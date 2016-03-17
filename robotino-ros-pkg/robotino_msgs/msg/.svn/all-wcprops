@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg
+END
+EncoderReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/EncoderReadings.msg
+END
+MotorReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/MotorReadings.msg
+END
+SetGrapplerAxis.msg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/SetGrapplerAxis.msg
+END
+AnalogReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/AnalogReadings.msg
+END
+NorthStarReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/NorthStarReadings.msg
+END
+SetBHAPressures.msg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/SetBHAPressures.msg
+END
+BHAReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/BHAReadings.msg
+END
+GrapplerReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/GrapplerReadings.msg
+END
+GripperState.msg
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/GripperState.msg
+END
+PowerReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/PowerReadings.msg
+END
+SetGrapplerAxes.msg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/SetGrapplerAxes.msg
+END
+DigitalReadings.msg
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/msg/DigitalReadings.msg
+END

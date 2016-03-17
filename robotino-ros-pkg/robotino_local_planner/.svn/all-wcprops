@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_planner
+END
+blp_plugin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_planner/blp_plugin.xml
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_planner/package.xml
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_planner/CMakeLists.txt
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/srv
+END
+SetEncoderPosition.srv
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/srv/SetEncoderPosition.srv
+END
+ResetOdometry.srv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/srv/ResetOdometry.srv
+END
+SetGripperState.srv
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/srv/SetGripperState.srv
+END

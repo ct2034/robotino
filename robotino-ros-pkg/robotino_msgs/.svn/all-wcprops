@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/3109/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/3109/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/package.xml
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/3109/robotino-ros-pkg/trunk/catkin-pkg/robotino_msgs/CMakeLists.txt
+END

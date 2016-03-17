@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/3303/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src
+END
+ComROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/3109/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/ComROS.cpp
+END
+AnalogInputArrayROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/AnalogInputArrayROS.cpp
+END
+InitialPoseROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/InitialPoseROS.cpp
+END
+DistanceSensorArrayROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/DistanceSensorArrayROS.cpp
+END
+NorthStarROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/NorthStarROS.cpp
+END
+robotino_camera_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/robotino_camera_node.cpp
+END
+RobotinoCameraNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/RobotinoCameraNode.cpp
+END
+NavGoalROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/NavGoalROS.cpp
+END
+robotino_mapping_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/robotino_mapping_node.cpp
+END
+CameraROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/CameraROS.cpp
+END
+PowerManagementROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/PowerManagementROS.cpp
+END
+RobotinoMappingNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/RobotinoMappingNode.cpp
+END
+BumperROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/BumperROS.cpp
+END
+MappingROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/MappingROS.cpp
+END
+DigitalInputArrayROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3303/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/DigitalInputArrayROS.cpp
+END
+OmniDriveROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/OmniDriveROS.cpp
+END
+DigitalOutputArrayROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/DigitalOutputArrayROS.cpp
+END
+robotino_odometry_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/robotino_odometry_node.cpp
+END
+MotorArrayROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/MotorArrayROS.cpp
+END
+EncoderInputROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/EncoderInputROS.cpp
+END
+ElectricalGripperROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/ElectricalGripperROS.cpp
+END
+RobotinoOdometryNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/RobotinoOdometryNode.cpp
+END
+CompactBHAROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/CompactBHAROS.cpp
+END
+OdometryROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/OdometryROS.cpp
+END
+robotino_laserrangefinder_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/robotino_laserrangefinder_node.cpp
+END
+RobotinoLaserRangeFinderNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/RobotinoLaserRangeFinderNode.cpp
+END
+LaserRangeFinderROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/LaserRangeFinderROS.cpp
+END
+GrapplerROS.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/GrapplerROS.cpp
+END
+robotino_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/robotino_node.cpp
+END
+RobotinoNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/src/RobotinoNode.cpp
+END
