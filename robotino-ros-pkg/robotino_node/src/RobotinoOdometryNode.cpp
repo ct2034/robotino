@@ -10,7 +10,7 @@
 RobotinoOdometryNode::RobotinoOdometryNode()
 	: nh_("~")
 {
-	nh_.param<std::string>("hostname", hostname_, "192.168.5.5" );
+	nh_.param<std::string>("hostname", hostname_, "172.0.0.1" );
 
 	com_.setName( "Odometry" );
 

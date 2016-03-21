@@ -12,9 +12,15 @@
     <node name="robotino_odometry_node" pkg="robotino_node" type="robotino_odometry_node" output="screen">
         <param name="hostname" value="$(arg hostname)" />
     </node>
-    <node name="robotino_laserrangefinder_node" pkg="robotino_node" type="robotino_laserrangefinder_node" output="screen">
+    <!-- node name="robotino_laserrangefinder_node" pkg="robotino_node" type="robotino_laserrangefinder_node" output="screen">
         <param name="hostname" value="$(arg hostname)" />
         <param name="laserRangeFinderNumber" value="0" />
+    </node -->
+    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" output="screen">
+	<remap from="/laser/scan" to="/scan" />
+	<param name="port" value="/dev/ttyS5" />
+        <param name="inverted" value="true" />
+	<param name="frame_id" value="camera_depth_frame" />
     </node>
     <node name="robotino_camera_node" pkg="robotino_node" type="robotino_camera_node" output="screen">
         <param name="hostname" value="$(arg hostname)" />
@@ -27,6 +33,6 @@
         <param name="hostname" value="$(arg hostname)" />
     </node>
     <node pkg="tf" type="static_transform_publisher" name="laser_camera_broadcaster" args="0.0 0 0.0 0 0 0 laser_link camera_depth_frame 50" />
-  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="20.97 0 835.0 0 0 0 base_link laser_link 50" />
+  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.02097 0 0.12 0 0 0 base_link laser_link 50" />
   	<param name="robot_description" textfile="$(find robotino_description)/urdf/robotino.urdf" />
 </launch>
