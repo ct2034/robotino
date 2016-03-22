@@ -79,6 +79,9 @@ public:
 	ros::Publisher topicPub_laser_scan;
 
 	NodeClass() {
+		// create a handle for this node, initialize node
+		nh = ros::NodeHandle("~");
+
 		// loading config
 		scan_intervals = loadScanRanges();	
 		
@@ -165,9 +168,12 @@ std::vector<std::vector<double> > NodeClass::loadScanRanges() {
 	std::vector<double> vd_interval;
 
 	//grab the range-list from the parameter server if possible
-	XmlRpc::XmlRpcValue intervals_list;
-	if(nh.hasParam(scan_intervals_param)){
-		nh.getParam(scan_intervals_param, intervals_list);
+	XmlRpc::XmlRpcValue intervals_list;                
+	ROS_INFO("looking for parameter scan_intervals");
+
+	if(nh.hasParam("scan_intervals")){
+		ROS_INFO("found parameter scan_intervals");
+		nh.getParam("scan_intervals", intervals_list);
 		//make sure we have a list of lists
 		if(!(intervals_list.getType() == XmlRpc::XmlRpcValue::TypeArray)){
 			ROS_FATAL("The scan intervals must be specified as a list of lists [[x1, y1], [x2, y2], ..., [xn, yn]]");
