@@ -7,7 +7,9 @@
   </include>
 
   <!--- Run AMCL -->
-  <include file="$(find amcl)/examples/amcl_omni.launch" />
+  <include file="$(find amcl)/examples/amcl_omni.launch">
+        <rosparam command="load" file="$(find robotino_navigation)/launch/amcl.yaml"/>
+  </node>
 
   <!--- Run move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
