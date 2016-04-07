@@ -1,5 +1,5 @@
 <launch>
-  <arg name="map_file" value="$(find robotino_navigation)/maps/office_bigger.yaml" />
+  <arg name="map_file" value="$(find robotino_navigation)/maps/iff.yaml" />
 
   <!--- Run mapserver -->
   <include file="$(find robotino_navigation)/launch/map_server.launch">
