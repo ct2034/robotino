@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="robotino_safety" type="robotino_safety_node" name="robotino_safety_node" output="screen">
+  <node pkg="robotino_safety" type="robotino_safety_node" name="robotino_safety_node" output="screen" respawn="true">
     <param name="outer_major_radius" value="0.70"/>
     <param name="outer_minor_radius" value="0.30"/>
     <param name="inner_major_radius" value="0.40"/>

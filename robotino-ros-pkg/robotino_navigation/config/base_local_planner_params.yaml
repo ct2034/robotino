@@ -1,6 +1,6 @@
 RobotinoLocalPlanner:
-  max_linear_vel: 0.2
-  mix_linear_vel: 0.1
+  max_linear_vel: 1.0
+  min_linear_vel: 0.3
   max_rotation_vel: 1.0
   min_rotation_vel: 0.3
 
