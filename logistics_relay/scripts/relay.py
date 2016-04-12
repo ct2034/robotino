@@ -33,14 +33,10 @@ def callbackGoal(data):
 
 
 if __name__ == '__main__':
-    try:
-        rospy.init_node('talker', anonymous=True)
+    rospy.init_node('relay', anonymous=True)
 
-        rospy.Subscriber("logistics_goal", Point, callbackGoal)
-        pub = rospy.Publisher(
-            'move_base_simple/goal', PoseStamped, queue_size=10)
+    rospy.Subscriber("logistics_goal", Point, callbackGoal)
+    pub = rospy.Publisher(
+        'move_base_simple/goal', PoseStamped, queue_size=10)
 
-        rospy.spin()
-
-        ros except rospy.ROSInterruptException:
-        pass
+    rospy.spin()
