@@ -45,7 +45,6 @@ def callbackMap(data):
     rospy.loginfo("RELAY recieved map")
     na = np.array(data.data)
     p = np.reshape(na, (data.info.height, data.info.width), 'C')
-    print p
 
     # rand = str(random.randrange(0, 999999))
     # path = '/tmp/' + rand + '.png'
@@ -79,8 +78,6 @@ if __name__ == '__main__':
     listener = tf.TransformListener()
 
     while not rospy.is_shutdown():
-        rospy.loginfo("RELAY pose lookup")
-
         while(
             (not listener.frameExists(map_frame)) or
             (not listener.frameExists(link_frame)) and
@@ -93,9 +90,12 @@ if __name__ == '__main__':
         position, quaternion = listener.lookupTransform(
             link_frame, map_frame, t)
 
-        rospy.loginfo("RELAY pose " + str((position, quaternion)))
-
         p = Point()
+        p.x = position[0]
+        p.y = position[1]
+        p.z = tf.transformations.euler_from_quaternion(quaternion)[2]
+
+        rospy.loginfo("RELAY pose " + str(p))
 
         pubCurrentPose.publish(p)
 
