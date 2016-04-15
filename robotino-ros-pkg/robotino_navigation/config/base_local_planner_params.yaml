@@ -1,12 +1,15 @@
-RobotinoLocalPlanner:
-  max_linear_vel: 1.0
-  min_linear_vel: 0.3
-  max_rotation_vel: 1.0
-  min_rotation_vel: 0.3
+DWAPlannerROS:
+  max_vel_x: 1.0
+  min_vel_x: 0.6
+  max_vel_theta: 1.0
+  min_vel_theta: -1.0
 
   yaw_goal_tolerance: 0.05
   xy_goal_tolerance: 0.10
   
-  heading_lookahead: 0.3
-  num_window_points: 10
+  dwa: true
+
+  pdist_scale: 0.6
+  gdist_scale: 0.8
+
   
