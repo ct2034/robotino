@@ -20,10 +20,15 @@ def pubGoal(x, y, th):
     ps.header.seq = 1
     ps.header.stamp = rospy.Time.now()
     ps.header.frame_id = "map"
-    ps.pose.position.x = x
-    ps.pose.position.y = y
+    ps.pose.position.x = float(x)
+    ps.pose.position.y = float(y)
     ps.pose.position.z = 0.0
-    ps.pose.orientation = tf.transformations.quaternion_from_euler(0, 0, th)
+
+    quat = tf.transformations.quaternion_from_euler(0.0, 0.0, th)
+    ps.pose.orientation.x = quat[0]
+    ps.pose.orientation.y = quat[1]
+    ps.pose.orientation.z = quat[2]
+    ps.pose.orientation.w = quat[3]
 
     pubGoalPose.publish(ps)
 
