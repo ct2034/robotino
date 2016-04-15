@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package>
+  <name>pitasc_vfk</name>
+  <version>0.0.0</version>
+  <description>Project pitasc_vfk</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <maintainer email="lorenz.halt@ipa.fraunhofer.de">ipa-lth</maintainer>
+  <maintainer email="frank.naegele@ipa.fraunhofer.de">ipa-frn</maintainer>
+  <maintainer email="philipp.gorczak@ipa.fraunhofer.de">pgorczak</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>LGPLv3</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <url type="website">http://www.ipa.fraunhofer.de/</url>
+
+  <!-- Author tags are optional, mutiple are allowed, one per tag -->
+  <author email="lorenz.halt@ipa.fraunhofer.de">ipa-lth</author>
+  <author email="frank.naegele@ipa.fraunhofer.de">ipa-frn</author>
+  <author email="philipp.gorczak@ipa.fraunhofer.de">pgorczak</author>
+
+  <!-- The *_depend tags are used to specify dependencies -->
+  <!-- Dependencies can be catkin packages or system dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+
+</package>
