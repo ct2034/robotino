@@ -14,13 +14,13 @@
 		<!-- <param name="topics" value="test, test2, testpoint" /> -->
 		
 		<!-- Topics to subscribe in ros -->
-		<param name="topics_sub" value="test_strings" />
+		<param name="topics_sub" value="logistics_pose" />
 		<!-- <param name="topics_sub" value="*" /> -->
 		<!-- <param name="topics_sub" value="map_karto" /> -->
 		
 		<!-- Topics to publish in ROS -->
 		<param name="topics_pub" value="
-			/simpler_goal geometry_msgs/Point
+			/logistics_goal geometry_msgs/Point
 		" />
 <!-- 			/base/twist_controller/command_safe geometry_msgs/Twist,
 			/test_command geometry_msgs/PoseStamped, 
