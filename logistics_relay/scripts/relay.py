@@ -6,6 +6,7 @@ from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Point
 from nav_msgs.msg import OccupancyGrid
 
+import sys
 import numpy as np
 import png
 import random
@@ -77,14 +78,22 @@ if __name__ == '__main__':
     rate = rospy.Rate(1)
     listener = tf.TransformListener()
 
+    rospy.loginfo("waiting for tf ..")
+
     while not rospy.is_shutdown():
         while(
-            (not listener.frameExists(map_frame)) or
-            (not listener.frameExists(link_frame)) and
+            (
+                (not listener.frameExists(map_frame)) or
+                (not listener.frameExists(link_frame))
+            ) and
             (not rospy.is_shutdown())
         ):
             # rospy.loginfo("RELAY waiting for position")
             rate.sleep()
+            if rospy.is_shutdown():
+                sys.exit()
+
+        rospy.loginfo("tf pose available")
 
         t = listener.getLatestCommonTime(link_frame, map_frame)
         position, quaternion = listener.lookupTransform(
