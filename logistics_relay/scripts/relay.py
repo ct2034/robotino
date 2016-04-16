@@ -86,31 +86,38 @@ if __name__ == '__main__':
     rospy.loginfo("waiting for tf ..")
 
     while not rospy.is_shutdown():
-        while(
-            (
-                (not listener.frameExists(map_frame)) or
-                (not listener.frameExists(link_frame))
-            ) and
-            (not rospy.is_shutdown())
-        ):
-            # rospy.loginfo("RELAY waiting for position")
-            rate.sleep()
-            if rospy.is_shutdown():
-                sys.exit()
+        try:
+            (position, quaternion) = listener.lookupTransform(link_frame, map_frame, rospy.Time(0))
 
-        rospy.loginfo("tf pose available")
+            p = Point()
+            p.x = position[0]
+            p.y = position[1]
+            p.z = tf.transformations.euler_from_quaternion(quaternion)[2]
 
-        t = listener.getLatestCommonTime(link_frame, map_frame)
-        position, quaternion = listener.lookupTransform(
-            link_frame, map_frame, t)
+            rospy.loginfo("RELAY pose " + str(p))
 
-        p = Point()
-        p.x = position[0]
-        p.y = position[1]
-        p.z = tf.transformations.euler_from_quaternion(quaternion)[2]
+            pubCurrentPose.publish(p)
+            
+        except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+            rospy.logwarn("tf error")
+            continue       
 
-        rospy.loginfo("RELAY pose " + str(p))
+        # while(
+        #     (
+        #         (not listener.frameExists(map_frame)) or
+        #         (not listener.frameExists(link_frame))
+        #     ) and
+        #     (not rospy.is_shutdown())
+        # ):
+        #     # rospy.loginfo("RELAY waiting for position")
+        #     rate.sleep()
+        #     if rospy.is_shutdown():
+        #         sys.exit()
 
-        pubCurrentPose.publish(p)
+        # rospy.loginfo("tf pose available")
+
+        # t = listener.getLatestCommonTime(link_frame, map_frame)
+        # position, quaternion = listener.lookupTransform(
+        #     link_frame, map_frame, t)
 
         rate.sleep()
