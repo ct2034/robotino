@@ -351,8 +351,8 @@ class MsbRosBridge:
 
                     # REGISTER SMO WITH MSB
                     self.s = SmartObject(
-                        "msb_ros_bridge",  # a robot
-                        "msb_ros_bridge",
+                        "Robotino",  # a robot
+                        "Robotino",
                         "Bridge from ROS to MSB",
                         es.values(),
                         fs,
