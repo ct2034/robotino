@@ -6,10 +6,8 @@ from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Point
 from nav_msgs.msg import OccupancyGrid
 
-import sys
 import numpy as np
 import png
-import random
 import io
 
 map_frame = "/map"
@@ -87,7 +85,9 @@ if __name__ == '__main__':
 
     while not rospy.is_shutdown():
         try:
-            (position, quaternion) = listener.lookupTransform(link_frame, map_frame, rospy.Time(0))
+            (position, quaternion) = listener.lookupTransform(
+                link_frame, map_frame, rospy.Time(0)
+            )
 
             p = Point()
             p.x = position[0]
@@ -97,27 +97,13 @@ if __name__ == '__main__':
             rospy.loginfo("RELAY pose " + str(p))
 
             pubCurrentPose.publish(p)
-            
-        except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+
+        except (
+            tf.LookupException,
+            tf.ConnectivityException,
+            tf.ExtrapolationException
+        ):
             rospy.logwarn("tf error")
-            continue       
-
-        # while(
-        #     (
-        #         (not listener.frameExists(map_frame)) or
-        #         (not listener.frameExists(link_frame))
-        #     ) and
-        #     (not rospy.is_shutdown())
-        # ):
-        #     # rospy.loginfo("RELAY waiting for position")
-        #     rate.sleep()
-        #     if rospy.is_shutdown():
-        #         sys.exit()
-
-        # rospy.loginfo("tf pose available")
-
-        # t = listener.getLatestCommonTime(link_frame, map_frame)
-        # position, quaternion = listener.lookupTransform(
-        #     link_frame, map_frame, t)
+            continue
 
         rate.sleep()
