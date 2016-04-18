@@ -295,6 +295,33 @@ class MsbRosBridge:
                 token +
                 '\')'
             )
+        try:
+            name = rospy.get_param('~name')
+        except Exception:
+            name = 'ROS Bridge'  # DEFAULT
+            rospy.logwarn(
+                'unable to get param ~name (using default: \'' +
+                name +
+                '\')'
+            )
+        try:
+            uuid = rospy.get_param('~uuid')
+        except Exception:
+            uuid = 'rosbridge'  # DEFAULT
+            rospy.logwarn(
+                'unable to get param ~uuid (using default: \'' +
+                uuid +
+                '\')'
+            )
+        try:
+            desc = rospy.get_param('~desc')
+        except Exception:
+            desc = 'A ROS Bridge'  # DEFAULT
+            rospy.logwarn(
+                'unable to get param ~desc (using default: \'' +
+                desc +
+                '\')'
+            )
 
         (self.confTopicsPub, self.confTopicsSub) = self.getParamTopics()
 
@@ -351,9 +378,9 @@ class MsbRosBridge:
 
                     # REGISTER SMO WITH MSB
                     self.s = SmartObject(
-                        "Robotino",  # a robot
-                        "Robotino",
-                        "Bridge from ROS to MSB",
+                        uuid,  # a robot
+                        name,
+                        desc,
                         es.values(),
                         fs,
                         token

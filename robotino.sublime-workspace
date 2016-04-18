@@ -283,7 +283,7 @@
 			"file": "logistics_relay/scripts/relay.py",
 			"settings":
 			{
-				"buffer_size": 3271,
+				"buffer_size": 2714,
 				"line_ending": "Unix"
 			}
 		},
@@ -299,7 +299,7 @@
 			"file": "robotino-ros-pkg/robotino_node/launch/msb_ros_bridge.launch",
 			"settings":
 			{
-				"buffer_size": 1163,
+				"buffer_size": 1261,
 				"line_ending": "Unix"
 			}
 		},
@@ -320,9 +320,33 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "re",
+		"last_filter": "pus",
 		"selected_items":
 		[
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"inde",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"ana",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
 			[
 				"re",
 				"JSON Reindent: reindent file or selection"
@@ -334,14 +358,6 @@
 			[
 				"push",
 				"Git: Push"
-			],
-			[
-				"comm",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add..."
 			],
 			[
 				"rein",
@@ -414,10 +430,6 @@
 			[
 				"json",
 				"JSON Reindent: reindent file or selection"
-			],
-			[
-				"inde",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"js",
@@ -833,15 +845,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3271,
+						"buffer_size": 2714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2479,
-								2479
+								194,
+								194
 							]
 						],
 						"settings":
@@ -851,7 +863,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 945.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -891,7 +903,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1163,
+						"buffer_size": 1261,
 						"regions":
 						{
 						},
@@ -1010,16 +1022,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "vf",
+		"last_filter": "no",
 		"selected_items":
 		[
 			[
-				"vf",
-				"~/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb.sublime-project"
-			],
-			[
 				"no",
 				"~/Dropbox/Apps/Plain.txt/notes.sublime-project"
+			],
+			[
+				"vf",
+				"~/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb.sublime-project"
 			],
 			[
 				"",

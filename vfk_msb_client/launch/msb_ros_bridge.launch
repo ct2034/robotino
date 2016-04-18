@@ -3,16 +3,22 @@
 		<!-- MSB to connect to -->
 		<!-- <param name="host" value="ws://localhost:8085" /> -->
 		<!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
+		<param name="host" value="ws://10.3.2.10:8085" />
 		<!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
 		<!-- <param name="host" value="ws://demo.virtualfortknox.de/msb2" />  -->
-		<param name="host" value="ws://10.3.2.10:8085" />
-		
-		<!-- TODO: name / uuid konfigurierbar $ROBOT -->
 
-		<!-- Token for conneciton -->
+		<!-- UUID for connection -->
+		<param name="uuid" value="ros" />
+
+		<!-- Name for connection -->
+		<param name="name" value="ROS Bridge" />
+
+		<!-- Description for connection -->
+		<param name="desc" value="The ROS Bridge" />
+
+		<!-- Token for connection -->
 		<param name="token" value="rossecret" />
-		<!-- <param name="topics" value="test, test2, testpoint" /> -->
-		
+
 		<!-- Topics to subscribe in ros -->
 		<!-- <param name="topics_sub" value="test_goal" /> -->
 		<!-- <param name="topics_sub" value="*" /> -->
