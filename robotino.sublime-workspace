@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"log",
+				"logwarn	import"
+			],
+			[
 				"i",
 				"is_shutdown"
 			],
@@ -279,7 +283,7 @@
 			"file": "logistics_relay/scripts/relay.py",
 			"settings":
 			{
-				"buffer_size": 2592,
+				"buffer_size": 3271,
 				"line_ending": "Unix"
 			}
 		},
@@ -292,13 +296,10 @@
 			}
 		},
 		{
-			"contents": "<launch>\n        <node name=\"msb_ros_bridge\" pkg=\"vfk_msb_client\" type=\"msb_ros_bridge.py\" output=\"screen\">\n                <!-- MSB to connect to -->\n                <!-- <param name=\"host\" value=\"ws://localhost:8085\" /> -->\n                <!-- <param name=\"host\" value=\"ws://10.15.5.232:8085\" /> -->\n                <!-- <param name=\"host\" value=\"ws://demo.virtualfortknox.de\" /> -->\n                <!-- <param name=\"host\" value=\"ws://demo.virtualfortknox.de/msb2\" /> -->\n                <param name=\"host\" value=\"ws://10.3.2.10:8085\" />\n\n                <!-- TODO: name / uuid konfigurierbar $ROBOT -->\n\n                <!-- Token for conneciton -->\n                <param name=\"token\" value=\"robotino\" />\n                <!-- <param name=\"topics\" value=\"test, test2, testpoint\" /> -->\n\n                <!-- Topics to subscribe in ros -->\n                <param name=\"topics_sub\" value=\"logistics_pose\" />\n                <!-- <param name=\"topics_sub\" value=\"*\" /> -->\n                <!-- <param name=\"topics_sub\" value=\"map_karto\" /> -->\n\n                <!-- Topics to publish in ROS -->\n                <param name=\"topics_pub\" value=\"\n                        /logistics_goal geometry_msgs/Point\n                \" />\n<!--                    /base/twist_controller/command_safe geometry_msgs/Twist,\n                        /test_command geometry_msgs/PoseStamped,\n                        /test_goal geometry_msgs/Point,\n                        /message std_msgs/String -->\n        </node>\n</launch>\n",
 			"file": "robotino-ros-pkg/robotino_node/launch/msb_ros_bridge.launch",
-			"file_size": 1159,
-			"file_write_time": 131049185483669997,
 			"settings":
 			{
-				"buffer_size": 1507,
+				"buffer_size": 1163,
 				"line_ending": "Unix"
 			}
 		},
@@ -495,6 +496,8 @@
 	],
 	"file_history":
 	[
+		"/home/cch/ros/robotino_ws/src/robotino/.git/MERGE_MSG",
+		"/home/cch/src/vfk_msb_client/.git/MERGE_MSG",
 		"/home/cch/ws/VFK_DEMOS/Applications/ProductionView/ProductionView/pom.xml",
 		"/home/cch/ros/auckbot_ws/auckbot/auckbot_analysis/src/model_fitting.py",
 		"/home/cch/.bashrc",
@@ -763,7 +766,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -821,7 +824,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -830,15 +833,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2592,
+						"buffer_size": 3271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1014,
-								1014
+								2479,
+								2479
 							]
 						],
 						"settings":
@@ -848,10 +851,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 435.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -879,7 +882,7 @@
 						"translation.y": 1635.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -888,7 +891,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1507,
+						"buffer_size": 1163,
 						"regions":
 						{
 						},
@@ -902,13 +905,14 @@
 						"settings":
 						{
 							"syntax": "Packages/XML/XML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
