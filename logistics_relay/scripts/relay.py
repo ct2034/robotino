@@ -36,7 +36,7 @@ def pubGoal(x, y, th):
 
 def callbackGoal(data):
     rospy.loginfo(
-        "RELAY (" +
+        "RELAY goal (" +
         str(data.x) +
         "; " +
         str(data.y) +
@@ -94,12 +94,13 @@ if __name__ == '__main__':
             p.y = position[1]
             p.z = tf.transformations.euler_from_quaternion(quaternion)[2]
 
-            rospy.loginfo("RELAY pose " + str(p))
+            rospy.logdebug("RELAY pose " + str(p))
 
             pubCurrentPose.publish(p)
             
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
-            rospy.logwarn("tf error")
+            rospy.logdebug("tf error")
+            rate.sleep()
             continue       
 
         # while(
