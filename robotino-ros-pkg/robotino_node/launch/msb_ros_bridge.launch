@@ -10,23 +10,25 @@
 		
 		<!-- TODO: name / uuid konfigurierbar $ROBOT -->
 
-		<!-- Token for conneciton -->
-		<param name="token" value="robotino" />
-		<!-- <param name="topics" value="test, test2, testpoint" /> -->
+		<!-- Uuid for conneciton -->
+		<param name="uuid" value="robotino" />
+
+                <!-- Name for conneciton -->
+                <param name="name" value="Robotino" />
+
+                <!-- Description for conneciton -->
+                <param name="desc" value="Robotino" />
+
+                <!-- Token for conneciton -->
+                <param name="token" value="robotino" />
 		
 		<!-- Topics to subscribe in ros -->
 		<param name="topics_sub" value="logistics_pose" />
-		<!-- <param name="topics_sub" value="*" /> -->
-		<!-- <param name="topics_sub" value="map_karto" /> -->
 		
 		<!-- Topics to publish in ROS -->
 		<param name="topics_pub" value="
 			/logistics_goal geometry_msgs/Point
 		" />
-<!-- 			/base/twist_controller/command_safe geometry_msgs/Twist,
-			/test_command geometry_msgs/PoseStamped, 
-			/test_goal geometry_msgs/Point,
-			/message std_msgs/String -->
 	</node>
         <node name="relay" pkg="logistics_relay" type="relay.py" output="screen">
         </node>
