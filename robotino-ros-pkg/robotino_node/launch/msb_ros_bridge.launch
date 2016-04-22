@@ -5,8 +5,10 @@
 		<!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
 		<!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
 		<!-- <param name="host" value="ws://demo.virtualfortknox.de/msb2" /> -->
-		<param name="host" value="ws://10.3.2.10:8085" />
-                <!-- <param name="host" value="ws://10.100.2.14:8085" /> -->
+		<!-- <param name="host" value="ws://10.3.2.10:8085" /> -->
+                <param name="host" value="ws://10.3.5.141:8085" />
+		<!-- <param name="host" value="ws://10.100.2.14:8085" /> -->
+                <!-- <param name="host" value="ws://172.20.1.17:8085" /> -->
 		
 		<!-- TODO: name / uuid konfigurierbar $ROBOT -->
 
