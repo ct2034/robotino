@@ -78,7 +78,7 @@ if __name__ == '__main__':
     pubCurrentPose = rospy.Publisher(
         'logistics_pose', Point, queue_size=10)
 
-    rate = rospy.Rate(1)
+    rate = rospy.Rate(.1)
     listener = tf.TransformListener()
 
     rospy.loginfo("waiting for tf ..")
