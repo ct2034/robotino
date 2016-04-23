@@ -5,6 +5,7 @@ import tf
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Point
 from nav_msgs.msg import OccupancyGrid
+from std_srvs.srv import Empty
 
 import numpy as np
 import png
@@ -42,8 +43,10 @@ def callbackGoal(data):
         str(data.z) +
         ")"
     )
+    clear_costmaps()
     pubGoal(data.x, data.y, data.z)
-
+    clear_costmaps()
+    pubGoal(data.x, data.y, data.z)
 
 def callbackMap(data):
     rospy.loginfo("RELAY recieved map")
@@ -77,6 +80,8 @@ if __name__ == '__main__':
         'move_base_simple/goal', PoseStamped, queue_size=10)
     pubCurrentPose = rospy.Publisher(
         'logistics_pose', Point, queue_size=10)
+
+    clear_costmaps = rospy.ServiceProxy('move_base/clear_costmaps', Empty)
 
     rate = rospy.Rate(.1)
     listener = tf.TransformListener()
