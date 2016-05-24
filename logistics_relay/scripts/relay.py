@@ -43,9 +43,9 @@ def callbackGoal(data):
         str(data.z) +
         ")"
     )
-    clear_costmaps()
+    #clear_costmaps()
     pubGoal(data.x, data.y, data.z)
-    clear_costmaps()
+    #clear_costmaps()
     pubGoal(data.x, data.y, data.z)
 
 def callbackMap(data):
