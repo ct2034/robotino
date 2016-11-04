@@ -1,0 +1,250 @@
+/* Text Styles */
+hr { color: #000000}
+body, table, tr, th /* Normal */
+{
+ font-size: 10pt;
+ font-family: Arial;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.f_BefehloderMenue /* Befehl oder Menü */
+{
+ font-size: 9pt;
+ font-style: italic;
+ color: #000080;
+}
+span.f_BefehloderMenueinTabellen /* Befehl oder Menü in Tabellen */
+{
+ font-size: 9pt;
+ font-style: italic;
+ color: #000080;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ font-family: 'Courier New';
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_FesteBreite /* Feste Breite */
+{
+ font-family: 'Courier New';
+}
+span.f_FesteBreiteInTabellen /* Feste Breite In Tabellen */
+{
+ font-family: 'Courier New';
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 14pt;
+ font-weight: bold;
+ color: #000080;
+}
+span.f_Heading2 /* Heading2 */
+{
+ font-size: 14pt;
+}
+span.f_Heading3 /* Heading3 */
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.f_Heading4 /* Heading4 */
+{
+ font-size: 12pt;
+}
+span.f_Heading5 /* Heading5 */
+{
+ font-weight: bold;
+}
+span.f_Heading5inTabellen /* Heading5 in Tabellen */
+{
+ font-weight: bold;
+}
+span.f_Heading6 /* Heading6 */
+{
+}
+span.f_Heading62 /* Heading62 */
+{
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_NormalinTabellen /* Normal in Tabellen */
+{
+}
+span.f_Notes /* Notes */
+{
+ font-style: italic;
+ font-weight: bold;
+}
+span.f_Screenshot /* Screenshot */
+{
+}
+span.f_TableSpacing /* TableSpacing */
+{
+}
+/* Paragraph styles */
+p /* Normal */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 10px 0px 10px 0px;
+}
+.p_BefehloderMenue /* Befehl oder Menü */
+{
+}
+.p_BefehloderMenueinTabellen /* Befehl oder Menü in Tabellen */
+{
+ margin: 0px 0px 0px 0px;
+}
+.p_CodeExample /* Code Example */
+{
+ white-space: nowrap;
+ margin: 0px 0px 0px 0px;
+}
+.p_Comment /* Comment */
+{
+}
+.p_FesteBreite /* Feste Breite */
+{
+}
+.p_FesteBreiteInTabellen /* Feste Breite In Tabellen */
+{
+ margin: 0px 0px 0px 0px;
+}
+.p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 10px 0px 10px 0px;
+}
+.p_Heading2 /* Heading2 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 14px 0px 10px 0px;
+}
+.p_Heading3 /* Heading3 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 14px 0px 10px 0px;
+}
+.p_Heading4 /* Heading4 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 14px 0px 10px 0px;
+}
+.p_Heading5 /* Heading5 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 14px 0px 10px 0px;
+}
+.p_Heading5inTabellen /* Heading5 in Tabellen */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: center;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_Heading6 /* Heading6 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 14px 0px 10px 0px;
+}
+.p_Heading62 /* Heading62 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: center;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 5px 0px 5px 0px;
+}
+.p_ImageCaption /* Image Caption */
+{
+}
+.p_NormalinTabellen /* Normal in Tabellen */
+{
+ margin: 0px 0px 0px 0px;
+}
+.p_Notes /* Notes */
+{
+ margin: 19px 0px 10px 0px;
+}
+.p_Screenshot /* Screenshot */
+{
+ text-align: center;
+ margin: 5px 0px 14px 0px;
+}
+.p_TableSpacing /* TableSpacing */
+{
+ margin: 5px 0px 14px 0px;
+}
+
+
+#hmpopupdiv /* used for javascript text popups */
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#hmlightbox /* image lightbox */
+{
+  border: none;
+  padding: 8px;
+  background: #FFF;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */
+{
+  cursor: pointer;
+}
+a.inline-toggle /* inline toggle caption */
+{
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */
+{
+  cursor: pointer;
+}

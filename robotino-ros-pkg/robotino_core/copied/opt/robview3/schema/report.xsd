@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:rep="http://easykit.informatik.tu-muenchen.de/schema/report"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/report"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+		schemaLocation="keyvalue.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/variable"
+		schemaLocation="variable.xsd"/>
+
+	<!-- Root node -->
+	<xs:element name="report" type="rep:reportType"/>
+
+	<!-- Definition of a report -->
+	<xs:complexType name="reportType">
+		<xs:all>
+			<!-- Genrric report information (a key/value map).       -->
+			<!-- Default keys:                                       -->
+			<!--  * generated - Generation timestamp                 -->
+			<xs:element name="reportInfo" type="kv:keyValueRootType"/>
+
+			<!-- Generic project report (a key/value map).           -->
+			<!-- Default keys:                                       -->
+			<!--  * projectFilename - Project filename               -->
+			<!--  * projectComment - Project comment, if any         -->
+			<xs:element name="projectInfo" type="kv:keyValueRootType"/>
+
+			<!-- Code generation report (a key/value map).           -->
+			<!-- Default keys:                                       -->
+			<!--  * programId - Virtually unique program identifier  -->
+			<!--  * codegenDir - Selected output directory           -->
+			<!--  * codegenFlags - Flags used during code generation -->
+			<!--  * platform - Selected platform                     -->
+			<!--  * toolchain - Selected toolchain                   -->
+			<!--  * uploader - Selected uploader                     -->
+			<xs:element name="codegenInfo" type="kv:keyValueRootType"/>
+
+			<!-- The serviceInterface node contains a service variable report. It lists all service variables present in the project. -->
+			<xs:element name="serviceInterface" type="rep:serviceInterfaceReportType" minOccurs="0" maxOccurs="1"/>
+		</xs:all>
+	</xs:complexType>
+
+	<!-- Definition of a configuration variable report -->
+	<xs:complexType name="serviceInterfaceReportType">
+		<xs:sequence>
+			<xs:element name="serviceVar" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<!-- Variable name -->
+					<xs:attribute name="name" type="xs:string"/>
+
+					<!-- Variable type (as modeled in EasyLab)                                               -->
+					<!-- Note: This is *not* the name of the data type as it would appear in generated code! -->
+					<!--       (use platform/toolchain to look up the respective representation)!            -->
+					<xs:attribute name="type" type="xs:string"/>
+
+					<!-- Default value (as modeled in EasyLab)                                               -->
+					<!-- This is the string representation of the respective value.                          -->
+					<xs:attribute name="defaultValue" type="xs:string"/>
+
+					<!-- Variable access mode                                                                -->
+					<!-- read-only - variable can be read, but not written (write will fail)                 -->
+					<!-- read-write - variable can be both read and written                                  -->
+					<!-- hidden - access to the variable is currently disabled (read and write will fail)    -->
+					<xs:attribute name="access" type="var:accessType" default="read-only"/>
+
+					<!-- Variable identifier in code generation -->
+					<xs:attribute name="identifier" type="xs:nonNegativeInteger"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

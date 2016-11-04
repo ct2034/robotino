@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:env="http://easykit.informatik.tu-muenchen.de/schema/environment"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/environment"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Definition of environment type -->
+	<xs:complexType name="environmentType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:choice>
+				<xs:element name="include">
+					<xs:complexType>
+						<xs:attribute name="filter" type="env:filterType" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="exclude">
+					<xs:complexType>
+						<xs:attribute name="filter" type="env:filterType" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="set">
+					<xs:complexType>
+						<xs:attribute name="variable" type="xs:string" use="required"/>
+						<xs:attribute name="value" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="append">
+					<xs:complexType>
+						<xs:attribute name="variable" type="xs:string" use="required"/>
+						<xs:attribute name="value" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of filter type -->
+	<xs:simpleType name="filterType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+</xs:schema>

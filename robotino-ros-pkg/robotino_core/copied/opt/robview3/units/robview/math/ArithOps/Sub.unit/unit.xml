@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+	
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Basic Subtraction">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="minuend">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="1">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="2">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="3">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="4">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="5">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="6">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="7">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="8">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="9">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="10">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="difference">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="minuend" unit:side="left"/>
+						<unit:layout unit:varname="1" unit:side="left"/>
+						<unit:layout unit:varname="2" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="10" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="difference" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Subtraction</unit:name>
+					<unit:icon unit:filename="sub.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="minuend">
+								<unit:description>Minuend</unit:description>
+							</unit:info>
+							<unit:info unit:varname="1">
+								<unit:description>Subtrahend[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="2">
+								<unit:description>Subtrahend[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="3">
+								<unit:description>Subtrahend[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="4">
+								<unit:description>Subtrahend[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="5">
+								<unit:description>Subtrahend[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="6">
+								<unit:description>Subtrahend[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="7">
+								<unit:description>Subtrahend[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="8">
+								<unit:description>Subtrahend[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="9">
+								<unit:description>Subtrahend[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="10">
+								<unit:description>Subtrahend[ 10]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="difference">
+								<unit:description>Difference</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_math_sub_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_math_sub_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

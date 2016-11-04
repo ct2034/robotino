@@ -1,0 +1,3113 @@
+<!DOCTYPE MyML>
+<root>
+	<translations>
+		<tr:item tr:key="(none)" >
+			<tr:translation tr:lang="de" >(keine)</tr:translation>
+			<tr:translation tr:lang="en" >(none)</tr:translation>
+			<tr:translation tr:lang="es" >(ninguno)</tr:translation>
+			<tr:translation tr:lang="fr" >(aucun)</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Absolute Value" >
+			<tr:translation tr:lang="de" >Betrag</tr:translation>
+			<tr:translation tr:lang="en" >Absolute Value</tr:translation>
+			<tr:translation tr:lang="es" >Valor absoluto</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur absolue</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Acceleration" >
+			<tr:translation tr:lang="de" >Beschleunigung</tr:translation>
+			<tr:translation tr:lang="en" >Acceleration</tr:translation>
+			<tr:translation tr:lang="es" >Aceleración</tr:translation>
+			<tr:translation tr:lang="fr" >Accélération</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Action is not permitted while simulation is running." >
+			<tr:translation tr:lang="de" >Die Aktion kann bei laufender Simulation nicht ausgeführt werden.</tr:translation>
+			<tr:translation tr:lang="en" >Action is not permitted while simulation is running.</tr:translation>
+			<tr:translation tr:lang="es" >Acción no permitida mientras funciona la simulación</tr:translation>
+			<tr:translation tr:lang="fr" >L'action ne peut pas être exécutée pendant la simulation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Active movement" >
+			<tr:translation tr:lang="de" >Aktivierte Bewegung</tr:translation>
+			<tr:translation tr:lang="en" >Active movement</tr:translation>
+			<tr:translation tr:lang="es" >Movimiento activo</tr:translation>
+			<tr:translation tr:lang="fr" >Mouvement activé</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actual pose" >
+			<tr:translation tr:lang="de" >Aktuelle Pose</tr:translation>
+			<tr:translation tr:lang="en" >Actual pose</tr:translation>
+			<tr:translation tr:lang="es" >Pose actual</tr:translation>
+			<tr:translation tr:lang="fr" >Pose actuelle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actual position" >
+			<tr:translation tr:lang="de" >Ist-Position</tr:translation>
+			<tr:translation tr:lang="en" >Actual position</tr:translation>
+			<tr:translation tr:lang="es" >Posición actual</tr:translation>
+			<tr:translation tr:lang="fr" >Position effective</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actual position \[ticks]" >
+			<tr:translation tr:lang="de" >Ist-Position \[ticks]</tr:translation>
+			<tr:translation tr:lang="en" >Actual position \[ticks]</tr:translation>
+			<tr:translation tr:lang="es" >Posición actual \[ticks]</tr:translation>
+			<tr:translation tr:lang="fr" >Position effective \[ticks]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actual velocity \[rpm]" >
+			<tr:translation tr:lang="de" >Ist-Geschwindigkeit \[rpm]</tr:translation>
+			<tr:translation tr:lang="en" >Actual velocity \[rpm]</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad actual \[rpm]</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse effective \[tr/min]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actual velocity \[ticks/s]" >
+			<tr:translation tr:lang="de" >Ist-Geschwindigkeit \[ticks/s]</tr:translation>
+			<tr:translation tr:lang="en" >Actual velocity \[ticks/s]</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad actual \[ticks/s]</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse effective \[tr/min]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actor" >
+			<tr:translation tr:lang="de" >Aktor</tr:translation>
+			<tr:translation tr:lang="en" >Actor</tr:translation>
+			<tr:translation tr:lang="es" >Actuador</tr:translation>
+			<tr:translation tr:lang="fr" >Actionnement</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Actors" >
+			<tr:translation tr:lang="de" >Aktoren</tr:translation>
+			<tr:translation tr:lang="en" >Actors</tr:translation>
+			<tr:translation tr:lang="es" >Actuador</tr:translation>
+			<tr:translation tr:lang="fr" >Actionnement</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Add all channels" >
+			<tr:translation tr:lang="de" >Alle Kanäle hinzufügen</tr:translation>
+			<tr:translation tr:lang="en" >Add all channels</tr:translation>
+			<tr:translation tr:lang="es" >Añadir todos los canales</tr:translation>
+			<tr:translation tr:lang="fr" >Ajouter tous les canaux</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Add channel" >
+			<tr:translation tr:lang="de" >Kanal hinzufügen</tr:translation>
+			<tr:translation tr:lang="en" >Add channel</tr:translation>
+			<tr:translation tr:lang="es" >Añadir canal</tr:translation>
+			<tr:translation tr:lang="fr" >Ajouter un canal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Add position" >
+			<tr:translation tr:lang="de" >Position hinzufügen</tr:translation>
+			<tr:translation tr:lang="en" >Add position</tr:translation>
+			<tr:translation tr:lang="es" >Añadir posición</tr:translation>
+			<tr:translation tr:lang="fr" >Ajouter position</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Addition" >
+			<tr:translation tr:lang="de" >Addition</tr:translation>
+			<tr:translation tr:lang="en" >Addition</tr:translation>
+			<tr:translation tr:lang="es" >Suma</tr:translation>
+			<tr:translation tr:lang="fr" >Addition</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Adds a communication channel." >
+			<tr:translation tr:lang="de" >Fügt einen Kommunikationskanal hinzu.</tr:translation>
+			<tr:translation tr:lang="en" >Adds a communication channel.</tr:translation>
+			<tr:translation tr:lang="es" >Añade un canal de comunicación</tr:translation>
+			<tr:translation tr:lang="fr" >Ajoute un canal de communication</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Amplitude" >
+			<tr:translation tr:lang="de" >Amplitude</tr:translation>
+			<tr:translation tr:lang="en" >Amplitude</tr:translation>
+			<tr:translation tr:lang="es" >Amplitud</tr:translation>
+			<tr:translation tr:lang="fr" >Amplitude</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Analog Input[]" >
+			<tr:translation tr:lang="de" >Analoger Eingang[]</tr:translation>
+			<tr:translation tr:lang="en" >Analog Input[]</tr:translation>
+			<tr:translation tr:lang="es" >Entrada analógica[]</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée analogique[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Analog input[]" >
+			<tr:translation tr:lang="de" >Analoger Eingang[]</tr:translation>
+			<tr:translation tr:lang="en" >Analog input[]</tr:translation>
+			<tr:translation tr:lang="es" >Entrada analógica[]</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée analogique[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Analog Output[]" >
+			<tr:translation tr:lang="de" >Analoger Ausgang[]</tr:translation>
+			<tr:translation tr:lang="en" >Analog Output[]</tr:translation>
+			<tr:translation tr:lang="es" >Salida analógica[]</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie analogique[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Analog output[]" >
+			<tr:translation tr:lang="de" >Analoger Ausgang[]</tr:translation>
+			<tr:translation tr:lang="en" >Analog output[]</tr:translation>
+			<tr:translation tr:lang="es" >Salida analógica[]</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie analogique[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="AND" >
+			<tr:translation tr:lang="de" >AND</tr:translation>
+			<tr:translation tr:lang="en" >AND</tr:translation>
+			<tr:translation tr:lang="es" >AND</tr:translation>
+			<tr:translation tr:lang="fr" >ET</tr:translation>
+		</tr:item>
+		<tr:item tr:key="AND FL" >
+			<tr:translation tr:lang="de" >AND FL</tr:translation>
+			<tr:translation tr:lang="en" >AND FL</tr:translation>
+			<tr:translation tr:lang="es" >AND FL</tr:translation>
+			<tr:translation tr:lang="fr" >AND FL</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angular distance" >
+			<tr:translation tr:lang="de" >Winkelentfernung</tr:translation>
+			<tr:translation tr:lang="en" >Angular distance</tr:translation>
+			<tr:translation tr:lang="es" >Distancia angular</tr:translation>
+			<tr:translation tr:lang="fr" >Distance angulaire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angular velocity" >
+			<tr:translation tr:lang="de" >Winkelgeschwindigkeit</tr:translation>
+			<tr:translation tr:lang="en" >Angular velocity</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad angular</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse angulaire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angular velocity coupling" >
+			<tr:translation tr:lang="de" >Winkelgeschwindigkeitskopplung</tr:translation>
+			<tr:translation tr:lang="en" >Angular velocity coupling</tr:translation>
+			<tr:translation tr:lang="es" >Acoplamiento de velocidad angular</tr:translation>
+			<tr:translation tr:lang="fr" >Couplage de vitesse angulaire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angular velocity ramp" >
+			<tr:translation tr:lang="de" >Winkelgeschwindigkeitsrampe</tr:translation>
+			<tr:translation tr:lang="en" >Angular velocity ramp</tr:translation>
+			<tr:translation tr:lang="es" >Rampa de velocidad angular</tr:translation>
+			<tr:translation tr:lang="fr" >Rampe de vitesse angulaire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Arbitrary Waveform Generator" >
+			<tr:translation tr:lang="de" >Arbiträrgenerator</tr:translation>
+			<tr:translation tr:lang="en" >Arbitrary Waveform Generator</tr:translation>
+			<tr:translation tr:lang="es" >Forma de onda arbitraria</tr:translation>
+			<tr:translation tr:lang="fr" >Générateur d'ondes arbitraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Area" >
+			<tr:translation tr:lang="de" >Fläche</tr:translation>
+			<tr:translation tr:lang="en" >Area</tr:translation>
+			<tr:translation tr:lang="es" >Área</tr:translation>
+			<tr:translation tr:lang="fr" >Surface</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Area \[pixel]" >
+			<tr:translation tr:lang="de" >Fläche \[pixel]</tr:translation>
+			<tr:translation tr:lang="en" >Area \[pixel]</tr:translation>
+			<tr:translation tr:lang="es" >Área \[pixel]</tr:translation>
+			<tr:translation tr:lang="fr" >Surface \[pixel]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Array" >
+			<tr:translation tr:lang="de" >Feld</tr:translation>
+			<tr:translation tr:lang="en" >Array</tr:translation>
+			<tr:translation tr:lang="es" >Matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Tableau</tr:translation>
+		</tr:item>
+		<tr:item tr:key="auto" >
+			<tr:translation tr:lang="de" >Auto</tr:translation>
+			<tr:translation tr:lang="en" >auto</tr:translation>
+			<tr:translation tr:lang="es" >Auto</tr:translation>
+			<tr:translation tr:lang="fr" >Auto</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Auto reconnect" >
+			<tr:translation tr:lang="de" >Automatisches Verbinden</tr:translation>
+			<tr:translation tr:lang="en" >Auto reconnect</tr:translation>
+			<tr:translation tr:lang="es" >Reconexión automática</tr:translation>
+			<tr:translation tr:lang="fr" >Connexion automatique</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Axes" >
+			<tr:translation tr:lang="de" >Achsen</tr:translation>
+			<tr:translation tr:lang="en" >Axes</tr:translation>
+			<tr:translation tr:lang="es" >Ejes</tr:translation>
+			<tr:translation tr:lang="fr" >Axes</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Axes count" >
+			<tr:translation tr:lang="de" >Achsenanzahl</tr:translation>
+			<tr:translation tr:lang="en" >Axes count</tr:translation>
+			<tr:translation tr:lang="es" >Número ejes</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre axes</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Axis" >
+			<tr:translation tr:lang="de" >Achse</tr:translation>
+			<tr:translation tr:lang="en" >Axis</tr:translation>
+			<tr:translation tr:lang="es" >Eje</tr:translation>
+			<tr:translation tr:lang="fr" >Axe</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Axis[]" >
+			<tr:translation tr:lang="de" >Achse[]</tr:translation>
+			<tr:translation tr:lang="en" >Axis[]</tr:translation>
+			<tr:translation tr:lang="es" >Eje[]</tr:translation>
+			<tr:translation tr:lang="fr" >Axe[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Battery \[V]" >
+			<tr:translation tr:lang="de" >Batterie \[V\]</tr:translation>
+			<tr:translation tr:lang="en" >Battery \[V]</tr:translation>
+			<tr:translation tr:lang="es" >Batería \[V]</tr:translation>
+			<tr:translation tr:lang="fr" >Batterie \[V]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Base" >
+			<tr:translation tr:lang="de" >Basis</tr:translation>
+			<tr:translation tr:lang="en" >Base</tr:translation>
+			<tr:translation tr:lang="es" >El básico</tr:translation>
+			<tr:translation tr:lang="fr" >Base</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Bellows[]" >
+			<tr:translation tr:lang="de" >Balg[]</tr:translation>
+			<tr:translation tr:lang="en" >Bellows[]</tr:translation>
+			<tr:translation tr:lang="es" >Fuelle[]</tr:translation>
+			<tr:translation tr:lang="fr" >Soufflet[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Bellows[] \[bar]" >
+			<tr:translation tr:lang="de" >Balg[] \[bar]</tr:translation>
+			<tr:translation tr:lang="en" >Bellows[] \[bar]</tr:translation>
+			<tr:translation tr:lang="es" >Fuelle[] \[bar]</tr:translation>
+			<tr:translation tr:lang="fr" >Soufflet[] \[bar]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Segment XY" >
+			<tr:translation tr:lang="de" >Segment XY</tr:translation>
+			<tr:translation tr:lang="en" >Segment XY</tr:translation>
+			<tr:translation tr:lang="es" >Segmento XY</tr:translation>
+			<tr:translation tr:lang="fr" >Segment XY</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Gripper rotate" >
+			<tr:translation tr:lang="de" >Greifer rotieren</tr:translation>
+			<tr:translation tr:lang="en" >Gripper rotate</tr:translation>
+			<tr:translation tr:lang="es" >Rotar la pinza</tr:translation>
+			<tr:translation tr:lang="fr" >Rotation pince</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Gripper open / close" >
+			<tr:translation tr:lang="de" >Greifer öffnen / schließen</tr:translation>
+			<tr:translation tr:lang="en" >Gripper open / close</tr:translation>
+			<tr:translation tr:lang="es" >Abrir / cerrar la pinza</tr:translation>
+			<tr:translation tr:lang="fr" >Ouvrir / fermer la pince</tr:translation>
+		</tr:item>
+		<tr:item tr:key="String potentiometers" >
+			<tr:translation tr:lang="de" >Seilzugpotentiometer</tr:translation>
+			<tr:translation tr:lang="en" >String potentiometers</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pot[] value" >
+			<tr:translation tr:lang="de" >Poti[] Wert</tr:translation>
+			<tr:translation tr:lang="en" >Pot[] value</tr:translation>
+			<tr:translation tr:lang="es" >Pot[] valor</tr:translation>
+			<tr:translation tr:lang="fr" >Pot[] valeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Foil potentiometer" >
+			<tr:translation tr:lang="de" >Folienpotentiometer</tr:translation>
+			<tr:translation tr:lang="en" >Foil potentiometer</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Compressors" >
+			<tr:translation tr:lang="de" >Kompressoren</tr:translation>
+			<tr:translation tr:lang="en" >Compressors</tr:translation>
+			<tr:translation tr:lang="es" >Compresores</tr:translation>
+			<tr:translation tr:lang="fr" >Compresseurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Gripper valve[]" >
+			<tr:translation tr:lang="de" >Greiferventil[]</tr:translation>
+			<tr:translation tr:lang="en" >Gripper valve[]</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Water drain valve" >
+			<tr:translation tr:lang="de" >Wasserablassventil</tr:translation>
+			<tr:translation tr:lang="en" >Water drain valve</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pressure sensor" >
+			<tr:translation tr:lang="de" >Drucksensor</tr:translation>
+			<tr:translation tr:lang="en" >Pressure sensor</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="I/O" >
+			<tr:translation tr:lang="de" >E/A</tr:translation>
+			<tr:translation tr:lang="en" >I/O</tr:translation>
+			<tr:translation tr:lang="es" >E/S</tr:translation>
+			<tr:translation tr:lang="fr" >E/S</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Bit[]" >
+			<tr:translation tr:lang="de" >Bit[]</tr:translation>
+			<tr:translation tr:lang="en" >Bit[]</tr:translation>
+			<tr:translation tr:lang="es" >Bit[]</tr:translation>
+			<tr:translation tr:lang="fr" >Bit[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Brake" >
+			<tr:translation tr:lang="de" >Bremse</tr:translation>
+			<tr:translation tr:lang="en" >Brake</tr:translation>
+			<tr:translation tr:lang="es" >Freno</tr:translation>
+			<tr:translation tr:lang="fr" >Frein</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Bumper" >
+			<tr:translation tr:lang="de" >Stoßleiste</tr:translation>
+			<tr:translation tr:lang="en" >Bumper</tr:translation>
+			<tr:translation tr:lang="es" >Paragolpes</tr:translation>
+			<tr:translation tr:lang="fr" >Parechoc</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Button" >
+			<tr:translation tr:lang="de" >Knopf</tr:translation>
+			<tr:translation tr:lang="en" >Button</tr:translation>
+			<tr:translation tr:lang="es" >Botón</tr:translation>
+			<tr:translation tr:lang="fr" >Bouton</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Button[]" >
+			<tr:translation tr:lang="de" >Knopf[]</tr:translation>
+			<tr:translation tr:lang="en" >Button[]</tr:translation>
+			<tr:translation tr:lang="es" >Botón[]</tr:translation>
+			<tr:translation tr:lang="fr" >Bouton[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Buttons" >
+			<tr:translation tr:lang="de" >Knöpfe</tr:translation>
+			<tr:translation tr:lang="en" >Buttons</tr:translation>
+			<tr:translation tr:lang="es" >Botones</tr:translation>
+			<tr:translation tr:lang="fr" >Boutons</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Camera" >
+			<tr:translation tr:lang="de" >Kamera</tr:translation>
+			<tr:translation tr:lang="en" >Camera</tr:translation>
+			<tr:translation tr:lang="es" >Cámara</tr:translation>
+			<tr:translation tr:lang="fr" >Caméra</tr:translation>
+		</tr:item>
+    <tr:item tr:key="Camera[]" >
+      <tr:translation tr:lang="de" >Kamera[]</tr:translation>
+      <tr:translation tr:lang="en" >Camera[]</tr:translation>
+      <tr:translation tr:lang="es" >Cámara[]</tr:translation>
+      <tr:translation tr:lang="fr" >Caméra[]</tr:translation>
+    </tr:item>
+		<tr:item tr:key="Cartesian to Vector" >
+			<tr:translation tr:lang="de" >Kartesisch nach Vektor</tr:translation>
+			<tr:translation tr:lang="en" >Cartesian to Vector</tr:translation>
+			<tr:translation tr:lang="es" >Cartesiano a Vector</tr:translation>
+			<tr:translation tr:lang="fr" >Cartésiennes en vecteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Ceiling calibration" >
+			<tr:translation tr:lang="de" >Deckenkalibrierung</tr:translation>
+			<tr:translation tr:lang="en" >Ceiling calibration</tr:translation>
+			<tr:translation tr:lang="es" >Calibración techo</tr:translation>
+			<tr:translation tr:lang="fr" >Calibrage de plafond</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Change number of inputs" >
+			<tr:translation tr:lang="de" >Anzahl der Eingänge ändern</tr:translation>
+			<tr:translation tr:lang="en" >Change number of inputs</tr:translation>
+			<tr:translation tr:lang="es" >Cambiar número de entradas</tr:translation>
+			<tr:translation tr:lang="fr" >Changer le nombre d'entrées</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Change number of outputs" >
+			<tr:translation tr:lang="de" >Anzahl der Ausgänge ändern</tr:translation>
+			<tr:translation tr:lang="en" >Change number of outputs</tr:translation>
+			<tr:translation tr:lang="es" >Cambiar número de salidas</tr:translation>
+			<tr:translation tr:lang="fr" >Changer le nombre de sorties</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Channel name" >
+			<tr:translation tr:lang="de" >Kanalname</tr:translation>
+			<tr:translation tr:lang="en" >Channel name</tr:translation>
+			<tr:translation tr:lang="es" >Nombre del canal</tr:translation>
+			<tr:translation tr:lang="fr" >Nom de canal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Channel type" >
+			<tr:translation tr:lang="de" >Kanaltyp</tr:translation>
+			<tr:translation tr:lang="en" >Channel type</tr:translation>
+			<tr:translation tr:lang="es" >Tipo de canal</tr:translation>
+			<tr:translation tr:lang="fr" >Type de canal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Channel[]" >
+			<tr:translation tr:lang="de" >Kanal[]</tr:translation>
+			<tr:translation tr:lang="en" >Channel[]</tr:translation>
+			<tr:translation tr:lang="es" >Canal[]</tr:translation>
+			<tr:translation tr:lang="fr" >Canal[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Choose directory containing images" >
+			<tr:translation tr:lang="de" >Wähle Verzeichnis mit Bildern</tr:translation>
+			<tr:translation tr:lang="en" >Choose directory containing images</tr:translation>
+			<tr:translation tr:lang="es" >Elegir el directorio que contiene las imágenes</tr:translation>
+			<tr:translation tr:lang="fr" >Test</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Choose directory storing images" >
+			<tr:translation tr:lang="de" >Wähle Verzeichnis zum abspeichern der Bilder</tr:translation>
+			<tr:translation tr:lang="en" >Choose directory storing images</tr:translation>
+			<tr:translation tr:lang="es" >Elegir el directorio de almacenamiento de las imágenes</tr:translation>
+			<tr:translation tr:lang="fr" >Sélectionner le répertoire d'enregistrement des images</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Closed" >
+			<tr:translation tr:lang="de" >Geschlossen</tr:translation>
+			<tr:translation tr:lang="en" >Closed</tr:translation>
+			<tr:translation tr:lang="es" >Cerrado</tr:translation>
+			<tr:translation tr:lang="fr" >Fermé</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Collision detection" >
+			<tr:translation tr:lang="de" >Kollisionserkennung</tr:translation>
+			<tr:translation tr:lang="en" >Collision detection</tr:translation>
+			<tr:translation tr:lang="es" >Detección de colisión</tr:translation>
+			<tr:translation tr:lang="fr" >Détection de collision</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Color space" >
+			<tr:translation tr:lang="de" >Farbraum</tr:translation>
+			<tr:translation tr:lang="en" >Color space</tr:translation>
+			<tr:translation tr:lang="es" >Espacio de color</tr:translation>
+			<tr:translation tr:lang="fr" >Espace de couleurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Colorspace Conversion" >
+			<tr:translation tr:lang="de" >Farbraum Konvertierung</tr:translation>
+			<tr:translation tr:lang="en" >Colorspace Conversion</tr:translation>
+			<tr:translation tr:lang="es" >Conversión de espacio de color</tr:translation>
+			<tr:translation tr:lang="fr" >Conversion d'espace de couleurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Configuration" >
+			<tr:translation tr:lang="de" >Konfiguration</tr:translation>
+			<tr:translation tr:lang="en" >Configuration</tr:translation>
+			<tr:translation tr:lang="es" >Configuración</tr:translation>
+			<tr:translation tr:lang="fr" >Configuration</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connect" >
+			<tr:translation tr:lang="de" >Verbinden</tr:translation>
+			<tr:translation tr:lang="en" >Connect</tr:translation>
+			<tr:translation tr:lang="es" >Conectar</tr:translation>
+			<tr:translation tr:lang="fr" >Connecter</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connected" >
+			<tr:translation tr:lang="de" >Verbunden</tr:translation>
+			<tr:translation tr:lang="en" >Connected</tr:translation>
+			<tr:translation tr:lang="es" >Conectado</tr:translation>
+			<tr:translation tr:lang="fr" >Connecté</tr:translation>
+		</tr:item>
+		<tr:item tr:key="connected" >
+			<tr:translation tr:lang="de" >verbunden</tr:translation>
+			<tr:translation tr:lang="en" >connected</tr:translation>
+			<tr:translation tr:lang="es" >conectado</tr:translation>
+			<tr:translation tr:lang="fr" >connecté</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connected to %1 in passive mode." >
+			<tr:translation tr:lang="de" >Passive Verbindung zu %1 hergestellt.</tr:translation>
+			<tr:translation tr:lang="en" >Connected to %1 in passive mode.</tr:translation>
+			<tr:translation tr:lang="es" >Conectado a %1 en modo pasivo.</tr:translation>
+			<tr:translation tr:lang="fr" >Connecté à %1 en mode passif.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connected to %1." >
+			<tr:translation tr:lang="de" >Verbindung zu %1 hergestellt.</tr:translation>
+			<tr:translation tr:lang="en" >Connected to %1.</tr:translation>
+			<tr:translation tr:lang="es" >Conectado a %1</tr:translation>
+			<tr:translation tr:lang="fr" >Connecté à %1.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connecting to %1." >
+			<tr:translation tr:lang="de" >Baue Verbindung zu %1 auf.</tr:translation>
+			<tr:translation tr:lang="en" >Connecting to %1.</tr:translation>
+			<tr:translation tr:lang="es" >Conectando a %1.</tr:translation>
+			<tr:translation tr:lang="fr" >Connexion à %1.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Constant" >
+			<tr:translation tr:lang="de" >Konstante</tr:translation>
+			<tr:translation tr:lang="en" >Constant</tr:translation>
+			<tr:translation tr:lang="es" >Constante</tr:translation>
+			<tr:translation tr:lang="fr" >Constante</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Constant pose" >
+			<tr:translation tr:lang="de" >Konstante Pose</tr:translation>
+			<tr:translation tr:lang="en" >Constant pose</tr:translation>
+			<tr:translation tr:lang="es" >Pose constante</tr:translation>
+			<tr:translation tr:lang="fr" >Pose constante</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Constant's value" >
+			<tr:translation tr:lang="de" >Wert der Konstanten</tr:translation>
+			<tr:translation tr:lang="en" >Constant's value</tr:translation>
+			<tr:translation tr:lang="es" >Valor de la constante</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur de la constante</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Control Panel" >
+			<tr:translation tr:lang="de" >Steuerungsfeld</tr:translation>
+			<tr:translation tr:lang="en" >Control Panel</tr:translation>
+			<tr:translation tr:lang="es" >Panel de control</tr:translation>
+			<tr:translation tr:lang="fr" >Panneau de commande</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Control signal" >
+			<tr:translation tr:lang="de" >Steuersignal</tr:translation>
+			<tr:translation tr:lang="en" >Control signal</tr:translation>
+			<tr:translation tr:lang="es" >Señal de control</tr:translation>
+			<tr:translation tr:lang="fr" >Signal de commande</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Cosine" >
+			<tr:translation tr:lang="de" >Kosinus</tr:translation>
+			<tr:translation tr:lang="en" >Cosine</tr:translation>
+			<tr:translation tr:lang="es" >Coseno</tr:translation>
+			<tr:translation tr:lang="fr" >Cosinus</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Color range" >
+			<tr:translation tr:lang="de" >Farbbereich</tr:translation>
+			<tr:translation tr:lang="en" >Color range</tr:translation>
+			<tr:translation tr:lang="es" >Gama de colores</tr:translation>
+			<tr:translation tr:lang="fr" >Plage colorimétrique</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Color range finder" >
+			<tr:translation tr:lang="de" >Farbbereichssuche</tr:translation>
+			<tr:translation tr:lang="en" >Color range finder</tr:translation>
+			<tr:translation tr:lang="es" >Búsqueda de gamas de colores</tr:translation>
+			<tr:translation tr:lang="fr" >Recherche de plage colorimétrique</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Count on falling edge" >
+			<tr:translation tr:lang="de" >Auf fallender Flanke zählen</tr:translation>
+			<tr:translation tr:lang="en" >Count on falling edge</tr:translation>
+			<tr:translation tr:lang="es" >Contar en flanco descendente</tr:translation>
+			<tr:translation tr:lang="fr" >Comptage sur front descendant</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Count on rising edge" >
+			<tr:translation tr:lang="de" >Auf steigender Flanke zählen</tr:translation>
+			<tr:translation tr:lang="en" >Count on rising edge</tr:translation>
+			<tr:translation tr:lang="es" >Contar en flanco ascendente</tr:translation>
+			<tr:translation tr:lang="fr" >Comptage sur front montant</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Counter" >
+			<tr:translation tr:lang="de" >Zähler</tr:translation>
+			<tr:translation tr:lang="en" >Counter</tr:translation>
+			<tr:translation tr:lang="es" >Contador</tr:translation>
+			<tr:translation tr:lang="fr" >Compteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Counter Down" >
+			<tr:translation tr:lang="de" >Zähler abwärts</tr:translation>
+			<tr:translation tr:lang="en" >Counter Down</tr:translation>
+			<tr:translation tr:lang="es" >Contador decremental</tr:translation>
+			<tr:translation tr:lang="fr" >Décompteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Counter Up" >
+			<tr:translation tr:lang="de" >Zähler aufwärts</tr:translation>
+			<tr:translation tr:lang="en" >Counter Up</tr:translation>
+			<tr:translation tr:lang="es" >Contador incremental</tr:translation>
+			<tr:translation tr:lang="fr" >Compteur-totalisateur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Current \[A]" >
+			<tr:translation tr:lang="de" >Strom \[A]</tr:translation>
+			<tr:translation tr:lang="en" >Current \[A]</tr:translation>
+			<tr:translation tr:lang="es" >Intensidad \[A]</tr:translation>
+			<tr:translation tr:lang="fr" >Courant \[A]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Current room" >
+			<tr:translation tr:lang="de" >Aktueller Raum</tr:translation>
+			<tr:translation tr:lang="en" >Current room</tr:translation>
+			<tr:translation tr:lang="es" >Sala actual</tr:translation>
+			<tr:translation tr:lang="fr" >Local courant</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Cv" >
+			<tr:translation tr:lang="de" >Bildverarbeitung</tr:translation>
+			<tr:translation tr:lang="en" >Image processing</tr:translation>
+			<tr:translation tr:lang="es" >Procesamiento de imágenes</tr:translation>
+			<tr:translation tr:lang="fr" >Traitement d'image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="CW limit \[deg]" >
+			<tr:translation tr:lang="de" >CW Grenze \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >CW limit \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >CW limite \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >CW limite \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="CCW limit \[deg]" >
+			<tr:translation tr:lang="de" >CCW Grenze \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >CCW limit \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >CCW limite \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >CCW limite \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Data" >
+			<tr:translation tr:lang="de" >Daten</tr:translation>
+			<tr:translation tr:lang="en" >Data</tr:translation>
+			<tr:translation tr:lang="es" >Datos</tr:translation>
+			<tr:translation tr:lang="fr" >Données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Data Exchange Client" >
+			<tr:translation tr:lang="de" >Datenaustausch Client</tr:translation>
+			<tr:translation tr:lang="en" >Data Exchange Client</tr:translation>
+			<tr:translation tr:lang="es" >Intercambio de datos cliente</tr:translation>
+			<tr:translation tr:lang="fr" >Echange de données client</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Data Exchange Server" >
+			<tr:translation tr:lang="de" >Datenaustausch Server</tr:translation>
+			<tr:translation tr:lang="en" >Data Exchange Server</tr:translation>
+			<tr:translation tr:lang="es" >Servidor de Intercambio de datos</tr:translation>
+			<tr:translation tr:lang="fr" >Echange de données serveur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Data Exchange UDP" >
+			<tr:translation tr:lang="de" >Datenaustausch UDP</tr:translation>
+			<tr:translation tr:lang="en" >Data Exchange UDP</tr:translation>
+			<tr:translation tr:lang="es" >Intercambio de datos UDP</tr:translation>
+			<tr:translation tr:lang="fr" >Echange de données UDP</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Dataexchange" >
+			<tr:translation tr:lang="de" >Datenaustausch</tr:translation>
+			<tr:translation tr:lang="en" >Data exchange</tr:translation>
+			<tr:translation tr:lang="es" >Intercambio de datos</tr:translation>
+			<tr:translation tr:lang="fr" >Échange de données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Deceleration" >
+			<tr:translation tr:lang="de" >Verzögerung</tr:translation>
+			<tr:translation tr:lang="en" >Deceleration</tr:translation>
+			<tr:translation tr:lang="es" >Deceleración</tr:translation>
+			<tr:translation tr:lang="fr" >Décélération</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Delta axis" >
+			<tr:translation tr:lang="de" >Abweichung Achse</tr:translation>
+			<tr:translation tr:lang="en" >Delta axis</tr:translation>
+			<tr:translation tr:lang="es" >Grados</tr:translation>
+			<tr:translation tr:lang="fr" >degrés</tr:translation>
+		</tr:item>
+		<tr:item tr:key="degrees" >
+			<tr:translation tr:lang="de" >Grad</tr:translation>
+			<tr:translation tr:lang="en" >degrees</tr:translation>
+			<tr:translation tr:lang="es" >Grados</tr:translation>
+			<tr:translation tr:lang="fr" >degrés</tr:translation>
+		</tr:item>
+		<tr:item tr:key="\[deg]" >
+			<tr:translation tr:lang="de" >\[deg]</tr:translation>
+			<tr:translation tr:lang="en" >\[deg]</tr:translation>
+			<tr:translation tr:lang="es" >\[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >\[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Demultiplexer" >
+			<tr:translation tr:lang="de" >Demultiplexer</tr:translation>
+			<tr:translation tr:lang="en" >Demultiplexer</tr:translation>
+			<tr:translation tr:lang="es" >Desmultiplexor</tr:translation>
+			<tr:translation tr:lang="fr" >Démultiplexeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Depth" >
+			<tr:translation tr:lang="de" >Tiefe</tr:translation>
+			<tr:translation tr:lang="en" >Depth</tr:translation>
+			<tr:translation tr:lang="es" >Profundidad</tr:translation>
+			<tr:translation tr:lang="fr" >Gravité</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Detour" >
+			<tr:translation tr:lang="de" >Umweg</tr:translation>
+			<tr:translation tr:lang="en" >Detour</tr:translation>
+			<tr:translation tr:lang="es" >Rodeo</tr:translation>
+			<tr:translation tr:lang="fr" >Détour</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Difference" >
+			<tr:translation tr:lang="de" >Differenz</tr:translation>
+			<tr:translation tr:lang="en" >Difference</tr:translation>
+			<tr:translation tr:lang="es" >Diferencia</tr:translation>
+			<tr:translation tr:lang="fr" >Différence</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Digital input" >
+			<tr:translation tr:lang="de" >Digitaler Eingang</tr:translation>
+			<tr:translation tr:lang="en" >Digital input</tr:translation>
+			<tr:translation tr:lang="es" >Entrada digital</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée TOR</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Digital input[]" >
+			<tr:translation tr:lang="de" >Digitaler Eingang[]</tr:translation>
+			<tr:translation tr:lang="en" >Digital input[]</tr:translation>
+			<tr:translation tr:lang="es" >Entrada digital[]</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée TOR[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Digital output" >
+			<tr:translation tr:lang="de" >Digitaler Ausgang</tr:translation>
+			<tr:translation tr:lang="en" >Digital output</tr:translation>
+			<tr:translation tr:lang="es" >Salida digital</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie TOR</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Digital output[]" >
+			<tr:translation tr:lang="de" >Digitaler Ausgang[]</tr:translation>
+			<tr:translation tr:lang="en" >Digital output[]</tr:translation>
+			<tr:translation tr:lang="es" >Salida digital[]</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie TOR[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Directory" >
+			<tr:translation tr:lang="de" >Verzeichnis</tr:translation>
+			<tr:translation tr:lang="en" >Directory</tr:translation>
+			<tr:translation tr:lang="es" >Directorio</tr:translation>
+			<tr:translation tr:lang="fr" >Répertoire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Disable drive system" >
+			<tr:translation tr:lang="de" >Antriebssystem ausschalten</tr:translation>
+			<tr:translation tr:lang="en" >Disable drive system</tr:translation>
+			<tr:translation tr:lang="es" >Deshabilitar sistema accionador</tr:translation>
+			<tr:translation tr:lang="fr" >Désactiver système moteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Disconnect" >
+			<tr:translation tr:lang="de" >Trennen</tr:translation>
+			<tr:translation tr:lang="en" >Disconnect</tr:translation>
+			<tr:translation tr:lang="es" >Desconectar</tr:translation>
+			<tr:translation tr:lang="fr" >Déconnecter</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Disconnected" >
+			<tr:translation tr:lang="de" >Getrennt</tr:translation>
+			<tr:translation tr:lang="en" >Disconnected</tr:translation>
+			<tr:translation tr:lang="es" >Desconectado</tr:translation>
+			<tr:translation tr:lang="fr" >Déconnecté</tr:translation>
+		</tr:item>
+		<tr:item tr:key="disconnected" >
+			<tr:translation tr:lang="de" >getrennt</tr:translation>
+			<tr:translation tr:lang="en" >disconnected</tr:translation>
+			<tr:translation tr:lang="es" >desconectado</tr:translation>
+			<tr:translation tr:lang="fr" >déconnecté</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Display" >
+			<tr:translation tr:lang="de" >Anzeige</tr:translation>
+			<tr:translation tr:lang="en" >Display</tr:translation>
+			<tr:translation tr:lang="es" >Visualizador</tr:translation>
+			<tr:translation tr:lang="fr" >Affichages</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Distance[]" >
+			<tr:translation tr:lang="de" >Abstand[]</tr:translation>
+			<tr:translation tr:lang="en" >Distance[]</tr:translation>
+			<tr:translation tr:lang="es" >Distancia[]</tr:translation>
+			<tr:translation tr:lang="fr" >Distance[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Distance \[m]" >
+			<tr:translation tr:lang="de" >Abstand \[m]</tr:translation>
+			<tr:translation tr:lang="en" >Distance \[m]</tr:translation>
+			<tr:translation tr:lang="es" >Distancia \[m]</tr:translation>
+			<tr:translation tr:lang="fr" >Distance \[m]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Dividend" >
+			<tr:translation tr:lang="de" >Dividend</tr:translation>
+			<tr:translation tr:lang="en" >Dividend</tr:translation>
+			<tr:translation tr:lang="es" >Dividendo</tr:translation>
+			<tr:translation tr:lang="fr" >Dividende</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Division" >
+			<tr:translation tr:lang="de" >Division</tr:translation>
+			<tr:translation tr:lang="en" >Division</tr:translation>
+			<tr:translation tr:lang="es" >División</tr:translation>
+			<tr:translation tr:lang="fr" >Division</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Divisor" >
+			<tr:translation tr:lang="de" >Divisor</tr:translation>
+			<tr:translation tr:lang="en" >Divisor</tr:translation>
+			<tr:translation tr:lang="es" >Divisor</tr:translation>
+			<tr:translation tr:lang="fr" >Diviseur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Dot Product" >
+			<tr:translation tr:lang="de" >Skalarprodukt</tr:translation>
+			<tr:translation tr:lang="en" >Dot Product</tr:translation>
+			<tr:translation tr:lang="es" >Producto escalar</tr:translation>
+			<tr:translation tr:lang="fr" >Produit scalaire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Drive" >
+			<tr:translation tr:lang="de" >Fahren</tr:translation>
+			<tr:translation tr:lang="en" >Drive</tr:translation>
+			<tr:translation tr:lang="es" >Accionamiento</tr:translation>
+			<tr:translation tr:lang="fr" >Rouler</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Drive system" >
+			<tr:translation tr:lang="de" >Antriebssystem</tr:translation>
+			<tr:translation tr:lang="en" >Drive system</tr:translation>
+			<tr:translation tr:lang="es" >Sistema de accionamiento</tr:translation>
+			<tr:translation tr:lang="fr" >Système moteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Edit speed" >
+			<tr:translation tr:lang="de" >Geschw. bearbeiten</tr:translation>
+			<tr:translation tr:lang="en" >Edit speed</tr:translation>
+			<tr:translation tr:lang="es" >Variar velocidad</tr:translation>
+			<tr:translation tr:lang="fr" >Changer vélocité</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Enable" >
+			<tr:translation tr:lang="de" >Aktiv</tr:translation>
+			<tr:translation tr:lang="en" >Enable</tr:translation>
+			<tr:translation tr:lang="es" >Habilitar</tr:translation>
+			<tr:translation tr:lang="fr" >Activer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="enabled" >
+			<tr:translation tr:lang="de" >aktiviert</tr:translation>
+			<tr:translation tr:lang="en" >enabled</tr:translation>
+			<tr:translation tr:lang="es" >habilitar</tr:translation>
+			<tr:translation tr:lang="fr" >activer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Enable sending message %1 output" >
+			<tr:translation tr:lang="de" >Senden von Nachricht %1 Ausgang aktiviert</tr:translation>
+			<tr:translation tr:lang="en" >Enable sending message %1 output</tr:translation>
+			<tr:translation tr:lang="es" >Habilitar envio de mensaje %1 salida </tr:translation>
+			<tr:translation tr:lang="fr" >Active l'envoi du message %1 sortie</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Encoder Input" >
+			<tr:translation tr:lang="de" >Drehgebereingang</tr:translation>
+			<tr:translation tr:lang="en" >Encoder Input</tr:translation>
+			<tr:translation tr:lang="es" >Entrada del transmisor giratorio</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée de codeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Equality" >
+			<tr:translation tr:lang="de" >Gleich</tr:translation>
+			<tr:translation tr:lang="en" >Equality</tr:translation>
+			<tr:translation tr:lang="es" >Igualdad</tr:translation>
+			<tr:translation tr:lang="fr" >Égal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Error" >
+			<tr:translation tr:lang="de" >Fehler</tr:translation>
+			<tr:translation tr:lang="en" >Error</tr:translation>
+			<tr:translation tr:lang="es" >Error</tr:translation>
+			<tr:translation tr:lang="fr" >Erreur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Factor[]" >
+			<tr:translation tr:lang="de" >Faktor[]</tr:translation>
+			<tr:translation tr:lang="en" >Factor[]</tr:translation>
+			<tr:translation tr:lang="es" >Factor[]</tr:translation>
+			<tr:translation tr:lang="fr" >Facteur[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Filter" >
+			<tr:translation tr:lang="de" >Filter</tr:translation>
+			<tr:translation tr:lang="en" >Filter</tr:translation>
+			<tr:translation tr:lang="es" >Filtro</tr:translation>
+			<tr:translation tr:lang="fr" >Filtre</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Fit" >
+			<tr:translation tr:lang="de" >Einpassen</tr:translation>
+			<tr:translation tr:lang="en" >Fit</tr:translation>
+			<tr:translation tr:lang="es" >Ajustar</tr:translation>
+			<tr:translation tr:lang="fr" >Ajuster</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Float array composer" >
+			<tr:translation tr:lang="de" >Fließkommafeld-Zusammensetzer</tr:translation>
+			<tr:translation tr:lang="en" >Float array composer</tr:translation>
+			<tr:translation tr:lang="es" >Componer matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Composeur de float array</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Float array decomposer" >
+			<tr:translation tr:lang="de" >Fließkommafeld-Zerleger</tr:translation>
+			<tr:translation tr:lang="en" >Float array decomposer</tr:translation>
+			<tr:translation tr:lang="es" >Descomponer matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Décomposeur de float array</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Float array splitter" >
+			<tr:translation tr:lang="de" >Fließkommafeld-Zerhacker</tr:translation>
+			<tr:translation tr:lang="en" >Float array splitter</tr:translation>
+			<tr:translation tr:lang="es" >Desmenuzadora matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Découpeur de float array</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Float array index access" >
+			<tr:translation tr:lang="de" >Fließkommafeld Indexzugriff</tr:translation>
+			<tr:translation tr:lang="en" >Float array index access</tr:translation>
+			<tr:translation tr:lang="es" >Acceso al índice de la matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Accès indexé au float array</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Frequency" >
+			<tr:translation tr:lang="de" >Frequenz</tr:translation>
+			<tr:translation tr:lang="en" >Frequency</tr:translation>
+			<tr:translation tr:lang="es" >Frecuencia</tr:translation>
+			<tr:translation tr:lang="fr" >Fréquence</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Function" >
+			<tr:translation tr:lang="de" >Funktion</tr:translation>
+			<tr:translation tr:lang="en" >Function</tr:translation>
+			<tr:translation tr:lang="es" >Función</tr:translation>
+			<tr:translation tr:lang="fr" >Fonction</tr:translation>
+		</tr:item>
+		<tr:item tr:key="General" >
+			<tr:translation tr:lang="de" >Allgemein</tr:translation>
+			<tr:translation tr:lang="en" >General</tr:translation>
+			<tr:translation tr:lang="es" >General</tr:translation>
+			<tr:translation tr:lang="fr" >Général</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Generators" >
+			<tr:translation tr:lang="de" >Generatoren</tr:translation>
+			<tr:translation tr:lang="en" >Generators</tr:translation>
+			<tr:translation tr:lang="es" >Generadores</tr:translation>
+			<tr:translation tr:lang="fr" >Générateur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Generic" >
+			<tr:translation tr:lang="de" >Funktionsblockbibliothek</tr:translation>
+			<tr:translation tr:lang="en" >Function block library</tr:translation>
+			<tr:translation tr:lang="es" >Librería de bloques de función</tr:translation>
+			<tr:translation tr:lang="fr" >Bibliothèque de blocs de fonction</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Greater" >
+			<tr:translation tr:lang="de" >Größer</tr:translation>
+			<tr:translation tr:lang="en" >Greater</tr:translation>
+			<tr:translation tr:lang="es" >Mayor</tr:translation>
+			<tr:translation tr:lang="fr" >Supérieur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Greater Equal" >
+			<tr:translation tr:lang="de" >Größer gleich</tr:translation>
+			<tr:translation tr:lang="en" >Greater Equal</tr:translation>
+			<tr:translation tr:lang="es" >Mayor o igual</tr:translation>
+			<tr:translation tr:lang="fr" >Supérieur égal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Gripper" >
+			<tr:translation tr:lang="de" >Greifer</tr:translation>
+			<tr:translation tr:lang="en" >Gripper</tr:translation>
+			<tr:translation tr:lang="es" >Pinza</tr:translation>
+			<tr:translation tr:lang="fr" >Pince</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Heading \[deg]" >
+			<tr:translation tr:lang="de" >Orientierung \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Heading \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Orientación \[gra]</tr:translation>
+			<tr:translation tr:lang="fr" >Orientation \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Height" >
+			<tr:translation tr:lang="de" >Höhe</tr:translation>
+			<tr:translation tr:lang="en" >Height</tr:translation>
+			<tr:translation tr:lang="es" >Altura</tr:translation>
+			<tr:translation tr:lang="fr" >Altitude</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Holonomic" >
+			<tr:translation tr:lang="de" >Holonom</tr:translation>
+			<tr:translation tr:lang="en" >Holonomic</tr:translation>
+			<tr:translation tr:lang="es" >Holonómo</tr:translation>
+			<tr:translation tr:lang="fr" >Holonom</tr:translation>
+		</tr:item>
+		<tr:item tr:key="I/O connector" >
+			<tr:translation tr:lang="de" >E/A Anschluss</tr:translation>
+			<tr:translation tr:lang="en" >I/O connector</tr:translation>
+			<tr:translation tr:lang="es" >Conector E/S</tr:translation>
+			<tr:translation tr:lang="fr" >Connecteur d'E/S</tr:translation>
+		</tr:item>
+		<tr:item tr:key="I/O extension" >
+			<tr:translation tr:lang="de" >E/A Erweiterung</tr:translation>
+			<tr:translation tr:lang="en" >I/O extension</tr:translation>
+			<tr:translation tr:lang="es" >Ampliación E/S</tr:translation>
+			<tr:translation tr:lang="fr" >Extension d'E/S</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image" >
+			<tr:translation tr:lang="de" >Bild</tr:translation>
+			<tr:translation tr:lang="en" >Image</tr:translation>
+			<tr:translation tr:lang="es" >Imagen</tr:translation>
+			<tr:translation tr:lang="fr" >Image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image center" >
+			<tr:translation tr:lang="de" >Bildmitte</tr:translation>
+			<tr:translation tr:lang="en" >Image center</tr:translation>
+			<tr:translation tr:lang="es" >Imagen centro</tr:translation>
+			<tr:translation tr:lang="fr" >Image centre</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image Information" >
+			<tr:translation tr:lang="de" >Bildinformation</tr:translation>
+			<tr:translation tr:lang="en" >Image Information</tr:translation>
+			<tr:translation tr:lang="es" >Información de la imagen</tr:translation>
+			<tr:translation tr:lang="fr" >Information d'image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image Reader" >
+			<tr:translation tr:lang="de" >Bildleser</tr:translation>
+			<tr:translation tr:lang="en" >Image Reader</tr:translation>
+			<tr:translation tr:lang="es" >Lector de imagen</tr:translation>
+			<tr:translation tr:lang="fr" >Lecteur d'image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image size" >
+			<tr:translation tr:lang="de" >Bildgröße</tr:translation>
+			<tr:translation tr:lang="en" >Image size</tr:translation>
+			<tr:translation tr:lang="es" >Tamaño de imagen</tr:translation>
+			<tr:translation tr:lang="fr" >Taille d'image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image system" >
+			<tr:translation tr:lang="de" >Bildaufnahme</tr:translation>
+			<tr:translation tr:lang="en" >Image system</tr:translation>
+			<tr:translation tr:lang="es" >Sistema de imágenes</tr:translation>
+			<tr:translation tr:lang="fr" >Prise de vue</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Image Writer" >
+			<tr:translation tr:lang="de" >Bildschreiber</tr:translation>
+			<tr:translation tr:lang="en" >Image Writer</tr:translation>
+			<tr:translation tr:lang="es" >Grabador de imágenes</tr:translation>
+			<tr:translation tr:lang="fr" >Enregistreur d'image</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Index" >
+			<tr:translation tr:lang="de" >Index</tr:translation>
+			<tr:translation tr:lang="en" >Index</tr:translation>
+			<tr:translation tr:lang="es" >Índice</tr:translation>
+			<tr:translation tr:lang="fr" >Index</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Index[]" >
+			<tr:translation tr:lang="de" >Index[]</tr:translation>
+			<tr:translation tr:lang="en" >Index[]</tr:translation>
+			<tr:translation tr:lang="es" >Índice[]</tr:translation>
+			<tr:translation tr:lang="fr" >Index[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Inequality" >
+			<tr:translation tr:lang="de" >Ungleich</tr:translation>
+			<tr:translation tr:lang="en" >Inequality</tr:translation>
+			<tr:translation tr:lang="es" >Diferente</tr:translation>
+			<tr:translation tr:lang="fr" >Différent</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Initialization" >
+			<tr:translation tr:lang="de" >Initialisierung</tr:translation>
+			<tr:translation tr:lang="en" >Initialization</tr:translation>
+			<tr:translation tr:lang="es" >la inicialización</tr:translation>
+			<tr:translation tr:lang="fr" >Initialisation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Initial value" >
+			<tr:translation tr:lang="de" >Anfangswert</tr:translation>
+			<tr:translation tr:lang="en" >Initial value</tr:translation>
+			<tr:translation tr:lang="es" >Valor inicial</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur initiale</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Input devices" >
+			<tr:translation tr:lang="de" >Eingabegeräte</tr:translation>
+			<tr:translation tr:lang="en" >Input devices</tr:translation>
+			<tr:translation tr:lang="es" >Dispositivos de entrada</tr:translation>
+			<tr:translation tr:lang="fr" >Dispositifs d'entrée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Input" >
+			<tr:translation tr:lang="de" >Eingang</tr:translation>
+			<tr:translation tr:lang="en" >Input</tr:translation>
+			<tr:translation tr:lang="es" >Entrada</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Input[]" >
+			<tr:translation tr:lang="de" >Eingang[]</tr:translation>
+			<tr:translation tr:lang="en" >Input[]</tr:translation>
+			<tr:translation tr:lang="es" >Entrada[]</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Input[] INT[]" >
+			<tr:translation tr:lang="de" >Eingang[] INT[]</tr:translation>
+			<tr:translation tr:lang="en" >Input[] INT[]</tr:translation>
+			<tr:translation tr:lang="es" >Entrada[] INT[]</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée[] INT[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Inputs" >
+			<tr:translation tr:lang="de" >Eingänge</tr:translation>
+			<tr:translation tr:lang="en" >Inputs</tr:translation>
+			<tr:translation tr:lang="es" >Entradas</tr:translation>
+			<tr:translation tr:lang="fr" >Entrées</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Interfaces" >
+			<tr:translation tr:lang="de" >Schnittstelle</tr:translation>
+			<tr:translation tr:lang="en" >Interfaces</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Internal sensors" >
+			<tr:translation tr:lang="de" >Interne Sensoren</tr:translation>
+			<tr:translation tr:lang="en" >Internal sensors</tr:translation>
+			<tr:translation tr:lang="es" >Sensores internos</tr:translation>
+			<tr:translation tr:lang="fr" >Capteurs internes</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Interval" >
+			<tr:translation tr:lang="de" >Intervall</tr:translation>
+			<tr:translation tr:lang="en" >Interval</tr:translation>
+			<tr:translation tr:lang="es" >Intervalo</tr:translation>
+			<tr:translation tr:lang="fr" >Intervalle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="IP Address" >
+			<tr:translation tr:lang="de" >IP Adresse</tr:translation>
+			<tr:translation tr:lang="en" >IP Address</tr:translation>
+			<tr:translation tr:lang="es" >Dirección IP</tr:translation>
+			<tr:translation tr:lang="fr" >Adresse IP</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Laser rangefinder" >
+			<tr:translation tr:lang="de" >Laserscanner</tr:translation>
+			<tr:translation tr:lang="en" >Laser rangefinder</tr:translation>
+			<tr:translation tr:lang="es" >Sensor de distancia láser</tr:translation>
+			<tr:translation tr:lang="fr" >Scanner laser</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Laser rangefinder info" >
+			<tr:translation tr:lang="de" >Laserscanner Information</tr:translation>
+			<tr:translation tr:lang="en" >Laser rangefinder info</tr:translation>
+			<tr:translation tr:lang="es" >Información de la sensor de distancia láser</tr:translation>
+			<tr:translation tr:lang="fr" >Information d'laser</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Laser rangefinder analysis" >
+			<tr:translation tr:lang="de" >Laserscanner Auswertung</tr:translation>
+			<tr:translation tr:lang="en" >Laser rangefinder analysis</tr:translation>
+			<tr:translation tr:lang="es" >Sensor de distancia láser análisis</tr:translation>
+			<tr:translation tr:lang="fr" >Scanner lase évaluation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Length" >
+			<tr:translation tr:lang="de" >Länge</tr:translation>
+			<tr:translation tr:lang="en" >Length</tr:translation>
+			<tr:translation tr:lang="es" >Longitud</tr:translation>
+			<tr:translation tr:lang="fr" >Longueur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Less" >
+			<tr:translation tr:lang="de" >Kleiner</tr:translation>
+			<tr:translation tr:lang="en" >Less</tr:translation>
+			<tr:translation tr:lang="es" >Menor</tr:translation>
+			<tr:translation tr:lang="fr" >Inférieur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Less Equal" >
+			<tr:translation tr:lang="de" >Kleiner gleich</tr:translation>
+			<tr:translation tr:lang="en" >Less Equal</tr:translation>
+			<tr:translation tr:lang="es" >Menor o igual</tr:translation>
+			<tr:translation tr:lang="fr" >Inférieur égal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Line" >
+			<tr:translation tr:lang="de" >Strang</tr:translation>
+			<tr:translation tr:lang="en" >Line</tr:translation>
+			<tr:translation tr:lang="es" >Conducción</tr:translation>
+			<tr:translation tr:lang="fr" >Conduite</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Line Detector" >
+			<tr:translation tr:lang="de" >Linienerkenner</tr:translation>
+			<tr:translation tr:lang="en" >Line Detector</tr:translation>
+			<tr:translation tr:lang="es" >Detector de líneas</tr:translation>
+			<tr:translation tr:lang="fr" >Détecteur de ligne</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Line found" >
+			<tr:translation tr:lang="de" >Linie gefunden</tr:translation>
+			<tr:translation tr:lang="en" >Line found</tr:translation>
+			<tr:translation tr:lang="es" >Línea encontrada</tr:translation>
+			<tr:translation tr:lang="fr" >Ligne trouvée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Listeners" >
+			<tr:translation tr:lang="de" >Zuhörer</tr:translation>
+			<tr:translation tr:lang="en" >Listeners</tr:translation>
+			<tr:translation tr:lang="es" >Receptores</tr:translation>
+			<tr:translation tr:lang="fr" >Auditeurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Load" >
+			<tr:translation tr:lang="de" >Laden</tr:translation>
+			<tr:translation tr:lang="en" >Load</tr:translation>
+			<tr:translation tr:lang="es" >Carga</tr:translation>
+			<tr:translation tr:lang="fr" >Charger</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Local camera" >
+			<tr:translation tr:lang="de" >Lokale Kamera</tr:translation>
+			<tr:translation tr:lang="en" >Local camera</tr:translation>
+			<tr:translation tr:lang="es" >Cámara local</tr:translation>
+			<tr:translation tr:lang="fr" >Caméra locale</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Logic" >
+			<tr:translation tr:lang="de" >Logik</tr:translation>
+			<tr:translation tr:lang="en" >Logic</tr:translation>
+			<tr:translation tr:lang="es" >Lógica</tr:translation>
+			<tr:translation tr:lang="fr" >Logique</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Logic_logicops" >
+			<tr:translation tr:lang="de" >Logische Operationen</tr:translation>
+			<tr:translation tr:lang="en" >Logic operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones lógicas</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations logiques</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Logic_triggered" >
+			<tr:translation tr:lang="de" >Getriggerte Operationen</tr:translation>
+			<tr:translation tr:lang="en" >Triggered operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones desencadenadas</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations déclenchées</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Logic_bitwise" >
+			<tr:translation tr:lang="de" >Bitweise Operationen</tr:translation>
+			<tr:translation tr:lang="en" >Bitwise operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones a nivel de bits</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations sur les bits</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Manipulator" >
+			<tr:translation tr:lang="de" >Manipulator</tr:translation>
+			<tr:translation tr:lang="en" >Manipulator</tr:translation>
+			<tr:translation tr:lang="es" >El manipulador</tr:translation>
+			<tr:translation tr:lang="fr" >Manipulateur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math" >
+			<tr:translation tr:lang="de" >Mathematik</tr:translation>
+			<tr:translation tr:lang="en" >Mathematics</tr:translation>
+			<tr:translation tr:lang="es" >Matemáticas</tr:translation>
+			<tr:translation tr:lang="fr" >Mathématiques</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math_arithops" >
+			<tr:translation tr:lang="de" >Arithmetische Operationen</tr:translation>
+			<tr:translation tr:lang="en" >Arithmetic operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones aritméticas</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations arithmétiques</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math_arrays" >
+			<tr:translation tr:lang="de" >Felder</tr:translation>
+			<tr:translation tr:lang="en" >Arrays</tr:translation>
+			<tr:translation tr:lang="es" >Matrices</tr:translation>
+			<tr:translation tr:lang="fr" >Tableaux</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math_compareops" >
+			<tr:translation tr:lang="de" >Vergleichende Operationen</tr:translation>
+			<tr:translation tr:lang="en" >Comparison operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones de comparación</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations de comparaison</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math_functions" >
+			<tr:translation tr:lang="de" >Funktionen</tr:translation>
+			<tr:translation tr:lang="en" >Functions</tr:translation>
+			<tr:translation tr:lang="es" >Funciones</tr:translation>
+			<tr:translation tr:lang="fr" >Fonctions</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Math_trigonometry" >
+			<tr:translation tr:lang="de" >Trigonometrie</tr:translation>
+			<tr:translation tr:lang="en" >Trigonometry</tr:translation>
+			<tr:translation tr:lang="es" >Trigonometría</tr:translation>
+			<tr:translation tr:lang="fr" >Trigonométrie</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Max" >
+			<tr:translation tr:lang="de" >Max</tr:translation>
+			<tr:translation tr:lang="en" >Max</tr:translation>
+			<tr:translation tr:lang="es" >Máx.</tr:translation>
+			<tr:translation tr:lang="fr" >max.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Maximum" >
+			<tr:translation tr:lang="de" >Maximum</tr:translation>
+			<tr:translation tr:lang="en" >Maximum</tr:translation>
+			<tr:translation tr:lang="es" >Máximo</tr:translation>
+			<tr:translation tr:lang="fr" >Maximum</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Maximum area" >
+			<tr:translation tr:lang="de">Maximale Fläche</tr:translation>
+			<tr:translation tr:lang="en" >Maximum area</tr:translation>
+			<tr:translation tr:lang="es" >Superficie máxima</tr:translation>
+			<tr:translation tr:lang="fr" >Surface maximale</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Mean Filter" >
+			<tr:translation tr:lang="de" >Mittelwertfilter</tr:translation>
+			<tr:translation tr:lang="en" >Mean Filter</tr:translation>
+			<tr:translation tr:lang="es" >Filtro de valor medio</tr:translation>
+			<tr:translation tr:lang="fr" >Filtre moyen</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Message[]" >
+			<tr:translation tr:lang="de" >Nachricht[]</tr:translation>
+			<tr:translation tr:lang="en" >Message[]</tr:translation>
+			<tr:translation tr:lang="es" >Mensaje[]</tr:translation>
+			<tr:translation tr:lang="fr" >Message[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Min" >
+			<tr:translation tr:lang="de" >Min</tr:translation>
+			<tr:translation tr:lang="en" >Min</tr:translation>
+			<tr:translation tr:lang="es" >Mín.</tr:translation>
+			<tr:translation tr:lang="fr" >min.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minimum" >
+			<tr:translation tr:lang="de" >Minimum</tr:translation>
+			<tr:translation tr:lang="en" >Minimum</tr:translation>
+			<tr:translation tr:lang="es" >Mínimo</tr:translation>
+			<tr:translation tr:lang="fr" >Minimum</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minimum area" >
+			<tr:translation tr:lang="de" >Minimale Fläche</tr:translation>
+			<tr:translation tr:lang="en" >Minimum area</tr:translation>
+			<tr:translation tr:lang="es" >Superficie mínima</tr:translation>
+			<tr:translation tr:lang="fr" >Surface minimale</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minimum area \[pixel]" >
+			<tr:translation tr:lang="de" >Minimale Fläche \[pixel]</tr:translation>
+			<tr:translation tr:lang="en" >Minimum area \[pixel]</tr:translation>
+			<tr:translation tr:lang="es" >Superficie mínima \[pixel]</tr:translation>
+			<tr:translation tr:lang="fr" >Surface minimale \[pixel]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minuend" >
+			<tr:translation tr:lang="de" >Minuend</tr:translation>
+			<tr:translation tr:lang="en" >Minuend</tr:translation>
+			<tr:translation tr:lang="es" >Minuendo</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre à diminuer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Modulo" >
+			<tr:translation tr:lang="de" >Modulo</tr:translation>
+			<tr:translation tr:lang="en" >Modulo</tr:translation>
+			<tr:translation tr:lang="es" >Módulo</tr:translation>
+			<tr:translation tr:lang="fr" >Modulo</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Motor" >
+			<tr:translation tr:lang="de" >Motor</tr:translation>
+			<tr:translation tr:lang="en" >Motor</tr:translation>
+			<tr:translation tr:lang="es" >Motor</tr:translation>
+			<tr:translation tr:lang="fr" >Moteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Motor[]" >
+			<tr:translation tr:lang="de" >Motor[]</tr:translation>
+			<tr:translation tr:lang="en" >Motor[]</tr:translation>
+			<tr:translation tr:lang="es" >Motor[]</tr:translation>
+			<tr:translation tr:lang="fr" >Moteur[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Movement" >
+			<tr:translation tr:lang="de" >Bewegung</tr:translation>
+			<tr:translation tr:lang="en" >Movement</tr:translation>
+			<tr:translation tr:lang="es" >Movimiento</tr:translation>
+			<tr:translation tr:lang="fr" >Mouvement</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Moving" >
+			<tr:translation tr:lang="de" >In Bewegung</tr:translation>
+			<tr:translation tr:lang="en" >Moving</tr:translation>
+			<tr:translation tr:lang="es" >En movimiento</tr:translation>
+			<tr:translation tr:lang="fr" >En mouvement</tr:translation>
+		</tr:item>
+		<tr:item tr:key="ms" >
+			<tr:translation tr:lang="de" >ms</tr:translation>
+			<tr:translation tr:lang="en" >ms</tr:translation>
+			<tr:translation tr:lang="es" >ms</tr:translation>
+			<tr:translation tr:lang="fr" >ms</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Multiplexer" >
+			<tr:translation tr:lang="de" >Multiplexer</tr:translation>
+			<tr:translation tr:lang="en" >Multiplexer</tr:translation>
+			<tr:translation tr:lang="es" >Multiplexor</tr:translation>
+			<tr:translation tr:lang="fr" >Multiplexeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Multiplication" >
+			<tr:translation tr:lang="de" >Multiplikation</tr:translation>
+			<tr:translation tr:lang="en" >Multiplication</tr:translation>
+			<tr:translation tr:lang="es" >Multiplicación</tr:translation>
+			<tr:translation tr:lang="fr" >Multiplication</tr:translation>
+		</tr:item>
+		<tr:item tr:key="MyFuncBlocks" >
+			<tr:translation tr:lang="de" >Eigene Funktionsblöcke</tr:translation>
+			<tr:translation tr:lang="en" >My function blocks</tr:translation>
+			<tr:translation tr:lang="es" >Mis bloques de función</tr:translation>
+			<tr:translation tr:lang="fr" >Mes blocs de fonction</tr:translation>
+		</tr:item>
+		<tr:item tr:key="name" >
+			<tr:translation tr:lang="de" >Name</tr:translation>
+			<tr:translation tr:lang="en" >name</tr:translation>
+			<tr:translation tr:lang="es" >Nombre</tr:translation>
+			<tr:translation tr:lang="fr" >Nom</tr:translation>
+		</tr:item>
+		<tr:item tr:key="NAND" >
+			<tr:translation tr:lang="de" >NAND</tr:translation>
+			<tr:translation tr:lang="en" >NAND</tr:translation>
+			<tr:translation tr:lang="es" >NAND</tr:translation>
+			<tr:translation tr:lang="fr" >NAND</tr:translation>
+		</tr:item>
+		<tr:item tr:key="NAND FL" >
+			<tr:translation tr:lang="de" >NAND FL</tr:translation>
+			<tr:translation tr:lang="en" >NAND FL</tr:translation>
+			<tr:translation tr:lang="es" >NAND FL</tr:translation>
+			<tr:translation tr:lang="fr" >NAND FL</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Navigation" >
+			<tr:translation tr:lang="de" >Navigation</tr:translation>
+			<tr:translation tr:lang="en" >Navigation</tr:translation>
+			<tr:translation tr:lang="es" >Navegación</tr:translation>
+			<tr:translation tr:lang="fr" >Navigation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="New configuration" >
+			<tr:translation tr:lang="de" >Neue Konfiguration</tr:translation>
+			<tr:translation tr:lang="en" >New configuration</tr:translation>
+			<tr:translation tr:lang="es" >Nueva configuración</tr:translation>
+			<tr:translation tr:lang="fr" >Nouvelle configuration</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Next waypoint" >
+			<tr:translation tr:lang="de" >Nächster Wegpunkt</tr:translation>
+			<tr:translation tr:lang="en" >Next waypoint</tr:translation>
+			<tr:translation tr:lang="es" >Siguiente punto de referencia</tr:translation>
+			<tr:translation tr:lang="fr" >Point de cheminement suivant</tr:translation>
+		</tr:item>
+		<tr:item tr:key="none" >
+			<tr:translation tr:lang="de" >kein</tr:translation>
+			<tr:translation tr:lang="en" >none</tr:translation>
+			<tr:translation tr:lang="es" >ninguno</tr:translation>
+			<tr:translation tr:lang="fr" >aucun</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Nonholonomic" >
+			<tr:translation tr:lang="de" >Nicht holonom</tr:translation>
+			<tr:translation tr:lang="en" >Nonholonomic</tr:translation>
+			<tr:translation tr:lang="es" >No holonómo</tr:translation>
+			<tr:translation tr:lang="fr" >Non holonome</tr:translation>
+		</tr:item>
+		<tr:item tr:key="NOR" >
+			<tr:translation tr:lang="de" >NOR</tr:translation>
+			<tr:translation tr:lang="en" >NOR</tr:translation>
+			<tr:translation tr:lang="es" >NOR</tr:translation>
+			<tr:translation tr:lang="fr" >NOR</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Norm" >
+			<tr:translation tr:lang="de" >Norm</tr:translation>
+			<tr:translation tr:lang="en" >Norm</tr:translation>
+			<tr:translation tr:lang="es" >Norma</tr:translation>
+			<tr:translation tr:lang="fr" >Norme</tr:translation>
+		</tr:item>
+		<tr:item tr:key="North Star" >
+			<tr:translation tr:lang="de" >North Star ®</tr:translation>
+			<tr:translation tr:lang="en" >North Star ®</tr:translation>
+			<tr:translation tr:lang="es" >North Star ®</tr:translation>
+			<tr:translation tr:lang="fr" >North Star ®</tr:translation>
+		</tr:item>
+		<tr:item tr:key="NOT" >
+			<tr:translation tr:lang="de" >NOT</tr:translation>
+			<tr:translation tr:lang="en" >NOT</tr:translation>
+			<tr:translation tr:lang="es" >NOT</tr:translation>
+			<tr:translation tr:lang="fr" >NOT</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Not connected." >
+			<tr:translation tr:lang="de" >Keine Verbindung.</tr:translation>
+			<tr:translation tr:lang="en" >Not connected.</tr:translation>
+			<tr:translation tr:lang="es" >No conectado.</tr:translation>
+			<tr:translation tr:lang="fr" >Pas de connexion.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number" >
+			<tr:translation tr:lang="de" >Nummer</tr:translation>
+			<tr:translation tr:lang="en" >Number</tr:translation>
+			<tr:translation tr:lang="es" >Número</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of axes" >
+			<tr:translation tr:lang="de" >Anzahl der Achsen</tr:translation>
+			<tr:translation tr:lang="en" >Number of axes</tr:translation>
+			<tr:translation tr:lang="es" >Número de ejes</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre d'axes</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of buttons" >
+			<tr:translation tr:lang="de" >Anzahl der Knöpfe</tr:translation>
+			<tr:translation tr:lang="en" >Number of buttons</tr:translation>
+			<tr:translation tr:lang="es" >Número de botones</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de boutons</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of channels" >
+			<tr:translation tr:lang="de" >Anzahl der Kanäle</tr:translation>
+			<tr:translation tr:lang="en" >Number of channels</tr:translation>
+			<tr:translation tr:lang="es" >Número de canales</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de canaux</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of inputs" >
+			<tr:translation tr:lang="de" >Anzahl der Eingänge</tr:translation>
+			<tr:translation tr:lang="en" >Number of inputs</tr:translation>
+			<tr:translation tr:lang="es" >Número de entradas</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre d'entrées</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of outputs" >
+			<tr:translation tr:lang="de" >Anzahl der Ausgänge</tr:translation>
+			<tr:translation tr:lang="en" >Number of outputs</tr:translation>
+			<tr:translation tr:lang="es" >Número de salidas</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de sorties</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of projectors" >
+			<tr:translation tr:lang="de" >Anzahl der Projektoren</tr:translation>
+			<tr:translation tr:lang="en" >Number of projectors</tr:translation>
+			<tr:translation tr:lang="es" >Número de proyectores</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de projecteurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of subtrahends" >
+			<tr:translation tr:lang="de" >Anzahl der Subtrahenden</tr:translation>
+			<tr:translation tr:lang="en" >Number of subtrahends</tr:translation>
+			<tr:translation tr:lang="es" >Número de sustraendos</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de nombres à soustraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Obstacle avoidance" >
+			<tr:translation tr:lang="de" >Hindernisvermeidung</tr:translation>
+			<tr:translation tr:lang="en" >Obstacle avoidance</tr:translation>
+			<tr:translation tr:lang="es" >Evasión de obstáculos</tr:translation>
+			<tr:translation tr:lang="fr" >Evitement d'obstacle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Obstacle pose" >
+			<tr:translation tr:lang="de" >Hindernispose</tr:translation>
+			<tr:translation tr:lang="en" >Obstacle pose</tr:translation>
+			<tr:translation tr:lang="es" >Pose del obstáculo</tr:translation>
+			<tr:translation tr:lang="fr" >Pose d'obstacle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Obstacle radius" >
+			<tr:translation tr:lang="de" >Hindernisradius</tr:translation>
+			<tr:translation tr:lang="en" >Obstacle radius</tr:translation>
+			<tr:translation tr:lang="es" >Radio del obstáculo</tr:translation>
+			<tr:translation tr:lang="fr" >Rayon d'obstacle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Odometry" >
+			<tr:translation tr:lang="de" >Odometrie</tr:translation>
+			<tr:translation tr:lang="en" >Odometry</tr:translation>
+			<tr:translation tr:lang="es" >Odometría</tr:translation>
+			<tr:translation tr:lang="fr" >Odométrie</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Drive System" >
+			<tr:translation tr:lang="de" >Antriebssystem</tr:translation>
+			<tr:translation tr:lang="en" >Drive System</tr:translation>
+			<tr:translation tr:lang="es" >Système d'entraînement</tr:translation>
+			<tr:translation tr:lang="fr" >Système d'entraînement</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Omnidrive" >
+			<tr:translation tr:lang="de" >Omniantrieb</tr:translation>
+			<tr:translation tr:lang="en" >Omnidrive</tr:translation>
+			<tr:translation tr:lang="es" >Onmiaccionamiento</tr:translation>
+			<tr:translation tr:lang="fr" >Entraînement omnidirectionnel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Omnidrive (inverse)" >
+			<tr:translation tr:lang="de" >Omniantrieb (invers)</tr:translation>
+			<tr:translation tr:lang="en" >Omnidrive (inverse)</tr:translation>
+			<tr:translation tr:lang="es" >Omniaccionamiento (inverso)</tr:translation>
+			<tr:translation tr:lang="fr" >Entraînement omnidir. (inverse)</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Open" >
+			<tr:translation tr:lang="de" >Öffnen</tr:translation>
+			<tr:translation tr:lang="en" >Open</tr:translation>
+			<tr:translation tr:lang="es" >Abrir</tr:translation>
+			<tr:translation tr:lang="fr" >Ouvrir</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Close" >
+			<tr:translation tr:lang="de" >Schließen</tr:translation>
+			<tr:translation tr:lang="en" >Close</tr:translation>
+			<tr:translation tr:lang="es" >Cerrar</tr:translation>
+			<tr:translation tr:lang="fr" >Fermer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Opened" >
+			<tr:translation tr:lang="de" >Geöffnet</tr:translation>
+			<tr:translation tr:lang="en" >Opened</tr:translation>
+			<tr:translation tr:lang="es" >Abierto</tr:translation>
+			<tr:translation tr:lang="fr" >ouvert</tr:translation>
+		</tr:item>
+		<tr:item tr:key="OR" >
+			<tr:translation tr:lang="de" >OR</tr:translation>
+			<tr:translation tr:lang="en" >OR</tr:translation>
+			<tr:translation tr:lang="es" >OR</tr:translation>
+			<tr:translation tr:lang="fr" >OR</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Orientation" >
+			<tr:translation tr:lang="de" >Orientierung</tr:translation>
+			<tr:translation tr:lang="en" >Orientation</tr:translation>
+			<tr:translation tr:lang="es" >Orientación</tr:translation>
+			<tr:translation tr:lang="fr" >Orientation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Orientation in" >
+			<tr:translation tr:lang="de" >Orientierung in</tr:translation>
+			<tr:translation tr:lang="en" >Orientation in</tr:translation>
+			<tr:translation tr:lang="es" >Orientación en</tr:translation>
+			<tr:translation tr:lang="fr" >Orientation dans</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Orientation reached" >
+			<tr:translation tr:lang="de" >Orientierung erreicht</tr:translation>
+			<tr:translation tr:lang="en" >Orientation reached</tr:translation>
+			<tr:translation tr:lang="es" >Orientación alcanzada</tr:translation>
+			<tr:translation tr:lang="fr" >Orientation atteinte</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Orientation valid" >
+			<tr:translation tr:lang="de" >Orientierung gültig</tr:translation>
+			<tr:translation tr:lang="en" >Orientation valid</tr:translation>
+			<tr:translation tr:lang="es" >Orientación válida</tr:translation>
+			<tr:translation tr:lang="fr" >Orientation valide</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Oscilloscope" >
+			<tr:translation tr:lang="de" >Oszilloskop</tr:translation>
+			<tr:translation tr:lang="en" >Oscilloscope</tr:translation>
+			<tr:translation tr:lang="es" >Osciloscopio</tr:translation>
+			<tr:translation tr:lang="fr" >Oscilloscope</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Output" >
+			<tr:translation tr:lang="de" >Ausgang</tr:translation>
+			<tr:translation tr:lang="en" >Output</tr:translation>
+			<tr:translation tr:lang="es" >Salida</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Output[]" >
+			<tr:translation tr:lang="de" >Ausgang[]</tr:translation>
+			<tr:translation tr:lang="en" >Output[]</tr:translation>
+			<tr:translation tr:lang="es" >Salida[]</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Output[] INT[]" >
+			<tr:translation tr:lang="de" >Ausgang[] INT[]</tr:translation>
+			<tr:translation tr:lang="en" >Output[] INT[]</tr:translation>
+			<tr:translation tr:lang="es" >Salida[] INT[]</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie[] INT[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Outputs" >
+			<tr:translation tr:lang="de" >Ausgänge</tr:translation>
+			<tr:translation tr:lang="en" >Outputs</tr:translation>
+			<tr:translation tr:lang="es" >Salidas</tr:translation>
+			<tr:translation tr:lang="fr" >Sorties</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Path" >
+			<tr:translation tr:lang="de" >Weg</tr:translation>
+			<tr:translation tr:lang="en" >Path</tr:translation>
+			<tr:translation tr:lang="es" >Ruta</tr:translation>
+			<tr:translation tr:lang="fr" >Itinéraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Path composer" >
+			<tr:translation tr:lang="de" >Wegzusammensetzer</tr:translation>
+			<tr:translation tr:lang="en" >Path composer</tr:translation>
+			<tr:translation tr:lang="es" >Componer ruta</tr:translation>
+			<tr:translation tr:lang="fr" >Composeur d'itinéraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Path decomposer" >
+			<tr:translation tr:lang="de" >Wegzerleger</tr:translation>
+			<tr:translation tr:lang="en" >Path decomposer</tr:translation>
+			<tr:translation tr:lang="es" >Descomponer ruta</tr:translation>
+			<tr:translation tr:lang="fr" >Décomposeur d'itinéraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Path Driver" >
+			<tr:translation tr:lang="de" >Wegbefahrer</tr:translation>
+			<tr:translation tr:lang="en" >Path Driver</tr:translation>
+			<tr:translation tr:lang="es" >Controlador de ruta</tr:translation>
+			<tr:translation tr:lang="fr" >Parcoureur d'itinéraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Path[]" >
+			<tr:translation tr:lang="de" >Weg[]</tr:translation>
+			<tr:translation tr:lang="en" >Path[]</tr:translation>
+			<tr:translation tr:lang="es" >Ruta[]</tr:translation>
+			<tr:translation tr:lang="fr" >Itinéraire[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="phi \[deg]" >
+			<tr:translation tr:lang="de" >phi \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >phi \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >phi \[gra]</tr:translation>
+			<tr:translation tr:lang="fr" >phi \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="phi actual" >
+			<tr:translation tr:lang="de" >phi Ist</tr:translation>
+			<tr:translation tr:lang="en" >phi actual</tr:translation>
+			<tr:translation tr:lang="es" >phi actual</tr:translation>
+			<tr:translation tr:lang="fr" >phi réel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="phi set" >
+			<tr:translation tr:lang="de" >phi Soll</tr:translation>
+			<tr:translation tr:lang="en" >phi set</tr:translation>
+			<tr:translation tr:lang="es" >phi ajustado</tr:translation>
+			<tr:translation tr:lang="fr" >phi consigne</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Polar to Vector" >
+			<tr:translation tr:lang="de" >Polar nach Vektor</tr:translation>
+			<tr:translation tr:lang="en" >Polar to Vector</tr:translation>
+			<tr:translation tr:lang="es" >Polar a Vector</tr:translation>
+			<tr:translation tr:lang="fr" >Polaires en vecteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Port" >
+			<tr:translation tr:lang="de" >Anschluss</tr:translation>
+			<tr:translation tr:lang="en" >Port</tr:translation>
+			<tr:translation tr:lang="es" >Puerto</tr:translation>
+			<tr:translation tr:lang="fr" >Port</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pose composer" >
+			<tr:translation tr:lang="de" >Posenzusammensetzer</tr:translation>
+			<tr:translation tr:lang="en" >Pose composer</tr:translation>
+			<tr:translation tr:lang="es" >Componer pose</tr:translation>
+			<tr:translation tr:lang="fr" >Composeur de poses</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pose decomposer" >
+			<tr:translation tr:lang="de" >Posenzerleger</tr:translation>
+			<tr:translation tr:lang="en" >Pose decomposer</tr:translation>
+			<tr:translation tr:lang="es" >Descomponer pose</tr:translation>
+			<tr:translation tr:lang="fr" >Décomposeur de poses</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pose reached" >
+			<tr:translation tr:lang="de" >Pose erreicht</tr:translation>
+			<tr:translation tr:lang="en" >Pose reached</tr:translation>
+			<tr:translation tr:lang="es" >Pose alcanzada</tr:translation>
+			<tr:translation tr:lang="fr" >Pose atteinte</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pose valid" >
+			<tr:translation tr:lang="de" >Pose gültig</tr:translation>
+			<tr:translation tr:lang="en" >Pose valid</tr:translation>
+			<tr:translation tr:lang="es" >Pose válida</tr:translation>
+			<tr:translation tr:lang="fr" >Pose valide</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position Driver" >
+			<tr:translation tr:lang="de" >Positionsfahrer</tr:translation>
+			<tr:translation tr:lang="en" >Position Driver</tr:translation>
+			<tr:translation tr:lang="es" >Controlador de posición</tr:translation>
+			<tr:translation tr:lang="fr" >Parcoureur de positions</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position reached" >
+			<tr:translation tr:lang="de" >Position erreicht</tr:translation>
+			<tr:translation tr:lang="en" >Position reached</tr:translation>
+			<tr:translation tr:lang="es" >Posición alcanzada</tr:translation>
+			<tr:translation tr:lang="fr" >Position atteinte</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position selector" >
+			<tr:translation tr:lang="de" >Positionsauswahl</tr:translation>
+			<tr:translation tr:lang="en" >Position selector</tr:translation>
+			<tr:translation tr:lang="es" >Posición selección</tr:translation>
+			<tr:translation tr:lang="fr" >Position sélection</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position View" >
+			<tr:translation tr:lang="de" >Positionsanzeige</tr:translation>
+			<tr:translation tr:lang="en" >Position View</tr:translation>
+			<tr:translation tr:lang="es" >Vista de la posición</tr:translation>
+			<tr:translation tr:lang="fr" >Affichage de position</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Power consumption \[A]" >
+			<tr:translation tr:lang="de" >Stromverbrauch \[A\]</tr:translation>
+			<tr:translation tr:lang="en" >Power consumption \[A]</tr:translation>
+			<tr:translation tr:lang="es" >Consumo de potencia</tr:translation>
+			<tr:translation tr:lang="fr" >Consommation de courant \[A]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Power Management" >
+			<tr:translation tr:lang="de" >Stromüberwachung</tr:translation>
+			<tr:translation tr:lang="en" >Power Management</tr:translation>
+			<tr:translation tr:lang="es" >Supervisión de la alimentación</tr:translation>
+			<tr:translation tr:lang="fr" >Gestion de l'alimentation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Power Output" >
+			<tr:translation tr:lang="de" >Leistungsausgang</tr:translation>
+			<tr:translation tr:lang="en" >Power Output</tr:translation>
+			<tr:translation tr:lang="es" >Salida de potencia</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie de puissance</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Predefined settings" >
+			<tr:translation tr:lang="de" >Vordefinierte Einstellungen</tr:translation>
+			<tr:translation tr:lang="en" >Predefined settings</tr:translation>
+			<tr:translation tr:lang="es" >Ajustes predefinidos</tr:translation>
+			<tr:translation tr:lang="fr" >Paramètres par défaut</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Prefix" >
+			<tr:translation tr:lang="de" >Präfix</tr:translation>
+			<tr:translation tr:lang="en" >Prefix</tr:translation>
+			<tr:translation tr:lang="es" >Prefijo</tr:translation>
+			<tr:translation tr:lang="fr" >Préfixe</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Pressure \[bar]" >
+			<tr:translation tr:lang="de" >Druck \[bar]</tr:translation>
+			<tr:translation tr:lang="en" >Pressure \[bar]</tr:translation>
+			<tr:translation tr:lang="es" >Agobio \[bar]</tr:translation>
+			<tr:translation tr:lang="fr" >Pression \[bar]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Product" >
+			<tr:translation tr:lang="de" >Produkt</tr:translation>
+			<tr:translation tr:lang="en" >Product</tr:translation>
+			<tr:translation tr:lang="es" >Producto</tr:translation>
+			<tr:translation tr:lang="fr" >Produit</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Projector" >
+			<tr:translation tr:lang="de" >Projektor</tr:translation>
+			<tr:translation tr:lang="en" >Projector</tr:translation>
+			<tr:translation tr:lang="es" >Proyector</tr:translation>
+			<tr:translation tr:lang="fr" >Projecteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Projectors" >
+			<tr:translation tr:lang="de" >Projektoren</tr:translation>
+			<tr:translation tr:lang="en" >Projectors</tr:translation>
+			<tr:translation tr:lang="es" >Proyectores</tr:translation>
+			<tr:translation tr:lang="fr" >Projecteurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Quotient" >
+			<tr:translation tr:lang="de" >Quotient</tr:translation>
+			<tr:translation tr:lang="en" >Quotient</tr:translation>
+			<tr:translation tr:lang="es" >Cociente</tr:translation>
+			<tr:translation tr:lang="fr" >Quotient</tr:translation>
+		</tr:item>
+		<tr:item tr:key="radians" >
+			<tr:translation tr:lang="de" >Radiant</tr:translation>
+			<tr:translation tr:lang="en" >radians</tr:translation>
+			<tr:translation tr:lang="es" >Radianes</tr:translation>
+			<tr:translation tr:lang="fr" >Radians</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Random generator" >
+			<tr:translation tr:lang="de" >Zufallsgenerator</tr:translation>
+			<tr:translation tr:lang="en" >Random generator</tr:translation>
+			<tr:translation tr:lang="es" >Generador aleatorio</tr:translation>
+			<tr:translation tr:lang="fr" >Générateur aléatoire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="rangedata" >
+			<tr:translation tr:lang="de" >Laserscanner Daten</tr:translation>
+			<tr:translation tr:lang="en" >Laser rangefinder data</tr:translation>
+			<tr:translation tr:lang="es" >Sensor de distancia láser datos</tr:translation>
+			<tr:translation tr:lang="fr" >Scanner laser données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Reader" >
+			<tr:translation tr:lang="de" >Leser</tr:translation>
+			<tr:translation tr:lang="en" >Reader</tr:translation>
+			<tr:translation tr:lang="es" >Lector</tr:translation>
+			<tr:translation tr:lang="fr" >Lecteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Relay[]" >
+			<tr:translation tr:lang="de" >Relais[]</tr:translation>
+			<tr:translation tr:lang="en" >Relay[]</tr:translation>
+			<tr:translation tr:lang="es" >Relé[]</tr:translation>
+			<tr:translation tr:lang="fr" >Relais[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Remainder" >
+			<tr:translation tr:lang="de" >Rest</tr:translation>
+			<tr:translation tr:lang="en" >Remainder</tr:translation>
+			<tr:translation tr:lang="es" >Resto</tr:translation>
+			<tr:translation tr:lang="fr" >Reste</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Remove position" >
+			<tr:translation tr:lang="de" >Position löschen</tr:translation>
+			<tr:translation tr:lang="en" >Remove position</tr:translation>
+			<tr:translation tr:lang="es" >Quitar posición</tr:translation>
+			<tr:translation tr:lang="fr" >Supprimer position</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Remove channel" >
+			<tr:translation tr:lang="de" >Kanal löschen</tr:translation>
+			<tr:translation tr:lang="en" >Remove channel</tr:translation>
+			<tr:translation tr:lang="es" >Quitar canal</tr:translation>
+			<tr:translation tr:lang="fr" >Supprimer canal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Removes the selected communication channel." >
+			<tr:translation tr:lang="de" >Löscht den ausgewählten Kommunikationskanal.</tr:translation>
+			<tr:translation tr:lang="en" >Removes the selected communication channel.</tr:translation>
+			<tr:translation tr:lang="es" >Quita el canal de comunicación seleccionado</tr:translation>
+			<tr:translation tr:lang="fr" >Supprime le canal de communication sélectionné.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Reset" >
+			<tr:translation tr:lang="de" >Zurücksetzen</tr:translation>
+			<tr:translation tr:lang="en" >Reset</tr:translation>
+			<tr:translation tr:lang="es" >Restaurar</tr:translation>
+			<tr:translation tr:lang="fr" >Réinitialiser</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Reset on start" >
+			<tr:translation tr:lang="de" >Bei Start zurücksetzen</tr:translation>
+			<tr:translation tr:lang="en" >Reset on start</tr:translation>
+			<tr:translation tr:lang="es" >Restaurar al inico</tr:translation>
+			<tr:translation tr:lang="fr" >Réinitialiser au démarrage</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Reset position" >
+			<tr:translation tr:lang="de" >Position zurücksetzen</tr:translation>
+			<tr:translation tr:lang="en" >Reset position</tr:translation>
+			<tr:translation tr:lang="es" >Restaurar posición</tr:translation>
+			<tr:translation tr:lang="fr" >Réinitialiser position</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Reset position counter at program start." >
+			<tr:translation tr:lang="de" >Den Positionszähler bei Programmstart zurücksetzen.</tr:translation>
+			<tr:translation tr:lang="en" >Reset position counter at program start.</tr:translation>
+			<tr:translation tr:lang="es" >Restaurar contador de posición al inicio del programa</tr:translation>
+			<tr:translation tr:lang="fr" >Réinitialiser le compteur de positions au démarrage du programme</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Resolution" >
+			<tr:translation tr:lang="de" >Auflösung</tr:translation>
+			<tr:translation tr:lang="en" >Resolution</tr:translation>
+			<tr:translation tr:lang="es" >Resolución</tr:translation>
+			<tr:translation tr:lang="fr" >Résolution</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Restart" >
+			<tr:translation tr:lang="de" >Neustart</tr:translation>
+			<tr:translation tr:lang="en" >Restart</tr:translation>
+			<tr:translation tr:lang="es" >Reinicio</tr:translation>
+			<tr:translation tr:lang="fr" >Redémarrage</tr:translation>
+		</tr:item>
+		<tr:item tr:key="restart" >
+			<tr:translation tr:lang="de" >Neustart</tr:translation>
+			<tr:translation tr:lang="en" >restart</tr:translation>
+			<tr:translation tr:lang="es" >Reinicio</tr:translation>
+			<tr:translation tr:lang="fr" >Redémarrage</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Result" >
+			<tr:translation tr:lang="de" >Resultat</tr:translation>
+			<tr:translation tr:lang="en" >Result</tr:translation>
+			<tr:translation tr:lang="es" >Resultado</tr:translation>
+			<tr:translation tr:lang="fr" >Résultat</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Rise time" >
+			<tr:translation tr:lang="de" >Anstiegszeit</tr:translation>
+			<tr:translation tr:lang="en" >Rise time</tr:translation>
+			<tr:translation tr:lang="es" >Tiempo de subida</tr:translation>
+			<tr:translation tr:lang="fr" >Temps de montée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="ROI selector" >
+			<tr:translation tr:lang="de" >ROI</tr:translation>
+			<tr:translation tr:lang="en" >ROI selector</tr:translation>
+			<tr:translation tr:lang="es" >ROI</tr:translation>
+			<tr:translation tr:lang="fr" >ROI</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Room number" >
+			<tr:translation tr:lang="de" >Raumnummer</tr:translation>
+			<tr:translation tr:lang="en" >Room number</tr:translation>
+			<tr:translation tr:lang="es" >Número de sala</tr:translation>
+			<tr:translation tr:lang="fr" >Numéro de local</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Rotate" >
+			<tr:translation tr:lang="de" >Rotieren</tr:translation>
+			<tr:translation tr:lang="en" >Rotate</tr:translation>
+			<tr:translation tr:lang="es" >Rotar</tr:translation>
+			<tr:translation tr:lang="fr" >Pivoter</tr:translation>
+		</tr:item>
+		<tr:item tr:key="RS" >
+			<tr:translation tr:lang="de" >Selbsthalterelais</tr:translation>
+			<tr:translation tr:lang="en" >Latching relay</tr:translation>
+			<tr:translation tr:lang="es" >Relé de enclavamiento</tr:translation>
+			<tr:translation tr:lang="fr" >Relais à automaintien</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sample" >
+			<tr:translation tr:lang="de" >Abtasten</tr:translation>
+			<tr:translation tr:lang="en" >Sample</tr:translation>
+			<tr:translation tr:lang="es" >Muestra</tr:translation>
+			<tr:translation tr:lang="fr" >Echantilloner</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sample and hold element" >
+			<tr:translation tr:lang="de" >Abtast-Halte-Glied</tr:translation>
+			<tr:translation tr:lang="en" >Sample and hold element</tr:translation>
+			<tr:translation tr:lang="es" >Elemento de muestreo y retención</tr:translation>
+			<tr:translation tr:lang="fr" >Echantillonneur-bloqueur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Save" >
+			<tr:translation tr:lang="de" >Speichern</tr:translation>
+			<tr:translation tr:lang="en" >Save</tr:translation>
+			<tr:translation tr:lang="es" >Guardar</tr:translation>
+			<tr:translation tr:lang="fr" >Enregistrer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Scale" >
+			<tr:translation tr:lang="de" >Skalierung</tr:translation>
+			<tr:translation tr:lang="en" >Scale</tr:translation>
+			<tr:translation tr:lang="es" >Escalado</tr:translation>
+			<tr:translation tr:lang="fr" >Mise l'échelle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Scan" >
+			<tr:translation tr:lang="de" >Suche</tr:translation>
+			<tr:translation tr:lang="en" >Scan</tr:translation>
+			<tr:translation tr:lang="es" >Escaneo</tr:translation>
+			<tr:translation tr:lang="fr" >Rechercher</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Search height" >
+			<tr:translation tr:lang="de" >Suchhöhe</tr:translation>
+			<tr:translation tr:lang="en" >Search height</tr:translation>
+			<tr:translation tr:lang="es" >Altura de búsqueda</tr:translation>
+			<tr:translation tr:lang="fr" >Hauteur de recherche</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Search start" >
+			<tr:translation tr:lang="de" >Beginn der Suche</tr:translation>
+			<tr:translation tr:lang="en" >Search start</tr:translation>
+			<tr:translation tr:lang="es" >Inicio de la búsqueda</tr:translation>
+			<tr:translation tr:lang="fr" >Début de recherche</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Segment Extractor" >
+			<tr:translation tr:lang="de" >Segmentextrahierer</tr:translation>
+			<tr:translation tr:lang="en" >Segment Extractor</tr:translation>
+			<tr:translation tr:lang="es" >Extractor de segmentos</tr:translation>
+			<tr:translation tr:lang="fr" >Extraction de segments</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Segment tracker" >
+			<tr:translation tr:lang="de" >Segmentverfolger</tr:translation>
+			<tr:translation tr:lang="en" >Segment tracker</tr:translation>
+			<tr:translation tr:lang="es" >Rastreador de segmentos</tr:translation>
+			<tr:translation tr:lang="fr" >Traqueur de segment</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Segment found" >
+			<tr:translation tr:lang="de" >Segment gefunden</tr:translation>
+			<tr:translation tr:lang="en" >Segment found</tr:translation>
+			<tr:translation tr:lang="es" >Segmento encontrado</tr:translation>
+			<tr:translation tr:lang="fr" >Segment trouvé</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Segmenter" >
+			<tr:translation tr:lang="de" >Segmentierer</tr:translation>
+			<tr:translation tr:lang="en" >Segmenter</tr:translation>
+			<tr:translation tr:lang="es" >Segmentador</tr:translation>
+			<tr:translation tr:lang="fr" >Opérateur de segmentation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Selected segment" >
+			<tr:translation tr:lang="de" >Ausgewähltes Segment</tr:translation>
+			<tr:translation tr:lang="en" >Selected segment</tr:translation>
+			<tr:translation tr:lang="es" >Segmento seleccionado</tr:translation>
+			<tr:translation tr:lang="fr" >Segment sélectionné</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sending interval" >
+			<tr:translation tr:lang="de" >Sendeintervall</tr:translation>
+			<tr:translation tr:lang="en" >Sending interval</tr:translation>
+			<tr:translation tr:lang="es" >Intervalo de envió</tr:translation>
+			<tr:translation tr:lang="fr" >Intervalle d'émission</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sensors" >
+			<tr:translation tr:lang="de" >Sensoren</tr:translation>
+			<tr:translation tr:lang="en" >Sensors</tr:translation>
+			<tr:translation tr:lang="es" >Sensores</tr:translation>
+			<tr:translation tr:lang="fr" >Capteurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sequence number" >
+			<tr:translation tr:lang="de" >Sequenznummer</tr:translation>
+			<tr:translation tr:lang="en" >Sequence number</tr:translation>
+			<tr:translation tr:lang="es" >Número de secuencia</tr:translation>
+			<tr:translation tr:lang="fr" >Numéro de séquence</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Server address" >
+			<tr:translation tr:lang="de" >Serveradresse</tr:translation>
+			<tr:translation tr:lang="en" >Server address</tr:translation>
+			<tr:translation tr:lang="es" >Dirección del servidor</tr:translation>
+			<tr:translation tr:lang="fr" >Adresse du serveur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Server port" >
+			<tr:translation tr:lang="de" >Server-Port</tr:translation>
+			<tr:translation tr:lang="en" >Server port</tr:translation>
+			<tr:translation tr:lang="es" >Puerto del servidor</tr:translation>
+			<tr:translation tr:lang="fr" >Port du serveur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Server started" >
+			<tr:translation tr:lang="de" >Server gestartet</tr:translation>
+			<tr:translation tr:lang="en" >Server started</tr:translation>
+			<tr:translation tr:lang="es" >Servidor iniciado</tr:translation>
+			<tr:translation tr:lang="fr" >Serveur démarré</tr:translation>
+		</tr:item>
+    <tr:item tr:key="Server listening at:" >
+      <tr:translation tr:lang="de" >Server horcht auf:</tr:translation>
+      <tr:translation tr:lang="en" >Server listening at:</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+		<tr:item tr:key="Server stopped" >
+			<tr:translation tr:lang="de" >Server angehalten</tr:translation>
+			<tr:translation tr:lang="en" >Server stopped</tr:translation>
+			<tr:translation tr:lang="es" >Servidor detenido</tr:translation>
+			<tr:translation tr:lang="fr" >Serveur arrêté</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Server-Port changed to %1" >
+			<tr:translation tr:lang="de" >Server-Port geändert auf %1</tr:translation>
+			<tr:translation tr:lang="en" >Server-Port changed to %1</tr:translation>
+			<tr:translation tr:lang="es" >Puerto del servidor cambiado a %1</tr:translation>
+			<tr:translation tr:lang="fr" >Port de serveur passé à %1</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Set" >
+			<tr:translation tr:lang="de" >Setzen</tr:translation>
+			<tr:translation tr:lang="en" >Set</tr:translation>
+			<tr:translation tr:lang="es" >Set</tr:translation>
+			<tr:translation tr:lang="fr" >Définir</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Set-point" >
+			<tr:translation tr:lang="de" >Sollwert</tr:translation>
+			<tr:translation tr:lang="en" >Set-point</tr:translation>
+			<tr:translation tr:lang="es" >Valor de consigna</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur de consigne</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Show all" >
+			<tr:translation tr:lang="de" >Alles zeigen</tr:translation>
+			<tr:translation tr:lang="en" >Show all</tr:translation>
+			<tr:translation tr:lang="es" >Mostrar todo</tr:translation>
+			<tr:translation tr:lang="fr" >Afficher tout</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Shutdown" >
+			<tr:translation tr:lang="de" >Ausschalten</tr:translation>
+			<tr:translation tr:lang="en" >Shutdown</tr:translation>
+			<tr:translation tr:lang="es" >Desconexión</tr:translation>
+			<tr:translation tr:lang="fr" >Arrêter</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sine" >
+			<tr:translation tr:lang="de" >Sinus</tr:translation>
+			<tr:translation tr:lang="en" >Sine</tr:translation>
+			<tr:translation tr:lang="es" >Seno</tr:translation>
+			<tr:translation tr:lang="fr" >Sinus</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Slider" >
+			<tr:translation tr:lang="de" >Schieberegler</tr:translation>
+			<tr:translation tr:lang="en" >Slider</tr:translation>
+			<tr:translation tr:lang="es" >Corredera</tr:translation>
+			<tr:translation tr:lang="fr" >Réglette</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Speed set-point \[rpm]" >
+			<tr:translation tr:lang="de" >Sollgeschwindigkeit \[rpm]</tr:translation>
+			<tr:translation tr:lang="en" >Speed set-point \[rpm]</tr:translation>
+			<tr:translation tr:lang="es" >Valor de consigna de velocidad \[rpm]</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse de consigne \[tr/min]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Square" >
+			<tr:translation tr:lang="de" >Rechteck</tr:translation>
+			<tr:translation tr:lang="en" >Square</tr:translation>
+			<tr:translation tr:lang="es" >Rectángulo</tr:translation>
+			<tr:translation tr:lang="fr" >Rectangle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Start" >
+			<tr:translation tr:lang="de" >Start</tr:translation>
+			<tr:translation tr:lang="en" >Start</tr:translation>
+			<tr:translation tr:lang="es" >Inicio</tr:translation>
+			<tr:translation tr:lang="fr" >Démarrer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Start server" >
+			<tr:translation tr:lang="de" >Server starten</tr:translation>
+			<tr:translation tr:lang="en" >Start server</tr:translation>
+			<tr:translation tr:lang="es" >Iniciar servidor</tr:translation>
+			<tr:translation tr:lang="fr" >Démarrer serveur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Step" >
+			<tr:translation tr:lang="de" >Schritt</tr:translation>
+			<tr:translation tr:lang="en" >Step</tr:translation>
+			<tr:translation tr:lang="es" >Paso</tr:translation>
+			<tr:translation tr:lang="fr" >Pas</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Stop server" >
+			<tr:translation tr:lang="de" >Server anhalten</tr:translation>
+			<tr:translation tr:lang="en" >Stop server</tr:translation>
+			<tr:translation tr:lang="es" >Detener servidor</tr:translation>
+			<tr:translation tr:lang="fr" >Arrêter serveur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sub array" >
+			<tr:translation tr:lang="de" >Teilfeld</tr:translation>
+			<tr:translation tr:lang="en" >Sub array</tr:translation>
+			<tr:translation tr:lang="es" >Sub matriz</tr:translation>
+			<tr:translation tr:lang="fr" >Sous-tableau</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Subpath" >
+			<tr:translation tr:lang="de" >Teilweg</tr:translation>
+			<tr:translation tr:lang="en" >Subpath</tr:translation>
+			<tr:translation tr:lang="es" >Subruta</tr:translation>
+			<tr:translation tr:lang="fr" >Itinéraire partiel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Subtraction" >
+			<tr:translation tr:lang="de" >Subtraktion</tr:translation>
+			<tr:translation tr:lang="en" >Subtraction</tr:translation>
+			<tr:translation tr:lang="es" >Resta</tr:translation>
+			<tr:translation tr:lang="fr" >Soustraction</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Subtrahend" >
+			<tr:translation tr:lang="de" >Subtrahend</tr:translation>
+			<tr:translation tr:lang="en" >Subtrahend</tr:translation>
+			<tr:translation tr:lang="es" >Sustraendo</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre à soustraire</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Subtrahend[]" >
+			<tr:translation tr:lang="de" >Subtrahend[]</tr:translation>
+			<tr:translation tr:lang="en" >Subtrahend[]</tr:translation>
+			<tr:translation tr:lang="es" >Sustraendo[]</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre à soustraire[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Sum" >
+			<tr:translation tr:lang="de" >Summe</tr:translation>
+			<tr:translation tr:lang="en" >Sum</tr:translation>
+			<tr:translation tr:lang="es" >Suma</tr:translation>
+			<tr:translation tr:lang="fr" >Somme</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Summand" >
+			<tr:translation tr:lang="de" >Summand</tr:translation>
+			<tr:translation tr:lang="en" >Summand</tr:translation>
+			<tr:translation tr:lang="es" >Sumando</tr:translation>
+			<tr:translation tr:lang="fr" >Terme d'une somme</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Summand[]" >
+			<tr:translation tr:lang="de" >Summand[]</tr:translation>
+			<tr:translation tr:lang="en" >Summand[]</tr:translation>
+			<tr:translation tr:lang="es" >Sumando[]</tr:translation>
+			<tr:translation tr:lang="fr" >Terme d'une somme[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Test" >
+			<tr:translation tr:lang="de" >Test</tr:translation>
+			<tr:translation tr:lang="en" >Test</tr:translation>
+			<tr:translation tr:lang="es" >Test</tr:translation>
+			<tr:translation tr:lang="fr" >Test</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Threshold" >
+			<tr:translation tr:lang="de" >Schwellwert</tr:translation>
+			<tr:translation tr:lang="en" >Threshold</tr:translation>
+			<tr:translation tr:lang="es" >Umbral</tr:translation>
+			<tr:translation tr:lang="fr" >Seuil</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Time" >
+			<tr:translation tr:lang="de" >Zeit</tr:translation>
+			<tr:translation tr:lang="en" >Time</tr:translation>
+			<tr:translation tr:lang="es" >Tiempo</tr:translation>
+			<tr:translation tr:lang="fr" >Temps</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Time base" >
+			<tr:translation tr:lang="de" >Zeitbasis</tr:translation>
+			<tr:translation tr:lang="en" >Time base</tr:translation>
+			<tr:translation tr:lang="es" >Base de tiempo</tr:translation>
+			<tr:translation tr:lang="fr" >Base de temps</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Timer" >
+			<tr:translation tr:lang="de" >Zeitbaustein</tr:translation>
+			<tr:translation tr:lang="en" >Timer</tr:translation>
+			<tr:translation tr:lang="es" >Temporizador</tr:translation>
+			<tr:translation tr:lang="fr" >Bloc de temporisation</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Toggle torque" >
+			<tr:translation tr:lang="de" >Drehmoment schalten</tr:translation>
+			<tr:translation tr:lang="en" >Toggle torque</tr:translation>
+			<tr:translation tr:lang="es" >cambiar torque</tr:translation>
+			<tr:translation tr:lang="fr" >commuter couple</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Transfer Function" >
+			<tr:translation tr:lang="de" >Transferfunktion</tr:translation>
+			<tr:translation tr:lang="en" >Transfer Function</tr:translation>
+			<tr:translation tr:lang="es" >Función de transferencia</tr:translation>
+			<tr:translation tr:lang="fr" >Fonction de transfert</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Transmission on data change" >
+			<tr:translation tr:lang="de" >Übertragung bei Datenänderung</tr:translation>
+			<tr:translation tr:lang="en" >Transmission on data change</tr:translation>
+			<tr:translation tr:lang="es" >Transmisión en cambio de datos</tr:translation>
+			<tr:translation tr:lang="fr" >Transmission du changement de données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Transmission stopped" >
+			<tr:translation tr:lang="de" >Übertragung angehalten</tr:translation>
+			<tr:translation tr:lang="en" >Transmission stopped</tr:translation>
+			<tr:translation tr:lang="es" >Transmisión detenida</tr:translation>
+			<tr:translation tr:lang="fr" >Transmission arrêtée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Transmit interval changed to %1 ms" >
+			<tr:translation tr:lang="de" >Übertragungsintervall geändert auf %1 ms</tr:translation>
+			<tr:translation tr:lang="en" >Transmit interval changed to %1 ms</tr:translation>
+			<tr:translation tr:lang="es" >Intervalo de transmisión cambiado a %1 ms</tr:translation>
+			<tr:translation tr:lang="fr" >Intervalle de transmission passé à %1 ms</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Triangle" >
+			<tr:translation tr:lang="de" >Dreieck</tr:translation>
+			<tr:translation tr:lang="en" >Triangle</tr:translation>
+			<tr:translation tr:lang="es" >Triángulo</tr:translation>
+			<tr:translation tr:lang="fr" >Triangle</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Turn" >
+			<tr:translation tr:lang="de" >Drehen</tr:translation>
+			<tr:translation tr:lang="en" >Turn</tr:translation>
+			<tr:translation tr:lang="es" >Giro</tr:translation>
+			<tr:translation tr:lang="fr" >Tourner</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Tutorial 1" >
+			<tr:translation tr:lang="de" >Übung 1</tr:translation>
+			<tr:translation tr:lang="en" >Tutorial 1</tr:translation>
+			<tr:translation tr:lang="es" >Ejercicio 1</tr:translation>
+			<tr:translation tr:lang="fr" >Exercice 1</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Tutorial 2" >
+			<tr:translation tr:lang="de" >Übung 2</tr:translation>
+			<tr:translation tr:lang="en" >Tutorial 2</tr:translation>
+			<tr:translation tr:lang="es" >Ejercicio 2</tr:translation>
+			<tr:translation tr:lang="fr" >Exercice 2</tr:translation>
+		</tr:item>
+		<tr:item tr:key="type" >
+			<tr:translation tr:lang="de" >Typ</tr:translation>
+			<tr:translation tr:lang="en" >type</tr:translation>
+			<tr:translation tr:lang="es" >Tipo</tr:translation>
+			<tr:translation tr:lang="fr" >Type</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Use default parameters" >
+			<tr:translation tr:lang="de" >Standardparameter verwenden</tr:translation>
+			<tr:translation tr:lang="en" >Use default parameters</tr:translation>
+			<tr:translation tr:lang="es" >Usar parámetros predeterminados</tr:translation>
+			<tr:translation tr:lang="fr" >Utiliser paramètres par défaut</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Use I/O board firmware default controller parameters." >
+			<tr:translation tr:lang="de" >Verwende die von der E/A Platinen Firmware voreingestellten Reglerparameter.</tr:translation>
+			<tr:translation tr:lang="en" >Use I/O board firmware default controller parameters.</tr:translation>
+			<tr:translation tr:lang="es" >Usar parámetros del controlador predeterminados del firmware de la tarjeta E/S</tr:translation>
+			<tr:translation tr:lang="fr" >Utiliser les paramètres de régulateur par défaut spécifiés par le firmware de la carte d'E/S</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Valid pose" >
+			<tr:translation tr:lang="de" >Gültige Pose</tr:translation>
+			<tr:translation tr:lang="en" >Valid pose</tr:translation>
+			<tr:translation tr:lang="es" >Pose válida</tr:translation>
+			<tr:translation tr:lang="fr" >Pose valide</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Value" >
+			<tr:translation tr:lang="de" >Wert</tr:translation>
+			<tr:translation tr:lang="en" >Value</tr:translation>
+			<tr:translation tr:lang="es" >Valor</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="value" >
+			<tr:translation tr:lang="de" >Wert</tr:translation>
+			<tr:translation tr:lang="en" >value</tr:translation>
+			<tr:translation tr:lang="es" >Valor</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Value \[V]" >
+			<tr:translation tr:lang="de" >Wert \[V]</tr:translation>
+			<tr:translation tr:lang="en" >Value \[V]</tr:translation>
+			<tr:translation tr:lang="es" >Valor \[V]</tr:translation>
+			<tr:translation tr:lang="fr" >Valeur \[V]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vector" >
+			<tr:translation tr:lang="de" >Vektor</tr:translation>
+			<tr:translation tr:lang="en" >Vector</tr:translation>
+			<tr:translation tr:lang="es" >Vector</tr:translation>
+			<tr:translation tr:lang="fr" >Vecteur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vector to Cartesian" >
+			<tr:translation tr:lang="de" >Vektor nach Kartesisch</tr:translation>
+			<tr:translation tr:lang="en" >Vector to Cartesian</tr:translation>
+			<tr:translation tr:lang="es" >Vector a Cartesiano</tr:translation>
+			<tr:translation tr:lang="fr" >Vecteur en cartésiennes</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vector to Polar" >
+			<tr:translation tr:lang="de" >Vektor nach Polar</tr:translation>
+			<tr:translation tr:lang="en" >Vector to Polar</tr:translation>
+			<tr:translation tr:lang="es" >Vector a Polar</tr:translation>
+			<tr:translation tr:lang="fr" >Vecteur en polaires</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vector[]" >
+			<tr:translation tr:lang="de" >Vektor[]</tr:translation>
+			<tr:translation tr:lang="en" >Vector[]</tr:translation>
+			<tr:translation tr:lang="es" >Vector[]</tr:translation>
+			<tr:translation tr:lang="fr" >Vecteur[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vectormath" >
+			<tr:translation tr:lang="de" >Vektorrechnung</tr:translation>
+			<tr:translation tr:lang="en" >Vector analysis</tr:translation>
+			<tr:translation tr:lang="es" >Cálculo vectorial</tr:translation>
+			<tr:translation tr:lang="fr" >Calcul vectoriel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vectormath_elementops" >
+			<tr:translation tr:lang="de" >Elementoperationen</tr:translation>
+			<tr:translation tr:lang="en" >Element operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones con elementos</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations élémentaires</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vectormath_transform" >
+			<tr:translation tr:lang="de" >Transformationen</tr:translation>
+			<tr:translation tr:lang="en" >Transformations</tr:translation>
+			<tr:translation tr:lang="es" >Transformaciones</tr:translation>
+			<tr:translation tr:lang="fr" >Transformations</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Vectormath_vectorops" >
+			<tr:translation tr:lang="de" >Vektoroperationen</tr:translation>
+			<tr:translation tr:lang="en" >Vector operations</tr:translation>
+			<tr:translation tr:lang="es" >Operaciones con vectores</tr:translation>
+			<tr:translation tr:lang="fr" >Opérations vectorielles</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Velocity" >
+			<tr:translation tr:lang="de" >Geschwindigkeit</tr:translation>
+			<tr:translation tr:lang="en" >Velocity</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Velocity coupling" >
+			<tr:translation tr:lang="de" >Geschwindigkeitskopplung</tr:translation>
+			<tr:translation tr:lang="en" >Velocity coupling</tr:translation>
+			<tr:translation tr:lang="es" >Acoplamiento de velocidad</tr:translation>
+			<tr:translation tr:lang="fr" >Couplage de vitesse</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Velocity ramp" >
+			<tr:translation tr:lang="de" >Geschwindigkeitsrampe</tr:translation>
+			<tr:translation tr:lang="en" >Velocity ramp</tr:translation>
+			<tr:translation tr:lang="es" >Rampa de velocidad</tr:translation>
+			<tr:translation tr:lang="fr" >Rampe de vitesse</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Width" >
+			<tr:translation tr:lang="de" >Breite</tr:translation>
+			<tr:translation tr:lang="en" >Width</tr:translation>
+			<tr:translation tr:lang="es" >Ancho</tr:translation>
+			<tr:translation tr:lang="fr" >Largeur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Writer" >
+			<tr:translation tr:lang="de" >Schreiber</tr:translation>
+			<tr:translation tr:lang="en" >Writer</tr:translation>
+			<tr:translation tr:lang="es" >Escritor</tr:translation>
+			<tr:translation tr:lang="fr" >Enregistreur</tr:translation>
+		</tr:item>
+		<tr:item tr:key="x \[mm]" >
+			<tr:translation tr:lang="de" >x \[mm]</tr:translation>
+			<tr:translation tr:lang="en" >x \[mm]</tr:translation>
+			<tr:translation tr:lang="es" >x \[mm]</tr:translation>
+			<tr:translation tr:lang="fr" >x \[mm]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="x actual" >
+			<tr:translation tr:lang="de" >x Ist</tr:translation>
+			<tr:translation tr:lang="en" >x actual</tr:translation>
+			<tr:translation tr:lang="es" >x actual</tr:translation>
+			<tr:translation tr:lang="fr" >x réel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="x set" >
+			<tr:translation tr:lang="de" >x Soll</tr:translation>
+			<tr:translation tr:lang="en" >x set</tr:translation>
+			<tr:translation tr:lang="es" >x ajustada</tr:translation>
+			<tr:translation tr:lang="fr" >x consigne</tr:translation>
+		</tr:item>
+		<tr:item tr:key="XOR" >
+			<tr:translation tr:lang="de" >XOR</tr:translation>
+			<tr:translation tr:lang="en" >XOR</tr:translation>
+			<tr:translation tr:lang="es" >XOR</tr:translation>
+			<tr:translation tr:lang="fr" >XOR</tr:translation>
+		</tr:item>
+		<tr:item tr:key="y \[mm]" >
+			<tr:translation tr:lang="de" >y \[mm]</tr:translation>
+			<tr:translation tr:lang="en" >y \[mm]</tr:translation>
+			<tr:translation tr:lang="es" >y \[mm]</tr:translation>
+			<tr:translation tr:lang="fr" >y \[mm]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="y actual" >
+			<tr:translation tr:lang="de" >y Ist</tr:translation>
+			<tr:translation tr:lang="en" >y actual</tr:translation>
+			<tr:translation tr:lang="es" >y actual</tr:translation>
+			<tr:translation tr:lang="fr" >y réel</tr:translation>
+		</tr:item>
+		<tr:item tr:key="y set" >
+			<tr:translation tr:lang="de" >y Soll</tr:translation>
+			<tr:translation tr:lang="en" >y set</tr:translation>
+			<tr:translation tr:lang="es" >y ajustada</tr:translation>
+			<tr:translation tr:lang="fr" >y consigne</tr:translation>
+		</tr:item>
+		<tr:item tr:key="OPC Client" >
+			<tr:translation tr:lang="de" >OPC Client</tr:translation>
+			<tr:translation tr:lang="en" >OPC Client</tr:translation>
+			<tr:translation tr:lang="es" >OPC Client</tr:translation>
+			<tr:translation tr:lang="fr" >Client OPC</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Positions" >
+			<tr:translation tr:lang="de" >Positionen</tr:translation>
+			<tr:translation tr:lang="en" >Positions</tr:translation>
+			<tr:translation tr:lang="es" >Posiciónes</tr:translation>
+			<tr:translation tr:lang="fr" >Positions</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Limits" >
+			<tr:translation tr:lang="de" >Anschläge</tr:translation>
+			<tr:translation tr:lang="en" >Limits</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Limits breached" >
+			<tr:translation tr:lang="de" >Anschläge überschritten</tr:translation>
+			<tr:translation tr:lang="en" >Limits breached</tr:translation>
+			<tr:translation tr:lang="es" >Topes superados</tr:translation>
+			<tr:translation tr:lang="fr" >Butées dépassées</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Current position \[deg]" >
+			<tr:translation tr:lang="de" >Aktuelle Position \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Current position \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Posición actual \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Position actuel \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Current speed \[rpm]" >
+			<tr:translation tr:lang="de" >Aktuelle Geschwindigkeit \[rpm]</tr:translation>
+			<tr:translation tr:lang="en" >Current speed \[rpm]</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad actual \[rpm]</tr:translation>
+			<tr:translation tr:lang="fr" >Velocité actuelle \[rpm]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position set-point \[deg]" >
+			<tr:translation tr:lang="de" >Positions-Sollwert \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Position set-point \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Valor nominal de posición \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Consigne de position \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Time stamp" >
+			<tr:translation tr:lang="de" >Zeitstempel</tr:translation>
+			<tr:translation tr:lang="en" >Time stamp</tr:translation>
+			<tr:translation tr:lang="es" >Fecha y hora marcadas</tr:translation>
+			<tr:translation tr:lang="fr" >Horodatage</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Frame ID" >
+			<tr:translation tr:lang="de" >Bezugspunkt</tr:translation>
+			<tr:translation tr:lang="en" >Frame ID</tr:translation>
+			<tr:translation tr:lang="es" >Punto de referencia</tr:translation>
+			<tr:translation tr:lang="fr" >Point de référence</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minimum angle \[deg]" >
+			<tr:translation tr:lang="de" >Minimaler Winkel \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Minimum angle \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Angulo minimo \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Angle minimal \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Maximum angle \[deg]" >
+			<tr:translation tr:lang="de" >Maximaler Winkel \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Maximum angle \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Angulo maximo \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Angle maximal \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angle increment \[deg]" >
+			<tr:translation tr:lang="de" >Winkelschrittweite \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Angle increment \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Paso de ángulo \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Pas angulaire \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Rate \[deg/s]" >
+			<tr:translation tr:lang="de" >Winkelgeschwindigkeit \[deg/s]</tr:translation>
+			<tr:translation tr:lang="en" >Angular velocity \[deg/s]</tr:translation>
+			<tr:translation tr:lang="es" >Velocidad angular \[deg/s]</tr:translation>
+			<tr:translation tr:lang="fr" >Vitesse angulaire \[deg/s]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Gyroscope" >
+			<tr:translation tr:lang="de" >Gyroskop</tr:translation>
+			<tr:translation tr:lang="en" >Gyroscope</tr:translation>
+			<tr:translation tr:lang="es" >El giroscopio</tr:translation>
+			<tr:translation tr:lang="fr" >Gyroscope</tr:translation>
+		</tr:item>
+    <tr:item tr:key="Gyroscope Ext" >
+      <tr:translation tr:lang="de" >Gyroskop Ext</tr:translation>
+      <tr:translation tr:lang="en" >Gyroscope Ext</tr:translation>
+      <tr:translation tr:lang="es" >El giroscopio ext</tr:translation>
+      <tr:translation tr:lang="fr" >Gyroscope Ext</tr:translation>
+    </tr:item>
+		<tr:item tr:key="Time increment \[s]" >
+			<tr:translation tr:lang="de" >Schrittweite \[s]</tr:translation>
+			<tr:translation tr:lang="en" >Time increment \[s]</tr:translation>
+			<tr:translation tr:lang="es" >Incremento \[s]</tr:translation>
+			<tr:translation tr:lang="fr" >Pas \[s]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Scan time \[s]" >
+			<tr:translation tr:lang="de" >Scanzeit \[s]</tr:translation>
+			<tr:translation tr:lang="en" >Scan time \[s]</tr:translation>
+			<tr:translation tr:lang="es" >Tiempo de escaneado \[s]</tr:translation>
+			<tr:translation tr:lang="fr" >Durée de balayage \[s]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Minimum range \[m]" >
+			<tr:translation tr:lang="de" >Minimale Reichweite \[m]</tr:translation>
+			<tr:translation tr:lang="en" >Minimum range \[m]</tr:translation>
+			<tr:translation tr:lang="es" >Alcance mínimo \[m]</tr:translation>
+			<tr:translation tr:lang="fr" >Portée minimale \[m]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Maximum range \[m]" >
+			<tr:translation tr:lang="de" >Maximale Reichweite \[m]</tr:translation>
+			<tr:translation tr:lang="en" >Maximum range \[m]</tr:translation>
+			<tr:translation tr:lang="es" >Alcance máximo \[m]</tr:translation>
+			<tr:translation tr:lang="fr" >Portée maximale \[m]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of range measurements" >
+			<tr:translation tr:lang="de" >Anzahl der Distanzmesswerte</tr:translation>
+			<tr:translation tr:lang="en" >Number of range measurements</tr:translation>
+			<tr:translation tr:lang="es" >Número de valores de distancia</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de valeurs de distance</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Number of intensity measurements" >
+			<tr:translation tr:lang="de" >Anzahl der Intensitätsmesswerte</tr:translation>
+			<tr:translation tr:lang="en" >Number of intensity measurements</tr:translation>
+			<tr:translation tr:lang="es" >Número de valores de intensidad</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de valeurs d'intensité</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Num segments found" >
+			<tr:translation tr:lang="de" >Anzahl gefundener Segmente</tr:translation>
+			<tr:translation tr:lang="en" >Num segments found</tr:translation>
+			<tr:translation tr:lang="es" >Número de segmentos localizados</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de segments trouvés</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Original size">
+			<tr:translation tr:lang="de" >Originalgröße</tr:translation>
+			<tr:translation tr:lang="en" >Original size</tr:translation>
+			<tr:translation tr:lang="es" >Tamaño original</tr:translation>
+			<tr:translation tr:lang="fr" >Taille originale</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Angle \[deg]" >
+			<tr:translation tr:lang="de" >Winkel \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Angle \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Ángulo \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Angle \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Opening angle \[deg]" >
+			<tr:translation tr:lang="de" >Öffnungswinkel \[deg]</tr:translation>
+			<tr:translation tr:lang="en" >Opening angle \[deg]</tr:translation>
+			<tr:translation tr:lang="es" >Apertura angular \[deg]</tr:translation>
+			<tr:translation tr:lang="fr" >Angle d'ouverture \[deg]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Log" >
+			<tr:translation tr:lang="de" >Log</tr:translation>
+			<tr:translation tr:lang="en" >Log</tr:translation>
+			<tr:translation tr:lang="es" >Log</tr:translation>
+			<tr:translation tr:lang="fr" >Journal</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Inputs and outputs" >
+			<tr:translation tr:lang="de" >Ein- und Ausgänge</tr:translation>
+			<tr:translation tr:lang="en" >Inputs and outputs</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Script editor" >
+			<tr:translation tr:lang="de" >Skripteditor</tr:translation>
+			<tr:translation tr:lang="en" >Script editor</tr:translation>
+			<tr:translation tr:lang="es" >Editor de script</tr:translation>
+			<tr:translation tr:lang="fr" >Editeur de script</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Global variables" >
+			<tr:translation tr:lang="de" >Globale Variablen</tr:translation>
+			<tr:translation tr:lang="en" >Global variables</tr:translation>
+			<tr:translation tr:lang="es" >Variables globales</tr:translation>
+			<tr:translation tr:lang="fr" >Variables globales</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Step function" >
+			<tr:translation tr:lang="de" >Schrittfunktion</tr:translation>
+			<tr:translation tr:lang="en" >Step function</tr:translation>
+			<tr:translation tr:lang="es" >Función escalonada</tr:translation>
+			<tr:translation tr:lang="fr" >Fonction Etape</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Script" >
+			<tr:translation tr:lang="de" >Skript</tr:translation>
+			<tr:translation tr:lang="en" >Script</tr:translation>
+			<tr:translation tr:lang="es" >Script</tr:translation>
+			<tr:translation tr:lang="fr" >Script</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Lua script" >
+			<tr:translation tr:lang="de" >Lua-Skript</tr:translation>
+			<tr:translation tr:lang="en" >Lua script</tr:translation>
+			<tr:translation tr:lang="es" >Script Lua</tr:translation>
+			<tr:translation tr:lang="fr" >Script Lua</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Deterministic" >
+			<tr:translation tr:lang="de" >Deterministisch</tr:translation>
+			<tr:translation tr:lang="en" >Deterministic</tr:translation>
+			<tr:translation tr:lang="es" >Determinado</tr:translation>
+			<tr:translation tr:lang="fr" >Déterministe</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Custom" >
+			<tr:translation tr:lang="de" >Benutzerdefiniert</tr:translation>
+			<tr:translation tr:lang="en" >Custom</tr:translation>
+			<tr:translation tr:lang="es" >Definido por el usuario</tr:translation>
+			<tr:translation tr:lang="fr" >Personnalisés</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Clear" >
+			<tr:translation tr:lang="de" >Leeren</tr:translation>
+			<tr:translation tr:lang="en" >Clear</tr:translation>
+			<tr:translation tr:lang="es" >Suprimir</tr:translation>
+			<tr:translation tr:lang="fr" >Supprimer</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Execute only when input values change" >
+			<tr:translation tr:lang="de" >Nur bei Änderung der Eingangswerte ausführen</tr:translation>
+			<tr:translation tr:lang="en" >Execute only when input values change</tr:translation>
+			<tr:translation tr:lang="es" >Ejecutar sólo si el valor de entrada cambia</tr:translation>
+			<tr:translation tr:lang="fr" >À exécuter seulement quand les valeurs des entrées changent</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Enable JIT compiler" >
+			<tr:translation tr:lang="de" >JIT-Compiler aktivieren</tr:translation>
+			<tr:translation tr:lang="en" >Enable JIT compiler</tr:translation>
+			<tr:translation tr:lang="es" >Activar el compilador JIT</tr:translation>
+			<tr:translation tr:lang="fr" >Activer le compilateur JIT</tr:translation>
+		</tr:item>
+		<tr:item tr:key="x \[pixel]" >
+			<tr:translation tr:lang="de" >x \[pixel]</tr:translation>
+			<tr:translation tr:lang="en" >x \[pixel]</tr:translation>
+			<tr:translation tr:lang="es" >x \[pixel]</tr:translation>
+			<tr:translation tr:lang="fr" >x \[pixel]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="y \[pixel]" >
+			<tr:translation tr:lang="de" >y \[pixel]</tr:translation>
+			<tr:translation tr:lang="en" >y \[pixel]</tr:translation>
+			<tr:translation tr:lang="es" >y \[pixel]</tr:translation>
+			<tr:translation tr:lang="fr" >y \[pixel]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="vx \[pixel/step]" >
+			<tr:translation tr:lang="de" >vx \[pixel/Schritt]</tr:translation>
+			<tr:translation tr:lang="en" >vx \[pixel/step]</tr:translation>
+			<tr:translation tr:lang="es" >vx \[pixel/step]</tr:translation>
+			<tr:translation tr:lang="fr" >vx \[pixel/step]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="vy \[pixel]" >
+			<tr:translation tr:lang="de" >vy \[pixel/Schritt]</tr:translation>
+			<tr:translation tr:lang="en" >vy \[pixel/step]</tr:translation>
+			<tr:translation tr:lang="es" >vy \[pixel/step]</tr:translation>
+			<tr:translation tr:lang="fr" >vy \[pixel/step]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Mask size" >
+			<tr:translation tr:lang="de" >Maskengröße</tr:translation>
+			<tr:translation tr:lang="en" >Mask size</tr:translation>
+			<tr:translation tr:lang="es" >Tamaño de la máscara</tr:translation>
+			<tr:translation tr:lang="fr" >Taille de masque</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Bottom" >
+			<tr:translation tr:lang="de" >Unten</tr:translation>
+			<tr:translation tr:lang="en" >Bottom</tr:translation>
+			<tr:translation tr:lang="es" >inferior</tr:translation>
+			<tr:translation tr:lang="fr" >en bas</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Top" >
+			<tr:translation tr:lang="de" >Oben</tr:translation>
+			<tr:translation tr:lang="en" >Top</tr:translation>
+			<tr:translation tr:lang="es" >alto</tr:translation>
+			<tr:translation tr:lang="fr" >en haut</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Left" >
+			<tr:translation tr:lang="de" >Links</tr:translation>
+			<tr:translation tr:lang="en" >Left</tr:translation>
+			<tr:translation tr:lang="es" >zurdo</tr:translation>
+			<tr:translation tr:lang="fr" >sur la gauche</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Right" >
+			<tr:translation tr:lang="de" >Rechts</tr:translation>
+			<tr:translation tr:lang="en" >Right</tr:translation>
+			<tr:translation tr:lang="es" >derecho</tr:translation>
+			<tr:translation tr:lang="fr" >sur la droite</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Quality" >
+			<tr:translation tr:lang="de" >Qualität</tr:translation>
+			<tr:translation tr:lang="en" >Quality</tr:translation>
+			<tr:translation tr:lang="es" >Calidad</tr:translation>
+			<tr:translation tr:lang="fr" >Qualité</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Quality of connection to Robotino." >
+			<tr:translation tr:lang="de" >Qualität der Verbindung zu Robotino.</tr:translation>
+			<tr:translation tr:lang="en" >Quality of connection to Robotino.</tr:translation>
+			<tr:translation tr:lang="es" >Calidad de la conexión a Robotino</tr:translation>
+			<tr:translation tr:lang="fr" >Qualité de la connexion au Robotino</tr:translation>
+		</tr:item>
+		<tr:item tr:key="100 = maximum quality." >
+			<tr:translation tr:lang="de" >100 = maximale Qualität.</tr:translation>
+			<tr:translation tr:lang="en" >100 = maximum quality.</tr:translation>
+			<tr:translation tr:lang="es" >100 = calidad máxima.</tr:translation>
+			<tr:translation tr:lang="fr" >100 = qualité maximale.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Format" >
+			<tr:translation tr:lang="de" >Format</tr:translation>
+			<tr:translation tr:lang="en" >Format</tr:translation>
+			<tr:translation tr:lang="es" >Format</tr:translation>
+			<tr:translation tr:lang="fr" >Formato</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Num zeros" >
+			<tr:translation tr:lang="de" >Anzahl Nullen</tr:translation>
+			<tr:translation tr:lang="en" >Num zeros</tr:translation>
+			<tr:translation tr:lang="es" >Número de ceros</tr:translation>
+			<tr:translation tr:lang="fr" >Nombre de zéros</tr:translation>
+		</tr:item>
+		<tr:item tr:key="File" >
+			<tr:translation tr:lang="de" >Datei</tr:translation>
+			<tr:translation tr:lang="en" >File</tr:translation>
+			<tr:translation tr:lang="es" >Archivo</tr:translation>
+			<tr:translation tr:lang="fr" >Fichier</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Choose file to store data" >
+			<tr:translation tr:lang="de" >Datei zum Speichern der Daten auswählen</tr:translation>
+			<tr:translation tr:lang="en" >Choose file to store data</tr:translation>
+			<tr:translation tr:lang="es" >Elegir archivo para  almacenar datos</tr:translation>
+			<tr:translation tr:lang="fr" >Choisir le dossier pour sauvegarder les données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Choose file to read data" >
+			<tr:translation tr:lang="de" >Datei zum Lesen der Daten auswählen</tr:translation>
+			<tr:translation tr:lang="en" >Choose file to read data</tr:translation>
+			<tr:translation tr:lang="es" >Elegir archivo para leer datos</tr:translation>
+			<tr:translation tr:lang="fr" >Choisir le dossier pour lirer les données</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Overwrite" >
+			<tr:translation tr:lang="de" >Überschreiben</tr:translation>
+			<tr:translation tr:lang="en" >Overwrite</tr:translation>
+			<tr:translation tr:lang="es" >Sobrescribir</tr:translation>
+			<tr:translation tr:lang="fr" >Ecraser</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Append" >
+			<tr:translation tr:lang="de" >Anhängen</tr:translation>
+			<tr:translation tr:lang="en" >Append</tr:translation>
+			<tr:translation tr:lang="es" >Adjuntar</tr:translation>
+			<tr:translation tr:lang="fr" >Ajouter</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Current file name" >
+			<tr:translation tr:lang="de" >Aktueller Dateiname</tr:translation>
+			<tr:translation tr:lang="en" >Current file name</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Value reader" >
+			<tr:translation tr:lang="de" >Werteleser</tr:translation>
+			<tr:translation tr:lang="en" >Value reader</tr:translation>
+			<tr:translation tr:lang="es" >Lector de valores</tr:translation>
+			<tr:translation tr:lang="fr" >Lecteur de valeurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Value writer" >
+			<tr:translation tr:lang="de" >Werteschreiber</tr:translation>
+			<tr:translation tr:lang="en" >Value writer</tr:translation>
+			<tr:translation tr:lang="es" >Registrador de valores</tr:translation>
+			<tr:translation tr:lang="fr" >Enregistreur de valeurs</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Print..." >
+			<tr:translation tr:lang="de" >Drucken...</tr:translation>
+			<tr:translation tr:lang="en" >Print...</tr:translation>
+			<tr:translation tr:lang="es" >Imprimir...</tr:translation>
+			<tr:translation tr:lang="fr" >Imprimer...</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Calibration" >
+			<tr:translation tr:lang="de" >Kalibrierung</tr:translation>
+			<tr:translation tr:lang="en" >Calibration</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Focal lengths" >
+			<tr:translation tr:lang="de" >Brennweiten</tr:translation>
+			<tr:translation tr:lang="en" >Focal lengths</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Radial distortion coefficients" >
+			<tr:translation tr:lang="de" >Radiale Verzerrungskoeffizienten</tr:translation>
+			<tr:translation tr:lang="en" >Radial distortion coefficients</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Tangential distortion coefficients" >
+			<tr:translation tr:lang="de" >Tangentiale Verzerrungskoeffizienten</tr:translation>
+			<tr:translation tr:lang="en" >Tangential distortion coefficients</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Parameter file path" >
+			<tr:translation tr:lang="de" >Pfad der Parameterdatei</tr:translation>
+			<tr:translation tr:lang="en" >Parameter file path</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Visualize image center (if available)" >
+			<tr:translation tr:lang="de" >Bildmittelpunkt visualisieren (falls verfügbar)</tr:translation>
+			<tr:translation tr:lang="en" >Visualize image center (if available)</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Parameter file" >
+			<tr:translation tr:lang="de" >Parameterdatei</tr:translation>
+			<tr:translation tr:lang="en" >Parameter file</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Preparation" >
+			<tr:translation tr:lang="de" >Vorbereitung</tr:translation>
+			<tr:translation tr:lang="en" >Preparation</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="If not done yet, please print this pattern." >
+			<tr:translation tr:lang="de" >Falls noch nicht geschehen, bitte dieses Muster ausdrucken.</tr:translation>
+			<tr:translation tr:lang="en" >If not done yet, please print this pattern.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Step %1 of %2" >
+			<tr:translation tr:lang="de" >Schritt %1 von %2</tr:translation>
+			<tr:translation tr:lang="en" >Step %1 of %2</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Finish calibration" >
+			<tr:translation tr:lang="de" >Kalibrierung abschließen</tr:translation>
+			<tr:translation tr:lang="en" >Finish calibration</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Please specify the file path to save the values." >
+			<tr:translation tr:lang="de" >Bitte den Dateipfad zum Speichern der Werte angeben.</tr:translation>
+			<tr:translation tr:lang="en" >Please specify the file path to save the values.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="File path:" >
+			<tr:translation tr:lang="de" >Dateipfad</tr:translation>
+			<tr:translation tr:lang="en" >File path:</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Failed to write the values into the file." >
+			<tr:translation tr:lang="de" >Das Schreiben der Werte in die Datei ist fehlgeschlagen.</tr:translation>
+			<tr:translation tr:lang="en" >Failed to write the values into the file.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Calibration finished" >
+			<tr:translation tr:lang="de" >Kalibrierung abgeschlossen</tr:translation>
+			<tr:translation tr:lang="en" >Calibration finished</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Camera matrix and distortion coefficients have been saved. To use them, update the file path and restart the program." >
+			<tr:translation tr:lang="de" >Kameramatrix und Verzerrungskoeffizienten wurden gespeichert. Um sie zu benutzen, aktualisieren Sie den Dateipfad und starten Sie das Programm neu.</tr:translation>
+			<tr:translation tr:lang="en" >Camera matrix and distortion coefficients have been saved. To use them, update the file path and restart the program.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Generate..." >
+			<tr:translation tr:lang="de" >Generieren...</tr:translation>
+			<tr:translation tr:lang="en" >Generate...</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker detection" >
+			<tr:translation tr:lang="de" >Markerdetektion</tr:translation>
+			<tr:translation tr:lang="en" >Marker detection</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker side length \[m]" >
+			<tr:translation tr:lang="de" >Marker-Seitenlänge \[m]</tr:translation>
+			<tr:translation tr:lang="en" >Marker side length \[m]</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Visualize marker positions" >
+			<tr:translation tr:lang="de" >Markerpositionen visualisieren</tr:translation>
+			<tr:translation tr:lang="en" >Visualize marker positions</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker position" >
+			<tr:translation tr:lang="de" >Markerposition</tr:translation>
+			<tr:translation tr:lang="en" >Marker position</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker found" >
+			<tr:translation tr:lang="de" >Marker gefunden</tr:translation>
+			<tr:translation tr:lang="en" >Marker found</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Position[]" >
+			<tr:translation tr:lang="de" >Position[]</tr:translation>
+			<tr:translation tr:lang="en" >Position[]</tr:translation>
+			<tr:translation tr:lang="es" >Posición[]</tr:translation>
+			<tr:translation tr:lang="fr" >Position[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Rotation[]" >
+			<tr:translation tr:lang="de" >Rotation[]</tr:translation>
+			<tr:translation tr:lang="en" >Rotation[]</tr:translation>
+			<tr:translation tr:lang="es" >Rotación[]</tr:translation>
+			<tr:translation tr:lang="fr" >Rotation[]</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Visualize marker position" >
+			<tr:translation tr:lang="de" >Markerposition visualisieren</tr:translation>
+			<tr:translation tr:lang="en" >Visualize marker position</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Generate markers" >
+			<tr:translation tr:lang="de" >Marker erstellen</tr:translation>
+			<tr:translation tr:lang="en" >Generate markers</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Configure your printer." >
+			<tr:translation tr:lang="de" >Konfiguration Ihres Druckers.</tr:translation>
+			<tr:translation tr:lang="en" >Configure your printer.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Setup printer..." >
+			<tr:translation tr:lang="de" >Drucker einrichten...</tr:translation>
+			<tr:translation tr:lang="en" >Setup printer...</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker selection" >
+			<tr:translation tr:lang="de" >Markerauswahl</tr:translation>
+			<tr:translation tr:lang="en" >Marker selection</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="You can select up to %1 markers." >
+			<tr:translation tr:lang="de" >Sie können bis zu %1 Marker auswählen.</tr:translation>
+			<tr:translation tr:lang="en" >You can select up to %1 markers.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Available markers:" >
+			<tr:translation tr:lang="de" >Verfügbare Marker:</tr:translation>
+			<tr:translation tr:lang="en" >Available markers:</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Selected markers:" >
+			<tr:translation tr:lang="de" >Ausgewählte Marker:</tr:translation>
+			<tr:translation tr:lang="en" >Selected markers:</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Print markers..." >
+			<tr:translation tr:lang="de" >Marker drucken...</tr:translation>
+			<tr:translation tr:lang="en" >Print markers</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Finished" >
+			<tr:translation tr:lang="de" >Abgeschlossen</tr:translation>
+			<tr:translation tr:lang="en" >Finished</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="The page has been sent to the printer." >
+			<tr:translation tr:lang="de" >Die Seite wurde an den Drucker gesendet.</tr:translation>
+			<tr:translation tr:lang="en" >The page has been sent to the printer.</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Print more markers" >
+			<tr:translation tr:lang="de" >Mehr Marker drucken</tr:translation>
+			<tr:translation tr:lang="en" >Print more markers</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Marker ID" >
+			<tr:translation tr:lang="de" >Marker-ID</tr:translation>
+			<tr:translation tr:lang="en" >Marker ID</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Hold the pattern in front of the camera as shown in the picture below and click &quot;Next&quot;." >
+			<tr:translation tr:lang="de" >Halten Sie das Muster vor die Kamera wie im Bild gezeigt, und klicken Sie auf "Weiter".</tr:translation>
+			<tr:translation tr:lang="en" >Hold the pattern in front of the camera as shown in the picture below and click "Next".</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Print marker IDs. Prefix:" >
+			<tr:translation tr:lang="de" >Marker-IDs drucken. Präfix:</tr:translation>
+			<tr:translation tr:lang="en" >Print marker IDs. Prefix:</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Trying to connect to EasyPort Mini" >
+			<tr:translation tr:lang="de" >Aufbau der Verbindung zu EasyPort Mini</tr:translation>
+			<tr:translation tr:lang="en" >Trying to connect to EasyPort Mini</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="EasyPort Mini not found" >
+			<tr:translation tr:lang="de" >EasyPort Mini nicht gefunden</tr:translation>
+			<tr:translation tr:lang="en" >EasyPort Mini not found</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Successfully connected to EasyPort Mini" >
+			<tr:translation tr:lang="de" >Verbindung zu EasyPort Mini hergestellt</tr:translation>
+			<tr:translation tr:lang="en" >Successfully connected to EasyPort Mini</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Connection to EasyPort Mini closed" >
+			<tr:translation tr:lang="de" >Verbindung zu EasyPort Mini getrennt</tr:translation>
+			<tr:translation tr:lang="en" >Connection to EasyPort Mini closed</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+		<tr:item tr:key="Resetting device" >
+			<tr:translation tr:lang="de" >Gerät wird zurückgesetzt</tr:translation>
+			<tr:translation tr:lang="en" >Resetting device</tr:translation>
+			<tr:translation tr:lang="es" ></tr:translation>
+			<tr:translation tr:lang="fr" ></tr:translation>
+		</tr:item>
+    <tr:item tr:key="Connection" >
+      <tr:translation tr:lang="de" >Verbindung</tr:translation>
+      <tr:translation tr:lang="en" >Connection</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Radius base" >
+      <tr:translation tr:lang="de" >Basisradius</tr:translation>
+      <tr:translation tr:lang="en" >Radius base</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Radius wheel" >
+      <tr:translation tr:lang="de" >Radradius</tr:translation>
+      <tr:translation tr:lang="en" >Radius wheel</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Gear ratio" >
+      <tr:translation tr:lang="de" >Übersetzungsverhältnis</tr:translation>
+      <tr:translation tr:lang="en" >Gear ratio</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="External power supply" >
+      <tr:translation tr:lang="de" >Externe Stromversorgung</tr:translation>
+      <tr:translation tr:lang="en" >External power supply</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Number of chargers" >
+      <tr:translation tr:lang="de" >Anzahl Ladegeräte</tr:translation>
+      <tr:translation tr:lang="en" >Number of chargers</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery type" >
+      <tr:translation tr:lang="de" >Batterietyp</tr:translation>
+      <tr:translation tr:lang="en" >Battery type</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery low" >
+      <tr:translation tr:lang="de" >Batterie leer</tr:translation>
+      <tr:translation tr:lang="en" >Battery low</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery low shutdown count-down" >
+      <tr:translation tr:lang="de" >Count-down bis Abschalten</tr:translation>
+      <tr:translation tr:lang="en" >Battery low shutdown count-down</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery voltage" >
+      <tr:translation tr:lang="de" >Batteriespannung</tr:translation>
+      <tr:translation tr:lang="en" >Battery voltage</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Charging current" >
+      <tr:translation tr:lang="de" >Ladestrom</tr:translation>
+      <tr:translation tr:lang="en" >Charging current</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery 1 Temp" >
+      <tr:translation tr:lang="de" >Temperatur Batterie 1</tr:translation>
+      <tr:translation tr:lang="en" >Battery 1 Temp</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery 2 Temp" >
+      <tr:translation tr:lang="de" >Temperatur Batterie 2</tr:translation>
+      <tr:translation tr:lang="en" >Battery 2 Temp</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="State" >
+      <tr:translation tr:lang="de" >Zustand</tr:translation>
+      <tr:translation tr:lang="en" >State</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Version" >
+      <tr:translation tr:lang="de" >Version</tr:translation>
+      <tr:translation tr:lang="en" >Version</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Battery" >
+      <tr:translation tr:lang="de" >Batterie</tr:translation>
+      <tr:translation tr:lang="en" >Battery</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Charger" >
+      <tr:translation tr:lang="de" >Akkulader</tr:translation>
+      <tr:translation tr:lang="en" >Charger</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	<tr:item tr:key="Clear error" >
+      <tr:translation tr:lang="de" >Fehler löschen</tr:translation>
+      <tr:translation tr:lang="en" >Clear error</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Load camera calibration" >
+      <tr:translation tr:lang="de" >Kamerakalibrierungsdaten laden</tr:translation>
+      <tr:translation tr:lang="en" >Load camera calibration</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Start camera calibration program" >
+      <tr:translation tr:lang="de" >Das Programm zur Kamerakalibrierung ausführen</tr:translation>
+      <tr:translation tr:lang="en" >Start camera calibration program</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Remove all camera calibrations" >
+      <tr:translation tr:lang="de" >Löschen aller Kamerakalibrierungsdaten</tr:translation>
+      <tr:translation tr:lang="en" >Remove all camera calibrations</tr:translation>
+      <tr:translation tr:lang="es" ></tr:translation>
+      <tr:translation tr:lang="fr" ></tr:translation>
+    </tr:item>
+	</translations>
+</root>

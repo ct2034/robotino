@@ -1,0 +1,149 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Strategy</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "navigation_path_driver_strategy.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Strategy</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="navigation_path_path_dialog.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="navigation_path_driver_example.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="pathdriver_path1.png" width="500" height="240" alt="pathdriver_path1" style="width:500px;height:240px;border:none" /></p>
+<p>&nbsp;</p>
+<p>The path driver function block creates a path which first connects the way points straight-lined.</p>
+<p>&nbsp;</p>
+<p>The robot is driven with a virtual way point (painted as a red dot in the figure above). Given the robot's current position, the virtual way point will be placed on the path that the distance between robot and virtual way point is dp (distance virtual point). The virtual way point can only move along the path towards the path's end, i.e. if the robot moves away from the virtual way point, it remains unchanged. Due to the regulation on the virtual point, the path will be smoothed. The greater dp is, the greater is the smoothing.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Angular velocity parameterization</span></p>
+<p>The angular velocity <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ) is specified via the function block dialog dependent from the angular error dφ. dφ is the angle between the robot's current orientation and the line from the robots center to the virtual way point.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Velocity parameterization</span></p>
+<p>The velocity is also specified dependent from dφ and named v(dφ). So it is possible to slow down the movement if the robot is no longer oriented properly.</p>
+<p>&nbsp;</p>
+<p>To be able to reduce velocity if the path has a bend, the velocity is also specified as a function v(dn) of the distance between the virtual point and the next way point. A typical curve of v(dn) is</p>
+<p><img src="pathdriver_v_dn_zoom68.png" width="137" height="128" alt="pathdriver_v_dn" style="width:137px;height:128px;border:none" /></p>
+<p>I.e. the velocity shall decline if the robot gets closer to the way point.</p>
+<p>&nbsp;</p>
+<p>But we want to slow down the robot depending on the angle &nbsp;α<span style="font-size: 7pt; vertical-align: sub;">n</span>. α<span style="font-size: 7pt; vertical-align: sub;">n</span> is the angle between the current and the next path segment. If α<span style="font-size: 7pt; vertical-align: sub;">n</span> = 180° (i.e. the path leads straight-forward through the way point) the velocity is not to be reduced. If α<span style="font-size: 7pt; vertical-align: sub;">n</span> approaches 0° (a very strong bend) the robot must be slowed down strongly. Therefore the function v(α<span style="font-size: 7pt; vertical-align: sub;">n</span>) is needed. A typical curve of v(α<span style="font-size: 7pt; vertical-align: sub;">n</span>) looks like this</p>
+<p><img src="pathdriver_v_a_zoom69.png" width="137" height="133" alt="pathdriver_v_a" style="width:137px;height:133px;border:none" /></p>
+<p>I.e. the smaller α<span style="font-size: 7pt; vertical-align: sub;">n</span> is the smaller is the velocity.</p>
+<p>&nbsp;</p>
+<p>These three velocity profiles v(dφ), v(dn) und v(α) are used to calculate the overall velocity V(dφ,dn,α):</p>
+<p>&nbsp;</p>
+<p> Vp(dφ,dn,α) = min( &nbsp;v(dφ), max( v(dn), v(α) ) )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Driving to the last way point</span></p>
+<p>To slow down when the end of the path is reached, the velocity depending on the remaining distance to be driven is specified and called v(d). The target is supposed to be reached when the velocity as a function of the remaining distance to be driven is zero.</p>
+<p>&nbsp;</p>
+<p>The unsmoothed velocity results in:</p>
+<p>&nbsp;</p>
+<p>V(d,dφ,dn,γ) = min( v(d), &nbsp;Vp(dφ,dn,γ) )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Smoothing of velocity and angular velocity</span></p>
+<p>There are two other parameters available to smooth the movement.</p>
+<p>The velocity coupling is the time in milliseconds that is needed for the coupling vCC between the calculated velocity Vp(dφ,dn,α) and the real velocity to reach the value 1.</p>
+<p>The angular velocity coupling is the time in milliseconds that is needed for the Coupling omegaCC between the calculated angular velocity <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ) and the real velocity omega to reach the value 1.</p>
+<p>&nbsp;</p>
+<p>dv = vCC * ( Vp<span style="font-size: 7pt; vertical-align: sub;">t</span> - Vp<span style="font-size: 7pt; vertical-align: sub;">t-1</span> )</p>
+<p>velocity = Vp<span style="font-size: 7pt; vertical-align: sub;">t-1</span> + dv</p>
+<p>&nbsp;</p>
+<p>domega = omegaCC * ( <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t</span> - <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t-1</span> )</p>
+<p>velocity = <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t-1</span> + domega</p>
+<p>&nbsp;</p>
+<p>The subscript t means the value at time t. t-1 means the value one time step before t.</p>
+<p>&nbsp;</p>
+<p>At restart vCC is initialized with 0 and increases to 1 within the time specified by the velocity coupling.</p>
+<p>At restart omegaCC is initialized with 0 and increases to 1 within the time specified by the angular velocity coupling.</p>
+<p>&nbsp;</p>
+<p>If the virtual point jumps to a new path segment, vCC and omegaCC will be reset to 0.</p>
+
+</td></tr></table>
+
+</body>
+</html>

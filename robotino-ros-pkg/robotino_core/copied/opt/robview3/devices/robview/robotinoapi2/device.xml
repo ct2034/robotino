@@ -1,0 +1,2363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	dev:id="REC GmbH Robotino" dev:toplevel="true">
+
+	<dev:translations>
+	</dev:translations>
+
+	<dev:inputs>
+		<dev:input var:type="float" var:varname="ain0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain4">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain5">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain6">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="ain7">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din4">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din5">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din6">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="din7">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor0_velocity">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="motor0_position">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor0_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor1_velocity">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="motor1_position">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor1_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor2_velocity">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="motor2_position">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="motor2_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance4">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance5">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance6">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance7">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="distance8">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="bumper">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="power_button">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bytearray" var:varname="cameraData">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="image" var:varname="cameraImage0">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="image" var:varname="cameraImage1">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="image" var:varname="cameraImage2">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="image" var:varname="cameraImage3">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="uint16" var:varname="cameraDataSize">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="cameraFrequency0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="cameraFrequency1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="cameraFrequency2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="cameraFrequency3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="odometry_x">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="odometry_y">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="odometry_phi">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint32" var:varname="nstar_sequenceNo">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="nstar_roomId">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="nstar_numSpotsVisible">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="nstar_posX">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="nstar_posY">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="nstar_posTheta">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint16" var:varname="nstar_magSpot0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint16" var:varname="nstar_magSpot1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="power_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="power_voltage">
+			<var:default var:val="0"/>
+		</dev:input>
+    <dev:input var:type="bool" var:varname="ext_power">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="uint8" var:varname="num_chargers">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="string" var:varname="batteryType">
+      <var:default var:val=""/>
+    </dev:input>
+    <dev:input var:type="bool" var:varname="batteryLow">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="batteryLowShutdownCounter">
+      <var:default var:val="0"/>
+    </dev:input>
+		<dev:input var:type="float" var:varname="gripper_isOpened">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="gripper_isClosed">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="poweroutput_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="encoderinput_position">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="int16" var:varname="encoderinput_velocity">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint32" var:varname="sequenceNumber">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="connection_quality">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="connection_connected">
+			<var:default var:val="false"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="connection_master">
+			<var:default var:val="true"/>
+		</dev:input>
+		
+		<dev:input var:type="float" var:varname="vx_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="vy_current">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="omega_current">
+			<var:default var:val="0"/>
+		</dev:input>
+
+		<!--Manipulator-->
+		<dev:input var:type="uint16" var:varname="num_axes_found">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint16" var:varname="manipulator_readings">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint16" var:varname="manipulator_limits">
+			<var:default var:val="0"/>
+		</dev:input>
+
+		<!--laser rangefinder-->
+		<dev:input var:type="rangedata" var:varname="scan0">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="rangedata" var:varname="scan1">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="rangedata" var:varname="scan2">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="rangedata" var:varname="scan3">
+			<var:default var:val=""/>
+		</dev:input>
+    
+    <!--Gyroscope-->
+    <dev:input var:type="float" var:varname="gyro_angle">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="float" var:varname="gyro_rate">
+      <var:default var:val="0"/>
+    </dev:input>
+
+    <!--Gyroscope Ext-->
+    <dev:input var:type="float" var:varname="gyro_ext_angle">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="float" var:varname="gyro_ext_rate">
+      <var:default var:val="0"/>
+    </dev:input>
+
+		<!--CBHA-->
+		<dev:input var:type="floatvector" var:varname="cbha_readings">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="cbha_pressure_sensor">
+			<var:default var:val="false"/>
+		</dev:input>
+		<dev:input var:type="floatvector" var:varname="cbha_string_potis">
+			<var:default var:val=""/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="cbha_foil_poti">
+			<var:default var:val="0"/>
+		</dev:input>
+	</dev:inputs>
+
+	<dev:outputs>
+		<dev:output var:type="bool" var:varname="dout0">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout1">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout2">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout3">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout4">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout5">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout6">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="dout7">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="motor0_setVelocity">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor0_resetPosition">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor0_brake">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="motor1_setVelocity">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor1_resetPosition">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor1_brake">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="motor2_setVelocity">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor2_resetPosition">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="motor2_brake">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="odometry_set">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="odometry_set_x">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="odometry_set_y">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="odometry_set_phi">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="uint8" var:varname="nstar_setRoomId">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="nstar_ceilingCal">
+			<var:default var:val="1"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="relay0">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="relay1">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="gripper_open">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="poweroutput_setValue">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="encoderinput_resetPosition">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="shutdown">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="connection_connect">
+			<var:default var:val="false"/>
+		</dev:output>
+		
+		<dev:output var:type="float" var:varname="vx_set">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="vy_set">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="omega_set">
+			<var:default var:val="0"/>
+		</dev:output>
+
+		<!--Manipulator-->
+		<dev:output var:type="float" var:varname="axis0_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis0_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis1_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis1_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis2_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis2_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis3_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis3_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis4_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis4_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis5_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis5_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis6_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis6_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis7_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis7_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis8_setpos">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="axis8_setspeed">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="int16" var:varname="select_pos">
+			<var:default var:val="-1"/>
+		</dev:output>
+		
+		<!--CBHA-->
+		<dev:output var:type="float" var:varname="cbha_b0">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b1">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b2">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b3">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b4">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b5">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b6">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="cbha_b7">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="cbha_compressors">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="cbha_gripper_valve1">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="cbha_gripper_valve2">
+			<var:default var:val="false"/>
+		</dev:output>
+		<dev:output var:type="bool" var:varname="cbha_water_drain_valve">
+			<var:default var:val="false"/>
+		</dev:output>
+	</dev:outputs>
+
+	<dev:state>
+		<dev:statevar var:type="uint8" var:varname="numCameras0">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numCameras1">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numCameras2">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numCameras3">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numGrippers">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numPowerOutputs">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numLaserRangeFinders0">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numLaserRangeFinders1">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numLaserRangeFinders2">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="numLaserRangeFinders3">
+			<var:default var:val="0"/>
+		</dev:statevar>
+    <dev:statevar var:type="uint8" var:varname="numDriveSystems">
+      <var:default var:val="0"/>
+    </dev:statevar>
+		<dev:statevar var:type="uint8" var:varname="position_selectors">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="bool" var:varname="connectedToSimulator">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="float" var:varname="northstar_originX_stored">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="float" var:varname="northstar_originY_stored">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="float" var:varname="northstar_originX_offset">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="float" var:varname="northstar_originY_offset">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="float" var:varname="northstar_originPhi_stored">
+			<var:default var:val="0"/>
+		</dev:statevar>
+
+    <dev:statevar var:type="uint32" var:varname="charger0_time">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="uint32" var:varname="charger1_time">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="uint32" var:varname="charger2_time">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger0_batteryVoltage">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger1_batteryVoltage">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger2_batteryVoltage">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger0_chargingCurrent">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger1_chargingCurrent">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger2_chargingCurrent">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger0_bat1temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger1_bat1temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger2_bat1temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger0_bat2temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger1_bat2temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="float" var:varname="charger2_bat2temp">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="int32" var:varname="charger0_state_number">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="int32" var:varname="charger1_state_number">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="int32" var:varname="charger2_state_number">
+      <var:default var:val="0"/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger0_state">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger1_state">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger2_state">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger0_error">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger1_error">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger2_error">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger0_version">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger1_version">
+      <var:default var:val=""/>
+    </dev:statevar>
+    <dev:statevar var:type="string" var:varname="charger2_version">
+      <var:default var:val=""/>
+    </dev:statevar>
+	</dev:state>
+
+	<dev:config>
+		<dev:configvar var:type="string" var:varname="ipAddress">
+			<var:default var:val="172.26.1.1"/>
+		</dev:configvar>
+		<dev:configvar var:type="stringlist" var:varname="ipAddressHistory">
+			<var:default var:val="172.26.1.1;;127.0.0.1"/>
+		</dev:configvar>
+		<dev:configvar var:type="uint16" var:varname="imageServerPort">
+			<var:default var:val="8080"/>
+		</dev:configvar>
+		<dev:configvar var:type="uintvector" var:varname="camera0_resolution">
+			<var:default var:val="(320 240)"/>
+		</dev:configvar>
+		<dev:configvar var:type="uintvector" var:varname="camera1_resolution">
+			<var:default var:val="(320 240)"/>
+		</dev:configvar>
+		<dev:configvar var:type="uintvector" var:varname="camera2_resolution">
+			<var:default var:val="(320 240)"/>
+		</dev:configvar>
+		<dev:configvar var:type="uintvector" var:varname="camera3_resolution">
+			<var:default var:val="(320 240)"/>
+		</dev:configvar>
+		<dev:configvar var:type="bool" var:varname="disableDriveSystem">
+			<var:default var:val="false"/>
+		</dev:configvar>
+		<dev:configvar var:type="int32" var:varname="num_axes">
+			<var:default var:val="9"/>
+		</dev:configvar>
+		<dev:configvar var:type="int32" var:varname="num_pos_max">
+			<var:default var:val="30"/>
+		</dev:configvar>
+		<dev:configvar var:type="int32" var:varname="num_pos">
+			<var:default var:val="0"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos0_name">
+			<var:default var:val="Pos1"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos1_name">
+			<var:default var:val="Pos2"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos2_name">
+			<var:default var:val="Pos3"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos3_name">
+			<var:default var:val="Pos4"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos4_name">
+			<var:default var:val="Pos5"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos5_name">
+			<var:default var:val="Pos6"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos6_name">
+			<var:default var:val="Pos7"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos7_name">
+			<var:default var:val="Pos8"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos8_name">
+			<var:default var:val="Pos9"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos9_name">
+			<var:default var:val="Pos10"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos10_name">
+			<var:default var:val="Pos11"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos11_name">
+			<var:default var:val="Pos12"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos12_name">
+			<var:default var:val="Pos13"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos13_name">
+			<var:default var:val="Pos14"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos14_name">
+			<var:default var:val="Pos15"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos15_name">
+			<var:default var:val="Pos16"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos16_name">
+			<var:default var:val="Pos17"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos17_name">
+			<var:default var:val="Pos18"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos18_name">
+			<var:default var:val="Pos19"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos19_name">
+			<var:default var:val="Pos20"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos20_name">
+			<var:default var:val="Pos21"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos21_name">
+			<var:default var:val="Pos22"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos22_name">
+			<var:default var:val="Pos23"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos23_name">
+			<var:default var:val="Pos24"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos24_name">
+			<var:default var:val="Pos25"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos25_name">
+			<var:default var:val="Pos26"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos26_name">
+			<var:default var:val="Pos27"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos27_name">
+			<var:default var:val="Pos28"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos28_name">
+			<var:default var:val="Pos29"/>
+		</dev:configvar>
+		<dev:configvar var:type="string" var:varname="pos29_name">
+			<var:default var:val="Pos30"/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos0">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos1">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos2">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos3">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos4">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos5">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos6">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos7">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos8">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos9">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos10">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos11">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos12">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos13">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos14">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos15">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos16">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos17">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos18">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos19">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos20">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos21">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos22">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos23">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos24">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos25">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos26">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos27">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos28">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="pos29">
+			<var:default var:val=""/>
+		</dev:configvar>
+		<dev:configvar var:type="bool" var:varname="line0_enabled">
+			<var:default var:val="true"/>
+		</dev:configvar>
+		<dev:configvar var:type="bool" var:varname="line1_enabled">
+			<var:default var:val="true"/>
+		</dev:configvar>
+		<dev:configvar var:type="bool" var:varname="line2_enabled">
+			<var:default var:val="true"/>
+		</dev:configvar>
+		<dev:configvar var:type="floatvector" var:varname="drivelayout">
+			<var:default var:val=""/>
+		</dev:configvar>
+	</dev:config>
+
+	<dev:subdevices>
+		<dev:device dev:id="Drive system" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Robotino Motor" dev:name="Robotino Motor #1"/>
+				<dev:resource dev:class="Robotino Motor" dev:name="Robotino Motor #2"/>
+				<dev:resource dev:class="Robotino Motor" dev:name="Robotino Motor #3"/>
+			</dev:provides>
+
+			<dev:units>
+				<!-- Motors -->
+				<dev:unit dev:type="REC GmbH Robotino Motor" dev:name="Motor[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Motor #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/motor1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Motor" dev:name="Motor[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Motor #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/motor2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Motor" dev:name="Motor[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Motor #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/motor3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				
+				<dev:unit dev:type="REC GmbH Robotino Drive System">
+					<dev:stateVarExprs>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Motor #1"/>
+						<dev:resource dev:name="Robotino Motor #2"/>
+						<dev:resource dev:name="Robotino Motor #3"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+				<dev:unit dev:type="REC GmbH Robotino Omnidrive" >
+					<dev:stateVarExprs />
+				</dev:unit>
+
+				<dev:unit dev:type="REC GmbH Robotino Omnidrive Inverse" >
+					<dev:stateVarExprs />
+				</dev:unit>
+			</dev:units>
+
+		</dev:device>
+
+		<dev:device dev:id="Collision detection">
+			<dev:provides>
+				<dev:resource dev:class="Robotino Bumper" dev:name="REC GmbH Robotino Bumper"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #1"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #2"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #3"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #4"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #5"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #6"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #7"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #8"/>
+				<dev:resource dev:class="Robotino Distance" dev:name="Robotino Distance #9"/>
+			</dev:provides>
+
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Robotino Bumper" >
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Bumper"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+				<!-- Distance sensors -->
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Distance Sensor" dev:name="Distance[ #9]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="8" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Distance #9"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/distance9.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Image system">
+			<dev:provides>
+        <dev:resource dev:class="Robotino Camera" dev:name="REC GmbH Robotino Camera"/>
+        <dev:resource dev:class="Robotino Camera" dev:name="REC GmbH Robotino Camera #2"/>
+        <dev:resource dev:class="Robotino Camera" dev:name="REC GmbH Robotino Camera #3"/>
+        <dev:resource dev:class="Robotino Camera" dev:name="REC GmbH Robotino Camera #4"/>
+			</dev:provides>
+
+			<dev:units>
+				<!-- Camera -->
+				<dev:unit dev:type="REC GmbH Robotino Camera" dev:name="REC GmbH Robotino Camera">
+          <dev:stateVarExprs>
+            <md:varExpr md:value="0" md:varname="address"/>
+          </dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Camera"/>
+					</dev:unitRequirements>
+          <dev:guiinfo dev:display="hidden">
+            <dev:description>
+              <dev:icon dev:filename="icons/camera1.png"/>
+            </dev:description>
+          </dev:guiinfo>
+				</dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Camera" dev:name="Camera[ #1]">
+          <dev:stateVarExprs>
+            <md:varExpr md:value="0" md:varname="address"/>
+          </dev:stateVarExprs>
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Camera"/>
+          </dev:unitRequirements>
+          <dev:guiinfo>
+            <dev:description>
+              <dev:icon dev:filename="icons/camera1.png"/>
+            </dev:description>
+          </dev:guiinfo>
+        </dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Camera" dev:name="Camera[ #2]">
+          <dev:stateVarExprs>
+            <md:varExpr md:value="1" md:varname="address"/>
+          </dev:stateVarExprs>
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Camera #2"/>
+          </dev:unitRequirements>
+          <dev:guiinfo>
+            <dev:description>
+              <dev:icon dev:filename="icons/camera2.png"/>
+            </dev:description>
+          </dev:guiinfo>
+        </dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Camera" dev:name="Camera[ #3]">
+          <dev:stateVarExprs>
+            <md:varExpr md:value="2" md:varname="address"/>
+          </dev:stateVarExprs>
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Camera #3"/>
+          </dev:unitRequirements>
+          <dev:guiinfo>
+            <dev:description>
+              <dev:icon dev:filename="icons/camera3.png"/>
+            </dev:description>
+          </dev:guiinfo>
+        </dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Camera" dev:name="Camera[ #4]">
+          <dev:stateVarExprs>
+            <md:varExpr md:value="3" md:varname="address"/>
+          </dev:stateVarExprs>
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Camera #4"/>
+          </dev:unitRequirements>
+          <dev:guiinfo>
+            <dev:description>
+              <dev:icon dev:filename="icons/camera4.png"/>
+            </dev:description>
+          </dev:guiinfo>
+        </dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="I/O connector">
+			<dev:provides>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #1"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #2"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #3"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #4"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #5"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #6"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #7"/>
+				<dev:resource dev:class="Robotino Digital Input" dev:name="Robotino Digital Input #8"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #1"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #2"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #3"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #4"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #5"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #6"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #7"/>
+				<dev:resource dev:class="Robotino Digital Output" dev:name="Robotino Digital Output #8"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #1"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #2"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #3"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #4"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #5"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #6"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #7"/>
+				<dev:resource dev:class="Robotino ADC" dev:name="Robotino ADC #8"/>
+				<dev:resource dev:class="Robotino Relay" dev:name="Robotino Relay #1"/>
+				<dev:resource dev:class="Robotino Relay" dev:name="Robotino Relay #2"/>
+			</dev:provides>
+
+			<dev:units>
+				<!-- Digital input -->
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Input" dev:name="Digital input[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Input #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/din8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+
+				<!-- Digital output -->
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Digital Output" dev:name="Digital output[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Digital Output #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/dout8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+
+				<!-- ADC -->
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino ADC" dev:name="Analog input[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino ADC #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/ain8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+
+				<!--Relay-->
+				<dev:unit dev:type="REC GmbH Robotino Relay" dev:name="Relay[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Relay #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/relay1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Relay" dev:name="Relay[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Robotino Relay #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/relay2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+
+			<!--<dev:guiinfo>
+				<dev:description>
+					<dev:name>I/O connector</dev:name>
+					<dev:detailed>Festo Didactic Robotino ® I/O connector</dev:detailed>
+					<dev:icon dev:filename="icons/ioconnector.png"/>
+				</dev:description>
+			</dev:guiinfo>-->
+		</dev:device>
+
+		<dev:device dev:id="Navigation">
+			<dev:provides>
+				<dev:resource dev:class="Robotino Odometry" dev:name="REC GmbH Robotino Odometry"/>
+				<dev:resource dev:class="Robotino Northstar" dev:name="REC GmbH Robotino Northstar"/>
+        <dev:resource dev:class="Robotino Gyroscope" dev:name="REC GmbH Robotino Gyroscope"/>
+        <dev:resource dev:class="Robotino Gyroscope Ext" dev:name="REC GmbH Robotino Gyroscope Ext"/>
+			</dev:provides>
+
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Robotino Odometry" >
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Odometry"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+				<dev:unit dev:type="REC GmbH Robotino Northstar">
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Northstar"/>
+					</dev:unitRequirements>
+				</dev:unit>
+				
+				<dev:unit dev:type="REC GmbH Robotino Gyroscope">
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Gyroscope"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+        <dev:unit dev:type="REC GmbH Robotino Gyroscope Ext">
+          <dev:stateVarExprs />
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Gyroscope Ext"/>
+          </dev:unitRequirements>
+        </dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="I/O extension">
+			<dev:provides>
+				<!--<dev:resource dev:class="Robotino Gripper" dev:name="REC GmbH Robotino Gripper"/>-->
+				<dev:resource dev:class="Robotino Power Output" dev:name="REC GmbH Robotino Power Output"/>
+				<dev:resource dev:class="Robotino Encoder Input" dev:name="REC GmbH Robotino Encoder Input"/>
+			</dev:provides>
+
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Robotino Gripper">
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Power Output"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+				<dev:unit dev:type="REC GmbH Robotino Power Output">
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Power Output"/>
+					</dev:unitRequirements>
+				</dev:unit>
+
+				<dev:unit dev:type="REC GmbH Robotino Encoder Input">
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Encoder Input"/>
+					</dev:unitRequirements>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Internal sensors">
+			<dev:provides>
+        <dev:resource dev:class="Robotino Power Management" dev:name="REC GmbH Robotino Power Management"/>
+        <dev:resource dev:class="Robotino Battery" dev:name="REC GmbH Robotino Battery"/>
+				<dev:resource dev:class="Robotino Shutdown" dev:name="REC GmbH Robotino Shutdown"/>
+			</dev:provides>
+
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Robotino Power Management" >
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Power Management"/>
+					</dev:unitRequirements>
+				</dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Battery" >
+          <dev:stateVarExprs />
+          <dev:unitRequirements>
+            <dev:resource dev:name="REC GmbH Robotino Battery"/>
+          </dev:unitRequirements>
+        </dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Shutdown" >
+					<dev:stateVarExprs />
+					<dev:unitRequirements>
+						<dev:resource dev:name="REC GmbH Robotino Shutdown"/>
+					</dev:unitRequirements>
+          <dev:guiinfo dev:display="hidden">
+            <dev:description>
+              <dev:icon dev:filename="icons/Shutdown.png"/>
+            </dev:description>
+          </dev:guiinfo>
+				</dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Connection">
+          <dev:guiinfo dev:display="hidden">
+            <dev:description>
+              <dev:icon dev:filename="icons/Connection.png"/>
+            </dev:description>
+          </dev:guiinfo>
+        </dev:unit>
+        <dev:unit dev:type="REC GmbH Robotino Connection2"/>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Manipulator">
+			<dev:subdevices>
+				<dev:device dev:id="Reader" dev:toplevel="false">
+					<dev:provides>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS1 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS2 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS3 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS4 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS5 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS6 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS7 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS8 Reader"/>
+						<dev:resource dev:class="AXIS_READER" dev:name="AXIS9 Reader"/>
+					</dev:provides>
+
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axes Count" />
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #1]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="0" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS1 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis1.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #2]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="1" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS2 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis2.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #3]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="2" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS3 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis3.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #4]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="3" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS4 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis4.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #5]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="4" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS5 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis5.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #6]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="5" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS6 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis6.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #7]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="6" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS7 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis7.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #8]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="7" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS8 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis8.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Reader" dev:name="Axis[ #9]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="8" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS9 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis9.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+					</dev:units>
+				</dev:device>
+
+				<dev:device dev:id="Writer" dev:toplevel="false">
+					<dev:provides>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS1 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS2 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS3 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS4 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS5 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS6 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS7 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS8 Writer"/>
+						<dev:resource dev:class="AXIS_WRITER" dev:name="AXIS9 Writer"/>
+						<dev:resource dev:class="LINE_WRITER" dev:name="LINE1 Writer"/>
+						<dev:resource dev:class="LINE_WRITER" dev:name="LINE2 Writer"/>
+						<dev:resource dev:class="LINE_WRITER" dev:name="LINE3 Writer"/>
+						<dev:resource dev:class="POSITIONSELECTOR" dev:name="POSITIONSELECTOR"/>
+					</dev:provides>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Robotino Arm Position Selector" dev:name="Position selector">
+							<dev:stateVarExprs>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="POSITIONSELECTOR"/>
+								<dev:resource dev:name="AXIS1 Writer"/>
+								<dev:resource dev:name="AXIS2 Writer"/>
+								<dev:resource dev:name="AXIS3 Writer"/>
+								<dev:resource dev:name="AXIS4 Writer"/>
+								<dev:resource dev:name="AXIS5 Writer"/>
+								<dev:resource dev:name="AXIS6 Writer"/>
+								<dev:resource dev:name="AXIS7 Writer"/>
+								<dev:resource dev:name="AXIS8 Writer"/>
+								<dev:resource dev:name="AXIS9 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/positionselector.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #1]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="0" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS1 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis1.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #2]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="1" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS2 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis2.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #3]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="2" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS3 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis3.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #4]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="3" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS4 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis4.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #5]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="4" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS5 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis5.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #6]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="5" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS6 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis6.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #7]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="6" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS7 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis7.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #8]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="7" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS8 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis8.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Arm Axis Writer" dev:name="Axis[ #9]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="8" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="AXIS9 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/axis9.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<!--<dev:unit dev:type="REC GmbH Robotino Arm Line Writer" dev:name="Line[ #1]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="address"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="LINE1 Writer"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/line1.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Robotino Arm Line Writer" dev:name="Line[ #2]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="address"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="LINE2 Writer"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/line2.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Robotino Arm Line Writer" dev:name="Line[ #3]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="2" md:varname="address"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="LINE3 Writer"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/line3.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>-->
+
+					</dev:units>
+				</dev:device>
+			</dev:subdevices>
+		</dev:device>
+
+		<dev:device dev:id="Laser rangefinder">
+			<dev:provides>
+			</dev:provides>
+
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Robotino Laser Rangefinder">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Robotino Laser Rangefinder Analysis"/>
+				<dev:unit dev:type="REC GmbH Robotino Laser Rangefinder Info">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Robotino XT">
+			<dev:subdevices>
+				<dev:device dev:id="Sensors" dev:toplevel="false">
+					<dev:provides>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS1 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS2 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS3 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS4 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS5 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS6 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS7 Reader"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Reader" dev:name="BELLOWS8 Reader"/>
+					</dev:provides>
+
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #1]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="0" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS1 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel1.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #2]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="1" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS2 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel2.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #3]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="2" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS3 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel3.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #4]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="3" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS4 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel4.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #5]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="4" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS5 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel5.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #6]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="5" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS6 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel6.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #7]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="6" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS7 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel7.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Reader" dev:name="Bellows[ #8]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="7" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS8 Reader"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel8.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Actors" dev:toplevel="false">
+					<dev:provides>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS1 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS2 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS3 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS4 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS5 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS6 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS7 Writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel Bellows Writer" dev:name="BELLOWS8 Writer"/>
+					</dev:provides>
+
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Segment XY" />
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Gripper Rotate" />
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Gripper Opener" />
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #1]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="0" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS1 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel1.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #2]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="1" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS2 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel2.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #3]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="2" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS3 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel3.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #4]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="3" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS4 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel4.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #5]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="4" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS5 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel5.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #6]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="5" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS6 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel6.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #7]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="6" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS7 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel7.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel Bellows Writer" dev:name="Bellows[ #8]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="7" md:varname="address"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="BELLOWS8 Writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/ruessel8.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+					</dev:units>
+				</dev:device>
+
+				<dev:device dev:id="I/O" dev:toplevel="false">
+					<dev:provides>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel DOUT" dev:name="Compressors_writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel DOUT" dev:name="GripperValve1_writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel DOUT" dev:name="GripperValve2_writer"/>
+						<dev:resource dev:class="REC GmbH Robotino Ruessel DOUT" dev:name="WaterDrainValve_writer"/>
+					</dev:provides>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel String Potis" dev:name="String potentiometers"/>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel AIN" dev:name="Foil potentiometer">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_foil_poti" md:varname="devinputname"/>
+							</dev:stateVarExprs>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/foilpoti.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel DIN" dev:name="Pressure sensor">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_pressure_sensor" md:varname="devinputname"/>
+							</dev:stateVarExprs>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/pressuresensor.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel DOUT" dev:name="Compressors">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_compressors" md:varname="devoutputname"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="Compressors_writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/compressor.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel DOUT" dev:name="Gripper valve[ #1]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_gripper_valve1" md:varname="devoutputname"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="GripperValve1_writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/grippervalve1.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel DOUT" dev:name="Gripper valve[ #2]">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_gripper_valve2" md:varname="devoutputname"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="GripperValve2_writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/grippervalve2.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+						<dev:unit dev:type="REC GmbH Robotino Ruessel DOUT" dev:name="Water drain valve">
+							<dev:stateVarExprs>
+								<md:varExpr md:value="cbha_water_drain_valve" md:varname="devoutputname"/>
+							</dev:stateVarExprs>
+							<dev:unitRequirements>
+								<dev:resource dev:name="WaterDrainValve_writer"/>
+							</dev:unitRequirements>
+							<dev:guiinfo>
+								<dev:description>
+									<dev:icon dev:filename="icons/waterdrainvalve.png"/>
+								</dev:description>
+							</dev:guiinfo>
+						</dev:unit>
+					</dev:units>
+				</dev:device>
+			</dev:subdevices>
+		</dev:device>
+
+	</dev:subdevices>
+
+	<!-- Plugin filename -->
+	<dev:plugins>
+		<dev:plugin plugin:type="simulation" plugin:library="device_robotino_simulation"/>
+		<dev:plugin plugin:type="dialog" plugin:library="device_robotino_gui"/>
+		<dev:plugin plugin:type="toolbar" plugin:library="device_robotino_gui"/>
+	</dev:plugins>
+
+	<dev:guiinfo>
+		<dev:description>
+			<dev:name>Robotino®</dev:name>
+			<dev:detailed>Festo Didactic Robotino®</dev:detailed>
+			<dev:icon dev:filename="icons/robotino.png"/>
+		</dev:description>
+	</dev:guiinfo>
+
+</dev:device>

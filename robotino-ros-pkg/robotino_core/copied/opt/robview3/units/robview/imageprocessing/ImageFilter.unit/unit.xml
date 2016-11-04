@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+  </unit:translations>
+	
+	<unit:unittypes>
+		
+		<unit:unittype unit:id="REC GmbH ImageFilter">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+          <unit:connector var:type="image" var:varname="input"/>
+          <unit:connector var:type="int32" var:varname="filter">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="mask">
+            <var:default var:val="3"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="param1">
+            <var:default var:val="127"/>
+          </unit:connector>
+				</unit:in>
+				<unit:out>
+          <unit:connector var:type="image" var:varname="output"/>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+			
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+            <unit:layout unit:varname="input" unit:side="left"/>
+            <unit:layout unit:varname="filter" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="mask" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="param1" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+            <unit:layout unit:varname="output" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+				
+				<unit:description>
+					<unit:name>Filter</unit:name>
+					<unit:icon unit:filename="icons/imagefilter.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="input">
+								<unit:description>Input</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="output">
+								<unit:description>Output</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_imageprocessing_imagefilter_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_imageprocessing_imagefilter_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+		
+	</unit:unittypes>
+</unit:unit>

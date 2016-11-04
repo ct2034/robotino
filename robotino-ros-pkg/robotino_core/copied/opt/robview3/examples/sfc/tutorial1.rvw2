@@ -1,0 +1,112 @@
+
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="codegen" kv:value=""/>
+  </md:settings>
+
+  <md:variables>
+    <md:variable var:type="float" var:varname="a">
+      <var:default var:val="0"/>
+    </md:variable>
+  </md:variables>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:configVarExprs/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino ®">
+      <md:configVarExprs>
+        <md:varExpr md:value="192.168.101.101" md:varname="ipAddress"/>
+        <md:varExpr md:value="192.168.101.101;;127.0.0.1" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="0" md:varname="cameraResolution"/>
+        <md:varExpr md:value="0" md:varname="cameraColorSpace"/>
+      </md:configVarExprs>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_constant_float">
+      <md:spec md:curr="float" md:type="T"/>
+    </md:utspec>
+    <md:utspec md:id="rec_gmbh_global_variable_writer_float"/>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_subprogram" md:name="Subprogram">
+      <md:timeslice md:nsec="40000000" md:sec="0"/>
+      <md:units>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_constant__1_" md:name="Constant (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_a" md:name="a" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="a writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="out" md:unit="actor_constant__1_"/>
+          <md:to md:con="new_value" md:unit="actor_a"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init"/>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step" md:name="Step" md:sdfModel="sdfmodel_subprogram"/>
+        <md:sfcTransition md:guard="a > 0" md:id="sfcitem_transition2"/>
+        <md:sfcJump md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:active="true" md:sdfmodel="sdfmodel_subprogram" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000000000053d000001db00000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:nameDisplay="hidden" md:unit="actor_constant__1_" md:x="384" md:y="-204">
+            <md:unitDialogLayout md:objectName="776f33ad73f146dc7ae060b850f5649a"/>
+          </md:unit>
+          <md:unit md:nameDisplay="visible" md:unit="actor_a" md:x="492" md:y="-198"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_1"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>

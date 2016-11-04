@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations/>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Calibration">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="image" var:varname="input"/>
+          <unit:connector var:type="string" var:varname="c0"/>
+          <unit:connector var:type="string" var:varname="c1"/>
+          <unit:connector var:type="string" var:varname="c2"/>
+          <unit:connector var:type="string" var:varname="c3"/>
+          <unit:connector var:type="string" var:varname="c4"/>
+          <unit:connector var:type="string" var:varname="c5"/>
+          <unit:connector var:type="string" var:varname="c6"/>
+          <unit:connector var:type="string" var:varname="c7"/>
+          <unit:connector var:type="string" var:varname="c8"/>
+          <unit:connector var:type="string" var:varname="c9"/>
+          <unit:connector var:type="string" var:varname="c10"/>
+          <unit:connector var:type="string" var:varname="c11"/>
+          <unit:connector var:type="string" var:varname="c12"/>
+          <unit:connector var:type="string" var:varname="c13"/>
+          <unit:connector var:type="string" var:varname="c14"/>
+          <unit:connector var:type="string" var:varname="c15"/>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="image" var:varname="output"/>
+					<unit:connector var:type="vector2f" var:varname="focallengths"/>
+					<unit:connector var:type="vector2f" var:varname="imagecenter"/>
+					<unit:connector var:type="floatvector" var:varname="radialdistcoeffs"/>
+					<unit:connector var:type="floatvector" var:varname="tangentialdistcoeffs"/>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state>
+				<unit:statevar var:type="bool" var:varname="running">
+					<var:default var:val="false"/>
+					<var:visibility>hidden</var:visibility>
+				</unit:statevar>
+        <unit:statevar var:type="string" var:varname="params"/>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="input" unit:side="left"/>
+            <unit:layout unit:varname="c0" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c1" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c2" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c3" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c4" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c5" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c6" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c7" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c8" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c9" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c10" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c11" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c12" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c13" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c14" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="c15" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="output" unit:side="right"/>
+						<unit:layout unit:varname="focallengths" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="imagecenter" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="radialdistcoeffs" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="tangentialdistcoeffs" unit:side="right" unit:display="hidden"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Calibration</unit:name>
+					<unit:icon unit:filename="icons/calibration.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="input">
+								<unit:description>Input</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="output">
+								<unit:description>Output</unit:description>
+							</unit:info>
+							<unit:info unit:varname="focallengths">
+								<unit:description>Focal lengths</unit:description>
+							</unit:info>
+							<unit:info unit:varname="imagecenter">
+								<unit:description>Image center</unit:description>
+							</unit:info>
+							<unit:info unit:varname="radialdistcoeffs">
+								<unit:description>Radial distortion coefficients</unit:description>
+							</unit:info>
+							<unit:info unit:varname="tangentialdistcoeffs">
+								<unit:description>Tangential distortion coefficients</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_imageprocessing_calibration_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_imageprocessing_calibration_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+	</unit:unittypes>
+</unit:unit>

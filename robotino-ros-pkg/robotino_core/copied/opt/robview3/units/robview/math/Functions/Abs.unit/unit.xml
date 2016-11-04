@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+	
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Basic Absolute Value">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="in">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="abs">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+			
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="in" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="abs" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+				
+				<unit:description>
+					<unit:name>Absolute Value</unit:name>
+					<unit:icon unit:filename="abs.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="in">
+								<unit:description>Input</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="abs">
+								<unit:description>Output</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_math_funcs_abs_simulation"/>
+			</unit:plugins>			
+
+		</unit:unittype>
+		
+	</unit:unittypes>
+</unit:unit>

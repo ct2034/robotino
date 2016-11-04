@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Oscilloscope">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="ch0">
+						<var:default var:val="0"/>
+					</unit:connector>
+          <unit:connector var:type="float" var:varname="ch1">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch2">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch3">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch4">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch5">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch6">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch7">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch8">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch9">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch10">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch11">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch12">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch13">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch14">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ch15">
+            <var:default var:val="0"/>
+          </unit:connector>
+          
+          <unit:connector var:type="boolvector" var:varname="channel_enabled">
+            <var:default var:val="(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)"/>
+          </unit:connector>
+          <unit:connector var:type="intvector" var:varname="channel_trigger">
+            <var:default var:val="(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)"/>
+          </unit:connector>
+          <unit:connector var:type="floatvector" var:varname="channel_xscale">
+            <var:default var:val="(100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100)"/>
+          </unit:connector>
+          <unit:connector var:type="floatvector" var:varname="channel_yscale">
+            <var:default var:val="(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)"/>
+          </unit:connector>
+          <unit:connector var:type="floatvector" var:varname="channel_yoffset">
+            <var:default var:val="(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)"/>
+          </unit:connector>
+          <unit:connector var:type="floatvector" var:varname="channel_triggerPosition">
+            <var:default var:val="(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)"/>
+          </unit:connector>
+          <unit:connector var:type="uintvector" var:varname="channel_color">
+            <var:default var:val="(4294901760 4278255360 4278190335 4278255615 4294902015 4294967040 4286578688 4278222848 4278190208 4278222976 4286578816 4286611456 4294967295 4278190080 4294901760 4278255360)"/>
+          </unit:connector>
+				</unit:in>
+				<unit:out>
+				</unit:out>
+			</unit:connectors>
+			<unit:state>
+        <unit:statevar var:type="vector2f" var:varname="ch0point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch1point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch2point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch3point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch4point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch5point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch6point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch7point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch8point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch9point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch10point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch11point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch12point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch13point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch14point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+        <unit:statevar var:type="vector2f" var:varname="ch15point">
+          <var:default var:val="(0 0)"/>
+          <var:access>read-only</var:access>
+        </unit:statevar>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+            <unit:layout unit:varname="ch0" unit:side="left"/>
+            <unit:layout unit:varname="ch1" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch2" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch3" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch4" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch5" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch6" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch7" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch8" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch9" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch10" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch11" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch12" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch13" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch14" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="ch15" unit:side="left" unit:display="hidden"/>
+            
+						<unit:layout unit:varname="channel_enabled" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="channel_trigger" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="channel_xscale" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="channel_yscale" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="channel_color" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="channel_yoffset" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="channel_triggerPosition" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+					</unit:out>
+				</unit:connectors>
+				<unit:state>
+				</unit:state>
+
+				<unit:description>
+					<unit:name>Oscilloscope</unit:name>
+					<unit:icon unit:filename="icons/scope.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="ch0">
+								<unit:description>Channel[ 0]</unit:description>
+							</unit:info>
+              <unit:info unit:varname="ch1">
+                <unit:description>Channel[ 1]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch2">
+                <unit:description>Channel[ 2]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch3">
+                <unit:description>Channel[ 3]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch4">
+                <unit:description>Channel[ 4]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch5">
+                <unit:description>Channel[ 5]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch6">
+                <unit:description>Channel[ 6]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch7">
+                <unit:description>Channel[ 7]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch8">
+                <unit:description>Channel[ 8]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch9">
+                <unit:description>Channel[ 9]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch10">
+                <unit:description>Channel[ 10]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch11">
+                <unit:description>Channel[ 11]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch12">
+                <unit:description>Channel[ 12]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch13">
+                <unit:description>Channel[ 13]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch14">
+                <unit:description>Channel[ 14]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ch15">
+                <unit:description>Channel[ 15]</unit:description>
+              </unit:info>
+						</unit:in>
+						<unit:out>
+						</unit:out>
+					</unit:connectors>
+					<unit:state>
+					</unit:state>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_display_scope_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_display_scope_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>
+		

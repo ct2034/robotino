@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Position Driver">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="xset">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="yset">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="phiset">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="xactual">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="yactual">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="phiactual">
+						<var:default var:val="0"/>
+					</unit:connector>
+          <unit:connector var:type="bool" var:varname="restart">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="vramp">
+            <var:default var:val="1000"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="omegaramp">
+            <var:default var:val="1000"/>
+          </unit:connector>
+					<unit:connector var:type="pointfvector" var:varname="vpoints">
+						<var:default var:val="0\;\;0;;2\;\;0;;2\;\;40;;30\;\;50;;100\;\;300"/>
+					</unit:connector>
+					<unit:connector var:type="pointfvector" var:varname="omegapoints">
+						<var:default var:val="0\;\;0;;0.5\;\;0;;0.5\;\;10;;20\;\;50"/>
+					</unit:connector>
+					<unit:connector var:type="int32" var:varname="movement">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="vx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="vy">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="omega">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="position_reached">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="orientation_reached">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="pose_reached">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state>
+				<unit:statevar var:type="bool" var:varname="vshowCross">
+					<var:default var:val="false"/>
+					<var:access>read-only</var:access>
+				</unit:statevar>
+				<unit:statevar var:type="pointf" var:varname="vcrossPoint">
+					<var:default var:val=""/>
+					<var:access>read-only</var:access>
+				</unit:statevar>
+				<unit:statevar var:type="bool" var:varname="omegashowCross">
+					<var:default var:val="false"/>
+					<var:access>read-only</var:access>
+				</unit:statevar>
+				<unit:statevar var:type="pointf" var:varname="omegacrossPoint">
+					<var:default var:val=""/>
+					<var:access>read-only</var:access>
+				</unit:statevar>
+        <unit:statevar var:type="int32" var:varname="active_movement">
+          <var:default var:val="0"/>
+        </unit:statevar>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="xset" unit:side="left"/>
+						<unit:layout unit:varname="yset" unit:side="left"/>
+						<unit:layout unit:varname="phiset" unit:side="left"/>
+						<unit:layout unit:varname="xactual" unit:side="left"/>
+						<unit:layout unit:varname="yactual" unit:side="left"/>
+            <unit:layout unit:varname="phiactual" unit:side="left"/>
+            <unit:layout unit:varname="restart" unit:side="left"/>
+            <unit:layout unit:varname="vramp" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="omegaramp" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="vpoints" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="omegapoints" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="movement" unit:side="left" unit:display="hidden"/>
+<!--				<unit:layout unit:varname="kp_trans" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="ki_trans" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i_ignore_trans" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="kp_rot" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="ki_rot" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i_ignore_rot" unit:side="left" unit:display="hidden"/> -->
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="vx" unit:side="right"/>
+						<unit:layout unit:varname="vy" unit:side="right"/>
+						<unit:layout unit:varname="omega" unit:side="right"/>
+						<unit:layout unit:varname="position_reached" unit:side="right"/>
+						<unit:layout unit:varname="orientation_reached" unit:side="right"/>
+						<unit:layout unit:varname="pose_reached" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state>
+				</unit:state>
+
+				<unit:description>
+					<unit:name>Position Driver</unit:name>
+					<unit:icon unit:filename="icons/positiondriver.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="xset">
+								<unit:description>x set</unit:description>
+							</unit:info>
+							<unit:info unit:varname="yset">
+								<unit:description>y set</unit:description>
+							</unit:info>
+							<unit:info unit:varname="phiset">
+								<unit:description>phi set</unit:description>
+							</unit:info>
+							<unit:info unit:varname="xactual">
+								<unit:description>x actual</unit:description>
+							</unit:info>
+							<unit:info unit:varname="yactual">
+								<unit:description>y actual</unit:description>
+							</unit:info>
+							<unit:info unit:varname="phiactual">
+								<unit:description>phi actual</unit:description>
+							</unit:info>
+              <unit:info unit:varname="restart">
+                <unit:description>restart</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vramp">
+                <unit:description>vramp</unit:description>
+              </unit:info>
+              <unit:info unit:varname="omegaramp">
+                <unit:description>omegaramp</unit:description>
+              </unit:info>
+							<unit:info unit:varname="vpoints">
+								<unit:description>vpoints</unit:description>
+							</unit:info>
+							<unit:info unit:varname="omegapoints">
+								<unit:description>omegapoints</unit:description>
+							</unit:info>
+							<unit:info unit:varname="movement">
+								<unit:description>Movement</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="vx">
+								<unit:description>vx</unit:description>
+							</unit:info>
+							<unit:info unit:varname="vy">
+								<unit:description>vy</unit:description>
+							</unit:info>
+							<unit:info unit:varname="omega">
+								<unit:description>omega</unit:description>
+							</unit:info>
+							<unit:info unit:varname="position_reached">
+								<unit:description>Position reached</unit:description>
+							</unit:info>
+							<unit:info unit:varname="orientation_reached">
+								<unit:description>Orientation reached</unit:description>
+							</unit:info>
+							<unit:info unit:varname="pose_reached">
+								<unit:description>Pose reached</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state>
+						<unit:info unit:varname="vshowCross">
+							<unit:description>show v cross</unit:description>
+						</unit:info>
+						<unit:info unit:varname="vcrossPoint">
+							<unit:description>v cross point</unit:description>
+						</unit:info>
+						<unit:info unit:varname="omegashowCross">
+							<unit:description>show omega cross</unit:description>
+						</unit:info>
+						<unit:info unit:varname="omegacrossPoint">
+							<unit:description>omega cross point</unit:description>
+						</unit:info>
+            <unit:info unit:varname="active_movement">
+              <unit:description>Active movement</unit:description>
+            </unit:info>
+					</unit:state>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_navigation_positiondriver_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_navigation_positiondriver_gui"/>
+			</unit:plugins>
+
+			<unit:codegen/>
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

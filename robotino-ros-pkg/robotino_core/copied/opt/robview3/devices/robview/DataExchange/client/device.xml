@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	dev:id="REC GmbH Data Exchange Client" dev:toplevel="true">
+
+  <dev:translations>
+  </dev:translations>
+
+	<dev:inputs>
+		<dev:input var:type="int16" var:varname="in0">
+			<var:default var:val="0"/>
+		</dev:input>
+	</dev:inputs>
+
+	<dev:outputs>
+		<dev:output var:type="int16" var:varname="out0">
+			<var:default var:val="0"/>
+		</dev:output>
+	</dev:outputs>
+
+	<dev:state>
+	</dev:state>
+
+	<dev:config>
+		<dev:configvar var:type="string" var:varname="address">
+			<var:default var:val="127.0.0.1"/>
+		</dev:configvar>
+    <dev:configvar var:type="bool" var:varname="autoReconnect">
+      <var:default var:val="true"/>
+    </dev:configvar>
+    <dev:configvar var:type="int32" var:varname="queuedSendingInterval">
+      <var:default var:val="200"/>
+    </dev:configvar>
+  </dev:config>
+
+	<dev:subdevices>
+	</dev:subdevices>
+	
+	<!-- Plugin filename -->
+	<dev:plugins>
+		<dev:plugin plugin:type="simulation" plugin:library="device_dataexchange_client_simulation"/>
+		<dev:plugin plugin:type="dialog" plugin:library="device_dataexchange_client_gui"/>
+	</dev:plugins>
+
+  <dev:guiinfo>
+    <dev:description>
+      <dev:name>Data Exchange Client</dev:name>
+      <dev:detailed>REC GmbH Data Exchange Client</dev:detailed>
+      <dev:icon dev:filename="icons/client.png"/>
+    </dev:description>
+  </dev:guiinfo>
+
+</dev:device>

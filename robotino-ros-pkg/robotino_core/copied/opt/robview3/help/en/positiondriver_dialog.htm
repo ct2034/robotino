@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "positiondriver_dialog.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="navigation_positiondriver.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="positiondriver_example.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="positiondriver_dialog.png" width="304" height="709" alt="positiondriver_dialog" style="width:304px;height:709px;border:none" /></p>
+<p>&nbsp;</p>
+<p>The dialog is split into three parts.</p>
+<p>&nbsp;</p>
+<p>The upper part reflects the mapping from distance to the target position d (in mm) to the driving velocity v (in mm/s).</p>
+<p>&nbsp;</p>
+<p>The middle part reflects the mapping from angular distance to the target orientation d (in 1°) to angular velocity omega (in 1°/s). The angular distance is in the range [0°, 180°]. Clockwise and counter clockwise rotations are treated similar. Rotation will be performed clockwise or counter clockwise so that the angular distance is minimal.</p>
+<p>&nbsp;</p>
+<p>With the ComboBox</p>
+<p><img src="positiondriver_dialog_combobox.png" width="273" height="80" alt="positiondriver_dialog_combobox" style="width:273px;height:80px;border:none" /></p>
+<p>the kind of movement can be selected (see <a href="positiondriver_movements.htm" class="topiclink">Movements</a>). The selected movement becomes the active movement</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:10pt; font-family: 'Arial';color:#000000;">1.</span></td><td style="border:none">at program start.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:10pt; font-family: 'Arial';color:#000000;">2.</span></td><td style="border:none">when the input &quot;restart&quot; is set true.</td></tr></table></div><p>&nbsp;</p>
+<p>The velocity ramp is the time in milliseconds after which 100% of the desired velocity is reached. This avoids an abrupt jump of velocity at the beginning of the movement.</p>
+<p>&nbsp;</p>
+<p>The angular velocity ramp is the time in milliseconds after which 100% of the desired angular velocity is reached. This results in a damping of the movement when a new rotation begins.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

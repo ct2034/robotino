@@ -1,0 +1,14 @@
+<RCC version="1.0">
+	<qresource>
+    <file>../icons/camera.png</file>
+    <file>../icons/cbha.png</file>
+    <file>../icons/display.png</file>
+    <file>../icons/digitaloutput.png</file>
+    <file>../icons/grappler.png</file>
+    <file>../icons/motor.png</file>
+    <file>../icons/northstar.png</file>
+    <file>../icons/odometry.png</file>
+    <file>../icons/relay.png</file>
+    <file>../icons/shutdown.png</file>
+	</qresource>
+</RCC>

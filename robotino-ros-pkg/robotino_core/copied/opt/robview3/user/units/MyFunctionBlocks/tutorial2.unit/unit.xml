@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+		<tr:item tr:key="Tutorial 2" >
+			<tr:translation tr:lang="de" >Übung 2</tr:translation>
+			<tr:translation tr:lang="en" >Tutorial 2</tr:translation>
+			<tr:translation tr:lang="es" >Ejercicio 2</tr:translation>
+			<tr:translation tr:lang="fr" >Exercice 2</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Input" >
+			<tr:translation tr:lang="de" >Eingang</tr:translation>
+			<tr:translation tr:lang="en" >Input</tr:translation>
+			<tr:translation tr:lang="es" >Entrada</tr:translation>
+			<tr:translation tr:lang="fr" >Entrée</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Output" >
+			<tr:translation tr:lang="de" >Ausgang</tr:translation>
+			<tr:translation tr:lang="en" >Output</tr:translation>
+			<tr:translation tr:lang="es" >Salida</tr:translation>
+			<tr:translation tr:lang="fr" >Sortie</tr:translation>
+		</tr:item>
+	</unit:translations>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Tutorial 2">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="in">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="int16" var:varname="n">
+						<var:default var:val="1"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="out">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			
+			<unit:state>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="in" unit:side="left" />
+						<unit:layout unit:varname="n" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="out" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state>
+				</unit:state>
+
+				<unit:description>
+					<unit:name>Tutorial 2</unit:name>
+					<unit:icon unit:filename="icons/tutorial2.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="in">
+								<unit:description>Input</unit:description>
+							</unit:info>
+							<unit:info unit:varname="n">
+								<unit:description>n</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="out">
+								<unit:description>Output</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state>
+					</unit:state>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_myfunctionblocks_tutorial2_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_myfunctionblocks_tutorial2_gui"/>
+			</unit:plugins>
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>
+		

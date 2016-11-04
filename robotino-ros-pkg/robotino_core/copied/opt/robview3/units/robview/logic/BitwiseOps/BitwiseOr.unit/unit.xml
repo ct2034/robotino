@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+  <unit:translations>
+    <tr:item tr:key="Description_REC_GmbH_BitwiseOr">
+      <tr:translation tr:lang="en">Calcluates the bitwise or of two numbers.</tr:translation>
+      <tr:translation tr:lang="de">Berechnet eine bitweise Oder-Verknüpfung.</tr:translation>
+    </tr:item>
+    <tr:item tr:key="Bitwise Or">
+      <tr:translation tr:lang="de">Bitweises Oder</tr:translation>
+    </tr:item>
+    <tr:item tr:key="Operand[]">
+      <tr:translation tr:lang="de">Operand[]</tr:translation>
+    </tr:item>
+    <tr:item tr:key="Result">
+      <tr:translation tr:lang="de">Ergebnis</tr:translation>
+    </tr:item>
+  </unit:translations>
+
+  <unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Bitwise Or">
+			<unit:typeTemplates>
+			</unit:typeTemplates>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="int32" var:varname="op1"/>
+					<unit:connector var:type="int32" var:varname="op2"/>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="int32" var:varname="result"/>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="op1" unit:side="left"/>
+						<unit:layout unit:varname="op2" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="result" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Bitwise Or</unit:name>
+					<unit:icon unit:filename="bitwiseor.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="op1">
+								<unit:description>Operand[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="op2">
+								<unit:description>Operand[ 2]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="result">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+
+
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_bitwiseor_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

@@ -1,0 +1,14 @@
+digraph "rpc" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_f3846cdc88b49e96d7df11c33f0224a2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="rec" fontname="FreeSans", fontsize="10", URL="dir_f3846cdc88b49e96d7df11c33f0224a2.html"]
+  subgraph clusterdir_48f5dcebdc5b3b96e693d1cc6e4fa86e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_48f5dcebdc5b3b96e693d1cc6e4fa86e.html"];
+    dir_48f5dcebdc5b3b96e693d1cc6e4fa86e [shape=plaintext label="rpc"];
+    dir_ad5fd61ea549b53fab418681c621a5ed [shape=box label="serialization" color="black" fillcolor="white" style="filled" URL="dir_ad5fd61ea549b53fab418681c621a5ed.html"];
+  }
+  }
+  dir_48f5dcebdc5b3b96e693d1cc6e4fa86e->dir_ad5fd61ea549b53fab418681c621a5ed [headlabel="1", labeldistance=1.5 headhref="dir_000004_000005.html"];
+}

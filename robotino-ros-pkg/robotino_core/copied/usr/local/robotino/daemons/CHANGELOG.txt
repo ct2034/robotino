@@ -1,0 +1,17 @@
+0.9.20:
+  - start laserd2 only if smartsoft is not installed
+
+  bug fixes:
+  -  81: After using omnidrive topic switch to single motor mode when using motor_setpoints topic 
+
+0.9.13: fleetcomd
+          pass communication between fcgid and SmartFestoFleetCom component through fleetcomd to make
+		  features of SmartFestoFleetCom available to API2
+
+0.9.7: controld3
+         compensate gyro drift
+         internal gyroscope is disabled by default
+	   ftdid
+	     does not support NorthStar by default. Use -NS command line option
+
+0.7.8: run restore_default_configuration

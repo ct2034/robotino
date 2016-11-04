@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tc="http://easykit.informatik.tu-muenchen.de/schema/tc"
+	xmlns:path="http://easykit.informatik.tu-muenchen.de/schema/path"
+	xmlns:env="http://easykit.informatik.tu-muenchen.de/schema/environment"
+	xmlns:cfg="http://easykit.informatik.tu-muenchen.de/schema/config"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/tc"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/path"
+		schemaLocation="path.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/environment"
+		schemaLocation="environment.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/config"
+		schemaLocation="config.xsd"/>
+
+	<xs:element name="toolchains">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="toolchain" type="tc:toolchainType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="toolchainType">
+		
+		<xs:sequence minOccurs="1" maxOccurs="1">
+
+			<!-- Config section -->
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="config" type="cfg:configType"/>
+			</xs:sequence>
+
+			<!-- Environment section -->
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="environment" type="tc:environmentType"/>
+			</xs:sequence>
+
+			<!-- CMake section -->
+			<xs:element name="cmake" type="tc:cmakeType"/>
+
+			<!-- Make section -->
+			<xs:element name="make" type="tc:makeType"/>
+
+			<!-- Compiler section -->
+			<xs:element name="compiler" type="tc:compilerType"/>
+
+			<!-- Linker section -->
+			<xs:element name="linker" type="tc:linkerType"/>
+
+			<!-- Archiver section -->
+			<xs:element name="archiver" type="tc:archiverType"/>
+
+			<!-- Uploader section -->
+			<xs:element name="uploaders" type="tc:uploadersType"/>
+
+			<!-- Debugger section -->
+			<xs:element name="debuggers" type="tc:debuggersType"/>
+
+			<!-- Defines section -->
+			<xs:element name="defines">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="define" type="tc:defineType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Primitive type mapping section -->
+			<xs:element name="ptmaps">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="ptmap" type="tc:ptMapType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+		</xs:sequence>
+
+		<xs:attribute type="xs:string" name="arch" use="required"/>
+		<xs:attribute type="xs:ID" name="id" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="cmakeType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:element name="toolchain" type="path:pathType"/>
+		</xs:sequence>
+		<xs:attribute name="makefileGenerator" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="environmentType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="globalEnvironment" type="env:environmentType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="configureEnvironment" type="env:environmentType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="buildEnvironment" type="env:environmentType"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="commandType">
+		<xs:attribute name="command" type="xs:string" use="required"/>
+		<xs:attribute name="flags" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="makeType">
+		<xs:complexContent>
+			<xs:extension base="tc:commandType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="compilerType">
+		<xs:complexContent>
+			<xs:extension base="tc:commandType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="linkerType">
+		<xs:complexContent>
+			<xs:extension base="tc:commandType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="archiverType">
+		<xs:complexContent>
+			<xs:extension base="tc:commandType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="uploadersType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="uploader">
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="debuggersType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="debugger">
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ptMapType">
+		<xs:sequence maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="include" type="tc:includeType"/>
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="typeid" use="required"/>
+		<xs:attribute type="xs:string" name="name" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="includeType">
+		<xs:attribute name="type" type="tc:includeTypeType" use="required"/>
+		<xs:attribute name="file" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="includeTypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="system"/>
+			<xs:enumeration value="user"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="defineType">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="value" type="xs:string" use="optional" default=""/>
+	</xs:complexType>
+
+</xs:schema>

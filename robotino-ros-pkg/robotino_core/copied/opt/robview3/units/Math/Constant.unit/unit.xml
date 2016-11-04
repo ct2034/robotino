@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+		<tr:item tr:key="Description_REC_GmbH_Constant">
+			<tr:translation tr:lang="en">Creates a constant.</tr:translation>
+			<tr:translation tr:lang="de">Erzeugt eine Konstante.</tr:translation>
+		</tr:item>
+		<tr:item tr:key="Constant">
+			<tr:translation tr:lang="de">Konstante</tr:translation>
+			<tr:translation tr:lang="en">Constant</tr:translation>
+			<tr:translation tr:lang="es">Constante</tr:translation>
+			<tr:translation tr:lang="fr">Constante</tr:translation>
+		</tr:item>
+		<tr:item tr:key="val">
+		</tr:item>
+		<tr:item tr:key="Constant's value">
+			<tr:translation tr:lang="de">Wert der Konstanten</tr:translation>
+			<tr:translation tr:lang="en">Constant's value</tr:translation>
+			<tr:translation tr:lang="es">Valor de la constante</tr:translation>
+			<tr:translation tr:lang="fr">Valeur de la constante</tr:translation>
+		</tr:item>
+	</unit:translations>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Constant">
+			<unit:typeTemplates>
+				<unit:typeTemplate var:typename="T">
+					<var:specializationGroup var:group="group_primitive"/>
+          <var:specialization var:type="string" />
+					<var:default var:type="int16"/>
+				</unit:typeTemplate>
+			</unit:typeTemplates>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="T" var:varname="value"/>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="T" var:varname="out"/>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="value" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="out" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Constant</unit:name>
+					<unit:icon unit:filename="constant.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="value">
+								<unit:description>Constant's value</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="out">
+								<unit:description>val</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+				
+				<unit:annotations>
+          <kv:item kv:key="description" kv:value="Description_REC_GmbH_Constant"/>
+          <kv:item kv:key="skill" kv:value="0"/>
+					<kv:item kv:key="keywords">
+					</kv:item>
+				</unit:annotations>
+
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_constant_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_constant_gui"/>
+			</unit:plugins>
+
+			<unit:codegen>
+				<unit:step>
+					<tmpl:toolchain tmpl:name="default">
+						<tmpl:template>
+							<tmpl:typeTemplate tmpl:name="T">
+								<tmpl:specializationGroup tmpl:group="group_primitive"/>
+							</tmpl:typeTemplate>
+							<tmpl:attributes>
+								<kv:item kv:key="inline-allowed" kv:value="true"/>
+							</tmpl:attributes>
+							<tmpl:content>
+								<tmpl:code>
+<![CDATA[
+	/*$out("out")**/ = /*$in("value")**/;
+]]>
+								</tmpl:code>
+							</tmpl:content>
+						</tmpl:template>
+					</tmpl:toolchain>
+				</unit:step>
+			</unit:codegen>
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

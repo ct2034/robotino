@@ -1,0 +1,1545 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="codegen" kv:value=""/>
+    <kv:item kv:key="generic" kv:value=""/>
+    <kv:item kv:key="skill" kv:value="">
+      <kv:item kv:key="deviceSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="unitSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="typeSystemFeatureSkillLevel" kv:value="0"/>
+    </kv:item>
+  </md:settings>
+
+  <md:variables>
+    <md:variable var:type="float" var:varname="a">
+      <var:default var:val="-1"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="b">
+      <var:default var:val="0"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="step2Count">
+      <var:default var:val="0"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="step3Count">
+      <var:default var:val="0"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="step4Count">
+      <var:default var:val="0"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="step5Count">
+      <var:default var:val="0"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="timer">
+      <var:default var:val="0"/>
+    </md:variable>
+  </md:variables>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino ®">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs>
+        <md:varExpr md:value="192.168.101.101" md:varname="ipAddress"/>
+        <md:varExpr md:value="192.168.101.101;;127.0.0.1" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="(320 240)" md:varname="camera_resolution"/>
+        <md:varExpr md:value="false" md:varname="disableDriveSystem"/>
+      </md:configVarExprs>
+      <md:dynamicUnits/>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_arb_generator"/>
+    <md:utspec md:id="rec_gmbh_global_variable_reader_float"/>
+    <md:utspec md:id="rec_gmbh_global_variable_writer_float"/>
+    <md:utspec md:id="rec_gmbh_counter_up"/>
+    <md:utspec md:id="rec_gmbh_logic_and"/>
+    <md:utspec md:id="rec_gmbh_basic_addition"/>
+    <md:utspec md:id="rec_gmbh_basic_modulo"/>
+    <md:utspec md:id="rec_gmbh_basic_equality"/>
+    <md:utspec md:id="rec_gmbh_basic_greater_equal"/>
+    <md:utspec md:id="rec_gmbh_constant_int32">
+      <md:spec md:curr="int32" md:type="T"/>
+    </md:utspec>
+    <md:utspec md:id="rec_gmbh_constant_float">
+      <md:spec md:curr="float" md:type="T"/>
+    </md:utspec>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_step2" md:name="Step2">
+      <md:units>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_constant__1_" md:name="Constant (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="10" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step2count" md:name="step2Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step2Count reader"/>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step2count2" md:name="step2Count" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="step2Count writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_addition__1_" md:name="Addition (1)" md:type="REC GmbH Basic Addition" md:utspec="rec_gmbh_basic_addition" md:variantName="REC GmbH Basic Addition">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="s1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="sum">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_counter_up__1_" md:name="Counter Up (1)" md:type="REC GmbH Counter Up" md:utspec="rec_gmbh_counter_up" md:variantName="REC GmbH Counter Up">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="rst">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="countOnRisingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="countOnFallingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="5" md:varname="numDigits">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_timer" md:name="timer" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="timer writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_puls" md:name="Puls" md:type="REC GmbH ARB generator" md:utspec="rec_gmbh_arb_generator" md:variantName="REC GmbH ARB generator">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0\;\;1;;0.1\;\;1;;0.2\;\;1;;0.3\;\;1;;0.4\;\;1;;0.5\;\;1;;0.5001\;\;0;;0.6\;\;0;;0.7\;\;0;;0.8\;\;0;;0.9\;\;0;;1\;\;0" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="200" md:varname="timescale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="amplitude">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="20" md:varname="timescale_minimum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale_maximum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_equality__1_" md:name="Equality (1)" md:type="REC GmbH Basic Equality" md:utspec="rec_gmbh_basic_equality" md:variantName="REC GmbH Basic Equality">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="eq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="sum" md:unit="actor_addition__1_"/>
+          <md:to md:con="new_value" md:unit="actor_step2count2"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_2" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_"/>
+          <md:to md:con="new_value" md:unit="actor_timer"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="y" md:unit="actor_puls"/>
+          <md:to md:con="in" md:unit="actor_counter_up__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_4" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_"/>
+          <md:to md:con="op1" md:unit="actor_equality__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_5" md:prod="1">
+          <md:from md:con="out" md:unit="actor_constant__1_"/>
+          <md:to md:con="op2" md:unit="actor_equality__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_6" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step2count"/>
+          <md:to md:con="s2" md:unit="actor_addition__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_7" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_equality__1_"/>
+          <md:to md:con="s1" md:unit="actor_addition__1_"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_step4" md:name="Step4">
+      <md:units>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_timer3" md:name="timer" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="timer writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step4count" md:name="step4Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step4Count reader"/>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_puls4" md:name="Puls" md:type="REC GmbH ARB generator" md:utspec="rec_gmbh_arb_generator" md:variantName="REC GmbH ARB generator">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0\;\;1;;0.1\;\;1;;0.2\;\;1;;0.3\;\;1;;0.4\;\;1;;0.5\;\;1;;0.5001\;\;0;;0.6\;\;0;;0.7\;\;0;;0.8\;\;0;;0.9\;\;0;;1\;\;0" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="200" md:varname="timescale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="amplitude">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="20" md:varname="timescale_minimum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale_maximum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step4count5" md:name="step4Count" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="step4Count writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_constant__1_6" md:name="Constant (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="10" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_counter_up__1_7" md:name="Counter Up (1)" md:type="REC GmbH Counter Up" md:utspec="rec_gmbh_counter_up" md:variantName="REC GmbH Counter Up">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="rst">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="countOnRisingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="countOnFallingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="5" md:varname="numDigits">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_addition__1_8" md:name="Addition (1)" md:type="REC GmbH Basic Addition" md:utspec="rec_gmbh_basic_addition" md:variantName="REC GmbH Basic Addition">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="s1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="sum">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_equality__1_9" md:name="Equality (1)" md:type="REC GmbH Basic Equality" md:utspec="rec_gmbh_basic_equality" md:variantName="REC GmbH Basic Equality">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="eq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_8" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step4count"/>
+          <md:to md:con="s2" md:unit="actor_addition__1_8"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_9" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_equality__1_9"/>
+          <md:to md:con="s1" md:unit="actor_addition__1_8"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_10" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_7"/>
+          <md:to md:con="new_value" md:unit="actor_timer3"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_11" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_7"/>
+          <md:to md:con="op1" md:unit="actor_equality__1_9"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_12" md:prod="1">
+          <md:from md:con="sum" md:unit="actor_addition__1_8"/>
+          <md:to md:con="new_value" md:unit="actor_step4count5"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_13" md:prod="1">
+          <md:from md:con="y" md:unit="actor_puls4"/>
+          <md:to md:con="in" md:unit="actor_counter_up__1_7"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_14" md:prod="1">
+          <md:from md:con="out" md:unit="actor_constant__1_6"/>
+          <md:to md:con="op2" md:unit="actor_equality__1_9"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_step1" md:name="Step1">
+      <md:units>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_a" md:name="a" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="a reader"/>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_a10" md:name="a" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="a writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_ainc" md:name="ainc" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="1" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_addition" md:name="Addition" md:type="REC GmbH Basic Addition" md:utspec="rec_gmbh_basic_addition" md:variantName="REC GmbH Basic Addition">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="s1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="sum">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_binit" md:name="binit" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_b" md:name="b" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="b writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_modulo" md:name="Modulo" md:type="REC GmbH Basic Modulo" md:utspec="rec_gmbh_basic_modulo" md:variantName="REC GmbH Basic Modulo">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="dividend">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="divisor">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="remainder">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_amax" md:name="amax" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_int32" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="3" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_15" md:prod="1">
+          <md:from md:con="value" md:unit="actor_a"/>
+          <md:to md:con="s1" md:unit="actor_addition"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_16" md:prod="1">
+          <md:from md:con="out" md:unit="actor_ainc"/>
+          <md:to md:con="s2" md:unit="actor_addition"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_17" md:prod="1">
+          <md:from md:con="out" md:unit="actor_binit"/>
+          <md:to md:con="new_value" md:unit="actor_b"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_18" md:prod="1">
+          <md:from md:con="sum" md:unit="actor_addition"/>
+          <md:to md:con="dividend" md:unit="actor_modulo"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_19" md:prod="1">
+          <md:from md:con="remainder" md:unit="actor_modulo"/>
+          <md:to md:con="new_value" md:unit="actor_a10"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_20" md:prod="1">
+          <md:from md:con="out" md:unit="actor_amax"/>
+          <md:to md:con="divisor" md:unit="actor_modulo"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_step3" md:name="Step3">
+      <md:units>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_timer11" md:name="timer" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="timer writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step3count" md:name="step3Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step3Count reader"/>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_puls12" md:name="Puls" md:type="REC GmbH ARB generator" md:utspec="rec_gmbh_arb_generator" md:variantName="REC GmbH ARB generator">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0\;\;1;;0.1\;\;1;;0.2\;\;1;;0.3\;\;1;;0.4\;\;1;;0.5\;\;1;;0.5001\;\;0;;0.6\;\;0;;0.7\;\;0;;0.8\;\;0;;0.9\;\;0;;1\;\;0" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="200" md:varname="timescale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="amplitude">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="20" md:varname="timescale_minimum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale_maximum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step3count13" md:name="step3Count" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="step3Count writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_constant__1_14" md:name="Constant (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="10" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_counter_up__1_15" md:name="Counter Up (1)" md:type="REC GmbH Counter Up" md:utspec="rec_gmbh_counter_up" md:variantName="REC GmbH Counter Up">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="rst">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="countOnRisingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="countOnFallingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="5" md:varname="numDigits">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_addition__1_16" md:name="Addition (1)" md:type="REC GmbH Basic Addition" md:utspec="rec_gmbh_basic_addition" md:variantName="REC GmbH Basic Addition">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="s1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="sum">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_equality__1_17" md:name="Equality (1)" md:type="REC GmbH Basic Equality" md:utspec="rec_gmbh_basic_equality" md:variantName="REC GmbH Basic Equality">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="eq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_21" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step3count"/>
+          <md:to md:con="s2" md:unit="actor_addition__1_16"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_22" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_equality__1_17"/>
+          <md:to md:con="s1" md:unit="actor_addition__1_16"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_23" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_15"/>
+          <md:to md:con="new_value" md:unit="actor_timer11"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_24" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1_15"/>
+          <md:to md:con="op1" md:unit="actor_equality__1_17"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_25" md:prod="1">
+          <md:from md:con="sum" md:unit="actor_addition__1_16"/>
+          <md:to md:con="new_value" md:unit="actor_step3count13"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_26" md:prod="1">
+          <md:from md:con="y" md:unit="actor_puls12"/>
+          <md:to md:con="in" md:unit="actor_counter_up__1_15"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_27" md:prod="1">
+          <md:from md:con="out" md:unit="actor_constant__1_14"/>
+          <md:to md:con="op2" md:unit="actor_equality__1_17"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_step5" md:name="Step5">
+      <md:units>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step2count18" md:name="step2Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step2Count reader"/>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step3count19" md:name="step3Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step3Count reader"/>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_greater_equal__1_" md:name="Greater equal (1)" md:type="REC GmbH Basic Greater Equal" md:utspec="rec_gmbh_basic_greater_equal" md:variantName="REC GmbH Basic Greater Equal">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="greq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_greater_equal__2_" md:name="Greater equal (2)" md:type="REC GmbH Basic Greater Equal" md:utspec="rec_gmbh_basic_greater_equal" md:variantName="REC GmbH Basic Greater Equal">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="greq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step4count20" md:name="step4Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step4Count reader"/>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_and__1_" md:name="AND (1)" md:type="REC GmbH Logic AND" md:utspec="rec_gmbh_logic_and" md:variantName="REC GmbH Logic AND">
+          <md:inVarExprs>
+            <md:varExpr md:value="true" md:varname="1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="Q">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_b21" md:name="b" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="b writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_timer22" md:name="timer" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="timer writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_puls23" md:name="Puls" md:type="REC GmbH ARB generator" md:utspec="rec_gmbh_arb_generator" md:variantName="REC GmbH ARB generator">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0\;\;1;;0.1\;\;1;;0.2\;\;1;;0.3\;\;1;;0.4\;\;1;;0.5\;\;1;;0.5001\;\;0;;0.6\;\;0;;0.7\;\;0;;0.8\;\;0;;0.9\;\;0;;1\;\;0" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="200" md:varname="timescale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="amplitude">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="20" md:varname="timescale_minimum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale_maximum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_constant__1_24" md:name="Constant (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="10" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_counter_up__1___2_" md:name="Counter Up (1) (2)" md:type="REC GmbH Counter Up" md:utspec="rec_gmbh_counter_up" md:variantName="REC GmbH Counter Up">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="rst">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="countOnRisingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="countOnFallingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="5" md:varname="numDigits">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_addition__1_25" md:name="Addition (1)" md:type="REC GmbH Basic Addition" md:utspec="rec_gmbh_basic_addition" md:variantName="REC GmbH Basic Addition">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="s1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="s10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="sum">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_equality__1_26" md:name="Equality (1)" md:type="REC GmbH Basic Equality" md:utspec="rec_gmbh_basic_equality" md:variantName="REC GmbH Basic Equality">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="eq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step5count" md:name="step5Count" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="step5Count writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_step5count27" md:name="step5Count" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="step5Count reader"/>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_28" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step2count18"/>
+          <md:to md:con="op1" md:unit="actor_greater_equal__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_29" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step3count19"/>
+          <md:to md:con="op2" md:unit="actor_greater_equal__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_30" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step3count19"/>
+          <md:to md:con="op1" md:unit="actor_greater_equal__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_31" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step4count20"/>
+          <md:to md:con="op2" md:unit="actor_greater_equal__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_32" md:prod="1">
+          <md:from md:con="greq" md:unit="actor_greater_equal__1_"/>
+          <md:to md:con="1" md:unit="actor_and__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_33" md:prod="1">
+          <md:from md:con="greq" md:unit="actor_greater_equal__2_"/>
+          <md:to md:con="2" md:unit="actor_and__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_34" md:prod="1">
+          <md:from md:con="Q" md:unit="actor_and__1_"/>
+          <md:to md:con="new_value" md:unit="actor_b21"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_35" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_equality__1_26"/>
+          <md:to md:con="s1" md:unit="actor_addition__1_25"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_36" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1___2_"/>
+          <md:to md:con="new_value" md:unit="actor_timer22"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_37" md:prod="1">
+          <md:from md:con="out" md:unit="actor_counter_up__1___2_"/>
+          <md:to md:con="op1" md:unit="actor_equality__1_26"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_38" md:prod="1">
+          <md:from md:con="y" md:unit="actor_puls23"/>
+          <md:to md:con="in" md:unit="actor_counter_up__1___2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_39" md:prod="1">
+          <md:from md:con="out" md:unit="actor_constant__1_24"/>
+          <md:to md:con="op2" md:unit="actor_equality__1_26"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_40" md:prod="1">
+          <md:from md:con="sum" md:unit="actor_addition__1_25"/>
+          <md:to md:con="new_value" md:unit="actor_step5count"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_41" md:prod="1">
+          <md:from md:con="value" md:unit="actor_step5count27"/>
+          <md:to md:con="s2" md:unit="actor_addition__1_25"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init">
+          <md:timeslice md:nsec="40000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step1" md:name="Step1" md:sdfModel="sdfmodel_step1">
+          <md:timeslice md:nsec="40000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcAlternative md:id="sfcitem_alternative">
+          <md:sfcSequence>
+            <md:sfcTransition md:guard="a == 0" md:id="sfcitem_transition2"/>
+            <md:sfcSimple md:id="sfcitem_simple_step2" md:name="Step2" md:sdfModel="sdfmodel_step2">
+              <md:timeslice md:nsec="40000000" md:sec="0"/>
+            </md:sfcSimple>
+            <md:sfcTransition md:guard="timer == 10" md:id="sfcitem_transition3"/>
+          </md:sfcSequence>
+          <md:sfcSequence>
+            <md:sfcTransition md:guard="a == 1" md:id="sfcitem_transition4"/>
+            <md:sfcSimple md:id="sfcitem_simple_step3" md:name="Step3" md:sdfModel="sdfmodel_step3">
+              <md:timeslice md:nsec="40000000" md:sec="0"/>
+            </md:sfcSimple>
+            <md:sfcTransition md:guard="timer == 10" md:id="sfcitem_transition5"/>
+          </md:sfcSequence>
+          <md:sfcSequence>
+            <md:sfcTransition md:guard="a == 2" md:id="sfcitem_transition6"/>
+            <md:sfcSimple md:id="sfcitem_simple_step4" md:name="Step4" md:sdfModel="sdfmodel_step4">
+              <md:timeslice md:nsec="40000000" md:sec="0"/>
+            </md:sfcSimple>
+            <md:sfcTransition md:guard="timer == 10" md:id="sfcitem_transition7"/>
+          </md:sfcSequence>
+        </md:sfcAlternative>
+        <md:sfcSimple md:id="sfcitem_simple_step5" md:name="Step5" md:sdfModel="sdfmodel_step5">
+          <md:timeslice md:nsec="40000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcAlternative md:id="sfcitem_alternative8">
+          <md:sfcSequence>
+            <md:sfcTransition md:guard="step5Count == 6" md:id="sfcitem_transition9"/>
+            <md:sfcJump md:id="sfcitem_jump"/>
+          </md:sfcSequence>
+          <md:sfcSequence>
+            <md:sfcTransition md:guard="b > 0 &amp;&amp; timer == 10" md:id="sfcitem_transition10"/>
+          </md:sfcSequence>
+        </md:sfcAlternative>
+        <md:sfcJump md:dest="sfcitem_simple_step1" md:id="sfcitem_jump11"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:sdfmodel="sdfmodel_step2" md:showData="false" md:showToolTips="false" md:tab="2">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000010000000300000280fffffffcfc0100000003fb000000400034006500360062003500620032003400370039003200630034003100610063003700320064003000320038003200640033003300610062003300630061003102000004260000016a0000014400000129fb00000040003500340065003200310032003600320032003800300039003100390064003200310034006100610033006100330063003300330032003600340037006200350200000281000001a00000011e00000121fb00000040003600310061003800360035003100620035003700650062003100380036006600310061006200370035006300350032003400320035003700340033003300370200000366000001aa0000014400000129000002ae0000024300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_constant__1_" md:width="-1" md:x="204" md:y="-222"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step2count" md:width="-1" md:x="348" md:y="-132"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step2count2" md:width="-1" md:x="558" md:y="-216"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_addition__1_" md:width="-1" md:x="450" md:y="-222"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_counter_up__1_" md:width="-1" md:x="192" md:y="-300"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_timer" md:width="-1" md:x="450" md:y="-294"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_puls" md:width="-1" md:x="60" md:y="-312"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_equality__1_" md:width="-1" md:x="336" md:y="-228"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_1"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="276" md:y="-300">
+              <md:edge md:edge="edge_2"/>
+              <md:point md:x="276" md:y="-234">
+                <md:edge md:edge="edge_4"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_3"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_5"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="396" md:y="-132">
+              <md:point md:x="396" md:y="-216">
+                <md:edge md:edge="edge_6"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_7"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_step4" md:showData="false" md:showToolTips="false" md:tab="4">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000010000000300000280fffffffcfc0100000001fb0000003c0035003800660032003000330065003200360066003600340061006600310034003100340037003500370036003000390066003800330032006600620200000366000001aa0000014400000129000002ae0000024300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_timer3" md:width="-1" md:x="390" md:y="-276"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step4count" md:width="-1" md:x="384" md:y="-114"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_puls4" md:width="-1" md:x="78" md:y="-294"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step4count5" md:width="-1" md:x="594" md:y="-198"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_constant__1_6" md:width="-1" md:x="186" md:y="-204"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_counter_up__1_7" md:width="-1" md:x="198" md:y="-282"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_addition__1_8" md:width="-1" md:x="486" md:y="-204"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_equality__1_9" md:width="-1" md:x="318" md:y="-210"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:point md:x="432" md:y="-114">
+              <md:point md:x="432" md:y="-198">
+                <md:edge md:edge="edge_8"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_9"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="264" md:y="-282">
+              <md:edge md:edge="edge_10"/>
+              <md:point md:x="264" md:y="-216">
+                <md:edge md:edge="edge_11"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_12"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_13"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_14"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_step1" md:showData="false" md:showToolTips="false" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd00000001000000030000036efffffffcfc0100000001fb00000040003500310065003000310039006500340036003600620030003600630037003600340036003900310032003600320036003600640032003700310038003900320200000204000001be0000011e00000121000002ae0000024300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_a" md:width="-1" md:x="162" md:y="-24"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_a10" md:width="-1" md:x="540" md:y="-6"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_ainc" md:width="-1" md:x="168" md:y="36"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_addition" md:width="-1" md:x="282" md:y="-18"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_binit" md:width="-1" md:x="162" md:y="132"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_b" md:width="-1" md:x="282" md:y="138"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_modulo" md:width="-1" md:x="408" md:y="-12"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_amax" md:width="-1" md:x="288" md:y="48"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_15"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="228" md:y="36">
+              <md:point md:x="228" md:y="-12">
+                <md:edge md:edge="edge_16"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="228" md:y="132">
+              <md:edge md:edge="edge_17"/>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_18"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_19"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="360" md:y="48">
+              <md:point md:x="360" md:y="-6">
+                <md:edge md:edge="edge_20"/>
+              </md:point>
+            </md:point>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_step3" md:showData="false" md:showToolTips="false" md:tab="3">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000010000000300000280fffffffcfc0100000002fb0000003c0034006400370066003500360065003200310035003300370031003100320064003600350032003000620062003500320064006100320036003300300200000366000001aa0000014400000129fb0000003e00350037003300630032003700380062003600650039003900360033006600310064003100310037006300320038003100640062003200320032003100370200000366000001aa0000014400000129000002ae0000024300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_timer11" md:width="-1" md:x="366" md:y="-276"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step3count" md:width="-1" md:x="378" md:y="-114"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_puls12" md:width="-1" md:x="78" md:y="-294"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step3count13" md:width="-1" md:x="588" md:y="-198"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_constant__1_14" md:width="-1" md:x="180" md:y="-204"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_counter_up__1_15" md:width="-1" md:x="186" md:y="-282"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_addition__1_16" md:width="-1" md:x="480" md:y="-204"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_equality__1_17" md:width="-1" md:x="312" md:y="-210"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:point md:x="426" md:y="-114">
+              <md:point md:x="426" md:y="-198">
+                <md:edge md:edge="edge_21"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_22"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="252" md:y="-282">
+              <md:edge md:edge="edge_23"/>
+              <md:point md:x="252" md:y="-216">
+                <md:edge md:edge="edge_24"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_25"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_26"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_27"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_step5" md:showData="false" md:showToolTips="false" md:tab="5">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000010000000300000280fffffffcfc0100000002fb0000003e00370039003800610032003600330037003200340035003100360031003400350033003400340034003000330036003300380030006300310066006600370200000366000001ec0000014400000129fb0000004000330064006400640036006100640036003400610063006200330061003300650033003200320037003500620031003500340033006600630035006400320030020000005f000000c0000000c800000064000002ae0000024300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step2count18" md:width="-1" md:x="-102" md:y="-156"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step3count19" md:width="-1" md:x="-102" md:y="-90"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_greater_equal__1_" md:width="-1" md:x="42" md:y="-150"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_greater_equal__2_" md:width="-1" md:x="60" md:y="-84"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step4count20" md:width="-1" md:x="-102" md:y="-24"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_and__1_" md:width="-1" md:x="210" md:y="-114"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_b21" md:width="-1" md:x="330" md:y="-108"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_timer22" md:width="-1" md:x="366" md:y="-432"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_puls23" md:width="-1" md:x="-114" md:y="-450"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_constant__1_24" md:width="-1" md:x="12" md:y="-360"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_counter_up__1___2_" md:width="-1" md:x="6" md:y="-438"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_addition__1_25" md:width="-1" md:x="312" md:y="-360"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_equality__1_26" md:width="-1" md:x="144" md:y="-366"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step5count" md:width="-1" md:x="444" md:y="-360"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_step5count27" md:width="-1" md:x="198" md:y="-306"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_28"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="-24" md:y="-90">
+              <md:edge md:edge="edge_30"/>
+              <md:point md:x="-24" md:y="-144">
+                <md:edge md:edge="edge_29"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="-30" md:y="-24">
+              <md:point md:x="-30" md:y="-78">
+                <md:edge md:edge="edge_31"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="114" md:y="-150">
+              <md:point md:x="114" md:y="-120">
+                <md:edge md:edge="edge_32"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="114" md:y="-84">
+              <md:point md:x="114" md:y="-108">
+                <md:edge md:edge="edge_33"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_34"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_35"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="84" md:y="-438">
+              <md:edge md:edge="edge_36"/>
+              <md:point md:x="84" md:y="-372">
+                <md:edge md:edge="edge_37"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_38"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_39"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_40"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="264" md:y="-306">
+              <md:point md:x="264" md:y="-354">
+                <md:edge md:edge="edge_41"/>
+              </md:point>
+            </md:point>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:active="true" md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>

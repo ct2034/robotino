@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+  </unit:translations>
+	
+	<unit:unittypes>
+		
+		<unit:unittype unit:id="REC GmbH SegmentTracker">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+          <unit:connector var:type="image" var:varname="input"/>
+          <unit:connector var:type="bool" var:varname="restart">
+            <var:default var:val="false"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="init">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="minarea">
+            <var:default var:val="100"/>
+          </unit:connector>
+				</unit:in>
+				<unit:out>
+          <unit:connector var:type="int32" var:varname="x"/>
+          <unit:connector var:type="int32" var:varname="y"/>
+          <unit:connector var:type="int32" var:varname="area"/>
+          <unit:connector var:type="int32" var:varname="vx"/>
+          <unit:connector var:type="int32" var:varname="vy"/>
+          <unit:connector var:type="int32" var:varname="numsegments"/>
+          <unit:connector var:type="image" var:varname="output"/>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+			
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+            <unit:layout unit:varname="input" unit:side="left"/>
+            <unit:layout unit:varname="restart" unit:side="left"/>
+            <unit:layout unit:varname="init" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="minarea" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+            <unit:layout unit:varname="x" unit:side="right"/>
+            <unit:layout unit:varname="y" unit:side="right"/>
+            <unit:layout unit:varname="area" unit:side="right"/>
+            <unit:layout unit:varname="vx" unit:side="right"/>
+            <unit:layout unit:varname="vy" unit:side="right"/>
+            <unit:layout unit:varname="numsegments" unit:side="right"/>
+            <unit:layout unit:varname="output" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+				
+				<unit:description>
+					<unit:name>Segment tracker</unit:name>
+					<unit:icon unit:filename="icons/segmenttracker.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="input">
+								<unit:description>Input</unit:description>
+							</unit:info>
+              <unit:info unit:varname="restart">
+                <unit:description>Restart</unit:description>
+              </unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="x">
+								<unit:description>x \[pixel]</unit:description>
+							</unit:info>
+              <unit:info unit:varname="y">
+                <unit:description>y \[pixel]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="area">
+                <unit:description>Area \[pixel]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vx">
+                <unit:description>vx \[pixel/step]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vy">
+                <unit:description>vy \[pixel/step]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="numsegments">
+                <unit:description>Num segments found</unit:description>
+              </unit:info>
+              <unit:info unit:varname="output">
+                <unit:description>Output</unit:description>
+              </unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_imageprocessing_segmenttracker_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_imageprocessing_segmenttracker_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+		
+	</unit:unittypes>
+</unit:unit>

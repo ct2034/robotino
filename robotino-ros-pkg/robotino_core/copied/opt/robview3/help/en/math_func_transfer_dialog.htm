@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "math_func_transfer_dialog.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="transferfunction.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="math_func_transfer_example.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="transferfunction_dialog.png" width="270" height="240" alt="transferfunction_dialog" style="width:270px;height:240px;border:none" /><span class="f_ImageCaption"> <img src="transferfunction_dialog2.png" width="270" height="240" alt="transferfunction_dialog2" style="width:270px;height:240px;border:none" /></span></p>
+<p>&nbsp;</p>
+<p>With the dialog of the Transfer function function block it is possible to define interpolation points for the mapping y(x). The default interpolation points are</p>
+<p>&nbsp;</p>
+<p>p0 = ( x0, y0 ) = ( 0, 0 )</p>
+<p>p1 = ( x1, y1 ) = ( 10, 10 )</p>
+<p>&nbsp;</p>
+<p>These points define the following mapping y(x)</p>
+<p>&nbsp;</p>
+<p>y = y0 if x &lt;= x0</p>
+<p>y = x if x &gt; x0 and x &lt;= x1</p>
+<p>y = y1 if x &gt; x1</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Boundaries</span></p>
+<p>p0 = ( x0, y0 ) is the first interpolation point</p>
+<p>pn = ( xn, yn ) is the last interpolation point</p>
+<p>&nbsp;</p>
+<p>If x &lt; x0: y = y0</p>
+<p>If x &gt; xn: y = yn</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Mapping</span></p>
+<p>If we have a list of interpolation points p0, p1, ... pn the mapping y(x) is given by:</p>
+<p>&nbsp;</p>
+<p>y = y0 if x &lt;= x0</p>
+<p>y = ( y1 - y0 ) / ( x1 - x0 ) * ( x - x0 ) + y0 if x &gt; x0 and x &lt;= x1</p>
+<p>y = ( y2 - y1 ) / ( x2 - x1 ) * ( x - x1 ) + y1 if x &gt; x1 and x &lt;= x2</p>
+<p>...</p>
+<p>y = yn if x &gt; xn</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Move points</span></p>
+<p>Interpolation points can be moved, added and removed. To move an interpolation points you can use the Graphics-View and move the points with the mouse pointer. In the Table-View the x,y values of the interpolation points can be edited. The x value of an interpolation point can never be smaller than the x value of the earlier interpolation point and never be greater than the x value of the following interpolation point.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Adding points</span></p>
+<p>In the Graphics-View you can add a new point anywhere by using the context menu available by clicking with the right mouse button.</p>
+<p><img src="transferfunction_dialog_context_grafik.png" width="140" height="96" alt="transferfunction_dialog_context_grafik" style="width:140px;height:96px;border:none" /></p>
+<p>&nbsp;</p>
+<p>In the Table-View the context menu is available by clicking with the right mouse button into a row.</p>
+<p><img src="transferfunction_dialog_context_tabelle.png" width="140" height="132" alt="transferfunction_dialog_context_tabelle" style="width:140px;height:132px;border:none" /></p>
+<p>You can choose to insert the new point before or after the current row.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Delete points</span></p>
+<p>Points are deleted in both the Graphics-View and the Table-View via the context menu after right mouse click onto a point or row. If there is only a single interpolation point left, the function for deleting this point is deactivated.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Import/Export of interpolation points</span></p>
+<p>The clipboard can be used to import and export the list of interpolation points. By this data can be exchanged with programs like Excel or Matlab. The function for Import/Export is available via the context menu in both the Graphics and Table-View.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>
