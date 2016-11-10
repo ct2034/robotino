@@ -1,0 +1,2 @@
+#!/bin/bash
+$(rospack find robotino_core)/copied/usr/local/robotino/daemons/bin/rpcd

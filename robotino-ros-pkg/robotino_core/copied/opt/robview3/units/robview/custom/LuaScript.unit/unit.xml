@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Lua Script">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="in1">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in2">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in3">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in4">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in5">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in6">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in7">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in8">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in9">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in10">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in11">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in12">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in13">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in14">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in15">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in16">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in17">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in18">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in19">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="in20">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="string" var:varname="script">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="deterministic">
+						<var:default var:val="true" />
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="usejit">
+						<var:default var:val="true" />
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="out1">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out2">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out3">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out4">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out5">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out6">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out7">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out8">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out9">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out10">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out11">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out12">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out13">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out14">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out15">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out16">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out17">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out18">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out19">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="out20">
+						<var:default var:val="0" />
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state>
+				<unit:statevar var:type="string" var:varname="luaOutput">
+					<var:default var:val="" />
+				</unit:statevar>
+				<unit:statevar var:type="bool" var:varname="running">
+					<var:default var:val="false" />
+				</unit:statevar>
+				<unit:statevar var:type="bool" var:varname="scriptChanged">
+					<var:default var:val="false" />
+				</unit:statevar>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="in1" unit:side="left"/>
+						<unit:layout unit:varname="in2" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in10" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in11" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in12" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in13" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in14" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in15" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in16" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in17" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in18" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in19" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="in20" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="script" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="deterministic" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="usejit" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="out1" unit:side="right"/>
+						<unit:layout unit:varname="out2" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out3" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out4" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out5" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out6" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out7" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out8" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out9" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out10" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out11" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out12" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out13" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out14" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out15" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out16" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out17" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out18" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out19" unit:side="right" unit:display="hidden"/>
+						<unit:layout unit:varname="out20" unit:side="right" unit:display="hidden"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Lua script</unit:name>
+					<unit:icon unit:filename="Lua.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="in1">
+								<unit:description>Input[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in2">
+								<unit:description>Input[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in3">
+								<unit:description>Input[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in4">
+								<unit:description>Input[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in5">
+								<unit:description>Input[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in6">
+								<unit:description>Input[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in7">
+								<unit:description>Input[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in8">
+								<unit:description>Input[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in9">
+								<unit:description>Input[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in10">
+								<unit:description>Input[ 10]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in11">
+								<unit:description>Input[ 11]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in12">
+								<unit:description>Input[ 12]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in13">
+								<unit:description>Input[ 13]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in14">
+								<unit:description>Input[ 14]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in15">
+								<unit:description>Input[ 15]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in16">
+								<unit:description>Input[ 16]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in17">
+								<unit:description>Input[ 17]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in18">
+								<unit:description>Input[ 18]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in19">
+								<unit:description>Input[ 19]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="in20">
+								<unit:description>Input[ 20]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="script">
+								<unit:description>Script</unit:description>
+							</unit:info>
+							<unit:info unit:varname="deterministic">
+								<unit:description>Deterministic</unit:description>
+							</unit:info>
+							<unit:info unit:varname="usejit">
+								<unit:description>Use JIT compiler</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="out1">
+								<unit:description>Output[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out2">
+								<unit:description>Output[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out3">
+								<unit:description>Output[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out4">
+								<unit:description>Output[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out5">
+								<unit:description>Output[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out6">
+								<unit:description>Output[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out7">
+								<unit:description>Output[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out8">
+								<unit:description>Output[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out9">
+								<unit:description>Output[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out10">
+								<unit:description>Output[ 10]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out11">
+								<unit:description>Output[ 11]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out12">
+								<unit:description>Output[ 12]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out13">
+								<unit:description>Output[ 13]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out14">
+								<unit:description>Output[ 14]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out15">
+								<unit:description>Output[ 15]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out16">
+								<unit:description>Output[ 16]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out17">
+								<unit:description>Output[ 17]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out18">
+								<unit:description>Output[ 18]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out19">
+								<unit:description>Output[ 19]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="out20">
+								<unit:description>Output[ 20]</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_custom_luascript_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_custom_luascript_gui"/>
+			</unit:plugins>
+			
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

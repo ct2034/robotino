@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Function block library</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="function block" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "function_block_library.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Function block library</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="example_array.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="logic.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p>The control programs created with Robotino® View consist of interlinked function blocks. </p>
+<p>These are located in the <a href="structure_and_concept_of_the_workspace.htm" class="topiclink">function block library</a> and can be inserted into a sub-program via Drag&amp;Drop.</p>
+<p>Function blocks are assigned to different categories. By clicking onto a category name with the left mouse button,<br />
+the category folder is expanded. The following categories are available:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="width:612px; border:solid 1px #aca899; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Name</span></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="logic.htm" class="topiclink">Logic</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Components as recognised from electronic logic modules</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="math.htm" class="topiclink">Mathematics</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Simple mathematical operations</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="vector_math.htm" class="topiclink">Vector</a> <a href="vector_math.htm" class="topiclink">analysis</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Analysis using two-dimensional vectors</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="display.htm" class="topiclink">Display</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Function blocks for visualization</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="imageprocessing.htm" class="topiclink">Image processing</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Basic image processing functionalities</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="generator.htm" class="topiclink">Generators</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Generation of signals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="filter.htm" class="topiclink">Filter</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Smoothing of signals</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="navigation.htm" class="topiclink">Navigation</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Driving mobile Robots</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="inputdevices.htm" class="topiclink">Input devices</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Function blocks for the interaction of the user with the control program</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="dataexchange.htm" class="topiclink">Data exchange</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Exchange data with external programs</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:29%; padding:1px; border:solid 1px #aca899;"><p><a href="programming.htm" class="topiclink">My function blocks</a></p>
+</td>
+<td style="vertical-align:top; width:78%; padding:1px; border:solid 1px #aca899;"><p>Tutorials for the development of own function blocks</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

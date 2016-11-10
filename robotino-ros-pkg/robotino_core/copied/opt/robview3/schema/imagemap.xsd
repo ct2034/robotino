@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:map="http://easykit.informatik.tu-muenchen.de/schema/imagemap"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/imagemap"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Root node -->
+	<xs:element name="map">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="imageMap" type="map:imageMapType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Image map type definition -->
+	<xs:complexType name="imageMapType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="item" type="map:imageMapItemType"/>
+		</xs:sequence>
+		<xs:attribute name="image" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- Image map item type definition -->
+	<xs:complexType name="imageMapItemType">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="left" type="xs:decimal" use="required"/>
+		<xs:attribute name="top" type="xs:decimal" use="required"/>
+		<xs:attribute name="width" type="xs:decimal" use="required"/>
+		<xs:attribute name="height" type="xs:decimal" use="required"/>
+	</xs:complexType>
+
+</xs:schema>

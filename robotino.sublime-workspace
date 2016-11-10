@@ -1,0 +1,1077 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"log",
+				"logwarn	import"
+			],
+			[
+				"i",
+				"is_shutdown"
+			],
+			[
+				"png",
+				"pnghex	statement"
+			],
+			[
+				"pa",
+				"path	statement"
+			],
+			[
+				"call",
+				"callbackMap	function"
+			],
+			[
+				"map",
+				"map_frame	statement"
+			],
+			[
+				"fra",
+				"link_frame"
+			],
+			[
+				"po",
+				"position	statement"
+			],
+			[
+				"lis",
+				"listener"
+			],
+			[
+				"pub",
+				"pubPose	statement"
+			],
+			[
+				"lo",
+				"loginfo	import"
+			],
+			[
+				"to",
+				"toOrderedDict"
+			],
+			[
+				"__",
+				"__slots__"
+			],
+			[
+				"slot",
+				"slot"
+			],
+			[
+				"get",
+				"getDict"
+			],
+			[
+				"rosp",
+				"rospy	module"
+			],
+			[
+				"data",
+				"exchangeData"
+			],
+			[
+				"da",
+				"dataFormat"
+			],
+			[
+				"topi",
+				"topicName	statement"
+			],
+			[
+				"top",
+				"topic	forstmt"
+			],
+			[
+				"rou",
+				"routeFig	statement"
+			],
+			[
+				"kar",
+				"kartopose_x"
+			],
+			[
+				"col",
+				"mongoCollection"
+			],
+			[
+				"c",
+				"count	function"
+			],
+			[
+				"exc",
+				"Exception	class"
+			],
+			[
+				"ver",
+				"verticaConnection"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"stat",
+				"state"
+			],
+			[
+				"th",
+				"thetaFromQuaternions"
+			],
+			[
+				"tr",
+				"traj	forstmt"
+			],
+			[
+				"see",
+				"seenItAll	statement"
+			],
+			[
+				"bagf",
+				"bagfile	param"
+			],
+			[
+				"ins",
+				"insertData	function"
+			],
+			[
+				"in",
+				"insert_one	function"
+			],
+			[
+				"mon",
+				"mongoCollection	statement"
+			],
+			[
+				"conn",
+				"connection	statement"
+			],
+			[
+				"co",
+				"connect"
+			],
+			[
+				"con",
+				"con_settings	statement"
+			],
+			[
+				"msg",
+				"msgDic	statement"
+			],
+			[
+				"nam",
+				"namesTopicsPub	statement"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"ws",
+				"wsConnected	statement"
+			],
+			[
+				"ca",
+				"callbackFunction	param"
+			],
+			[
+				"s",
+				"str"
+			],
+			[
+				"on",
+				"on_open	statement"
+			],
+			[
+				"w",
+				"ws	statement"
+			],
+			[
+				"re",
+				"retrycount	statement"
+			],
+			[
+				"M",
+				"MsbCommunicate	class"
+			],
+			[
+				"webso",
+				"websocket"
+			],
+			[
+				"topic",
+				"topics	param"
+			],
+			[
+				"ge",
+				"getPubdTopics"
+			],
+			[
+				"topics",
+				"topics_pubed"
+			],
+			[
+				"load",
+				"loads	function"
+			],
+			[
+				"ros",
+				"rosType	param"
+			],
+			[
+				"f",
+				"fromRos	statement"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"def",
+				"definitions	statement"
+			],
+			[
+				"__le",
+				"__len__	function"
+			],
+			[
+				"de",
+				"definitions	statement"
+			],
+			[
+				"e",
+				"events	statement"
+			],
+			[
+				"pu",
+				"pubd_topics"
+			],
+			[
+				"ms",
+				"msgDic	statement"
+			],
+			[
+				"conf",
+				"confTopicsPub	statement"
+			],
+			[
+				"l",
+				"logwarn	import"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "logistics_relay/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 5251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logistics_relay/package.xml",
+			"settings":
+			{
+				"buffer_size": 598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logistics_relay/scripts/relay.py",
+			"settings":
+			{
+				"buffer_size": 2714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/cch/.bashrc",
+			"settings":
+			{
+				"buffer_size": 5165,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "robotino-ros-pkg/robotino_node/launch/msb_ros_bridge.launch",
+			"settings":
+			{
+				"buffer_size": 1261,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/cch/ros/auckbot_ws/auckbot/auckbot_analysis/src/nav_analysis.cpp",
+			"settings":
+			{
+				"buffer_size": 16184,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pus",
+		"selected_items":
+		[
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"inde",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"ana",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"re",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"rein",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"repl pyt",
+				"SublimeREPL: Python"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add Current File"
+			],
+			[
+				"form",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"nex",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"ne",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"previ",
+				"ColorSchemeSelector: Previous Color Scheme"
+			],
+			[
+				"next",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"selecto",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"packa in",
+				"Package Control: Install Package"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fo",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"reo",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"js",
+				"Set Syntax: JSON"
+			],
+			[
+				"curr",
+				"Git: Add Current File"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"reind",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"test",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"git p",
+				"Git: Pull"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 323.0,
+		"history":
+		[
+			"!ls",
+			"help();",
+			"help()",
+			"cd",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/cch/ros/robotino_ws/src/robotino/logistics_relay",
+		"/home/cch/ros/robotino_ws/src/robotino/logistics_relay/scripts"
+	],
+	"file_history":
+	[
+		"/home/cch/ros/robotino_ws/src/robotino/.git/MERGE_MSG",
+		"/home/cch/src/vfk_msb_client/.git/MERGE_MSG",
+		"/home/cch/ws/VFK_DEMOS/Applications/ProductionView/ProductionView/pom.xml",
+		"/home/cch/ros/auckbot_ws/auckbot/auckbot_analysis/src/model_fitting.py",
+		"/home/cch/.bashrc",
+		"/home/cch/ros/robotino_ws/src/robotino/logistics_relay/scripts/relay.py",
+		"/home/cch/ros/robotino_ws/src/robotino/logistics_relay/package.xml",
+		"/home/cch/ros/robotino_ws/src/robotino/logistics_relay/CMakeLists.txt",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ws4py_client.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_websocket_client_py.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_communicate.py",
+		"/home/cch/ros/vfk_ws/src/vfk.msb.client.library.websocket.python/pitasc_vfk/src/pitasc_vfk/vfk_app_loader.py",
+		"/home/cch/ros/vfk_ws/src/vfk.msb.client.library.websocket.python/vfk_msb_client/exmpls/pitasc/pitasc_vfk/package.xml",
+		"/home/cch/ros/vfk_ws/src/vfk.msb.client.library.websocket.python/vfk_msb_client/exmpls/pitasc/vfk.launch",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/example_main.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/launch/msb_ros_bridge.launch",
+		"/home/cch/Documents/1_Projekte/151105_i40_Emergenz/iecon2016/i40_emergence.tex",
+		"/usr/share/doc/fingerprint-gui/Manual_en.html",
+		"/home/cch/ws/VFK_PLATFORM/.git/MERGE_MSG",
+		"/home/cch/src/vfk_msb_client/vfk_msb_client/scripts/msb_classes.py",
+		"/home/cch/ros/vfk_ws/src/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_helper.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes_test.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_communicate_test.py",
+		"/home/cch/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_helper_test.py",
+		"/home/cch/ros/robotino_ws/src/robotino/cob_sick_s300/ros/src/cob_sick_s300.cpp",
+		"/home/cch/ros/robotino_ws/src/robotino/cob_sick_s300/ros/src/cob_scan_filter.cpp",
+		"/home/cch/amcl.yaml",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/example_main.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_websocket_client_py.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_helper.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_communicate.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/launch/msb_ros_bridge.launch",
+		"/home/cch/ws/VFK_DEMOS/.git/MERGE_MSG",
+		"/home/cch/ws/VFK_DEMOS/Applications/ProductionView/ProductionView/src/main/java/vfk/msb/client/productionview/msbclient/MsbClient.java",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/exmpls/event_example_2_pretty.json",
+		"/home/cch/ws/perproj.sh",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/.git/MERGE_MSG",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/launch/msb_ros_bridge.launch",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/exmpls/dataObject_PoseStamped_pretty.json",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/exmpls/event_example_pretty.json",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ws4py_client.py",
+		"/home/cch/ws/VFK_MSB/.git/MERGE_MSG",
+		"/home/cch/ws/VFK_COMMON/.git/MERGE_MSG",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_ros_helper_test.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/test.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_communicate_test.py",
+		"/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes_test.py",
+		"/tmp/pyyyy/vfk_msb_client_ORIG/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/example_main.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_classes.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_communicate.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/test.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_ros_helper.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_websocket_client_py.py",
+		"/tmp/vfk_msb_client/vfk_msb_client/scripts/msb_ros_bridge.py",
+		"/etc/grub.d/README",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_ws4py_client.py",
+		"/home/cch/vfk.txt",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_ros_helper_test.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_classes_test.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_communicate_test.py",
+		"/home/cch/src/bagfile2vertica/login.yaml",
+		"/home/cch/ros/auckbot_ws/auckbot/auckbot_analysis/src/mongodisp.py",
+		"/home/cch/ros/vfk_ws/src/TODO.notes",
+		"/home/cch/src/bagfile2vertica/display.py",
+		"/home/cch/src/bagfile2vertica/bagfile2vertica.py",
+		"/home/cch/src/textbrain/textbrain-webparse/webparse.py",
+		"/home/cch/src/textbrain/.git/COMMIT_EDITMSG",
+		"/home/cch/src/textbrain/.git/MERGE_MSG",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/README.md",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/scripts/msb_websocketS_client_py.py",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/register_example_DEF_pretty.json",
+		"/home/cch/src/textbrain/textbrain-bookmarks-chrome/popup.js",
+		"/home/cch/src/textbrain/textbrain-bookmarks-chrome/popup.html",
+		"/home/cch/src/textbrain/textbrain-bookmarks-chrome/manifest.json",
+		"/home/cch/ws/git_pull_all.sh",
+		"/home/cch/Downloads/Eigene Dateien_I/140312_Verteilung_Ausschreibung_Jrgen/Robotikinstitute_Verteiler.txt",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/register_example_pretty.json",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/whats_wrong.json",
+		"/home/cch/win_home/Dropbox/Apps/simplenotepad/OPLen.txt",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/dataObject_PoseStamped_pretty.json",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/show-geometry_msgs-PoseStamped",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/dataObject_PoseStamped.json",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/.travis.yml",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/install_ros.sh",
+		"/home/cch/ros/vfk_ws/src/vfk_msb_client/vfk_msb_client/exmpls/COMMIT_EDITMSG.COMMIT_EDITMSG",
+		"/home/cch/.config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings",
+		"/home/cch/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/cch/src/docker/restaptor/src/Dockerfile",
+		"/home/cch/src/docker/restaptor/src/index.js",
+		"/home/cch/src/docker/restaptor/src/package.json",
+		"/home/cch/.screenlayout/wide.sh",
+		"/home/cch/win_home/Desktop/i40 als Emergenz.txt",
+		"/home/cch/ros/cob_ws/src/cob_simulation/cob_bringup_sim/launch/robot.launch",
+		"/home/cch/win_home/error2.log",
+		"/home/cch/win_home/error.log",
+		"/opt/ros/indigo/share/cob_bringup_sim/launch/robot.launch",
+		"/var/log/rabbitmq/rabbit@cch-ThinkPad-T430-sasl.log",
+		"/var/log/rabbitmq/rabbit@cch-ThinkPad-T430.log",
+		"/home/cch/ws/VFK_TOOLS/vfkinstall/rabbitmq.sh",
+		"/home/cch/Downloads/eclipse.desktop",
+		"/home/cch/.netrc"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"og",
+			"pubPose",
+			"pub",
+			"self.tf",
+			"TIME",
+			"trans",
+			"tran",
+			"roboti",
+			"msgs",
+			"build",
+			"author",
+			"robotino_navigation",
+			"+ ",
+			"\"/>",
+			"\" value=\"",
+			"\" value=\"o",
+			"\" ",
+			"    <!--param name=\"",
+			"    <param name=\"",
+			"<param name=\"",
+			"~",
+			"topics[topic]['dict']",
+			"topics[topic]",
+			"print",
+			"od_data",
+			"haschild",
+			"msgJson",
+			"od_",
+			"getParamTopics",
+			"confTopicsPub",
+			"entry",
+			"getTopicNamesFromConf",
+			"confTopicsSub",
+			"subscribeTo",
+			"tosub",
+			"subscribeTo",
+			"es",
+			"getEvents",
+			"subscribeTo",
+			"eve",
+			"logerr",
+			"e",
+			"err",
+			"es",
+			"Even",
+			"getE",
+			"Even",
+			"'eve",
+			"subsc",
+			" +",
+			"\" +",
+			"x",
+			"route_fig",
+			"plt.",
+			"pose.",
+			"kartopose_y",
+			"kartopose_",
+			"rotation",
+			"status_code",
+			"trajectory_segment",
+			"status_code",
+			"_id",
+			"pose.",
+			"y",
+			"msg.pose.orientation.y",
+			"msg.pose.orientation.",
+			"v_desired",
+			" is not None",
+			"None",
+			"is not None",
+			"coord",
+			"colle",
+			"self.collection",
+			"self.connection",
+			"+",
+			"eval",
+			",",
+			"self.mc",
+			"msb_comm",
+			"callback",
+			"print",
+			"send",
+			"wsCo",
+			"datetime",
+			"time.",
+			"time",
+			"conn",
+			"MsbWsClient",
+			"MsbC",
+			"msb",
+			"commun",
+			"work",
+			" \n",
+			"    \n",
+			"        \n",
+			"        ",
+			"{",
+			",",
+			"print",
+			"toCol",
+			"mrh",
+			"confTopic",
+			"topics",
+			"getTopics",
+			"date",
+			"    ",
+			"definitions",
+			"l",
+			"toOrderedDict",
+			"Ordered",
+			"Dict",
+			"OrderedDict",
+			"topics_sub",
+			"pubdTopics",
+			"subbedTopics",
+			"topicPub",
+			"getFunctionsFromConfig",
+			"func",
+			"pubdT",
+			"pubd_topics",
+			"checkin",
+			"false",
+			"~",
+			"out",
+			"confTopics",
+			"get",
+			"topics",
+			"pubd"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "logistics_relay/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3019,
+								3019
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 871.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "logistics_relay/package.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "logistics_relay/scripts/relay.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/cch/.bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5104,
+								5104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1635.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "robotino-ros-pkg/robotino_node/launch/msb_ros_bridge.launch",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1261,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1144,
+								1144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/cch/ros/auckbot_ws/auckbot/auckbot_analysis/src/nav_analysis.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16184,
+								16184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7349.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "robotino.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/ros/auckbot_ws/auckbot/auckbot_analysis/src/nav_analysis.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "no",
+		"selected_items":
+		[
+			[
+				"no",
+				"~/Dropbox/Apps/Plain.txt/notes.sublime-project"
+			],
+			[
+				"vf",
+				"~/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb.sublime-project"
+			],
+			[
+				"",
+				"~/ws/VFK_PLATFORM/vfk.msb.client/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb.sublime-project"
+			],
+			[
+				"note",
+				"~/Dropbox/Apps/Plain.txt/notes.sublime-project"
+			],
+			[
+				"bagf",
+				"~/src/bagfile2vertica/bagfile2vertica.sublime-project"
+			],
+			[
+				"ba",
+				"~/src/bagfile2vertica/bagfile2vertica.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

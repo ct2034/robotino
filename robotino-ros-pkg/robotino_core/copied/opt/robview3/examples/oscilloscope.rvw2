@@ -1,0 +1,305 @@
+
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings"/>
+
+  <md:variables/>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:configVarExprs/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino ®">
+      <md:configVarExprs>
+        <md:varExpr md:value="172.26.1.1" md:varname="ipAddress"/>
+        <md:varExpr md:value="172.26.1.1;;127.0.0.1:8080" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="0" md:varname="cameraResolution"/>
+        <md:varExpr md:value="0" md:varname="cameraColorSpace"/>
+      </md:configVarExprs>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_oscilloscope"/>
+    <md:utspec md:id="rec_gmbh_arb_generator"/>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_step1" md:name="Step1">
+      <md:timeslice md:nsec="40000000" md:sec="0"/>
+      <md:units>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_oszilloskop__1_" md:name="Oszilloskop (1)" md:type="REC GmbH Oscilloscope" md:utspec="rec_gmbh_oscilloscope" md:variantName="REC GmbH Oscilloscope">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="ch0point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch1point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch2point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch3point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch4point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch5point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch6point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch7point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch8point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch9point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch10point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch11point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch12point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch13point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch14point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="ch15point">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="ch0">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch3">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch4">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch5">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch6">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch7">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch11">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch12">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch13">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch14">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="ch15">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)" md:varname="channel_enabled">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)" md:varname="channel_trigger">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(1000 500 200 2000 100 100 100 100 100 100 100 100 100 100 100 100)" md:varname="channel_xscale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(1 2 5 1 1 1 1 1 1 1 1 1 1 1 1 1)" md:varname="channel_yscale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(4294901760 4278255360 4278190335 4278255615 4294902015 4294967040 4286578688 4278222848 4278190208 4278222976 4286578816 4286611456 4294967295 4278190080 4294901760 4278255360)" md:varname="channel_color">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_arbitr_rgenerator__1_" md:name="Arbiträrgenerator (1)" md:type="REC GmbH ARB generator" md:utspec="rec_gmbh_arb_generator" md:variantName="REC GmbH ARB generator">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0\;\;0;;0.1\;\;0.587785;;0.2\;\;0.951056;;0.3\;\;0.951057;;0.4\;\;0.587787;;0.5\;\;2.65359e-006;;0.6\;\;-0.587783;;0.7\;\;-0.951055;;0.8\;\;-0.951058;;0.9\;\;-0.587789;;1\;\;-5.30718e-006" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="amplitude">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="20" md:varname="timescale_minimum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="timescale_maximum">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch0" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_2" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch1" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch2" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_4" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch3" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_5" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch4" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_6" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch5" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_7" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch6" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_8" md:prod="1">
+          <md:from md:con="y" md:unit="actor_arbitr_rgenerator__1_"/>
+          <md:to md:con="ch7" md:unit="actor_oszilloskop__1_"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init"/>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step1" md:name="Step1" md:sdfModel="sdfmodel_step1"/>
+        <md:sfcTransition md:guard="false" md:id="sfcitem_transition2"/>
+        <md:sfcJump md:dest="sfcitem_simple_init" md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:active="true" md:sdfmodel="sdfmodel_step1" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd00000001000000030000053dfffffffcfc0100000004fb0000003e00640064006400360038006300630033006100350063003500350034003200370031006200650034003000660033003600300063006100320036003800660200000218000001870000015700000110fb0000003c0033006300350033006600390032006600610035003400320037003900320066003600360033003200390034003500630039006200340066003800380200000266000001910000015700000110fb0000003e003400300061003800370038006200650033003200380061003100310061006400370036003900390039003000610037003500380063003400650033003403000002bf0000012e0000015700000110fb0000003e0063006100370034006600330039003400380033003100320062006600340032003200390061003600660030003800370036003000620036003300630039030000011e0000012d00000155000001130000053d000001db00000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:nameDisplay="hidden" md:unit="actor_oszilloskop__1_" md:x="678" md:y="96">
+            <md:unitDialogLayout md:objectName="40a878be328a11ad769990a758c4e34"/>
+          </md:unit>
+          <md:unit md:nameDisplay="hidden" md:unit="actor_arbitr_rgenerator__1_" md:x="450" md:y="54">
+            <md:unitDialogLayout md:objectName="ca74f3948312bf4229a6f08760b63c9"/>
+          </md:unit>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_1"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_2"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_3"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_4"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_5"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_6"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_7"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_8"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>

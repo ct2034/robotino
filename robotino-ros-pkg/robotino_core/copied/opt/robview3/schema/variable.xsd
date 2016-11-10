@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Type templates -->
+	<xs:complexType name="typeTemplateType">
+		<xs:sequence>
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+				<xs:choice>
+					<xs:element name="specialization">
+						<xs:complexType>
+							<xs:attribute name="type" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="specializationGroup">
+						<xs:complexType>
+							<xs:attribute name="group" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="default">
+				<xs:complexType>
+					<xs:attribute type="xs:string" name="type"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="typename" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- Base type for variable definitions -->
+	<xs:complexType name="variableType">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="default" type="var:valType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="access" default="read-write" type="var:accessType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="visibility" default="visible" type="var:visibilityType"/>
+			</xs:sequence>
+		</xs:sequence>
+
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="varname" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- Variable values -->
+	<xs:complexType name="valType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:choice>
+					<xs:element name="specialization">
+						<xs:complexType>
+							<xs:attribute name="type" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="specializationGroup">
+						<xs:complexType>
+							<xs:attribute name="group" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:sequence>
+
+		<xs:attribute name="val" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- Variable access type -->
+	<xs:simpleType name="accessType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="read-write"/>
+			<xs:enumeration value="read-only"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Variable visibility type -->
+	<xs:simpleType name="visibilityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="visible"/>
+			<xs:enumeration value="hidden"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

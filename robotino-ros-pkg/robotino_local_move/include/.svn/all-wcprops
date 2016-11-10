@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_move/include
+END
+RobotinoLocalMoveServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_move/include/RobotinoLocalMoveServer.h
+END
+RobotinoLocalMoveClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_local_move/include/RobotinoLocalMoveClient.h
+END

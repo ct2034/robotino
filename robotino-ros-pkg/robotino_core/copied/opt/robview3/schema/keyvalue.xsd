@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Definition of key/value type -->
+	<xs:complexType name="keyValueType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="item" type="kv:keyValueType"/>
+		</xs:sequence>
+		<xs:attribute name="key" type="xs:string" use="required"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+
+	<!-- Definition of root key/value type (no key required) -->
+	<xs:complexType name="keyValueRootType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="item" type="kv:keyValueType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

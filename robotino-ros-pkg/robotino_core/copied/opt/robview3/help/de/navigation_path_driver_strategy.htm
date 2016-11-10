@@ -1,0 +1,223 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Funktionsblockbibliothek &gt; Navigation &gt; Wegbefahrer &gt; Strategie</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Strategie">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body { margin:0; 
+   padding:0; 
+   overflow: hidden; 
+   background: #FFFFFF; 
+  }
+ 
+div#printheader { 
+   display: none;
+   padding-bottom: 10px;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+<noscript>
+<style type="text/css">
+html, body { overflow: auto; }
+</style> 
+</noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "navigation_path_driver_strategy.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Strategie</span></h1>
+</div> 
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?navigation_path_driver_strategy.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="function_block_library.htm">Funktionsblockbibliothek</a> &gt; <a href="navigation.htm">Navigation</a> &gt; <a href="navigation_path_driver.htm">Wegbefahrer</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Strategie</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="navigation_path_path_dialog.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="navigation_path_driver.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="navigation_path_driver_example.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p><img src="pathdriver_path1.png" width="500" height="240" alt="pathdriver_path1" style="width:500px;height:240px;border:none" /></p>
+<p>Der Wegbefahrer Funktionblock erzeugt einen Weg, der zunächst die Wegpunkte gradlinig verbindet.</p>
+<p>&nbsp;</p>
+<p>Der Roboter wird mittels eines virtuellen Wegpunktes (hier als roter Punkt eingezeichnet) geführt. Von der aktuellen Roboterposition ausgehend wird der virtuell Wegpunkt so auf dem Weg plaziert, das der Abstand zwischen Roboter und virtuellem Wegpunkt dp (distance virtual point) entspricht. Der virtuelle Wegpunkt kann sich auf dem Weg nur in Richtung des Wegendes bewegen, d.h. entfernt sich der Roboter vom virtuellen Wegpunkt, so bleibt dieser unverändert. Durch die Regelung auf den virtuellen Punkt kommt es zu einer Glättung des Weges. Diese Glättung ist um so größer, je größer der Abstand dp ist.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Winkelgeschwindigkeitsparametrierung</span></p>
+<p>Die Winkelgeschwindigkeit <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ) wird über den Funktionsblockdialog abhängig vom Winkelfehler dφ angegeben. dφ ist der Winkel zwischen aktueller Roboterorientierung und der Verbindung Robotermittelpunkt zu virtuellem Wegpunkt.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Geschwindigkeitsparametrierung</span></p>
+<p>Die Geschwindigkeit wird ebenfalls in Abhängigkeit von dφ angegeben, bezeichnet als v(dφ). Damit besteht die Möglichkeit die Bewegung zu verlangsamen, wenn der Roboter nicht mehr korrekt ausgerichtet ist.</p>
+<p>&nbsp;</p>
+<p>Um die Geschwindigkeit verlangsamen zu können, wenn der Weg abknickt, gibt man die Geschwindigkeit auch als Funktion v(dn) des Abstandes zwischen dem virtuellen Punkt und dem nächsten Wegpunkt an. Ein typischer Verlauf von v(dn) ist</p>
+<p><img src="pathdriver_v_dn_zoom68.png" width="137" height="128" alt="pathdriver_v_dn" style="width:137px;height:128px;border:none" /></p>
+<p>D.h. die Geschwindigkeit soll abnehmen, je näher der Roboter dem Wegpunkt (und damit der nächsten Biegung) kommt.</p>
+<p>&nbsp;</p>
+<p>Allerdings will man den Roboter in Abhängigkeit des Winkels α<span style="font-size: 7pt; vertical-align: sub;">n</span> abbremsen. α<span style="font-size: 7pt; vertical-align: sub;">n </span>ist der Winkel zwischen der aktuellen und der nächsten Wegstrecke. Für den Fall das α<span style="font-size: 7pt; vertical-align: sub;">n</span> 180° ist (d.h. der Weg geht gerade durch den Wegpunkt), soll die Geschwindigkeit nicht verlangsamt werden. Für den Fall das α<span style="font-size: 7pt; vertical-align: sub;">n</span> gegen 0° geht (ein sehr starker Knick), muss der Roboter auch sehr stark verlangsamt werden. Aus diesem Grund benötigt man die Funktion v(α<span style="font-size: 7pt; vertical-align: sub;">n</span>). Ein typischer Verlauf von v(α<span style="font-size: 7pt; vertical-align: sub;">n</span>) sieht so aus</p>
+<p><img src="pathdriver_v_a_zoom69.png" width="137" height="133" alt="pathdriver_v_a" style="width:137px;height:133px;border:none" /></p>
+<p>D.h. je kleiner α<span style="font-size: 7pt; vertical-align: sub;">n</span>, desto kleiner ist auch die zu fahrende Geschwindigkeit.</p>
+<p>&nbsp;</p>
+<p>Die drei Geschwindigkeitsprofile v(dφ), v(dn) und v(α) werden zu der Gesamtweggeschwindigkeit V(dφ,dn,α) verrechnet:</p>
+<p>&nbsp;</p>
+<p> Vp(dφ,dn,α) = min( &nbsp;v(dφ), max( v(dn), v(α) ) )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Anfahrt des letzten Wegpunktes</span></p>
+<p>Zum abbremsen bei Erreichen des Wegendes, wird die Geschwindigkeit in Abhängigkeit zum noch zu fahrenden Weg angegeben, bezeichnet als v(d). &nbsp;Das Ziel wird als erreicht angenommen, wenn die Geschwindigkeit als Funktion des noch zu fahrenden Weges gleich Null ist.</p>
+<p>&nbsp;</p>
+<p>Die ungeglättete Geschwindigkeit berechnet sich zu:</p>
+<p>&nbsp;</p>
+<p>V(d,dφ,dn,γ) = min( v(d), &nbsp;Vp(dφ,dn,γ) )</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Glättung der Geschwindigkeit und Winkelgeschwindigkeit</span></p>
+<p>Es stehen zwei weitere Parameter zur Glättung der Bewegung zur Verfügung.</p>
+<p>Die <span style="font-weight: bold;">Geschwindigkeitskopplung</span> bezeichnet die Zeit in Millisekunden, die benötigt wird, damit die Kopplung vCC zwischen errechneter Geschwindigkeit Vp(dφ,dn,α) und der ausgegebenen Geschwindigkeit velocity den Wert 1 erreicht.</p>
+<p>Die <span style="font-weight: bold;">Winkelgeschwindigkeitskopplung</span> bezeichnet die Zeit in Millisekunden, die benötigt wird, damit die Kopplung omegaCC zwischen errechneter Winkelgeschwindigkeit  <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ) und der ausgegebenen Winkelgeschwindigkeit omega den Wert 1 erreicht.</p>
+<p>&nbsp;</p>
+<p>dv = vCC * ( Vp<span style="font-size: 7pt; vertical-align: sub;">t</span> - Vp<span style="font-size: 7pt; vertical-align: sub;">t-1</span> )</p>
+<p>velocity = Vp<span style="font-size: 7pt; vertical-align: sub;">t-1</span> + dv</p>
+<p>&nbsp;</p>
+<p>domega = omegaCC * ( <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t</span> - <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t-1</span> )</p>
+<p>velocity = <span style="font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial';">&omega;</span>(dφ)<span style="font-size: 7pt; vertical-align: sub;">t-1</span> + domega</p>
+<p>&nbsp;</p>
+<p>Das tiefgestellte t bezeichnet den Wert zum Zeitpunkt t. t-1 bezeichnet den Wert einen Zeitschritt vor t.</p>
+<p>&nbsp;</p>
+<p>Bei Neustart wird vCC mit 0 initialisiert und steigt innerhalb der mit der <span style="font-weight: bold;">Geschwindigkeitskopplung </span>gegebenen Zeit auf der Wert 1 an.</p>
+<p>Bei Neustart wird omegaCC mit 0 initialisiert und steigt innerhalb der mit der <span style="font-weight: bold;">Winkelgeschwindigkeitskopplung </span>gegebenen Zeit auf der Wert 1 an.</p>
+<p>&nbsp;</p>
+<p>Springt der virtuelle Punkt auf einen neuen Wegabschnitt, so werden vCC und omegaCC ebenfalls wieder auf 0 gesetzt.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

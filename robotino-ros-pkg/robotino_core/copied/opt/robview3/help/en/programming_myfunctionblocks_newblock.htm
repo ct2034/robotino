@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Creating a new function block</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "programming_myfunctionblocks_newblock.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Creating a new function block</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="programming_myfunctionblocks_preparation.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="programming_myfunctionblocks_robotino.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p>To create a new function block the tool &quot;Function blick manager&quot; is included in the Robotino® View API. It can be launches via the Windows start menu (in the RobotinoView folder). To create a function block, change to the tab &quot;Function block designer&quot;.</p>
+<p><img src="programming_myfunctionblocks_functionblockdesigner.png" width="401" height="672" alt="programming_myfunctionblocks_functionblockdesigner" style="width:401px;height:672px;border:none" /></p>
+<p>In the example the function block &quot;Test function block&quot; is created. It has an input and an output, both of type uint32, no state variables and a dialog. By the way, it is not necessaty to enter all data. It is sufficient wo specify &quot;Vendor&quot; and &quot;Name&quot;. After clicking on &quot;Auto fill&quot; the other fields (except &quot;Icon file name&quot;) will be filled automatically with appropriate data. Then it is only necessary to specify the icon, inputs, outputs, state variables and if the function blick is supposed to have a dialog.</p>
+<p>After clicking on &quot;Generate&quot; the new function block is created. In the folder %USERPROFILE%\Festo\RobotinoView3\units\MyFunctionBlocks a new subdirectory is created that contains the XML description file, CMake scripts and even C++ source files (without any function). So it is possible to create a Visual C++ project with CMake and work with it.</p>
+<p>&nbsp;</p>
+<p>For the function blick to be visible in Robotino View it must be added to the device &quot;My function blicks&quot;. To do this, change to the tab &quot;Device manager&quot;.</p>
+<p><img src="programming_myfunctionblocks_devicemanager.png" width="373" height="412" alt="programming_myfunctionblocks_devicemanager" style="width:373px;height:412px;border:none" /></p>
+<p>Subfolders and function blocks can be added and removed by using the appropriate functions in the context menu; they can be moved by Drag &amp; Drop. Subfolders can be renamed directly in the view. After finishing all modifications, the new state is saved by clicking the &quot;Save&quot; button.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Checksum</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "device_udp_dataexchange_checksum.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Checksum</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="device_udp_dataexchange_protocol.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="device_udp_dataexchange_types.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p>If the message is shorter than 100 byte, the sum s0 will be calculated from the whole package's single bytes. If the message contains 100 bytes or more, s0 will be calculated from the message's first and the last 50 bytes.</p>
+<p>&nbsp;</p>
+<p>In both cases the checksum byte must be initialized with 0. The checksum is calculated to</p>
+<p>&nbsp;</p>
+<p>checksum = 0xff - s0</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample">unsigned&nbsp;char&nbsp;checksum(&nbsp;const&nbsp;unsigned&nbsp;char*&nbsp;payload,&nbsp;unsigned&nbsp;int&nbsp;payloadLength&nbsp;)&nbsp;const</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">unsigned&nbsp;char&nbsp;s0&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">if(&nbsp;payloadLength&nbsp;&lt;&nbsp;100&nbsp;)</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">for(&nbsp;int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;payloadLength;&nbsp;++i&nbsp;)</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">s0&nbsp;+=&nbsp;payload[i];</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">else</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">for(&nbsp;int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;50;&nbsp;++i&nbsp;)</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">s0&nbsp;+=&nbsp;payload[i];</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">for(&nbsp;int&nbsp;i&nbsp;=&nbsp;payloadLength-1;&nbsp;i&nbsp;&gt;=&nbsp;payloadLength&nbsp;-&nbsp;50;&nbsp;--i&nbsp;)</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">s0&nbsp;+=&nbsp;payload[i];</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:60px">&nbsp;</span><span class="f_CodeExample">return&nbsp;(&nbsp;0xFF&nbsp;-&nbsp;s0&nbsp;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>To check if the package has been transmitted correctly, the whole message's single bytes will be accumulated to the byte sum s1 if the message is shorter than 100 byte. If it contains 100 bytes or more, s1 is calculated from the message's first and last 50 bytes.</p>
+<p>&nbsp;</p>
+<p>The package is correct if</p>
+<p>&nbsp;</p>
+<p>s1 = 0xFF</p>
+
+</td></tr></table>
+
+</body>
+</html>

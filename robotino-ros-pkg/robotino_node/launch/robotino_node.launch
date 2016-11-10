@@ -1,0 +1,44 @@
+<launch>
+    <arg name="hostname" default="127.0.1.1" />
+	<node name="robotino_node" pkg="robotino_node" type="robotino_node" output="screen">
+		<param name="hostname" value="$(arg hostname)" />
+		<param name="max_linear_vel" value="0.3" />
+		<param name="min_linear_vel" value="0.01" />
+		<param name="max_angular_vel" value="1.0" />
+		<param name="min_angular_vel" value="0.01" />
+		<remap from="robotino_joint_states" to="joint_states" />
+		<!--remap from="image_raw" to="image"/-->
+	</node>
+    <node name="robotino_odometry_node" pkg="robotino_node" type="robotino_odometry_node" output="screen">
+        <param name="hostname" value="$(arg hostname)" />
+    </node>
+
+    <!-- node name="robotino_laserrangefinder_node" pkg="robotino_node" type="robotino_laserrangefinder_node" output="screen">
+        <param name="hostname" value="$(arg hostname)" />
+        <param name="laserRangeFinderNumber" value="0" />
+    </node -->
+    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" output="screen">
+	<rosparam command="load" file="$(find robotino_node)/launch/sick.yaml"/>
+    </node>
+    <node name="laserfilter" pkg="cob_sick_s300" type="cob_scan_filter" output="screen">
+        <rosparam command="load" file="$(find robotino_node)/launch/sick.yaml"/>
+        <remap from="/laserfilter/scan_filtered" to="/scan" /> <!-- OUT -->
+	<remap from="/laserfilter/scan" to="/laser/scan" /> <!-- IN -->
+    </node>
+
+    <node name="robotino_camera_node" pkg="robotino_node" type="robotino_camera_node" output="screen">
+        <param name="hostname" value="$(arg hostname)" />
+        <param name="cameraNumber" value="0" />
+    </node>
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    	<param name="publish_frequency" type="double" value="20.0" />
+  	</node>
+    <!--
+    <node name="robotino_mapping_node" pkg="robotino_node" type="robotino_mapping_node" output="screen">
+        <param name="hostname" value="$(arg hostname)" />
+    </node>
+    -->
+    <node pkg="tf" type="static_transform_publisher" name="laser_camera_broadcaster" args="0.0 0 0.0 0 0 0 laser_link camera_depth_frame 50" />
+  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.185 0 0.12 0 0 0 base_link laser_link 50" />
+  	<param name="robot_description" textfile="$(find robotino_description)/urdf/robotino.urdf" />
+</launch>

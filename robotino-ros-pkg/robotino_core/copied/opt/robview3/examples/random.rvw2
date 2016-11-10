@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="generic" kv:value="">
+      <kv:item kv:key="executionMode" kv:value="simulation"/>
+    </kv:item>
+    <kv:item kv:key="skill" kv:value="">
+      <kv:item kv:key="deviceSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="unitSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="typeSystemFeatureSkillLevel" kv:value="0"/>
+    </kv:item>
+    <kv:item kv:key="codegen" kv:value=""/>
+  </md:settings>
+
+  <md:variables/>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino ®">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs>
+        <md:varExpr md:value="172.26.1.1" md:varname="ipAddress"/>
+        <md:varExpr md:value="172.26.1.1;;127.0.0.1:8080" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="(320 240)" md:varname="camera_resolution"/>
+        <md:varExpr md:value="false" md:varname="disableDriveSystem"/>
+      </md:configVarExprs>
+      <md:dynamicUnits/>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_random_generator"/>
+    <md:utspec md:id="rec_gmbh_sample_and_hold_element"/>
+    <md:utspec md:id="rec_gmbh_basic_equality"/>
+    <md:utspec md:id="rec_gmbh_constant_float">
+      <md:spec md:curr="float" md:type="T"/>
+    </md:utspec>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_step1" md:name="Step1">
+      <md:units>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_zufallsgenerator__1_" md:name="Zufallsgenerator (1)" md:type="REC GmbH Random Generator" md:utspec="rec_gmbh_random_generator" md:variantName="REC GmbH Random Generator">
+          <md:inVarExprs>
+            <md:varExpr md:value="1" md:varname="max">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="min">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_konstante__1_" md:name="Konstante (1)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="2000" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_konstante__2_" md:name="Konstante (2)" md:type="REC GmbH Constant" md:utspec="rec_gmbh_constant_float" md:variantName="REC GmbH Constant">
+          <md:inVarExprs>
+            <md:varExpr md:value="1000" md:varname="value">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_abtast_halte_glied__1_" md:name="Abtast-Halte-Glied (1)" md:type="REC GmbH Sample And Hold Element" md:utspec="rec_gmbh_sample_and_hold_element" md:variantName="REC GmbH Sample And Hold Element">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="sample">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_gleich__1_" md:name="Gleich (1)" md:type="REC GmbH Basic Equality" md:utspec="rec_gmbh_basic_equality" md:variantName="REC GmbH Basic Equality">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="op1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="op2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="eq">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_zufallsgenerator__2_" md:name="Zufallsgenerator (2)" md:type="REC GmbH Random Generator" md:utspec="rec_gmbh_random_generator" md:variantName="REC GmbH Random Generator">
+          <md:inVarExprs>
+            <md:varExpr md:value="1" md:varname="max">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="min">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_zufallsgenerator__3_" md:name="Zufallsgenerator (3)" md:type="REC GmbH Random Generator" md:utspec="rec_gmbh_random_generator" md:variantName="REC GmbH Random Generator">
+          <md:inVarExprs>
+            <md:varExpr md:value="1" md:varname="max">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="min">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_abtast_halte_glied__2_" md:name="Abtast-Halte-Glied (2)" md:type="REC GmbH Sample And Hold Element" md:utspec="rec_gmbh_sample_and_hold_element" md:variantName="REC GmbH Sample And Hold Element">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="sample">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_abtast_halte_glied__3_" md:name="Abtast-Halte-Glied (3)" md:type="REC GmbH Sample And Hold Element" md:utspec="rec_gmbh_sample_and_hold_element" md:variantName="REC GmbH Sample And Hold Element">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="sample">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__1_"/>
+          <md:to md:con="max" md:unit="actor_zufallsgenerator__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_2" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__2_"/>
+          <md:to md:con="min" md:unit="actor_zufallsgenerator__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="value" md:unit="actor_zufallsgenerator__1_"/>
+          <md:to md:con="in" md:unit="actor_abtast_halte_glied__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_4" md:prod="1">
+          <md:from md:con="out" md:unit="actor_abtast_halte_glied__1_"/>
+          <md:to md:con="op1" md:unit="actor_gleich__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="1" md:id="edge_5" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_gleich__1_"/>
+          <md:to md:con="sample" md:unit="actor_abtast_halte_glied__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_6" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__1_"/>
+          <md:to md:con="max" md:unit="actor_zufallsgenerator__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_7" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__1_"/>
+          <md:to md:con="max" md:unit="actor_zufallsgenerator__3_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_8" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__2_"/>
+          <md:to md:con="min" md:unit="actor_zufallsgenerator__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_9" md:prod="1">
+          <md:from md:con="out" md:unit="actor_konstante__2_"/>
+          <md:to md:con="min" md:unit="actor_zufallsgenerator__3_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_10" md:prod="1">
+          <md:from md:con="value" md:unit="actor_zufallsgenerator__3_"/>
+          <md:to md:con="in" md:unit="actor_abtast_halte_glied__3_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_11" md:prod="1">
+          <md:from md:con="value" md:unit="actor_zufallsgenerator__2_"/>
+          <md:to md:con="in" md:unit="actor_abtast_halte_glied__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_12" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_gleich__1_"/>
+          <md:to md:con="sample" md:unit="actor_abtast_halte_glied__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_13" md:prod="1">
+          <md:from md:con="eq" md:unit="actor_gleich__1_"/>
+          <md:to md:con="sample" md:unit="actor_abtast_halte_glied__3_"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step1" md:name="Step1" md:sdfModel="sdfmodel_step1">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="false" md:id="sfcitem_transition2"/>
+        <md:sfcJump md:dest="sfcitem_simple_init" md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:active="true" md:sdfmodel="sdfmodel_step1" md:showData="true" md:showToolTips="false" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd000000000000073c0000028400000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_zufallsgenerator__1_" md:width="-1" md:x="846" md:y="162"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_konstante__1_" md:width="-1" md:x="654" md:y="132"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_konstante__2_" md:width="-1" md:x="654" md:y="210"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_abtast_halte_glied__1_" md:width="-1" md:x="1026" md:y="168"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_gleich__1_" md:width="-1" md:x="1224" md:y="174"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_zufallsgenerator__2_" md:width="-1" md:x="846" md:y="294"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_zufallsgenerator__3_" md:width="-1" md:x="846" md:y="366"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_abtast_halte_glied__2_" md:width="-1" md:x="1002" md:y="300"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_abtast_halte_glied__3_" md:width="-1" md:x="1002" md:y="372"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:point md:x="738" md:y="132">
+              <md:point md:x="738" md:y="156">
+                <md:point md:x="786" md:y="156">
+                  <md:edge md:edge="edge_1"/>
+                  <md:point md:x="786" md:y="288">
+                    <md:edge md:edge="edge_6"/>
+                    <md:point md:x="786" md:y="360">
+                      <md:edge md:edge="edge_7"/>
+                    </md:point>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="738" md:y="210">
+              <md:point md:x="738" md:y="168">
+                <md:point md:x="762" md:y="168">
+                  <md:edge md:edge="edge_2"/>
+                  <md:point md:x="762" md:y="300">
+                    <md:edge md:edge="edge_8"/>
+                    <md:point md:x="762" md:y="372">
+                      <md:edge md:edge="edge_9"/>
+                    </md:point>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_3"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_4"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="1290" md:y="174">
+              <md:point md:x="1290" md:y="252">
+                <md:point md:x="948" md:y="252">
+                  <md:point md:x="948" md:y="174">
+                    <md:edge md:edge="edge_5"/>
+                  </md:point>
+                  <md:point md:x="948" md:y="306">
+                    <md:edge md:edge="edge_12"/>
+                    <md:point md:x="948" md:y="378">
+                      <md:edge md:edge="edge_13"/>
+                    </md:point>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_10"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_11"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>

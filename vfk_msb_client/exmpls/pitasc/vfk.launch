@@ -1,0 +1,28 @@
+<launch>
+    <node name="msb_ros_bridge" pkg="vfk_msb_client" type="msb_ros_bridge.py" output="screen">
+        <!-- MSB to connect to -->
+        <!-- <param name="host" value="ws://localhost:8085" /> -->
+        <!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
+        <!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
+        <param name="host" value="ws://demo.virtualfortknox.de/msb2" />
+       
+
+        <!-- TODO: name / uuid konfigurierbar $ROBOT -->
+
+        <!-- Token for conneciton -->
+        <param name="token" value="rossecret" />
+        <!-- <param name="topics" value="test, test2, testpoint" /> -->
+       
+        <!-- Topics to subscribe in ros -->
+        <param name="topics_sub" value="pitasc_app_list, pitasc_load_progress" />
+       
+        <!-- Topics to publish in ROS -->
+        <param name="topics_pub" value="
+            /pitasc_load_app std_msgs/String,
+            /pitasc_start_app std_msgs/String
+        " />
+<!--             /base/twist_controller/command_safe geometry_msgs/Twist,
+            /test_command geometry_msgs/PoseStamped,
+            /test std_msgs/String, -->
+    </node>
+</launch>

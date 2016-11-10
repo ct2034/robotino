@@ -1,0 +1,84 @@
+EBandPlannerROS:  
+  max_vel_lin: 0.74
+  max_vel_th: 0.5
+
+  min_vel_lin: 0.0
+  min_vel_th: 0.0
+
+  max_vel_y: 0.2
+
+  min_in_place_vel_th: 0.2
+  in_place_trans_vel: 0.0
+
+  xy_goal_tolerance: 0.02
+  yaw_goal_tolerance: 0.04 
+  tolerance_timeout: 0.5
+ 
+  k_prop: 4.0
+  k_damp: 3.5
+
+  Ctrl_Rate: 15.0
+
+  max_acceleration: 0.3
+  virtual_mass: 0.75
+
+  max_translational_acceleration: 0.3
+  max_rotational_acceleration: 1.5
+
+  rotation_correction_threshold: 2.0
+
+  #Stuff from utexas which we don't need for Care-O-bot 3
+  differential_drive: false
+
+DWAPlannerROS:
+  acc_lim_th: 3.2
+  acc_lim_x: 2.5
+  acc_lim_y: 2.5
+
+  max_vel_x: 0.3
+  min_vel_x: -0.005
+
+  max_vel_y: 0.005
+  min_vel_y: -0.005
+
+  max_trans_vel: 0.3
+  min_trans_vel: 0.01
+
+  max_rot_vel: 0.8
+  min_rot_vel: -0.8
+
+#param for rotating behaviour
+#max_rotational_vel: 0.04
+#min_in_place_rotational_vel: 0.1
+
+  sim_time: 1.7
+  sim_granularity: 0.025
+
+  goal_distance_bias: 32.0
+  path_distance_bias: 28.0
+  occdist_scale: 0.01
+
+  stop_time_buffer: 0.2
+  oscillation_reset_dist: 0.15
+
+  forward_point_distance: 0.2
+
+  scaling_speed: 0.25
+  max_scaling_factor: 0.2
+
+  vx_samples: 5
+  vy_samples: 3
+
+  vtheta_samples: 12
+
+  sim_period: 1.0
+
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.05
+  latch_xy_goal_tolerance: true
+
+  rot_stopped_vel: 0.01
+  trans_stopped_vel: 0.01
+
+  penalize_negative_x: true
+  

@@ -1,0 +1,120 @@
+{
+    "uuid": "5_4",
+    "name": "Test_5_4",
+    "description": "TestSO of websocket interface",
+    "events": [
+        {
+            "eventId": "START",
+            "name": "Start",
+            "description": "Timestamp of start",
+            "dataFormat": {
+                "dataObject": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        {
+            "eventId": "WAIT",
+            "name": "Wait",
+            "description": "Timestamp of start waiting",
+            "dataFormat": {
+                "dataObject": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "byte"
+                    }
+                }
+            }
+        },
+        {
+            "eventId": "PULSE",
+            "name": "Event pulse",
+            "description": "periodical transmitted event",
+            "dataFormat": {}
+        },
+        {
+            "eventId": "PROCESS",
+            "name": "Process",
+            "description": "Timestamp of start processing",
+            "dataFormat": {
+                "TestEntity": {
+                    "properties": {
+                        "count": {
+                            "type": "integer",
+                            "format": "int32"
+                        },
+                        "subEntity": {
+                            "$ref": "#/definitions/TestSubEntity"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    }
+                },
+                "TestSubEntity": {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "dataObject": {
+                    "$ref": "#/definitions/TestEntity"
+                }
+            }
+        }
+    ],
+    "functions": [
+        {
+            "functionId": "/functionhandler/testCommandInt",
+            "dataFormat": {
+                "testParam": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "name": "testCommand",
+            "description": "test"
+        },
+        {
+            "functionId": "/functionhandler/testCommandTestClient",
+            "dataFormat": {
+                "client": {
+                    "$ref": "#/definitions/TestClient"
+                },
+                "TestClient": {
+                    "properties": {
+                        "token": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "uuid": {
+                            "type": "string"
+                        },
+                        "waitLock": {
+                            "$ref": "#/definitions/Object"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "Object": {
+                    "properties": {}
+                }
+            },
+            "name": "testCommand2",
+            "description": "recieveing a test client (for test purposes)"
+        }
+    ],
+    "token": "secret",
+    "@class": "SmartObject"
+}

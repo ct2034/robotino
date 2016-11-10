@@ -1,0 +1,9 @@
+<RCC version="1.0">
+	<qresource>
+    <file>../icons/wifi_connect1.png</file>
+    <file>../icons/wifi_connect2.png</file>
+    <file>../icons/wifi_connect3.png</file>
+    <file>../icons/wifi_connect3passive.png</file>
+    <file>../icons/wifi_disconnect.png</file>
+	</qresource>
+</RCC>

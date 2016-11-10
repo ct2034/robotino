@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	dev:id="REC GmbH Joystick" dev:toplevel="true" dev:autoconnect="true">
+
+	<dev:translations>
+	</dev:translations>
+
+	<dev:inputs>
+		<dev:input var:type="float" var:varname="axis0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis4">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis5">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis6">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis7">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis8">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis9">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis10">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis11">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis12">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis13">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis14">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="axis15">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button3">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button4">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button5">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button6">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button7">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button8">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button9">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button10">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button11">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button12">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button13">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button14">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="bool" var:varname="button15">
+			<var:default var:val="0"/>
+		</dev:input>
+	</dev:inputs>
+
+	<dev:outputs>
+	</dev:outputs>
+
+	<dev:state>
+		<dev:statevar var:type="int16" var:varname="numAxes">
+			<var:default var:val="0"/>
+		</dev:statevar>
+		<dev:statevar var:type="int16" var:varname="numButtons">
+			<var:default var:val="0"/>
+		</dev:statevar>
+	</dev:state>
+
+	<dev:config>
+		<dev:configvar var:type="string" var:varname="name">
+			<var:default var:val=""/>
+		</dev:configvar>
+	</dev:config>
+
+	<dev:subdevices>
+		<dev:device dev:id="Buttons" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Button" dev:name="Button #1"/>
+				<dev:resource dev:class="Button" dev:name="Button #2"/>
+				<dev:resource dev:class="Button" dev:name="Button #3"/>
+				<dev:resource dev:class="Button" dev:name="Button #4"/>
+				<dev:resource dev:class="Button" dev:name="Button #5"/>
+				<dev:resource dev:class="Button" dev:name="Button #6"/>
+				<dev:resource dev:class="Button" dev:name="Button #7"/>
+				<dev:resource dev:class="Button" dev:name="Button #8"/>
+				<dev:resource dev:class="Button" dev:name="Button #9"/>
+				<dev:resource dev:class="Button" dev:name="Button #10"/>
+				<dev:resource dev:class="Button" dev:name="Button #11"/>
+				<dev:resource dev:class="Button" dev:name="Button #12"/>
+				<dev:resource dev:class="Button" dev:name="Button #13"/>
+				<dev:resource dev:class="Button" dev:name="Button #14"/>
+				<dev:resource dev:class="Button" dev:name="Button #15"/>
+				<dev:resource dev:class="Button" dev:name="Button #16"/>
+			</dev:provides>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #9]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="8" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #9"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button9.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #10]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="9" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #10"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button10.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #11]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="10" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #11"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button11.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #12]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="11" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #12"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button12.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #13]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="12" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #13"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button13.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #14]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="13" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #14"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button14.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #15]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="14" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #15"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button15.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Button" dev:name="Button[ #16]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="15" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Button #16"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/button16.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+		<dev:device dev:id="Axes" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Axis" dev:name="Axis #1"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #2"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #3"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #4"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #5"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #6"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #7"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #8"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #9"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #10"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #11"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #12"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #13"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #14"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #15"/>
+				<dev:resource dev:class="Axis" dev:name="Axis #16"/>
+			</dev:provides>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #4]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #4"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis4.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #5]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="4" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #5"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis5.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #6]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="5" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #6"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis6.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #7]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="6" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #7"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis7.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #8]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="7" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #8"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis8.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #9]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="8" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #9"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis9.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #10]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="9" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #10"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis10.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #11]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="10" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #11"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis11.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #12]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="11" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #12"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis12.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #13]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="12" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #13"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis13.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #14]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="13" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #14"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis14.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #15]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="14" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #15"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis15.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Joystick Axis" dev:name="Axis[ #16]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="15" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Axis #16"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/axis16.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+	</dev:subdevices>
+
+	<!-- Plugin filename -->
+	<dev:plugins>
+		<dev:plugin plugin:type="simulation" plugin:library="device_joystick_simulation"/>
+		<dev:plugin plugin:type="dialog" plugin:library="device_joystick_gui"/>
+	</dev:plugins>
+
+	<dev:guiinfo>
+		<dev:description>
+			<dev:name>Joystick</dev:name>
+			<dev:detailed>REC GmbH Joystick</dev:detailed>
+			<dev:icon dev:filename="icons/joystick.png"/>
+		</dev:description>
+	</dev:guiinfo>
+
+</dev:device>

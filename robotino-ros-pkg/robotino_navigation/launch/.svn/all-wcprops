@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_navigation/launch
+END
+map_server.launch
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_navigation/launch/map_server.launch
+END
+rviz.launch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_navigation/launch/rviz.launch
+END
+navigation.launch
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_navigation/launch/navigation.launch
+END
+gmapping.launch
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/3087/robotino-ros-pkg/trunk/catkin-pkg/robotino_navigation/launch/gmapping.launch
+END

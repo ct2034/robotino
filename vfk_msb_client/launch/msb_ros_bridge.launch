@@ -1,0 +1,35 @@
+ <launch>
+	<node name="msb_ros_bridge" pkg="vfk_msb_client" type="msb_ros_bridge.py" output="screen">
+		<!-- MSB to connect to -->
+		<!-- <param name="host" value="ws://localhost:8085" /> -->
+		<!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
+		<param name="host" value="ws://10.3.2.10:8085" />
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de/msb2" />  -->
+
+		<!-- UUID for connection -->
+		<param name="uuid" value="ros" />
+
+		<!-- Name for connection -->
+		<param name="name" value="ROS Bridge" />
+
+		<!-- Description for connection -->
+		<param name="desc" value="The ROS Bridge" />
+
+		<!-- Token for connection -->
+		<param name="token" value="rossecret" />
+
+		<!-- Topics to subscribe in ros -->
+		<!-- <param name="topics_sub" value="test_goal" /> -->
+		<!-- <param name="topics_sub" value="*" /> -->
+		<param name="topics_sub" value="logistics_pose" />
+		
+		<!-- Topics to publish in ROS -->
+		<param name="topics_pub" value="
+			/logistics_goal geometry_msgs/Point
+		" />
+<!-- 			/base/twist_controller/command_safe geometry_msgs/Twist,
+			/test_command geometry_msgs/PoseStamped, 
+			/message std_msgs/String -->
+	</node>
+</launch>

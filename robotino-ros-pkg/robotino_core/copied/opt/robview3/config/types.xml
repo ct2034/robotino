@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types:types
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/types types.xsd"
+	xmlns:types="http://easykit.informatik.tu-muenchen.de/schema/types">
+
+	<types:primitive>
+		<!-- 8 bit integer numbers -->
+		<types:type types:id="int8" types:width="8" types:signed="true" types:defaultval="0"/>
+		<types:type types:id="uint8" types:width="8" types:signed="false" types:defaultval="0"/>
+
+		<!-- 16 bit integer numbers -->
+		<types:type types:id="int16" types:width="16" types:signed="true" types:defaultval="0"/>
+		<types:type types:id="uint16" types:width="16" types:signed="false" types:defaultval="0"/>
+
+		<!-- 32 bit integer numbers -->
+		<types:type types:id="int32" types:width="32" types:signed="true" types:defaultval="0"/>
+		<types:type types:id="uint32" types:width="32" types:signed="false" types:defaultval="0"/>
+
+		<!-- 64 bit integer numbers -->
+		<types:type types:id="int64" types:width="64" types:signed="true" types:defaultval="0"/>
+		<types:type types:id="uint64" types:width="64" types:signed="false" types:defaultval="0"/>
+
+		<!-- Boolean -->
+		<types:type types:id="bool" types:width="1" types:signed="false" types:defaultval="false"/>
+
+		<!-- Decimal numbers -->
+		<types:type types:id="double" types:width="64" types:signed="true" types:defaultval="0.0"/>
+		<types:type types:id="float" types:width="32" types:signed="true" types:defaultval="0.0f"/>
+		<types:type types:id="fixed" types:width="0" types:signed="true" types:defaultval="0"/>
+
+		<!-- Array -->
+		<types:type types:id="array" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- std::string -->
+		<types:type types:id="string" types:width="32" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::StringList -->
+		<types:type types:id="stringlist" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::image::Image -->
+		<types:type types:id="image" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Roi -->
+		<types:type types:id="roi" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Point -->
+		<types:type types:id="point" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Size -->
+		<types:type types:id="size" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector -->
+		<types:type types:id="vector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::memory::ByteArray -->
+		<types:type types:id="bytearray" types:width="32" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::cv::SegmentList -->
+		<types:type types:id="segmentlist" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::ColorList -->
+		<types:type types:id="colorlist" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector<rec::core::PointF> -->
+		<types:type types:id="pointfvector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::PointF -->
+		<types:type types:id="pointf" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::math::Vector2D -->
+		<types:type types:id="vector2f" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::math::Vector3D -->
+		<types:type types:id="vector3f" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::LocalizedLaserRangeFinderDataWithInfo -->
+		<types:type types:id="rangedata" types:width="0" types:signed="false" types:defaultval=""/>
+
+    <!-- rec::core::LaserRangeFinderInfo -->
+    <types:type types:id="rangeinfo" types:width="0" types:signed="false" types:defaultval=""/>
+
+    <!-- rec::karto::OccupancyGridData -->
+    <types:type types:id="occupancygriddata" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector<float> (rec::core::FloatVector) -->
+		<types:type types:id="floatvector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector<bool> (rec::core::BoolVector) -->
+		<types:type types:id="boolvector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector<int> (rec::core::IntVector) -->
+		<types:type types:id="intvector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::core::Vector<unsigned int> (rec::core::UIntVector) -->
+		<types:type types:id="uintvector" types:width="0" types:signed="false" types:defaultval=""/>
+
+		<!-- rec::navigation::Pose -->
+		<types:type types:id="pose" types:width="0" types:signed="false" types:defaultval="((0 0))"/>
+
+		<!-- rec::navigation::Path -->
+		<types:type types:id="path" types:width="0" types:signed="false" types:defaultval=""/>
+	</types:primitive>
+
+	<types:groups>
+		<!-- Groups sorted by data type size -->
+		<types:group types:name="group_int8" types:default="int8">
+			<types:include types:type="int8"/>
+			<types:include types:type="uint8"/>
+		</types:group>
+		<types:group types:name="group_int16" types:default="int16">
+			<types:include types:type="int16"/>
+			<types:include types:type="uint16"/>
+		</types:group>
+		<types:group types:name="group_int32" types:default="int32">
+			<types:include types:type="int32"/>
+			<types:include types:type="uint32"/>
+		</types:group>
+		<types:group types:name="group_int64" types:default="int64">
+			<types:include types:type="int64"/>
+			<types:include types:type="uint64"/>
+		</types:group>
+
+		<!-- Signed/unsigned groups -->
+		<types:group types:name="group_unsigned" types:default="uint16">
+			<types:include types:type="uint8"/>
+			<types:include types:type="uint16"/>
+			<types:include types:type="uint32"/>
+			<types:include types:type="uint64"/>
+		</types:group>
+		<types:group types:name="group_signed" types:default="int16">
+			<types:include types:type="int8"/>
+			<types:include types:type="int16"/>
+			<types:include types:type="int32"/>
+			<types:include types:type="int64"/>
+		</types:group>
+
+		<!-- Integer numbers -->
+		<types:group types:name="group_integer" types:default="int16">
+			<!-- uint8, uint16, uint32, uint64, -->
+			<!-- int8, int16, int32 and int64   -->
+			<types:includeGroup types:group="group_unsigned"/>
+			<types:includeGroup types:group="group_signed"/>
+		</types:group>
+
+		<!-- Fixed-/floating-point numbers -->
+		<!-- Actually "decimal" does not fit well here, but that's the -->
+		<!-- common English term for fixed- and floating-point numbers -->
+		<types:group types:name="group_decimal" types:default="float">
+			<types:include types:type="float"/>
+			<types:include types:type="double"/>
+			<types:include types:type="fixed"/>
+		</types:group>
+
+		<!-- All numbers -->
+		<types:group types:name="group_number" types:default="int16">
+			<!-- uint8, uint16, uint32, uint64, -->
+			<!-- int8, int16, int32, int64,     -->
+			<!-- float, double and fixed        -->
+			<types:includeGroup types:group="group_integer"/>
+			<types:includeGroup types:group="group_decimal"/>
+		</types:group>
+
+		<!-- Numbers and bool -->
+		<types:group types:name="group_integer_bool" types:default="int16">
+			<!-- uint8, uint16, uint32, uint64, -->
+			<!-- int8, int16, int32, int64 and  -->
+			<!-- bool                           -->
+			<types:includeGroup types:group="group_integer"/>
+			<types:include types:type="bool"/>
+		</types:group>
+
+		<!-- All primitive data types -->
+		<types:group types:name="group_primitive" types:default="int16">
+			<!-- uint8, uint16, uint32, uint64, -->
+			<!-- int8, int16, int32, int64,     -->
+			<!-- float, double, fixed and       -->
+			<!-- bool                           -->
+			<types:includeGroup types:group="group_integer_bool"/>
+			<types:includeGroup types:group="group_decimal"/>
+		</types:group>
+
+		<!-- Group for all registered data types -->
+		<types:group types:name="group_all" types:default="int16">
+			<types:includeAll/>
+		</types:group>
+
+	</types:groups>
+	
+	<!-- Binary relation specifying safe upcasts.
+	     
+	     Note that only a minimal spanning tree of the graph
+	     representing the relation needs to be specified.
+	
+	     The systems computes the transitive closure of this relation
+	-->
+	<types:convs>
+		<!-- Signed integer to signed integer -->
+		<types:conv types:from="int8" types:to="int16" />
+		<types:conv types:from="int16" types:to="int32" />
+		<types:conv types:from="int32" types:to="int64" />
+
+		<!-- Unsigned integer to unsigned integer -->
+		<types:conv types:from="uint8" types:to="uint16" />
+		<types:conv types:from="uint16" types:to="uint32" />
+		<types:conv types:from="uint32" types:to="uint64" />
+
+		<!-- Integer to floating point types -->
+		<types:conv types:from="int64" types:to="float" />
+		<types:conv types:from="uint64" types:to="float" />
+		<types:conv types:from="float" types:to="double" />
+		
+		<!-- Unsigned to signed integer -->
+		<types:conv types:from="uint8" types:to="int16" />
+		<types:conv types:from="uint16" types:to="int32" />
+		<types:conv types:from="uint32" types:to="int64" />
+	</types:convs>
+
+</types:types>

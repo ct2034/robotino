@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Tutorial 2</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "tutorial_2.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Tutorial 2</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="ablaufprogramme.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="examples_logic.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p>This exercise shows how a control program with alternative branches is created. The complete program is located int the file examples/sfc/tutorial2.rvw2.</p>
+<p>&nbsp;</p>
+<p>The complete control program looks as shown in figure 1.</p>
+<p><img src="examples_sfc_tutorial2_sfc_full.png" width="326" height="472" alt="examples_sfc_tutorial2_sfc_full" style="width:326px;height:472px;border:none" /></p>
+<p><span class="f_ImageCaption">Fig. 1: the complete control program</span></p>
+<p>&nbsp;</p>
+<p>In Step1 the value of a is changed. Thus in every cycle of the program one of the Steps Step2, Step3 and Step4 will be executed. Step5 compares the results produced by the previous steps. After the 6th execution of Step5 the program is stopped. Otherwise it continues with Step1.</p>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Create a new project</a></p>
+<div id="TOGGLE0186A1" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>Create a new project by</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">selecting File<span style="font-family: 'Wingdings 3';">„</span>New</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">pressing Ctrl + N</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">selecting the symbol for creating &nbsp;a new project in the tool bar <img src="newproject.png" width="16" height="15" alt="newproject" style="width:16px;height:15px;border:none" /><span class="f_ImageCaption">.</span></td></tr></table></div><p>&nbsp;</p>
+<p>The main program contains the steps Init and Step1.</p>
+<p><img src="examples_sfc_tutorial2_sfc_init.png" width="91" height="225" alt="examples_sfc_tutorial2_sfc_init" style="width:91px;height:225px;border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Create global Variables</a></p>
+<div id="TOGGLE0186A2" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>First, create the following <a href="globalvariables_general.htm" class="topiclink">global variables</a>:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">timer</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">a</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">b</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">step2count</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">step3count</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">step4count</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:17px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">step5count</td></tr></table></div><p>&nbsp;</p>
+<p>Assign the initial value -1 to &quot;a&quot;. All other variables keep their initial value 0.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Program Step1</a></p>
+<div id="TOGGLE0186A3" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>In this sub-program the global variable &quot;a&quot; is incremented by 1. To make sure that the value of &quot;a&quot; is always between 0 and 2, &quot;a&quot; will be calculated Modulo 3 and rewritten to &quot;a&quot;. The value of &quot;b&quot; will just be set 0.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step1.png" width="437" height="226" alt="examples_sfc_tutorial2_sfc_step1" style="width:437px;height:226px;border:none" /></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Create steps Step2, Step3 and Step4</a></p>
+<div id="TOGGLE0186A4" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>Now the steps will be created next to each other in alternative branches. To do that, select the transition condition below Step1.</p>
+<p>&nbsp;</p>
+<p>You can see that the transition condition is selected by a dashed line round the condition.</p>
+<p>Now click on the symbol to add an alternative branch on the right side <img src="alternativebranch_right.png" width="22" height="18" alt="alternativebranch_right" style="width:22px;height:18px;border:none" />.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_a.png" width="182" height="223" alt="examples_sfc_tutorial2_sfc_step2_a" style="width:182px;height:223px;border:none" /></p>
+<p>Expand the branching you have just created by selecting the transition condition on the right and selecting the &quot;Alternative branch right&quot; <img src="alternativebranch_right.png" width="22" height="18" alt="alternativebranch_right" style="width:22px;height:18px;border:none" /><span class="f_ImageCaption"> </span>symbol again.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_b.png" width="282" height="223" alt="examples_sfc_tutorial2_sfc_step2_b" style="width:282px;height:223px;border:none" /></p>
+<p>Now create three Steps in those three alternative branches and call them Step2, Step3 and Step4. To do that, select the entering condition of a branch and click on the &quot;insert step after&quot; <img src="step_transition_after.png" width="22" height="18" alt="step_transition_after" style="width:22px;height:18px;border:none" /> symbol. Then assign a sub-program of the same name to each step. To do that, double-click on the step and enter the name for the sub-program in the following dialog box. Alternatively, you can create a new sub-program with the tool bar button &quot;Create new subprogram&quot; <img src="sdfdocument.png" width="15" height="14" alt="sdfdocument" style="width:15px;height:14px;border:none" /> and assign it to the step.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_c.png" width="282" height="303" alt="examples_sfc_tutorial2_sfc_step2_c" style="width:282px;height:303px;border:none" /></p>
+<p>The entering and exit conditions of all three alternative branches are false at the moment. Change the entering conditions to a == 0, a == 1 and a == 2. Use timer == 10 as exit condition for all branches. Finally, change the final jump's destination from Init to Step1.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_d.png" width="317" height="303" alt="examples_sfc_tutorial2_sfc_step2_d" style="width:317px;height:303px;border:none" /></p>
+<p>If you start the main program now, the program will hang in Step2 because &quot;a&quot; is 0 during the first cycle and the global variable &quot;timer&quot; is not altered.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A5')">Program Step2, Step3 and Step4</a></p>
+<div id="TOGGLE0186A5" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>The sub-programs assigned to the steps Step2 to Step4 are empty at the moment. The sub-program Step2 is shown below.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_program.png" width="555" height="244" alt="examples_sfc_tutorial2_sfc_step2_program" style="width:555px;height:244px;border:none" /></p>
+<p>Every 200ms the Arbitrary Waveform Generator creates a pulse of 100ms width and height 1. The settings for the Arbitrary Waveform Generator are shown below.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step2_program_puls.png" width="332" height="323" alt="examples_sfc_tutorial2_sfc_step2_program_puls" style="width:332px;height:323px;border:none" /></p>
+<p>I.e. every 200ms there is a rising edge from 0 to 1. With every rising edge the counter increments its value by 1. After 2s the value will be 10. When the value of the counter is 10, the result of the comparison of the constant and the counter's value will be added to the current value of step2Count. As long as the comparision results in false, 0 is added. As soon as the comparision results in true, 1 is added. At the end of every calculation step of the sub-program, the transition condition below the step in the main program is evaluated. When the global variable &quot;timer&quot; has the value 10, the sub-program will be left.</p>
+<p>&nbsp;</p>
+<p>The sub-programs of Step3 and Step4 are built equivalently. Select all in Step2 (Ctrl+A) and copy it to Step3 and Step4. The only difference consists in the fact that step3count respectively step4count are read and written.</p>
+<p>&nbsp;</p>
+<p>Once you start the main program, Step2, Step3 and Step4 will be executed cyclically for 2s each.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Create and program Step5</a></p>
+<div id="TOGGLE0186A6" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>To add a new step after the alternative branching, select the final jump and click on the symbol to add a step before <img src="step_transition_before.png" width="22" height="18" alt="step_transition_before" style="width:22px;height:18px;border:none" />. Now create a sub-program named Step5 and assign it to Step5 just created. Change the transition condition below Step5 to b&gt;0 &amp;&amp; timer == 10.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step5.png" width="317" height="383" alt="examples_sfc_tutorial2_sfc_step5" style="width:317px;height:383px;border:none" /></p>
+<p>The sub-program Step5 is similar to Step2 to Step4. Copy Step2 to Step5 and change step2count to step5count. Beyond setting the global variables &quot;timer&quot; and &quot;step5count&quot; also a check is performed if the condition step2count &gt;= step3count &gt;= step4count is valid. If this is the case, the global variable &quot;b&quot; is set to 1. Otherwise &quot;b&quot; is 0. The condition must always be true when in a correct program execution because Step2, Step3 and Step4 are executed one after another because Step1 increments &quot;a&quot; by 1 in every cycle.</p>
+<p><img src="examples_sfc_tutorial2_sfc_step5_prg.png" width="615" height="490" alt="examples_sfc_tutorial2_sfc_step5_prg" style="width:615px;height:490px;border:none" /></p>
+<p>If the main program is started now, Step5 remains active for 2s if &quot;b&quot; is greater than 0.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A7')">Create program termination and jump to Step1</a></p>
+<div id="TOGGLE0186A7" style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p>Now the program should be terminated when the value of &quot;step5count&quot; has reached 6. To achieve this, insert an alternative branch below Step5. Select the transition condition below Step5 and klick on the symbol to insert an alternative branch on the left <img src="alternativebranch_left.png" width="22" height="18" alt="alternativebranch_left" style="width:22px;height:18px;border:none" />. &nbsp;Select the new branch's transition condition (at the moment it is false) and click on the symbol to create a new jump <img src="jump_after.png" width="22" height="18" alt="jump_after" style="width:22px;height:18px;border:none" />. Change the transition condition to step5count == 6 and select TERMINATE as new jump destination.</p>
+<p>The main program now looks as it was shown at the beginning.</p>
+<p>By the way, the alternative branch containing the jump to TERMINATE must be left of the branch with the condition b&gt;0 &amp;&amp; timer == 10 because the initial conditions of alternative branches are evaluated from left to right. In the first 6 cycles the condition step5count == 6 is not fulfilled. So the second branch's condition is evaluated.</p>
+<p>One run of the main program lasts 24s now.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A7','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>

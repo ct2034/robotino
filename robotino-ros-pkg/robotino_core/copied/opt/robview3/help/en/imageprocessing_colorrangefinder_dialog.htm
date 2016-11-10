@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "imageprocessing_colorrangefinder_dialog.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="imageprocessing_colorrangefinder.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="imageprocessing_colorrangefinder_example.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="colorrangefinder_dialog.png" width="538" height="533" alt="colorrangefinder_dialog" style="width:538px;height:533px;border:none" /></p>
+<p>If &quot;Show result&quot; is not set the input image is shown (1). Within the input image you can mark an area by clicking and dragging with the mouse. After selecting an area the maximum and minimum value of all pixels within the area is calculated per channel. The calculation is done within the <a href="hsv_colorspace.htm" class="topiclink">HSV color space</a>. The minimal and maximal values are shown at (2). (3) displays the current color range. An image is shown for the minimal, middle and maxiamlen value. Each image shows all colors in the hue an saturation range.</p>
+<p>By changing the values at (2) the color range and its visualization in (3) changes.</p>
+<p><img src="copy16.png" width="16" height="16" alt="copy16" style="width:16px;height:16px;border:none" /> Copy the current values to the clipboard. From the clipboard the values can be copied to a global variable of type &quot;floatvector&quot;.</p>
+<p><img src="paste16.png" width="16" height="16" alt="paste16" style="width:16px;height:16px;border:none" /> Overwrite the current values with values from the clipboard.</p>
+<p>If &quot;Show result&quot; is set the generated greyscale image is shown (1) .</p>
+<p><img src="colorrangefinder_dialog2.png" width="508" height="549" alt="colorrangefinder_dialog2" style="width:508px;height:549px;border:none" /></p>
+<p>The more compact the white areas the better is the fitting of the color range and the live image. To make the color detection robust against varied illumination the value range can be extended. If there are shiny objects you may extend the saturation range. A change of hue is rare so that in most cases this range is not manually modified.</p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p>Within the <a href="hsv_colorspace.htm" class="topiclink">HSV color space</a> hue is given as angle from 0° to 360°. A hue value of 361 is the same as a hue value of 1. There is a problem if a color range is chosen that exceeds the 0° boundary.</p>
+<p><img src="colorrangefinder_dialog_wrap.png" width="540" height="476" alt="colorrangefinder_dialog_wrap" style="width:540px;height:476px;border:none" /></p>
+<p>The above image shows a color range with hue ranging from violet to yellow. Violet is hue 300 and yellow hue 60. If we would simply look for the minimal and maximal hue value we would get a range of hue values ranging from [60;300]. In this range we have colors green and blue.</p>
+<p>The solution to this problem is to look at the distance between the hue range limits. In this example the distance is 300-60=240. If the distance is greater 180 we assume that the hue range exceeds the 0° boundary. This is shown by swapping the hue Min and Max value so that Max&lt;Min. If this case the hue range goes from Min-359 and from 0-Max.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

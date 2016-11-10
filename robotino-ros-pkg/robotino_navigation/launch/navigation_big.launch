@@ -1,0 +1,42 @@
+<launch>
+  <arg name="map_file" value="$(find robotino_navigation)/maps/hmi_big.yaml" />
+
+  <!--- Run mapserver -->
+  <include file="$(find robotino_navigation)/launch/map_server.launch">
+    <arg name="map_file" value="$(arg map_file)" />
+  </include>
+
+  <!--- Run AMCL -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+        <rosparam command="load" file="$(find robotino_navigation)/launch/amcl.yaml"/>
+  </node>
+
+  <!--- Run move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find robotino_navigation)/config/costmap_common_params_big.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find robotino_navigation)/config/costmap_common_params_big.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find robotino_navigation)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/recovery_behaviors.yaml" command="load" />
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <param name="controller_frequency" value="10.0" />
+    <remap from="cmd_vel" to="robotino_cmd_vel" />
+  </node>
+
+  <!-- 
+  <node pkg="cob_base_velocity_smoother" type="cob_base_velocity_smoother" respawn="false" name="smoother" output="screen">
+    <param name="circular_buffer_capacity" value="6" />
+    <param name="maximal_time_delay" value="1.0" />
+    <remap from="input" to="cmd_vel" />
+    <remap from="output" to="robotino_cmd_vel" /> 
+  </node>
+  -->
+ 
+  <!-- Run rviz 
+  <include file="$(find robotino_navigation)/launch/rviz.launch"/>
+  -->
+
+  <!-- Run robotino_safety_node -->
+  <include file="$(find robotino_safety)/launch/robotino_safety_node.launch"/>
+</launch>

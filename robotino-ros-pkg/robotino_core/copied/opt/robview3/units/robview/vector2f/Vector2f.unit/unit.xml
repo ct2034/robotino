@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Vector2f Addition">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="s1">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s2">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s3">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s4">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s5">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s6">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s7">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s8">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s9">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="s10">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="sum">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="s1" unit:side="left"/>
+						<unit:layout unit:varname="s2" unit:side="left"/>
+						<unit:layout unit:varname="s3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="s10" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="sum" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Addition</unit:name>
+					<unit:icon unit:filename="icons/add.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="s1">
+								<unit:description>Summand[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s2">
+								<unit:description>Summand[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s3">
+								<unit:description>Summand[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s4">
+								<unit:description>Summand[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s5">
+								<unit:description>Summand[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s6">
+								<unit:description>Summand[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s7">
+								<unit:description>Summand[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s8">
+								<unit:description>Summand[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s9">
+								<unit:description>Summand[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="s10">
+								<unit:description>Summand[ 10]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="sum">
+								<unit:description>Sum</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_vector2f_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Subtraction">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="minuend">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="1">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="2">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="3">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="4">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="5">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="6">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="7">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="8">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="9">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="10">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="difference">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="minuend" unit:side="left"/>
+						<unit:layout unit:varname="1" unit:side="left"/>
+						<unit:layout unit:varname="2" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="10" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="difference" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Subtraction</unit:name>
+					<unit:icon unit:filename="icons/sub.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="minuend">
+								<unit:description>Minuend</unit:description>
+							</unit:info>
+							<unit:info unit:varname="1">
+								<unit:description>Subtrahend[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="2">
+								<unit:description>Subtrahend[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="3">
+								<unit:description>Subtrahend[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="4">
+								<unit:description>Subtrahend[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="5">
+								<unit:description>Subtrahend[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="6">
+								<unit:description>Subtrahend[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="7">
+								<unit:description>Subtrahend[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="8">
+								<unit:description>Subtrahend[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="9">
+								<unit:description>Subtrahend[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="10">
+								<unit:description>Subtrahend[ 10]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="difference">
+								<unit:description>Difference</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_vector2f_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Element Addition">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="b">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="c">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="c" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Addition</unit:name>
+					<unit:icon unit:filename="icons/component_add.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Summand[]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="c">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Element Subtraction">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="b">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="c">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="c" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Subtraction</unit:name>
+					<unit:icon unit:filename="icons/component_sub.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Subtrahend</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="c">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Element Multiplication">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="b">
+						<var:default var:val="1"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="c">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="c" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Multiplication</unit:name>
+					<unit:icon unit:filename="icons/component_mult.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Factor</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="c">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Element Division">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="b">
+						<var:default var:val="1"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="c">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="c" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Division</unit:name>
+					<unit:icon unit:filename="icons/component_div.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Divisor</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="c">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Cartesian2Vector">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="x">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="y">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="vec">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="x" unit:side="left"/>
+						<unit:layout unit:varname="y" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="vec" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Cartesian to Vector</unit:name>
+					<unit:icon unit:filename="icons/cartesian2vector.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="x">
+								<unit:description>x</unit:description>
+							</unit:info>
+							<unit:info unit:varname="y">
+								<unit:description>y</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="vec">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Polar2Vector">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="r">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="phi">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="vec">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="r" unit:side="left"/>
+						<unit:layout unit:varname="phi" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="vec" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Polar to Vector</unit:name>
+					<unit:icon unit:filename="icons/polar2vector.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="r">
+								<unit:description>Length</unit:description>
+							</unit:info>
+							<unit:info unit:varname="phi">
+								<unit:description>Phi</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="vec">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Vector2Cartesian">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="vec">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="x">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="y">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="vec" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="x" unit:side="right"/>
+						<unit:layout unit:varname="y" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Vector to Cartesian</unit:name>
+					<unit:icon unit:filename="icons/vector2cartesian.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="vec">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="x">
+								<unit:description>x</unit:description>
+							</unit:info>
+							<unit:info unit:varname="y">
+								<unit:description>y</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Vector2Polar">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="vec">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="r">
+						<var:default var:val="0" />
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="phi">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="vec" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="r" unit:side="right"/>
+						<unit:layout unit:varname="phi" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Vector to Polar</unit:name>
+					<unit:icon unit:filename="icons/vector2polar.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="vec">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="r">
+								<unit:description>Length</unit:description>
+							</unit:info>
+							<unit:info unit:varname="phi">
+								<unit:description>Phi</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Rotate">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="phi">
+						<var:default var:val="0" />
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector2f" var:varname="b">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="phi" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="b" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Rotate</unit:name>
+					<unit:icon unit:filename="icons/rotate.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+							<unit:info unit:varname="phi">
+								<unit:description>Phi</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="b">
+								<unit:description>Result</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Dot">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector2f" var:varname="b">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="dot">
+						<var:default var:val="0" />
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="dot" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Dot Product</unit:name>
+					<unit:icon unit:filename="icons/dot.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Vector[ 2]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="dot">
+								<unit:description>Product</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Vector2f Norm">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector2f" var:varname="a">
+						<var:default var:val="(0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="b">
+						<var:default var:val="0" />
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="b" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Norm</unit:name>
+					<unit:icon unit:filename="icons/length.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="b">
+								<unit:description>Norm</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+
+		<unit:unittype unit:id="REC GmbH Vector3f Cross">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="vector3f" var:varname="a">
+						<var:default var:val="(0 0 0)"/>
+					</unit:connector>
+					<unit:connector var:type="vector3f" var:varname="b">
+						<var:default var:val="(0 0 0)"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="vector3f" var:varname="cross">
+						<var:default var:val="(0 0 0)"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="a" unit:side="left"/>
+						<unit:layout unit:varname="b" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="cross" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Vector Product</unit:name>
+					<unit:icon unit:filename="icons/cross.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="a">
+								<unit:description>Vector[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="b">
+								<unit:description>Vector[ 2]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="cross">
+								<unit:description>Product</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_vector2f_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+	</unit:unittypes>
+
+</unit:unit>

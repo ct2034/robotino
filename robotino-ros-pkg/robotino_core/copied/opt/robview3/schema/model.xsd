@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/model"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+		schemaLocation="keyvalue.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/variable"
+		schemaLocation="variable.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/device"
+		schemaLocation="device.xsd"/>
+
+	<!-- Global model -->
+	<xs:element name="model">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="settings" type="kv:keyValueType"/>
+
+				<xs:sequence minOccurs="0" maxOccurs="1"> <!-- This makes the md:variables element optional. Remove after complete migration. -->
+				<xs:element name="variables">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="variable" type="md:modelVariableType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				</xs:sequence> <!-- This makes the md:variables element optional. Remove after complete migration. -->
+
+				<xs:element name="device">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="type" type="dev:deviceType" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="instance" type="md:deviceInstanceType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="utspecs">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="utspec" type="md:unitTypeSpecializationType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="sdfs">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sdf" type="md:sdfType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sfcs">
+					<xs:complexType>
+						<xs:sequence  minOccurs="1" maxOccurs="1">
+							<xs:element name="sfc" type="md:sfcModelType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<!-- Layout information -->
+				<xs:element name="layout">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="sdfs">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sdf" type="md:sdfLayoutType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="sfcs">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="unbounded">
+										<xs:element name="sfc" type="md:sfcLayoutType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+
+		<!-- Keys and keyrefs -->
+		<xs:key name="sdfKey">
+			<xs:selector xpath="./sdfs/sdf"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="sdfKeyRef" refer="md:sdfKey">
+			<xs:selector xpath="./layout/sdfs/sdf"/>
+			<xs:field xpath="@sdfmodel"/>
+		</xs:keyref>
+
+		<xs:keyref name="sdfKeyRef2" refer="md:sdfKey">
+			<xs:selector xpath="./sfcs/sfc/sfcSequence/*"/>
+			<xs:field xpath="@sdfModel"/>
+		</xs:keyref>
+
+		<xs:key name="unitKey">
+			<xs:selector xpath="./sdfs/sdf/units/unit"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="unitKeyRef" refer="md:unitKey">
+			<xs:selector xpath="./layout/sdfs/sdf/units/unit"/>
+			<xs:field xpath="@unit"/>
+		</xs:keyref>
+
+		<xs:keyref name="unitKeyRef2" refer="md:unitKey">
+			<xs:selector xpath="./sdfs/sdf/edges/edge/from"/>
+			<xs:field xpath="@unit"/>
+		</xs:keyref>
+
+		<xs:keyref name="unitKeyRef3" refer="md:unitKey">
+			<xs:selector xpath="./sdfs/sdf/edges/edge/to"/>
+			<xs:field xpath="@unit"/>
+		</xs:keyref>
+
+		<xs:key name="edgeKey">
+			<xs:selector xpath="./sdfs/sdf/edges/edge"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="edgeKeyRef" refer="md:edgeKey">
+			<!--xs:selector xpath="./layout/sdfs/sdf/edges/edge"/-->
+			<xs:selector xpath=".//edge"/>
+			<xs:field xpath="@edge"/>
+		</xs:keyref>
+
+		<xs:key name="utspecKey">
+			<xs:selector xpath="./sdfs/sdf/utspecs/utspec"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="utspecKeyRef" refer="md:utspecKey">
+			<xs:selector xpath="./sdfs/sdf/units/unit"/>
+			<xs:field xpath="@utspec"/>
+		</xs:keyref>		
+		<xs:key name="sfcKey">
+			<xs:selector xpath="./sfcs/sfc"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="sfcKeyRef" refer="md:sfcKey">
+			<xs:selector xpath="./layout/sfcs/sfc"/>
+			<xs:field xpath="@sfcmodel"/>
+		</xs:keyref>
+	</xs:element>
+
+	<!-- Definition of model variable type -->
+	<xs:complexType name="modelVariableType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Device instances -->
+	<xs:complexType name="deviceInstanceType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="1" name="dynamicInputs" type="md:dynamicInputsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="dynamicOutputs" type="md:dynamicOutputsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="configVarExprs" type="md:varExprsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="dynamicUnits" type="md:dynamicUnitsType"/>
+		</xs:sequence>
+		<xs:attribute name="deviceType" type="xs:string" use="required"/>
+		<xs:attribute name="instanceName" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- SDF model -->
+	<xs:complexType name="sdfType">
+		<xs:sequence>
+			<!-- TODO: Deprecated, handled by SFCSimple now. -->
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="timeslice" type="md:timeSliceType"/>
+			</xs:sequence>
+			<xs:element name="units">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="unit" type="md:unitType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="edges">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="edge" type="md:edgeType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="timeSliceType">
+		<xs:attribute name="sec" type="xs:nonNegativeInteger" use="required"/>
+		<xs:attribute name="nsec" type="xs:nonNegativeInteger" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="unitTypeSpecializationType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="spec">
+				<xs:complexType>
+					<xs:attribute name="type" type="xs:string" use="required"/>
+					<xs:attribute name="curr" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="unitType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="1" name="stateVarExprs" type="md:varExprsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="inVarExprs" type="md:varExprsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="outVarExprs" type="md:varExprsType"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="utspec" type="xs:IDREF"/>
+		<xs:attribute name="deviceInstanceName" type="xs:string" use="required"/>
+		<xs:attribute name="variantName" type="xs:string" use="required"/>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="varExprsType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="varExpr" type="md:varExprType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="varExprType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="varProperty" type="md:varPropertyType"/>
+		</xs:sequence>
+		<xs:attribute name="varname" type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="dynamicInputsType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="input" type="dev:inputVarType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="dynamicOutputsType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="output" type="dev:outputVarType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="dynamicUnitsType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="unit" type="dev:deviceUnitType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="varPropertyType">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="edgeType">
+		<xs:sequence>
+			<xs:element name="from" type="md:edgeEndpointType"/>
+			<xs:element name="to" type="md:edgeEndpointType"/>
+		</xs:sequence>
+		<xs:attribute type="xs:ID" name="id" use="required"/>
+		<xs:attribute type="xs:nonNegativeInteger" name="prod" use="required"/>
+		<xs:attribute type="xs:nonNegativeInteger" name="cons" use="required"/>
+		<xs:attribute type="xs:nonNegativeInteger" name="delay" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="edgeEndpointType">
+		<xs:attribute type="xs:IDREF" name="unit" use="required"/>
+		<xs:attribute type="xs:string" name="con" use="required"/>
+	</xs:complexType>
+
+	<!-- Todo add metamodel.xsd for EasygenObjects-->
+	<!-- SFC model -->
+	<xs:complexType name="sfcModelType">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="sfcSequence" type="md:sfcSequenceType"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="sfcSequenceType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="sfcSimple" type="md:sfcSimpleType"/>
+			<xs:element name="sfcTransition" type="md:sfcTransitionType"/>
+			<xs:element name="sfcAlternative" type="md:sfcAlternativeType"/>
+			<xs:element name="sfcParallel" type="md:sfcParallelType"/>
+			<xs:element name="sfcJump" type="md:sfcJumpType"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="sfcItemType">
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="sfcSimpleType">
+		<xs:complexContent>
+			<xs:extension base="md:sfcItemType">
+				<!-- Optional in order to support old files -->
+				<xs:sequence minOccurs="0" maxOccurs="1">
+					<xs:element name="timeslice" type="md:timeSliceType"/>
+				</xs:sequence>
+				<xs:attribute type="xs:IDREF" name="sdfModel" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="sfcJumpType">
+		<xs:complexContent>
+			<xs:extension base="md:sfcItemType">
+				<xs:attribute type="xs:IDREF" name="dest" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="sfcParallelType">
+		<xs:complexContent>
+			<xs:extension base="md:sfcItemType">
+				<xs:sequence minOccurs="2" maxOccurs="unbounded">
+					<xs:element name="sfcSequence" type="md:sfcSequenceType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="sfcAlternativeType">
+		<xs:complexContent>
+			<xs:extension base="md:sfcItemType">
+				<xs:sequence minOccurs="2" maxOccurs="unbounded">
+					<xs:element name="sfcSequence" type="md:sfcSequenceType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="sfcTransitionType">
+		<xs:complexContent>
+			<xs:extension base="md:sfcItemType">
+				<xs:attribute type="xs:string" name="guard"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="sdfLayoutType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="sdfViewLayout" type="md:sdfViewLayoutType"/>
+			</xs:sequence>
+			<xs:element name="units">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="unit" type="md:unitLayoutType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nets">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="net" type="md:netLayoutType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="texts">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="text" type="md:textLayoutType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="sdfmodel" type="xs:IDREF" use="required"/>
+		<xs:attribute name="active" type="xs:string"/>
+		<xs:attribute name="tab" type="xs:integer"/>
+		<xs:attribute name="showData" type="xs:string"/>
+		<xs:attribute name="showToolTips" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="sdfViewLayoutType">
+		<xs:attribute name="data" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="textLayoutType">
+		<xs:attribute name="text" type="xs:string" use="required"/>
+		<xs:attribute type="xs:integer" name="x" use="required"/>
+		<xs:attribute type="xs:integer" name="y" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="unitLayoutType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:element name="unitDialogLayout" type="md:unitDialogLayoutType"/>
+		</xs:sequence>
+		<xs:attribute name="unit" type="xs:IDREF" use="required"/>
+		<xs:attribute type="xs:integer" name="x" use="required"/>
+		<xs:attribute type="xs:integer" name="y" use="required"/>
+		<xs:attribute type="xs:integer" name="width" use="optional"/>
+		<xs:attribute type="xs:integer" name="height" use="optional"/>
+		<xs:attribute type="xs:string" name="nameDisplay" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="unitDialogLayoutType">
+		<xs:attribute name="objectName" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="edgeLayoutType">
+		<xs:attribute type="xs:IDREF" name="edge" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="pointLayoutType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:choice>
+				<xs:element name="point" type="md:pointLayoutType"/>
+				<xs:element name="edge" type="md:edgeLayoutType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute type="xs:integer" name="x" use="required"/>
+		<xs:attribute type="xs:integer" name="y" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="netLayoutType">
+		<xs:choice>
+			<xs:element name="edge" type="md:edgeLayoutType"/>
+			<xs:element name="point" type="md:pointLayoutType"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="sfcLayoutType">
+		<xs:attribute name="sfcmodel" type="xs:IDREF" use="required"/>
+		<xs:attribute name="active" type="xs:string"/>
+		<!--xs:attribute name="tab" type="xs:integer"/-->
+	</xs:complexType>
+
+</xs:schema>

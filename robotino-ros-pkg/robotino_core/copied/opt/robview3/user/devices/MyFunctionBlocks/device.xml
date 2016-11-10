@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	dev:id="MyFuncBlocks" dev:toplevel="true">
+
+	<dev:translations/>
+
+	<dev:units>
+		<dev:unit dev:type="REC GmbH Tutorial 1"/>
+		<dev:unit dev:type="REC GmbH Tutorial 2"/>
+	</dev:units>
+
+</dev:device>

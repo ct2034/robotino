@@ -1,0 +1,37 @@
+<launch>
+	<node name="msb_ros_bridge" pkg="vfk_msb_client" type="msb_ros_bridge.py" output="screen">
+		<!-- MSB to connect to -->
+		<!-- <param name="host" value="ws://localhost:8085" /> -->
+		<!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de/msb2" /> -->
+		<!-- <param name="host" value="ws://10.3.2.10:8085" /> -->
+                <param name="host" value="ws://10.3.5.141:8085" /> 
+		<!-- <param name="host" value="ws://10.100.2.14:8085" /> -->
+                <!-- <param name="host" value="ws://172.20.1.17:8085" /> -->
+		
+		<!-- TODO: name / uuid konfigurierbar $ROBOT -->
+
+		<!-- Uuid for conneciton -->
+		<param name="uuid" value="robotino" />
+
+                <!-- Name for conneciton -->
+                <param name="name" value="Robotino" />
+
+                <!-- Description for conneciton -->
+                <param name="desc" value="Robotino" />
+
+                <!-- Token for conneciton -->
+                <param name="token" value="robotino" />
+		
+		<!-- Topics to subscribe in ros -->
+		<param name="topics_sub" value="logistics_pose" />
+		
+		<!-- Topics to publish in ROS -->
+		<param name="topics_pub" value="
+			/logistics_goal geometry_msgs/Point
+		" />
+	</node>
+        <node name="relay" pkg="logistics_relay" type="relay.py" output="screen">
+        </node>
+</launch>

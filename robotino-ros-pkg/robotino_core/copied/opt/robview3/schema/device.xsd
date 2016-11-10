@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:desc="http://easykit.informatik.tu-muenchen.de/schema/description"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/device"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/translation"
+		schemaLocation="translation.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/model"
+		schemaLocation="model.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+		schemaLocation="plugin.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/template"
+		schemaLocation="template.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/variable"
+		schemaLocation="variable.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+		schemaLocation="keyvalue.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/description"
+		schemaLocation="description.xsd"/>
+
+	<!-- Root node -->
+	<xs:element name="device" type="dev:deviceType"/>
+
+	<!-- Recursive definition of a device -->
+	<xs:complexType name="deviceType">
+
+		<xs:sequence>
+			<!-- The translations element specifies translations for key phrases specified
+			     below this device specification. See the translation.xsd schema file for how
+			     the element and its children are to be specified. -->
+			<xs:element name="translations" type="tr:translationType" minOccurs="0" maxOccurs="1"/>
+
+			<!-- The inputs node contains the specification of a device's inputs ("sensors") -->
+			<xs:element name="inputs" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="input" type="dev:inputVarType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- The output node contains the specification of a device's outputs ("actors") -->
+			<xs:element name="outputs" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="output" type="dev:outputVarType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- The state node contains the specification of a device's state variables -->
+			<xs:element name="state" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="statevar" type="dev:stateVarType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- The config node contains a specification of a device's configuration variables -->
+			<xs:element name="config" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="configvar" type="dev:configVarType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- The subdevices node contains a recursive specification of "smaller" devices
+			     that make up the current device. This technique is used to be able to build
+			     devices out of smaller components. -->
+			<xs:element name="subdevices" type="dev:subdevicesType" minOccurs="0" maxOccurs="1"/>
+
+			<!-- The inventory specification of a device holds all resources that have to be
+			     managed at this level. They can be used to define constraints that ought to
+			     be obeyed when the respective units or unit variants are instantiated. -->
+			<xs:element name="provides" type="dev:providesType" minOccurs="0" maxOccurs="1"/>
+
+			<!-- Unit requirements specification. This section defines the resources each of
+			     the unit variants will use when they are instantiated. This is needed to
+			     determine when to disable instantiation of the respective unit or other units
+			     that depend on the same (subset of) resources. -->
+			<xs:element name="requires" type="dev:requiresType" minOccurs="0" maxOccurs="1"/>
+
+			<!-- Unit type specializations. Needed to define the initial data types for the
+			     unit variants available at this device level. Same syntax as in model.xsd. -->
+			<xs:element name="utspecs" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="utspec" type="md:unitTypeSpecializationType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Unit variant specification. This section defines the units that may be
+			     instantiated at this device level. Note the requirements for unit instantiation
+			     defined above, they influence which units will actually be available during
+			     runtime. Same syntax as in model.xsd. -->
+			<xs:element name="units" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="unit" type="dev:deviceUnitType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Resource map specification. This section defines resource mappings for the current
+			     device. Resource mappings are used to define which resource requirements are mapped
+			     to which hardware resource in the device. This is necessary in case the resource
+			     requirement is not specified directly, but instead a class name of a resource is
+			     specified. All resource requirements must be fulfilled before the device can be
+			     programmed. -->
+			<xs:element name="resourcemappings" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="instance" type="dev:resourceMappingInstanceType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Plugin filenames for device -->
+			<xs:element name="plugins" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="1" maxOccurs="unbounded">
+						<xs:element name="plugin" type="plugin:pluginType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- GUI related information element. Note that the element for a specific
+			     device must be located below in the respective <dev:device> node, not
+			     at the parent level (i.e., if a device has subdevices, then the
+			     <dev:guiinfo> element for each subdevice must be located inside the
+			     <dev:subdevices><dev:subdevice><dev:guiinfo> element!) -->
+			<xs:element name="guiinfo" type="dev:guiInfoType" minOccurs="0" maxOccurs="1"/>
+
+			<!-- Code generation information element. -->
+			<xs:element name="codegen" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="platforms" type="dev:platformListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="global" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="local" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="open" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="start" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="read" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="write" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="stop" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="close" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+
+		<!-- Device identification, for external references -->
+		<!--<xs:attribute name="id" type="xs:ID" use="required"/>-->
+		<xs:attribute name="id" type="xs:string" use="required"/>
+
+		<!-- Flag determining whether the device can "live on its own".
+		     This controls whether the user may select the respective
+		     device as toplevel part in his model. --> 
+		<xs:attribute name="toplevel" type="xs:boolean" use="optional" default="false"/>
+
+		<!-- Flag determining whether the connection to the device should be established automatically -->
+		<xs:attribute name="autoconnect" type="xs:boolean" use="optional" default="false"/>
+
+		<!-- Flag if the device is currently hidden (used with PnP) -->
+		<xs:attribute name="hidden" type="xs:boolean" use="optional"/>
+
+	</xs:complexType>
+
+	<!-- Definition of platform list type -->
+	<xs:complexType name="platformListType">
+		<xs:sequence>
+			<xs:element name="platform" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of input variable type -->
+	<xs:complexType name="inputVarType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Definition of output variable type -->
+	<xs:complexType name="outputVarType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Definition of input variable type -->
+	<xs:complexType name="stateVarType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Definition of configuration variable type -->
+	<xs:complexType name="configVarType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Definition of subdevices type -->
+	<xs:complexType name="subdevicesType">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<!-- Reference to an externally defined device -->
+				<xs:element name="deviceref">
+					<xs:complexType>
+						<!-- Identification of referenced external device -->
+						<xs:attribute name="id" type="xs:string" use="required"/>
+
+						<!-- Instance name of this device reference -->
+						<xs:attribute name="instanceName" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+
+				<!-- Recursive device definition -->
+				<xs:element name="device" type="dev:deviceType"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of provides type -->
+	<xs:complexType name="providesType">
+		<xs:sequence>
+			<!-- A resource item definition -->
+			<xs:element name="resource" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="class" type="xs:string" use="optional" default=""/>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+					<xs:attribute name="quantity" type="xs:integer" use="optional" default="1"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of requires type -->
+	<xs:complexType name="requiresType">
+		<xs:sequence>
+			<xs:element name="utspecrequirements" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<!-- Requirement map for the respective unit type variant -->
+					<xs:sequence>
+						<xs:element name="resourceclass" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="class" type="xs:string" use="required"/>
+								<xs:attribute name="quantity" type="xs:integer" use="optional" default="1"/>
+							</xs:complexType>
+						</xs:element>
+
+						<!--
+						Currently disabled, because we might not need this
+						<xs:element name="resource" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:string" use="required"/>
+								<xs:attribute name="quantity" type="xs:integer" use="required"/>
+							</xs:complexType>
+						</xs:element>
+						-->
+
+					</xs:sequence>
+					<xs:attribute name="utspec" type="xs:string" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of device unit type (like md:unitType, but with some other elements) -->
+	<xs:complexType name="deviceUnitType">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="1" name="inConnectorExprs" type="md:varExprsType"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="stateVarExprs" type="md:varExprsType"/>
+			<!-- No inVarExprs -->
+
+			<xs:element minOccurs="0" maxOccurs="1" name="unitRequirements" type="dev:unitRequirementsType"/>
+
+			<!-- GUI related information element -->
+			<xs:element name="guiinfo" type="dev:guiInfoType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="attributes" type="kv:keyValueRootType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="utspec" type="xs:IDREF"/>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<!-- Definition of unit requirements type -->
+	<xs:complexType name="unitRequirementsType">
+		<xs:choice maxOccurs="unbounded">
+			<!-- Either specify the name of a resource... -->
+			<xs:element name="resource">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+					<xs:attribute name="quantity" type="xs:positiveInteger" use="optional" default="1"/>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- ... or the name of a resource class -->
+			<xs:element name="resourceclass">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+					<xs:attribute name="quantity" type="xs:positiveInteger" use="optional" default="1"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+
+	<!-- Definition of resource mappings instance type -->
+	<xs:complexType name="resourceMappingInstanceType">
+		<xs:sequence>
+			<xs:element name="classmapping" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="classname" type="xs:string" use="required"/>
+					<xs:attribute name="index" type="xs:nonNegativeInteger" use="required"/>
+					<xs:attribute name="targetdevice" type="xs:string" use="required"/>
+					<xs:attribute name="targetinstance" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="instancename" type="xs:string" use="required"/>
+		<xs:attribute name="instanceindex" type="xs:nonNegativeInteger" use="required"/>
+	</xs:complexType>
+
+	<!-- Definition of GUI related information type -->
+	<xs:complexType name="guiInfoType">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="1" name="description" type="dev:descriptionType"/>
+
+			<!-- Optional list of annotations that can be used to categorize this item.
+			     Reserved annotations:
+			      * skill (int)         Denotes the level of difficulty of this item.
+			      * keywords (keyValue) Child element containing keywords that can be used
+			                            to define search terms for items (e.g., to find the
+			                            "Additon" unit with the search term "plus").
+			-->
+			<xs:element minOccurs="0" maxOccurs="1" name="annotations" type="kv:keyValueRootType"/>
+    </xs:sequence>
+    <xs:attribute name="display" type="dev:variableDisplayType" default="visible" use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="variableDisplayType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="visible"/>
+      <xs:enumeration value="hidden"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+	<!-- Definition of device description type (needed for GUI) -->
+	<xs:complexType name="descriptionType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="name" type="dev:briefDescription"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="detailed" type="xs:string"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:choice>
+					<xs:element name="icon" type="dev:filespec"/>
+					<xs:element name="iconSpec" type="desc:iconType"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:choice>
+					<xs:element name="schematicIcon" type="dev:filespec"/>
+					<xs:element name="schematicIconSpec" type="desc:iconType"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Definition of brief description type -->
+	<xs:simpleType name="briefDescription">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Definition of file name specification type -->
+	<xs:complexType name="filespec">
+		<xs:attribute type="xs:string" name="filename" use="required"/>
+	</xs:complexType>
+
+</xs:schema>
