@@ -1,5 +1,5 @@
 <launch>
-  <arg name="map_file" value="$(find robotino_navigation)/maps/nevs.yaml" />
+  <arg name="map_file" value="$(find robotino_navigation)/maps/iff_sml.yaml" />
 
   <!--- Run mapserver -->
   <include file="$(find robotino_navigation)/launch/map_server.launch">
