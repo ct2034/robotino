@@ -1,0 +1,308 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Geräte &gt; Robotino &gt; Funktionsblöcke &gt; Navigation &gt; Odometrie</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Navigation,Odometrie">
+   <meta name="description" content="Odometrie">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body { margin:0; 
+   padding:0; 
+   overflow: hidden; 
+   background: #FFFFFF; 
+  }
+ 
+div#printheader { 
+   display: none;
+   padding-bottom: 10px;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+<noscript>
+<style type="text/css">
+html, body { overflow: auto; }
+</style> 
+</noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "robotino_odometry.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Odometrie</span></h1>
+</div> 
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?robotino_odometry.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="devices.htm">Geräte</a> &gt; <a href="devices_robotino.htm">Robotino</a> &gt; <a href="robotino_functionblocks.htm">Funktionsblöcke</a> &gt; <a href="robotino_navigation.htm">Navigation</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Odometrie</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="robotino_navigation.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="robotino_navigation.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="robotino_northstar.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p><img src="robotino_odometry.png" width="211" height="67" alt="robotino_odometry" style="width:211px;height:67px;border:none" /></p>
+<p><span class="f_ImageCaption" style="font-size: 10pt;">Diese Funktion benötigt die 1GB Compact-Flash Speicherkarte von Robotino (V 1.7 oder höher). </span></p>
+<p><span class="f_ImageCaption" style="font-size: 10pt;">(Keine Funktion bei 256MB Speicherkarte, Version &lt;=1.6)</span></p>
+<p>&nbsp;</p>
+<p>Odometrie bezeichnet die Berechnung der aktuellen Position eines Fahrzeuges aufgrund der vorangegangenen Drehungen der einzelnen Räder. Das Wort Odometrie setzt sich aus den griechischen Wörtern &quot;hodos&quot; (Übersetzung: &quot;Reise&quot;) und &quot;metron&quot; (Übersetzung: &quot;Messung&quot;) zusammen. Siehe auch <a href="http://de.wikipedia.org/wiki/Odometrie" target="_blank" class="weblink">http://de.wikipedia.org/wiki/Odometrie</a>.</p>
+<p>&nbsp;</p>
+<p>Die Drehung der Räder wird in möglichst hoher zeitlicher Auflösung erfasst. Zu jedem Zeitschritt wird dann aufgrund der Radgeschwindigkeiten die zurückgelegte Wegstrecke des Fahrzeuges berechnet. Die (sehr kleinen) Wegstrecken der einzelnen Zeitschritte werden addiert, so dass man die aktuelle Position bezogen auf den Startpunkt erhält. Dieses Verfahren liefert lokal gute Ergebnisse. Auf langen Strecken oder unter widrigen Umständen (Schlupf der Räder durch Staub auf dem Boden, Drift des Roboters aufgrund einer Vorzugsrichtung des Teppichs usw.) kommt es bei diesem Verfahren zu großen Abweichungen. Aus diesem Grund wird Odometrie fast immer mit anderen Verfahren kombiniert, um die auftretenden Fehler zu kompensieren.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:solid 2px #aca899; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Eingänge</span></p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Typ</span></p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Einheit</span></p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Standard</span></p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Beschreibung</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>x</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>mm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>0</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die neue x-Position. Der Wert wird übernommen, wenn am &quot;Setzen&quot; Eingang wahr (true) anliegt.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>y</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>mm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>0</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die neue y-Position. Der Wert wird übernommen, wenn am &quot;Setzen&quot; Eingang wahr (true) anliegt.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>phi</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>Grad</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>0</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die neue Orientierung. Der Wert wird übernommen, wenn am &quot;Setzen&quot; Eingang wahr (true) anliegt.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Setzen</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>bool</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>false</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Wenn der Eingang wahr (true) ist, wird Robotinos Odometrie auf die an den Eingängen x, y, phi anliegenden Werte gesetzt. Um die Odometrie auf (0,0,0) zu setzen reicht es daher, den Eingang für einen Zeitschritt auf wahr (true) zu setzen. Liegt unwahr (false) an, so ändert sich die Odometrie nur durch Bewegung der Räder von Robotino.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Ausgänge</span></p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>x</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>mm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die aktuelle x-Position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>y</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>mm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die aktuelle y-Position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>phi</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>Grad</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Die aktuelle Orientierung.</p>
+</td>
+</tr>
+</table>
+</div>
+<p><img src="odometry.png" width="569" height="479" alt="odometry" style="width:569px;height:479px;border:none" /></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

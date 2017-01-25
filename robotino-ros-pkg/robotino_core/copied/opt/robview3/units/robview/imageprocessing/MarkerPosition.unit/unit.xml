@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Marker Position">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="image" var:varname="image"/>
+					<unit:connector var:type="int32" var:varname="id">
+						<var:default var:val="-1"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="visualizeposition">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="bool" var:varname="found">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="posx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="posy">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="posz">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="rotx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="roty">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="rotz">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state>
+        <unit:statevar var:type="image" var:varname="imagevisualization"/>
+      </unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="image" unit:side="left"/>
+						<unit:layout unit:varname="id" unit:side="left"/>
+            <unit:layout unit:varname="visualizeposition" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="found" unit:side="right"/>
+						<unit:layout unit:varname="posx" unit:side="right"/>
+						<unit:layout unit:varname="posy" unit:side="right"/>
+						<unit:layout unit:varname="posz" unit:side="right"/>
+						<unit:layout unit:varname="rotx" unit:side="right"/>
+						<unit:layout unit:varname="roty" unit:side="right"/>
+						<unit:layout unit:varname="rotz" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Marker position</unit:name>
+					<unit:icon unit:filename="icons/marker.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="image">
+								<unit:description>Image</unit:description>
+							</unit:info>
+							<unit:info unit:varname="id">
+								<unit:description>ID</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="found">
+								<unit:description>Marker found</unit:description>
+							</unit:info>
+							<unit:info unit:varname="posx">
+								<unit:description>x [m]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="posy">
+								<unit:description>y [m]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="posz">
+								<unit:description>z [m]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="rotx">
+								<unit:description>a [deg]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="roty">
+								<unit:description>b [deg]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="rotz">
+								<unit:description>c [deg]</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_imageprocessing_markerposition_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_imageprocessing_markerposition_gui"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+	</unit:unittypes>
+</unit:unit>

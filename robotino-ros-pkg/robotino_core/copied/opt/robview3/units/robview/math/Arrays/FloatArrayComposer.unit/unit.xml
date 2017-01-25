@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Float Array Composer">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="floatvector" var:varname="i1">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i2">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i3">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i4">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i5">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i6">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i7">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i8">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i9">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="floatvector" var:varname="i10">
+						<var:default var:val="" />
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="floatvector" var:varname="array">
+						<var:default var:val="" />
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="i1" unit:side="left"/>
+						<unit:layout unit:varname="i2" unit:side="left"/>
+						<unit:layout unit:varname="i3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="i10" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="array" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Float array composer</unit:name>
+					<unit:icon unit:filename="icon.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="i1">
+								<unit:description>Index[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i2">
+								<unit:description>Index[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i3">
+								<unit:description>Index[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i4">
+								<unit:description>Index[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i5">
+								<unit:description>Index[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i6">
+								<unit:description>Index[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i7">
+								<unit:description>Index[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i8">
+								<unit:description>Index[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i9">
+								<unit:description>Index[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="i10">
+								<unit:description>Index[ 10]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="array">
+								<unit:description>Array</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_array_floatarraycomposer_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_array_floatarraycomposer_gui"/>
+			</unit:plugins>
+			
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

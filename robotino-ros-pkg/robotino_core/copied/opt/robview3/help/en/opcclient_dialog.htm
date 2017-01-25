@@ -1,0 +1,282 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Dialog</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "opcclient_dialog.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="opcclient.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="opcclient_functionblocks.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="opcclient_dialog.png" width="342" height="578" alt="opcclient_dialog" style="width:342px;height:578px;border:none" /></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:solid 2px #c0c0c0; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:35px; padding:0px; border:solid 1px #c0c0c0;"><p>1</p>
+</td>
+<td style="vertical-align:top; width:200px; padding:0px; border:solid 1px #c0c0c0;"><p>Select OPC server</p>
+</td>
+<td style="vertical-align:top; width:589px; padding:0px; border:solid 1px #c0c0c0;"><p>The combocox lists all available local OPC servers.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:35px; padding:0px; border:solid 1px #c0c0c0;"><p>2</p>
+</td>
+<td style="vertical-align:top; width:200px; padding:0px; border:solid 1px #c0c0c0;"><p>Connect</p>
+</td>
+<td style="vertical-align:top; width:589px; padding:0px; border:solid 1px #c0c0c0;"><p>Establish a connection to the selected OPC server.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:35px; padding:0px; border:solid 1px #c0c0c0;"><p>3</p>
+</td>
+<td style="vertical-align:top; width:200px; padding:0px; border:solid 1px #c0c0c0;"><p>Scan</p>
+</td>
+<td style="vertical-align:top; width:589px; padding:0px; border:solid 1px #c0c0c0;"><p>Update the list a OPC servers.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:35px; padding:0px; border:solid 1px #c0c0c0;"><p>4</p>
+</td>
+<td style="vertical-align:top; width:200px; padding:0px; border:solid 1px #c0c0c0;"><p>Mapping</p>
+</td>
+<td style="vertical-align:top; width:589px; padding:0px; border:solid 1px #c0c0c0;"><p>This table defines the mapping from function blocks to OPC &quot;Tags&quot;.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:solid 2px #c0c0c0; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p><span style="font-weight: bold;">Row</span></p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p><span style="font-weight: bold;">function block</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DO_Port_1</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Output 1</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DO_Port_2</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Output 2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DO_Port_3</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Output 3</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DO_Port_4</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Output 4</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DI_Port_1</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Input 1</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DI_Port_2</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Input 2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DI_Port_3</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Input 3</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>DI_Port_4</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>digital Input 4</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AO_Port_1</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Output 1</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AO_Port_2</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Output 2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AO_Port_3</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Output 3</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AO_Port_4</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Output 4</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AI_Port_1</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Input 1</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AI_Port_2</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Input 2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AI_Port_3</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Input 3</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:142px; padding:0px; border:solid 1px #c0c0c0;"><p>AI_Port_4</p>
+</td>
+<td style="vertical-align:top; width:683px; padding:0px; border:solid 1px #c0c0c0;"><p>analog Input 4</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The context menu provides the following functionality:</p>
+<p><img src="opcclient_dialog_menu.png" width="142" height="87" alt="opcclient_dialog_menu" style="width:142px;height:87px;border:none" /></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:solid 2px #c0c0c0; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:343px; padding:0px; border:solid 1px #c0c0c0;"><p>Predefined settings <span style="font-family: 'Wingdings 3';">u</span> Festo EzOPC VirtualPLC</p>
+</td>
+<td style="vertical-align:top; width:1167px; padding:0px; border:solid 1px #c0c0c0;"><p>Load a mapping suitable for VirtualPLC</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:343px; padding:0px; border:solid 1px #c0c0c0;"><p>Predefined settings <span style="font-family: 'Wingdings 3';">u</span> Festo EzOPC EasyPort</p>
+</td>
+<td style="vertical-align:top; width:1167px; padding:0px; border:solid 1px #c0c0c0;"><p>Load a mapping suitable for EasyPort</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:343px; padding:0px; border:solid 1px #c0c0c0;"><p>Load</p>
+</td>
+<td style="vertical-align:top; width:1167px; padding:0px; border:solid 1px #c0c0c0;"><p>Load a mapping from file.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:343px; padding:0px; border:solid 1px #c0c0c0;"><p>Save</p>
+</td>
+<td style="vertical-align:top; width:1167px; padding:0px; border:solid 1px #c0c0c0;"><p>Save the current mapping to a file.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:343px; padding:0px; border:solid 1px #c0c0c0;"><p>Help</p>
+</td>
+<td style="vertical-align:top; width:1167px; padding:0px; border:solid 1px #c0c0c0;"><p>Show this help page.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

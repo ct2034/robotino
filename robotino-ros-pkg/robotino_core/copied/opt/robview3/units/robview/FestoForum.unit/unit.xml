@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations/>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Festo Forum Connection Status">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="bool" var:varname="disconnect_terminal">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="bool" var:varname="connected">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="terminal_connected">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="disconnect_terminal" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="connected" unit:side="right"/>
+						<unit:layout unit:varname="terminal_connected" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Connection Status</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="disconnect_terminal">
+								<unit:description>Disconnect terminal</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="connected">
+								<unit:description>Connected</unit:description>
+							</unit:info>
+							<unit:info unit:varname="terminal_connected">
+								<unit:description>Terminal connected</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Fix Poses">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in/>
+				<unit:out>
+					<unit:connector var:type="pose" var:varname="startpose">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="pose" var:varname="balltarget">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="pose" var:varname="garagepose">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in/>
+					<unit:out>
+						<unit:layout unit:varname="startpose" unit:side="right"/>
+						<unit:layout unit:varname="balltarget" unit:side="right"/>
+						<unit:layout unit:varname="garagepose" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Fix Poses</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in/>
+						<unit:out>
+							<unit:info unit:varname="startpose">
+								<unit:description>Start pose (depends on terminal id)</unit:description>
+							</unit:info>
+							<unit:info unit:varname="balltarget">
+								<unit:description>Ball target pose (depends on terminal id)</unit:description>
+							</unit:info>
+							<unit:info unit:varname="garagepose">
+								<unit:description>Garage pose (depends on robot id)</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Pose Reader">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in/>
+				<unit:out>
+					<unit:connector var:type="pose" var:varname="pose">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="initialized">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="timer">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in/>
+					<unit:out>
+						<unit:layout unit:varname="pose" unit:side="right"/>
+						<unit:layout unit:varname="initialized" unit:side="right"/>
+						<unit:layout unit:varname="timer" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Pose reader</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in/>
+						<unit:out>
+							<unit:info unit:varname="pose">
+								<unit:description>Pose</unit:description>
+							</unit:info>
+							<unit:info unit:varname="initialized">
+								<unit:description>Odometry initialized</unit:description>
+							</unit:info>
+							<unit:info unit:varname="timer">
+								<unit:description>msecs since odometry correction</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Pose Writer">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="pose" var:varname="pose">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:in>
+				<unit:out/>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="pose" unit:side="left"/>
+					</unit:in>
+					<unit:out/>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Pose writer</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="pose">
+								<unit:description>Pose</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out/>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum State Writer">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="bool" var:varname="bumper">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance0">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance1">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance2">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance3">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance4">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance5">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance6">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance7">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="distance8">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="batteryVoltage">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="batteryVoltageLow">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out/>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="bumper" unit:side="left"/>
+						<unit:layout unit:varname="distance0" unit:side="left"/>
+						<unit:layout unit:varname="distance1" unit:side="left"/>
+						<unit:layout unit:varname="distance2" unit:side="left"/>
+						<unit:layout unit:varname="distance3" unit:side="left"/>
+						<unit:layout unit:varname="distance4" unit:side="left"/>
+						<unit:layout unit:varname="distance5" unit:side="left"/>
+						<unit:layout unit:varname="distance6" unit:side="left"/>
+						<unit:layout unit:varname="distance7" unit:side="left"/>
+						<unit:layout unit:varname="distance8" unit:side="left"/>
+						<unit:layout unit:varname="batteryVoltage" unit:side="left"/>
+						<unit:layout unit:varname="batteryVoltageLow" unit:side="left"/>
+					</unit:in>
+					<unit:out/>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>State Writer</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="bumper">
+								<unit:description>Bumper</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance0">
+								<unit:description>Distance 1</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance1">
+								<unit:description>Distance 2</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance2">
+								<unit:description>Distance 3</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance3">
+								<unit:description>Distance 4</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance4">
+								<unit:description>Distance 5</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance5">
+								<unit:description>Distance 6</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance6">
+								<unit:description>Distance 7</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance7">
+								<unit:description>Distance 8</unit:description>
+							</unit:info>
+							<unit:info unit:varname="distance8">
+								<unit:description>Distance 9</unit:description>
+							</unit:info>
+							<unit:info unit:varname="batteryVoltage">
+								<unit:description>Battery voltage</unit:description>
+							</unit:info>
+							<unit:info unit:varname="batteryVoltageLow">
+								<unit:description>Battery voltage low</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out/>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Velocity Writer">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="float" var:varname="vx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="vy">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="omega">
+						<var:default var:val="0"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out/>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="vx" unit:side="left"/>
+						<unit:layout unit:varname="vy" unit:side="left"/>
+						<unit:layout unit:varname="omega" unit:side="left"/>
+					</unit:in>
+					<unit:out/>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Velocity Writer</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="vx">
+								<unit:description>Velocity x</unit:description>
+							</unit:info>
+							<unit:info unit:varname="vy">
+								<unit:description>Velocity y</unit:description>
+							</unit:info>
+							<unit:info unit:varname="omega">
+								<unit:description>Velocity omega</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out/>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Command">
+			<unit:typeTemplates/>
+		
+			<unit:connectors>
+				<unit:in/>
+				<unit:out>
+					<unit:connector var:type="bool" var:varname="acquireRobot">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="releaseRobot">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="drivePath">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="objectFetch">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="stop">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in/>
+					<unit:out>
+						<unit:layout unit:varname="acquireRobot" unit:side="right"/>
+						<unit:layout unit:varname="releaseRobot" unit:side="right"/>
+						<unit:layout unit:varname="drivePath" unit:side="right"/>
+						<unit:layout unit:varname="objectFetch" unit:side="right"/>
+						<unit:layout unit:varname="stop" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Command</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in/>
+						<unit:out>
+							<unit:info unit:varname="acquireRobot">
+								<unit:description>Acquire robot</unit:description>
+							</unit:info>
+							<unit:info unit:varname="releaseRobot">
+								<unit:description>Release robot</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drivePath">
+								<unit:description>Drive path</unit:description>
+							</unit:info>
+							<unit:info unit:varname="objectFetch">
+								<unit:description>Fetch object (ball)</unit:description>
+							</unit:info>
+							<unit:info unit:varname="stop">
+								<unit:description>Stop</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Map">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="bool" var:varname="triggerballsearch">
+						<var:default var:val="false"/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="workspaceulx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="workspaceuly">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="workspacelrx">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="workspacelry">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="pose" var:varname="drehteilpose">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="drehteilradius">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="ballvisible">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="pose" var:varname="ballpose">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="triggerballsearch" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="workspaceulx" unit:side="right"/>
+						<unit:layout unit:varname="workspaceuly" unit:side="right"/>
+						<unit:layout unit:varname="workspacelrx" unit:side="right"/>
+						<unit:layout unit:varname="workspacelry" unit:side="right"/>
+						<unit:layout unit:varname="drehteilpose" unit:side="right"/>
+						<unit:layout unit:varname="drehteilradius" unit:side="right"/>
+						<unit:layout unit:varname="ballvisible" unit:side="right"/>
+            <unit:layout unit:varname="ballpose" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Map</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="triggerballsearch">
+								<unit:description>Trigger ball search</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="workspaceulx">
+								<unit:description>Workspace upper left x</unit:description>
+							</unit:info>
+							<unit:info unit:varname="workspaceuly">
+								<unit:description>Workspace upper left y</unit:description>
+							</unit:info>
+							<unit:info unit:varname="workspacelrx">
+								<unit:description>Workspace lower right x</unit:description>
+							</unit:info>
+							<unit:info unit:varname="workspacelry">
+								<unit:description>Workspace lower right y</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drehteilpose">
+								<unit:description>Drehteil position</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drehteilradius">
+								<unit:description>Drehteil radius</unit:description>
+							</unit:info>
+							<unit:info unit:varname="ballvisible">
+								<unit:description>Ball visible</unit:description>
+							</unit:info>
+							<unit:info unit:varname="ballpose">
+								<unit:description>Ball position</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Path">
+			<unit:typeTemplates/>
+		
+			<unit:connectors>
+				<unit:in/>
+				<unit:out>
+					<unit:connector var:type="int32" var:varname="length">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="path">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in/>
+					<unit:out>
+						<unit:layout unit:varname="length" unit:side="right"/>
+						<unit:layout unit:varname="path" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Path</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in/>
+						<unit:out>
+							<unit:info unit:varname="length">
+								<unit:description>Length</unit:description>
+							</unit:info>
+							<unit:info unit:varname="path">
+								<unit:description>Path</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+
+		<unit:unittype unit:id="REC GmbH Festo Forum Task">
+			<unit:typeTemplates/>
+
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="bool" var:varname="idle_task">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="leavegarage_task">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="drivehome_task">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="bool" var:varname="drivepath_task">
+						<var:default var:val="false"/>
+					</unit:connector>
+					<unit:connector var:type="pose" var:varname="drivepath_next_waypoint">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:in>
+				<unit:out/>
+			</unit:connectors>
+
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="idle_task" unit:side="left"/>
+						<unit:layout unit:varname="leavegarage_task" unit:side="left"/>
+						<unit:layout unit:varname="drivehome_task" unit:side="left"/>
+						<unit:layout unit:varname="drivepath_task" unit:side="left"/>
+						<unit:layout unit:varname="drivepath_next_waypoint" unit:side="left"/>
+					</unit:in>
+					<unit:out/>
+				</unit:connectors>
+
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Task</unit:name>
+					<unit:icon unit:filename="icons/robotino.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="idle_task">
+								<unit:description>Idle</unit:description>
+							</unit:info>
+							<unit:info unit:varname="leavegarage_task">
+								<unit:description>Leave garage</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drivehome_task">
+								<unit:description>Drive home</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drivepath_task">
+								<unit:description>Drive path</unit:description>
+							</unit:info>
+							<unit:info unit:varname="drivepath_next_waypoint">
+								<unit:description>Next waypoint (drive path)</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out/>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_festoforum_simulation"/>
+			</unit:plugins>
+
+		</unit:unittype>
+	</unit:unittypes>
+
+</unit:unit>

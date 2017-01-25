@@ -1,0 +1,2628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+  <unit:translations>
+	</unit:translations>
+
+  <unit:unittypes>
+    <unit:unittype unit:id="REC GmbH Robotino Camera">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="image" var:varname="image">
+            <var:default var:val=""/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="image" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Camera</unit:name>
+          <unit:icon unit:filename="icons/camera.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="image">
+                <unit:description>Image</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Digital Input">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="bool" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Digital Input</unit:name>
+          <unit:icon unit:filename="icons/digitalinput.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Digital Output">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="value" unit:side="left"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Digital Output</unit:name>
+          <unit:icon unit:filename="icons/digitaloutput.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino ADC">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>ADC</unit:name>
+          <unit:icon unit:filename="icons/adc.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value \[V]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Bumper">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="bool" var:varname="value">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Bumper</unit:name>
+          <unit:icon unit:filename="icons/bumper.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Relay">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="value">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="value" unit:side="left"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Relay</unit:name>
+          <unit:icon unit:filename="icons/relay.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    
+    <unit:unittype unit:id="REC GmbH Robotino Shutdown">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="shutdown">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+
+      <unit:state>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="shutdown" unit:side="left"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Shutdown</unit:name>
+          <unit:icon unit:filename="icons/shutdown.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="shutdown">
+                <unit:description>Shutdown</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Power Management">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="current">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="voltage">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="current" unit:side="right"/>
+            <unit:layout unit:varname="voltage" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Power Management</unit:name>
+          <unit:icon unit:filename="icons/battery.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="current">
+                <unit:description>Power consumption \[A]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="voltage">
+                <unit:description>Battery \[V]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+
+    </unit:unittype>
+    
+    <unit:unittype unit:id="REC GmbH Robotino Battery">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="bool" var:varname="ext_power">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="uint8" var:varname="num_chargers">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int8" var:varname="batteryType">
+            <var:default var:val="-1"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="batteryLow">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="batteryLowShutdownCounter">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="ext_power" unit:side="right"/>
+            <unit:layout unit:varname="num_chargers" unit:side="right"/>
+            <unit:layout unit:varname="batteryType" unit:side="right"/>
+            <unit:layout unit:varname="batteryLow" unit:side="right"/>
+            <unit:layout unit:varname="batteryLowShutdownCounter" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Battery</unit:name>
+          <unit:icon unit:filename="icons/charger.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="ext_power">
+                <unit:description>External power supply</unit:description>
+              </unit:info>
+              <unit:info unit:varname="num_chargers">
+                <unit:description>Number of chargers</unit:description>
+              </unit:info>
+              <unit:info unit:varname="batteryType">
+                <unit:description>Battery type</unit:description>
+              </unit:info>
+              <unit:info unit:varname="batteryLow">
+                <unit:description>Battery low</unit:description>
+              </unit:info>
+              <unit:info unit:varname="batteryLowShutdownCounter">
+                <unit:description>Battery low shutdown count-down</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Connection">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="connect">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="quality">
+            <var:default var:val="100"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="connected">
+            <var:default var:val="false"/>
+          </unit:connector>
+          <!--<unit:connector var:type="bool" var:varname="master">
+            <var:default var:val="true"/>
+          </unit:connector>-->
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="connect" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="quality" unit:side="right"/>
+            <unit:layout unit:varname="connected" unit:side="right"/>
+            <!--<unit:layout unit:varname="master" unit:side="right"/>-->
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Connection</unit:name>
+          <unit:icon unit:filename="icons/connection.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="connect">
+                <unit:description>Connect</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="quality">
+                <unit:description>Quality</unit:description>
+              </unit:info>
+              <unit:info unit:varname="connected">
+                <unit:description>Connected</unit:description>
+              </unit:info>
+              <!--<unit:info unit:varname="master">
+                <unit:description>Master</unit:description>
+              </unit:info>-->
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Connection2">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="quality">
+            <var:default var:val="100"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="connected">
+            <var:default var:val="false"/>
+          </unit:connector>
+          <!--<unit:connector var:type="bool" var:varname="master">
+            <var:default var:val="true"/>
+          </unit:connector>-->
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="quality" unit:side="right"/>
+            <unit:layout unit:varname="connected" unit:side="right"/>
+            <!--<unit:layout unit:varname="master" unit:side="right"/>-->
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Connection</unit:name>
+          <unit:icon unit:filename="icons/connection.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="quality">
+                <unit:description>Quality</unit:description>
+              </unit:info>
+              <unit:info unit:varname="connected">
+                <unit:description>Connected</unit:description>
+              </unit:info>
+              <!--<unit:info unit:varname="master">
+                <unit:description>Master</unit:description>
+              </unit:info>-->
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+
+    </unit:unittype>
+    
+    <unit:unittype unit:id="REC GmbH Robotino Northstar">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+				<unit:in>
+					<unit:connector var:type="int32" var:varname="roomId">
+						<var:default var:val="3"/>
+					</unit:connector>
+          <unit:connector var:type="float" var:varname="ceilingCal">
+            <var:default var:val="2800"/>
+          </unit:connector>
+					<unit:connector var:type="float" var:varname="originX">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="originY">
+						<var:default var:val="0"/>
+					</unit:connector>
+					<unit:connector var:type="float" var:varname="originPhi">
+						<var:default var:val="0"/>
+					</unit:connector>
+          <unit:connector var:type="bool" var:varname="set">
+            <var:default var:val="false"/>
+          </unit:connector>
+				</unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="x">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="y">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="phi">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="spots">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="int32" var:varname="magSpot0">
+          <var:default var:val="0"/>
+        </unit:statevar>
+        <unit:statevar var:type="int32" var:varname="magSpot1">
+          <var:default var:val="0"/>
+        </unit:statevar>
+        <unit:statevar var:type="int32" var:varname="sequenceNo">
+          <var:default var:val="0"/>
+        </unit:statevar>
+				<unit:statevar var:type="int32" var:varname="currentRoom">
+					<var:default var:val="0"/>
+				</unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+					<unit:in>
+            <unit:layout unit:varname="roomId" unit:side="left"/>
+            <unit:layout unit:varname="ceilingCal" unit:side="left"/>
+						<unit:layout unit:varname="originX" unit:side="left"/>
+						<unit:layout unit:varname="originY" unit:side="left"/>
+						<unit:layout unit:varname="originPhi" unit:side="left"/>
+            <unit:layout unit:varname="set" unit:side="left"/>
+					</unit:in>
+          <unit:out>
+            <unit:layout unit:varname="x" unit:side="right"/>
+            <unit:layout unit:varname="y" unit:side="right"/>
+            <unit:layout unit:varname="phi" unit:side="right"/>
+            <unit:layout unit:varname="spots" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>North Star</unit:name>
+          <unit:icon unit:filename="icons/nstar.png"/>
+          <unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="roomId">
+								<unit:description>Room number</unit:description>
+							</unit:info>
+              <unit:info unit:varname="ceilingCal">
+                <unit:description>Ceiling calibration</unit:description>
+              </unit:info>
+							<unit:info unit:varname="originX">
+								<unit:description>x \[mm]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="originY">
+								<unit:description>y \[mm]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="originPhi">
+								<unit:description>phi \[deg]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="set">
+								<unit:description>Set</unit:description>
+							</unit:info>
+						</unit:in>
+            <unit:out>
+              <unit:info unit:varname="x">
+                <unit:description>x \[mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="y">
+                <unit:description>y \[mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="phi">
+                <unit:description>phi \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="spots">
+                <unit:description>Projectors</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Distance Sensor">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="heading">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+            <unit:layout unit:varname="heading" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Distance</unit:name>
+          <unit:icon unit:filename="icons/distance.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value \[V]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="heading">
+                <unit:description>Heading \[deg]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Motor">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="setvel">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="resetpos">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="brake">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="actualvel">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="actualpos">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="current">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="setvel" unit:side="left"/>
+            <unit:layout unit:varname="resetpos" unit:side="left"/>
+            <unit:layout unit:varname="brake" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="actualvel" unit:side="right"/>
+            <unit:layout unit:varname="actualpos" unit:side="right"/>
+            <unit:layout unit:varname="current" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Motor</unit:name>
+          <unit:icon unit:filename="icons/motor.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="setvel">
+                <unit:description>Speed set-point \[rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="resetpos">
+                <unit:description>Reset position</unit:description>
+              </unit:info>
+              <unit:info unit:varname="brake">
+                <unit:description>Brake</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="actualvel">
+                <unit:description>Actual velocity \[rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="actualpos">
+                <unit:description>Actual position</unit:description>
+              </unit:info>
+              <unit:info unit:varname="current">
+                <unit:description>Current \[A]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>-->
+	  </unit:plugins>
+
+    </unit:unittype>
+	
+	    <unit:unittype unit:id="REC GmbH Robotino Drive System">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="vx_set">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="vy_set">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="omega_set">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="vx">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="vy">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="omega">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="vx_set" unit:side="left"/>
+            <unit:layout unit:varname="vy_set" unit:side="left"/>
+            <unit:layout unit:varname="omega_set" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="vx" unit:side="right"/>
+            <unit:layout unit:varname="vy" unit:side="right"/>
+            <unit:layout unit:varname="omega" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Drive System</unit:name>
+          <unit:icon unit:filename="icons/drivesystem.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="vx_set">
+                <unit:description>vx [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vy_set">
+                <unit:description>vy [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="omega_set">
+                <unit:description>omega [deg/s]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="vx">
+                <unit:description>vx [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vy">
+                <unit:description>vy [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="omega">
+                <unit:description>omega [deg/s]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+	
+    <unit:unittype unit:id="REC GmbH Robotino Omnidrive">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="vx">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="vy">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="omega">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="rb">
+            <var:default var:val="0.187"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="rw">
+            <var:default var:val="0.062"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="gear">
+            <var:default var:val="32.0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="m1">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="m2">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="m3">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="vx" unit:side="left"/>
+            <unit:layout unit:varname="vy" unit:side="left"/>
+            <unit:layout unit:varname="omega" unit:side="left"/>
+            <unit:layout unit:varname="rb" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="rw" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="gear" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="m1" unit:side="right"/>
+            <unit:layout unit:varname="m2" unit:side="right"/>
+            <unit:layout unit:varname="m3" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Omnidrive</unit:name>
+          <unit:icon unit:filename="icons/omnidrive.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="vx">
+                <unit:description>vx [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vy">
+                <unit:description>vy [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="omega">
+                <unit:description>omega [deg/s]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="m1">
+                <unit:description>m1 [rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="m2">
+                <unit:description>m2 [rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="m3">
+                <unit:description>m3 [rpm]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Odometry">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="x_in">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="y_in">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="phi_in">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="set">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="x">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="y">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="phi">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="x_in" unit:side="left"/>
+            <unit:layout unit:varname="y_in" unit:side="left"/>
+            <unit:layout unit:varname="phi_in" unit:side="left"/>
+            <unit:layout unit:varname="set" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="x" unit:side="right"/>
+            <unit:layout unit:varname="y" unit:side="right"/>
+            <unit:layout unit:varname="phi" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Odometry</unit:name>
+          <unit:icon unit:filename="icons/odometry.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="x_in">
+                <unit:description>x [mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="y_in">
+                <unit:description>y [mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="phi_in">
+                <unit:description>phi [deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="set">
+                <unit:description>Set</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="x">
+                <unit:description>x [mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="y">
+                <unit:description>y [mm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="phi">
+                <unit:description>phi [deg]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Omnidrive Inverse">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="m1">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="m2">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="m3">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="rb">
+            <var:default var:val="0.132"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="rw">
+            <var:default var:val="0.062"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="gear">
+            <var:default var:val="32.0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="vx">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="vy">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="omega">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="m1" unit:side="left"/>
+            <unit:layout unit:varname="m2" unit:side="left"/>
+            <unit:layout unit:varname="m3" unit:side="left"/>
+            <unit:layout unit:varname="rb" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="rw" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="gear" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="vx" unit:side="right"/>
+            <unit:layout unit:varname="vy" unit:side="right"/>
+            <unit:layout unit:varname="omega" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Omnidrive (inverse)</unit:name>
+          <unit:icon unit:filename="icons/omnidrive_inverse.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="m1">
+                <unit:description>m1 [rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="m2">
+                <unit:description>m2 [rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="m3">
+                <unit:description>m3 [rpm]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="vx">
+                <unit:description>vx [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="vy">
+                <unit:description>vy [mm/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="omega">
+                <unit:description>omega [deg/s]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Gripper">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="open">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="bool" var:varname="opened">
+            <var:default var:val="false"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="closed">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="open" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="opened" unit:side="right"/>
+            <unit:layout unit:varname="closed" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Gripper</unit:name>
+          <unit:icon unit:filename="icons/gripper.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="open">
+                <unit:description>Open</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="opened">
+                <unit:description>Opened</unit:description>
+              </unit:info>
+              <unit:info unit:varname="closed">
+                <unit:description>Closed</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Power Output">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="int32" var:varname="setpoint">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="current">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="setpoint" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="current" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Power Output</unit:name>
+          <unit:icon unit:filename="icons/poweroutput.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="setpoint">
+                <unit:description>Set-point</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="current">
+                <unit:description>Current \[A]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+    <unit:unittype unit:id="REC GmbH Robotino Encoder Input">
+      <unit:typeTemplates/>
+
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="bool" var:varname="resetPosition">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="int32" var:varname="velocity">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="position">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state />
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="resetPosition" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="velocity" unit:side="right"/>
+            <unit:layout unit:varname="position" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Encoder Input</unit:name>
+          <unit:icon unit:filename="icons/encoderinput.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="resetPosition">
+                <unit:description>Reset position</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="velocity">
+                <unit:description>Actual velocity \[ticks/s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="position">
+                <unit:description>Actual position \[ticks]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+		<unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+		<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+	  </unit:plugins>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Arm Axis Reader">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="currentPosition">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="currentSpeed">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="cwLimit">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="ccwLimit">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="int32" var:varname="error">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="currentPosition" unit:side="right"/>
+            <unit:layout unit:varname="currentSpeed" unit:side="right"/>
+            <unit:layout unit:varname="cwLimit" unit:side="right"/>
+            <unit:layout unit:varname="ccwLimit" unit:side="right"/>
+            <unit:layout unit:varname="error" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Axis reader</unit:name>
+          <unit:icon unit:filename="icons/axis1.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="currentPosition">
+                <unit:description>Current position \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="currentSpeed">
+                <unit:description>Current speed \[rpm]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="cwLimit">
+                <unit:description>CW limit \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="ccwLimit">
+                <unit:description>CCW limit \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="error">
+                <unit:description>Error</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Arm Axis Writer">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="position_set_point">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="speed_set_point">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="position_set_point" unit:side="left"/>
+            <unit:layout unit:varname="speed_set_point" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Axis writer</unit:name>
+          <unit:icon unit:filename="icons/axis1.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="position_set_point">
+                <unit:description>Position set-point \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="speed_set_point">
+                <unit:description>Speed set-point \[rpm]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Arm Position Selector">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="int32" var:varname="index">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="string" var:varname="name">
+            <var:default var:val=""/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis0_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis1_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis2_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis3_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis4_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis5_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis6_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis7_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="axis8_delta">
+            <var:default var:val="3.0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="bool" var:varname="position_reached">
+            <var:default var:val="false"/>
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="limits_breached">
+            <var:default var:val="false"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="index" unit:side="left"/>
+            <unit:layout unit:varname="name" unit:side="left"/>
+            <unit:layout unit:varname="axis0_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis1_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis2_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis3_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis4_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis5_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis6_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis7_delta" unit:side="left" unit:display="hidden"/>
+            <unit:layout unit:varname="axis8_delta" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="position_reached" unit:side="right"/>
+            <unit:layout unit:varname="limits_breached" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Position selector</unit:name>
+          <unit:icon unit:filename="icons/positionselector.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="index">
+                <unit:description>Index</unit:description>
+              </unit:info>
+              <unit:info unit:varname="name">
+                <unit:description>name</unit:description>
+              </unit:info>
+              <unit:info unit:varname="moving_threshold">
+                <unit:description>Threshold</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="position_reached">
+                <unit:description>Position reached</unit:description>
+              </unit:info>
+              <unit:info unit:varname="limits_breached">
+                <unit:description>Limits breached</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Arm Axes Count">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="int32" var:varname="num_axes">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="num_axes" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Number of axes</unit:name>
+          <unit:icon unit:filename="icons/num_axes.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="num_axes">
+                <unit:description>Number of axes</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Laser Rangefinder">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="rangedata" var:varname="scan">
+            <var:default var:val=""/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="scan" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Laser rangefinder</unit:name>
+          <unit:icon unit:filename="icons/laserrangefinder.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="scan">
+                <unit:description>rangedata</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Laser Rangefinder Info">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="uint32" var:varname="seq">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="uint32" var:varname="stamp">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="string" var:varname="frame_id">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="angle_min">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="angle_max">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="angle_increment">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="time_increment">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="scan_time">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="range_min">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="range_max">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="uint32" var:varname="num_ranges">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="uint32" var:varname="num_intensities">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="seq" unit:side="right"/>
+            <unit:layout unit:varname="stamp" unit:side="right"/>
+            <unit:layout unit:varname="frame_id" unit:side="right"/>
+            <unit:layout unit:varname="angle_min" unit:side="right"/>
+            <unit:layout unit:varname="angle_max" unit:side="right"/>
+            <unit:layout unit:varname="angle_increment" unit:side="right"/>
+            <unit:layout unit:varname="time_increment" unit:side="right"/>
+            <unit:layout unit:varname="scan_time" unit:side="right"/>
+            <unit:layout unit:varname="range_min" unit:side="right"/>
+            <unit:layout unit:varname="range_max" unit:side="right"/>
+            <unit:layout unit:varname="num_ranges" unit:side="right"/>
+            <unit:layout unit:varname="num_intensities" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Laser rangefinder info</unit:name>
+          <unit:icon unit:filename="icons/laserrangefinder_info.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="seq">
+                <unit:description>Sequence number</unit:description>
+              </unit:info>
+              <unit:info unit:varname="stamp">
+                <unit:description>Time stamp</unit:description>
+              </unit:info>
+              <unit:info unit:varname="frame_id">
+                <unit:description>Frame ID</unit:description>
+              </unit:info>
+              <unit:info unit:varname="angle_min">
+                <unit:description>Minimum angle \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="angle_max">
+                <unit:description>Maximum angle \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="angle_increment">
+                <unit:description>Angle increment \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="time_increment">
+                <unit:description>Time increment \[s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="scan_time">
+                <unit:description>Scan time \[s]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="range_min">
+                <unit:description>Minimum range \[m]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="range_max">
+                <unit:description>Maximum range \[m]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="num_ranges">
+                <unit:description>Number of range measurements</unit:description>
+              </unit:info>
+              <unit:info unit:varname="num_intensities">
+                <unit:description>Number of intensity measurements</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Laser Rangefinder Analysis">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="rangedata" var:varname="rangedata">
+            <var:default var:val=""/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="angle">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="opening_angle">
+            <var:default var:val="20"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="distance">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="rangedata" unit:side="left"/>
+            <unit:layout unit:varname="angle" unit:side="left"/>
+            <unit:layout unit:varname="opening_angle" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="distance" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Laser rangefinder analysis</unit:name>
+          <unit:icon unit:filename="icons/laserrangefinder_analysis.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="rangedata">
+                <unit:description>Data</unit:description>
+              </unit:info>
+              <unit:info unit:varname="angle">
+                <unit:description>Angle \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="opening_angle">
+                <unit:description>Opening angle \[deg]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="distance">
+                <unit:description>Distance \[m]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+
+	<unit:unittype unit:id="REC GmbH Robotino Gyroscope">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="angle">
+            <var:default var:val="0"/>
+          </unit:connector>
+		  <unit:connector var:type="float" var:varname="rate">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="angle" unit:side="right"/>
+			<unit:layout unit:varname="rate" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Gyroscope</unit:name>
+          <unit:icon unit:filename="icons/gyroscope.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="angle">
+                <unit:description>Angle \[deg]</unit:description>
+              </unit:info>
+			  <unit:info unit:varname="rate">
+                <unit:description>Rate \[deg/s]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Gyroscope Ext">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="angle">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="rate">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="angle" unit:side="right"/>
+            <unit:layout unit:varname="rate" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Gyroscope Ext</unit:name>
+          <unit:icon unit:filename="icons/gyroscope_ext.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="angle">
+                <unit:description>Angle \[deg]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="rate">
+                <unit:description>Rate \[deg/s]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>
+      </unit:plugins>
+    </unit:unittype>
+	
+    <unit:unittype unit:id="REC GmbH Robotino Ruessel Bellows Writer">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="value" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Bellows writer</unit:name>
+          <unit:icon unit:filename="icons/ruessel1.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="value">
+                <unit:description>Pressure \[bar]</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+    
+    <unit:unittype unit:id="REC GmbH Robotino Ruessel Bellows Reader">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="value">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state>
+        <unit:statevar var:type="uint8" var:varname="address">
+          <var:default var:val="0"/>
+          <var:visibility>hidden</var:visibility>
+        </unit:statevar>
+      </unit:state>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Bellows reader</unit:name>
+          <unit:icon unit:filename="icons/ruessel1.png"/>
+          <unit:connectors>
+            <unit:in>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Pressure \[bar]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Robotino Ruessel Segment XY">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="x">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="y">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="b0">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="b1">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:type="float" var:varname="b2">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="x" unit:side="left"/>
+            <unit:layout unit:varname="y" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="b0" unit:side="right"/>
+            <unit:layout unit:varname="b1" unit:side="right"/>
+            <unit:layout unit:varname="b2" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Segment XY</unit:name>
+          <unit:icon unit:filename="icons/ruessel_xy.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="x">
+                <unit:description>x</unit:description>
+              </unit:info>
+              <unit:info unit:varname="y">
+                <unit:description>y</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="b0">
+                <unit:description>Bellows[ #1] \[bar]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="b1">
+                <unit:description>Bellows[ #2] \[bar]</unit:description>
+              </unit:info>
+              <unit:info unit:varname="b2">
+                <unit:description>Bellows[ #3] \[bar]</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+        <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+      </unit:plugins>
+    </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel Gripper Opener">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in>
+				  <unit:connector var:type="bool" var:varname="open">
+					  <var:default var:val="true"/>
+				  </unit:connector>
+				  <unit:connector var:type="bool" var:varname="close">
+					  <var:default var:val="true"/>
+				  </unit:connector>
+			  </unit:in>
+			  <unit:out>
+				  <unit:connector var:type="bool" var:varname="rel1">
+					  <var:default var:val="false"/>
+				  </unit:connector>
+				  <unit:connector var:type="bool" var:varname="rel2">
+					  <var:default var:val="false"/>
+				  </unit:connector>
+			  </unit:out>
+		  </unit:connectors>
+
+		  <unit:state>
+		  </unit:state>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in>
+					  <unit:layout unit:varname="open" unit:side="left"/>
+					  <unit:layout unit:varname="close" unit:side="left"/>
+				  </unit:in>
+				  <unit:out>
+					  <unit:layout unit:varname="rel1" unit:side="right"/>
+					  <unit:layout unit:varname="rel2" unit:side="right"/>
+				  </unit:out>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name>Gripper open / close</unit:name>
+				  <unit:icon unit:filename="icons/ruessel_gripper_close.png"/>
+				  <unit:connectors>
+					  <unit:in>
+						  <unit:info unit:varname="open">
+							  <unit:description>Open</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="close">
+							  <unit:description>Close</unit:description>
+						  </unit:info>
+					  </unit:in>
+					  <unit:out>
+						  <unit:info unit:varname="rel1">
+							  <unit:description>Gripper valve[ #1]</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="rel2">
+							  <unit:description>Gripper valve[ #2]</unit:description>
+						  </unit:info>
+					  </unit:out>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+		  </unit:plugins>
+	  </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel Gripper Rotate">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in>
+				  <unit:connector var:type="float" var:varname="rotate">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:in>
+			  <unit:out>
+				  <unit:connector var:type="float" var:varname="b7">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="b8">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:out>
+		  </unit:connectors>
+
+		  <unit:state>
+		  </unit:state>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in>
+					  <unit:layout unit:varname="rotate" unit:side="left"/>
+				  </unit:in>
+				  <unit:out>
+					  <unit:layout unit:varname="b7" unit:side="right"/>
+					  <unit:layout unit:varname="b8" unit:side="right"/>
+				  </unit:out>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name>Gripper rotate</unit:name>
+				  <unit:icon unit:filename="icons/ruessel_gripper_rotate.png"/>
+				  <unit:connectors>
+					  <unit:in>
+						  <unit:info unit:varname="rotate">
+							  <unit:description>Rotate</unit:description>
+						  </unit:info>
+					  </unit:in>
+					  <unit:out>
+						  <unit:info unit:varname="b7">
+							  <unit:description>Bellows[ #7]</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="b8">
+							  <unit:description>Bellows[ #8]</unit:description>
+						  </unit:info>
+					  </unit:out>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_arm_gui"/>-->
+		  </unit:plugins>
+	  </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel String Potis">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in/>
+			  <unit:out>
+				  <unit:connector var:type="float" var:varname="poti1">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="poti2">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="poti3">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="poti4">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="poti5">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+				  <unit:connector var:type="float" var:varname="poti6">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:out>
+		  </unit:connectors>
+
+		  <unit:state/>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in/>
+				  <unit:out>
+					  <unit:layout unit:varname="poti1" unit:side="right"/>
+					  <unit:layout unit:varname="poti2" unit:side="right"/>
+					  <unit:layout unit:varname="poti3" unit:side="right"/>
+					  <unit:layout unit:varname="poti4" unit:side="right"/>
+					  <unit:layout unit:varname="poti5" unit:side="right"/>
+					  <unit:layout unit:varname="poti6" unit:side="right"/>
+				  </unit:out>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name>String potentiometers</unit:name>
+				  <unit:icon unit:filename="icons/stringpotis.png"/>
+				  <unit:connectors>
+					  <unit:in/>
+					  <unit:out>
+						  <unit:info unit:varname="poti1">
+							  <unit:description>Pot[ #1] value</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="poti2">
+							  <unit:description>Pot[ #2] value</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="poti3">
+							  <unit:description>Pot[ #3] value</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="poti4">
+							  <unit:description>Pot[ #4] value</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="poti5">
+							  <unit:description>Pot[ #5] value</unit:description>
+						  </unit:info>
+						  <unit:info unit:varname="poti6">
+							  <unit:description>Pot[ #6] value</unit:description>
+						  </unit:info>
+					  </unit:out>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>-->
+		  </unit:plugins>
+
+	  </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel AIN">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in/>
+			  <unit:out>
+				  <unit:connector var:type="float" var:varname="value">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:out>
+		  </unit:connectors>
+
+		  <unit:state>
+			  <unit:statevar var:type="string" var:varname="devinputname">
+				  <var:default var:val=""/>
+				  <var:visibility>hidden</var:visibility>
+			  </unit:statevar>
+		  </unit:state>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in/>
+				  <unit:out>
+					  <unit:layout unit:varname="value" unit:side="right"/>
+				  </unit:out>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name></unit:name>
+				  <unit:icon unit:filename=""/>
+				  <unit:connectors>
+					  <unit:in/>
+					  <unit:out>
+						  <unit:info unit:varname="value">
+							  <unit:description>Value</unit:description>
+						  </unit:info>
+					  </unit:out>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>-->
+		  </unit:plugins>
+
+	  </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel DIN">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in/>
+			  <unit:out>
+				  <unit:connector var:type="bool" var:varname="value">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:out>
+		  </unit:connectors>
+
+		  <unit:state>
+			  <unit:statevar var:type="string" var:varname="devinputname">
+				  <var:default var:val=""/>
+				  <var:visibility>hidden</var:visibility>
+			  </unit:statevar>
+		  </unit:state>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in/>
+				  <unit:out>
+					  <unit:layout unit:varname="value" unit:side="right"/>
+				  </unit:out>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name>DIN</unit:name>
+				  <unit:icon unit:filename=""/>
+				  <unit:connectors>
+					  <unit:in/>
+					  <unit:out>
+						  <unit:info unit:varname="value">
+							  <unit:description>Value</unit:description>
+						  </unit:info>
+					  </unit:out>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>-->
+		  </unit:plugins>
+
+	  </unit:unittype>
+
+	  <unit:unittype unit:id="REC GmbH Robotino Ruessel DOUT">
+		  <unit:typeTemplates/>
+		  <unit:connectors>
+			  <unit:in>
+				  <unit:connector var:type="bool" var:varname="value">
+					  <var:default var:val="0"/>
+				  </unit:connector>
+			  </unit:in>
+			  <unit:out/>
+		  </unit:connectors>
+
+		  <unit:state>
+			  <unit:statevar var:type="string" var:varname="devoutputname">
+				  <var:default var:val=""/>
+				  <var:visibility>hidden</var:visibility>
+			  </unit:statevar>
+		  </unit:state>
+
+		  <unit:guiinfo>
+			  <unit:connectors>
+				  <unit:in>
+					  <unit:layout unit:varname="value" unit:side="left"/>
+				  </unit:in>
+				  <unit:out/>
+			  </unit:connectors>
+
+			  <unit:state/>
+
+			  <unit:description>
+				  <unit:name>DOUT</unit:name>
+				  <unit:icon unit:filename=""/>
+				  <unit:connectors>
+					  <unit:in>
+						  <unit:info unit:varname="value">
+							  <unit:description>Value</unit:description>
+						  </unit:info>
+					  </unit:in>
+					  <unit:out/>
+				  </unit:connectors>
+				  <unit:state/>
+			  </unit:description>
+		  </unit:guiinfo>
+
+		  <unit:plugins>
+			  <unit:plugin plugin:type="simulation" plugin:library="unit_robotino_simulation"/>
+			  <!--<unit:plugin plugin:type="dialog" plugin:library="unit_robotino_gui"/>-->
+		  </unit:plugins>
+
+	  </unit:unittype>
+
+  </unit:unittypes>
+
+</unit:unit>

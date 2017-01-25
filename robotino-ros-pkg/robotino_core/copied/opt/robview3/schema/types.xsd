@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:types="http://easykit.informatik.tu-muenchen.de/schema/types"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/types"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:element name="types">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="primitive">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="type" type="types:typeType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="groups">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="group" type="types:groupType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="convs">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="conv" type="types:convType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="typeType">
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+		<xs:attribute name="width" type="xs:integer" use="required"/>
+		<xs:attribute name="signed" type="xs:boolean" use="required"/>
+		<xs:attribute name="defaultval" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="groupType">
+		<!-- The order of the elements below may be arbitrarily chosen,    -->
+		<!-- but the order of specification has effect on group membership -->
+		<!-- when contrary operations (include/exclude) are used.          -->
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:choice>
+				<xs:element name="include">
+					<xs:complexType>
+						<xs:attribute name="type" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="includeGroup">
+					<xs:complexType>
+						<xs:attribute name="group" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="includeAll">
+					<xs:complexType/>
+				</xs:element>
+				<xs:element name="exclude">
+					<xs:complexType>
+						<xs:attribute name="type" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="excludeGroup">
+					<xs:complexType>
+						<xs:attribute name="group" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="default" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="convType">
+		<xs:attribute name="from" type="xs:string" use="required"/>
+		<xs:attribute name="to" type="xs:string" use="required"/>
+	</xs:complexType>
+
+</xs:schema>

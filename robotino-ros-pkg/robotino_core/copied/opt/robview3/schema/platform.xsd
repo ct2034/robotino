@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:pt="http://easykit.informatik.tu-muenchen.de/schema/platform"
+	xmlns:path="http://easykit.informatik.tu-muenchen.de/schema/path"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/platform"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/path"
+		schemaLocation="path.xsd"/>
+
+	<xs:element name="platform" type="pt:platformType"/>
+
+	<xs:complexType name="platformType">
+
+		<xs:sequence>
+
+			<!-- Files section -->
+			<xs:element name="files">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="toolchains">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="tc" type="pt:toolchainType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="templates">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="tmpl" type="path:pathDestType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="libraries">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="lib" type="path:pathType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="sources">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="src" type="path:pathType"/>
+									</xs:sequence>
+							</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="headers">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="hdr" type="path:pathType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Paths section -->
+			<xs:element name="paths">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ldpaths">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="ldpath" type="path:pathType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="inclpaths">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="inclpath" type="path:pathType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Clock frequencies section -->
+			<xs:element name="clockFrequencies" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="clockFrequency" type="pt:clockFrequencyType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<!-- Defines section -->
+			<xs:element name="defines">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="define" type="pt:defineType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+		</xs:sequence>
+
+		<xs:attribute name="arch" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="toolchainType">
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="clockFrequencyType">
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="string" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="defineType">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="value" type="xs:string" use="optional" default=""/>
+	</xs:complexType>
+
+</xs:schema>

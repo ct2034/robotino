@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:env="http://easykit.informatik.tu-muenchen.de/schema/config"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/config"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Definition of config type -->
+	<xs:complexType name="configType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="variable">
+				<xs:complexType>
+					<xs:attribute type="xs:string" name="name" use="required"/>
+					<xs:attribute type="xs:string" name="default" use="required"/>
+					<xs:attribute type="xs:string" name="doc" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:dbg="http://easykit.informatik.tu-muenchen.de/schema/debugger"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/debugger"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+		schemaLocation="plugin.xsd"/>
+
+	<xs:element name="debuggers">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="debugger" type="dbg:debuggerType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="debuggerType">
+		<xs:complexContent>	
+			<xs:extension base="plugin:configurablePluginType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

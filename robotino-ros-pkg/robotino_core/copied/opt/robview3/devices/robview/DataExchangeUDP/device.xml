@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	dev:id="REC GmbH Data Exchange UDP" dev:toplevel="true">
+
+	<dev:translations>
+	</dev:translations>
+
+	<dev:inputs>
+	<dev:input var:type="int32" var:varname="in_0_0">
+	  <var:default var:val="0"/>
+	</dev:input>
+    <dev:input var:type="int32" var:varname="in_0_1">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_2">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_3">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_4">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_5">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_6">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_0_7">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_0">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_1">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_2">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_3">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_4">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_5">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_6">
+      <var:default var:val="0"/>
+    </dev:input>
+    <dev:input var:type="int32" var:varname="in_1_7">
+      <var:default var:val="0"/>
+    </dev:input>
+	</dev:inputs>
+
+	<dev:outputs>
+    <dev:output var:type="int32" var:varname="out_0_0">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_1">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_2">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_3">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_4">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_5">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_6">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_0_7">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_0">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_1">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_2">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_3">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_4">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_5">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_6">
+      <var:default var:val="0"/>
+    </dev:output>
+    <dev:output var:type="int32" var:varname="out_1_7">
+      <var:default var:val="0"/>
+    </dev:output>
+	</dev:outputs>
+
+	<dev:state>
+	</dev:state>
+	
+	<dev:config>
+    <dev:configvar var:type="stringlist" var:varname="listeners">
+      <var:default var:val=""/>
+    </dev:configvar>
+    <dev:configvar var:type="uint16" var:varname="local_port">
+      <var:default var:val="9180"/>
+    </dev:configvar>
+    <dev:configvar var:type="int32" var:varname="sendingInterval">
+      <var:default var:val="100"/>
+    </dev:configvar>
+    <dev:configvar var:type="bool" var:varname="message0SendingEnabled">
+      <var:default var:val="true"/>
+    </dev:configvar>
+    <dev:configvar var:type="bool" var:varname="message1SendingEnabled">
+      <var:default var:val="false"/>
+    </dev:configvar>
+	</dev:config>
+
+  <dev:subdevices>
+    <dev:device dev:id="Message[ 0]" dev:toplevel="false">
+      <dev:subdevices>
+        <dev:device dev:id="Input" dev:toplevel="false">
+          <dev:provides>
+            <dev:resource dev:class="INT0" dev:name="INT0 I0"/>
+            <dev:resource dev:class="INT1" dev:name="INT1 I0"/>
+            <dev:resource dev:class="INT2" dev:name="INT2 I0"/>
+            <dev:resource dev:class="INT3" dev:name="INT3 I0"/>
+            <dev:resource dev:class="INT4" dev:name="INT4 I0"/>
+            <dev:resource dev:class="INT5" dev:name="INT5 I0"/>
+            <dev:resource dev:class="INT6" dev:name="INT6 I0"/>
+            <dev:resource dev:class="INT7" dev:name="INT7 I0"/>
+          </dev:provides>
+          <dev:units>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[0]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="0" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT0 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int00.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[1]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="1" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT1 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int01.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[2]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="2" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT2 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int02.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[3]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="3" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT3 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int03.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[4]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="4" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT4 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int04.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[5]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="5" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT5 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int05.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[6]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="6" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT6 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int06.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 0] INT[7]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="7" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT7 I0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int07.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+          </dev:units>
+        </dev:device>
+        <dev:device dev:id="Output" dev:toplevel="false">
+          <dev:provides>
+            <dev:resource dev:class="INT0" dev:name="INT0 O0"/>
+            <dev:resource dev:class="INT1" dev:name="INT1 O0"/>
+            <dev:resource dev:class="INT2" dev:name="INT2 O0"/>
+            <dev:resource dev:class="INT3" dev:name="INT3 O0"/>
+            <dev:resource dev:class="INT4" dev:name="INT4 O0"/>
+            <dev:resource dev:class="INT5" dev:name="INT5 O0"/>
+            <dev:resource dev:class="INT6" dev:name="INT6 O0"/>
+            <dev:resource dev:class="INT7" dev:name="INT7 O0"/>
+          </dev:provides>
+          <dev:units>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[0]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="0" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT0 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int00.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[1]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="1" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT1 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int01.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[2]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="2" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT2 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int02.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[3]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="3" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT3 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int03.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[4]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="4" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT4 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int04.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[5]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="5" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT5 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int05.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[6]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="6" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT6 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int06.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 0] INT[7]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="0" md:varname="frame"/>
+                <md:varExpr md:value="7" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT7 O0"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int07.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+          </dev:units>
+        </dev:device>
+      </dev:subdevices>
+    </dev:device>
+    <dev:device dev:id="Message[ 1]" dev:toplevel="false">
+      <dev:subdevices>
+        <dev:device dev:id="Input" dev:toplevel="false">
+          <dev:provides>
+            <dev:resource dev:class="INT0" dev:name="INT0 I1"/>
+            <dev:resource dev:class="INT1" dev:name="INT1 I1"/>
+            <dev:resource dev:class="INT2" dev:name="INT2 I1"/>
+            <dev:resource dev:class="INT3" dev:name="INT3 I1"/>
+            <dev:resource dev:class="INT4" dev:name="INT4 I1"/>
+            <dev:resource dev:class="INT5" dev:name="INT5 I1"/>
+            <dev:resource dev:class="INT6" dev:name="INT6 I1"/>
+            <dev:resource dev:class="INT7" dev:name="INT7 I1"/>
+          </dev:provides>
+          <dev:units>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[0]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="0" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT0 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int10.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[1]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="1" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT1 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int11.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[2]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="2" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT2 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int12.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[3]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="3" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT3 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int13.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[4]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="4" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT4 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int14.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[5]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="5" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT5 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int15.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[6]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="6" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT6 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int16.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Reader" dev:name="Input[ 1] INT[7]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="7" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT7 I1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int17.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+          </dev:units>
+        </dev:device>
+        <dev:device dev:id="Output" dev:toplevel="false">
+          <dev:provides>
+            <dev:resource dev:class="INT0" dev:name="INT0 O1"/>
+            <dev:resource dev:class="INT1" dev:name="INT1 O1"/>
+            <dev:resource dev:class="INT2" dev:name="INT2 O1"/>
+            <dev:resource dev:class="INT3" dev:name="INT3 O1"/>
+            <dev:resource dev:class="INT4" dev:name="INT4 O1"/>
+            <dev:resource dev:class="INT5" dev:name="INT5 O1"/>
+            <dev:resource dev:class="INT6" dev:name="INT6 O1"/>
+            <dev:resource dev:class="INT7" dev:name="INT7 O1"/>
+          </dev:provides>
+          <dev:units>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[0]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="0" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT0 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int10.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[1]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="1" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT1 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int11.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[2]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="2" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT2 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int12.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[3]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="3" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT3 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int13.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[4]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="4" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT4 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int14.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[5]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="5" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT5 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int15.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[6]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="6" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT6 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int16.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+            <dev:unit dev:type="REC GmbH Data Exchange UDP INT Writer" dev:name="Output[ 1] INT[7]">
+              <dev:stateVarExprs>
+                <md:varExpr md:value="1" md:varname="frame"/>
+                <md:varExpr md:value="7" md:varname="port"/>
+              </dev:stateVarExprs>
+              <dev:unitRequirements>
+                <dev:resource dev:name="INT7 O1"/>
+              </dev:unitRequirements>
+              <dev:guiinfo>
+                <dev:description>
+                  <dev:icon dev:filename="icons/int17.png"/>
+                </dev:description>
+              </dev:guiinfo>
+            </dev:unit>
+          </dev:units>
+        </dev:device>
+      </dev:subdevices>
+    </dev:device>
+	</dev:subdevices>
+
+	<!-- Plugin filename -->
+	<dev:plugins>
+		<dev:plugin plugin:type="simulation" plugin:library="device_dataexchange_udp_simulation"/>
+		<dev:plugin plugin:type="dialog" plugin:library="device_dataexchange_udp_gui"/>
+	</dev:plugins>
+
+	<dev:guiinfo>
+		<dev:description>
+			<dev:name>Data Exchange UDP</dev:name>
+			<dev:detailed>REC GmbH Data Exchange UDP</dev:detailed>
+			<dev:icon dev:filename="icons/icon.png"/>
+		</dev:description>
+	</dev:guiinfo>
+
+</dev:device>

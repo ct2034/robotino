@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Funktionsblockbibliothek &gt; Bildverarbeitung &gt; Farbbereichssuche &gt; Dialog</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Dialog">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style type="text/css" media="screen"> 
+html, body { margin:0; 
+   padding:0; 
+   overflow: hidden; 
+   background: #FFFFFF; 
+  }
+ 
+div#printheader { 
+   display: none;
+   padding-bottom: 10px;
+   }
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   .sync-toc { color: #ffffff; font-size: 8pt; font-weight: bold; display: none; }
+   .sync-toc a { color: #ffffff; text-decoration: none; font-weight: bold;}
+   .sync-toc a:visited { color: #ffffff; }
+   .sync-toc a:hover { text-decoration: underline; }
+   </style>
+<!--[if lt IE 7]>
+<style type="text/css">
+  #idcontent {padding: 0px;} 
+  #innerdiv {padding: 10px 5px 5px 10px ;} 
+</style> 
+<![endif]-->
+<noscript>
+<style type="text/css">
+html, body { overflow: auto; }
+</style> 
+</noscript>
+<style type="text/css" media="print">
+span.f_Heading1 { color: black; }
+#idheader, #printheader img { display:none; }
+#printheader { display: block; margin-top: 20px; }
+#idcontent { margin-top: 10px; }
+</style>   
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "imageprocessing_colorrangefinder_dialog.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!--ZOOMSTOP-->
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+</div> 
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?imageprocessing_colorrangefinder_dialog.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   <a href="function_block_library.htm">Funktionsblockbibliothek</a> &gt; <a href="imageprocessing.htm">Bildverarbeitung</a> &gt; <a href="imageprocessing_colorrangefinder.htm">Farbbereichssuche</a>&nbsp;&gt;</p>
+   <h1 class="p_Heading1"><span class="f_Heading1">Dialog</span></h1>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="imageprocessing_colorrangefinder.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="imageprocessing_colorrangefinder.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="imageprocessing_colorrangefinder_example.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p><img src="colorrangefinder_dialog.png" width="538" height="533" alt="colorrangefinder_dialog" style="width:538px;height:533px;border:none" /></p>
+<p>Wenn &quot;Ergebnis anzeigen&quot; nicht angekreuzt ist, wird das Eingangsbild angezeigt (1). In dem Eingangsbild kann man einen Bereich mit der Maus durch klicken und ziehen auswählen. Nach der Auswahl eines Bereichs wird der maximale und minimale Wert &nbsp;aller Pixel im ausgewählten Bereich pro Bildkanal ermittelt. Dabei wird auf einem in den <a href="hsv_colorspace.htm" class="topiclink">HSV-Farbraum</a> konvertierten Bild gearbeitet. Die minimalen und maximalen Werte werden unter (2) angezeigt. (3) ist eine visuelle Darstellung des ausgewählten Farbbereichs.Für den minimalen, den mittleren und den maxiamlen Hellwert (Value) wird jeweils ein Bild gezeigt, das die Farben in dem gewählten Bereich für Farbton (Hue) und Sättigung (Sat) zeigt.</p>
+<p>Durch Veränderung der Werte unter (2) ändert sich der Farbbereich und damit auch die Darstellung in (3).</p>
+<p><img src="copy16.png" width="16" height="16" alt="copy16" style="width:16px;height:16px;border:none" /> Kopiert die aktuellen Werte in die Zwischenablage. Von dort können die Werte in eine gloable Variable vom Typ &quot;floatvector&quot; eingefügt werden.</p>
+<p><img src="paste16.png" width="16" height="16" alt="paste16" style="width:16px;height:16px;border:none" /> Überschreibt die aktuellen Werte mit Werten aus der Zwischenablage.</p>
+<p>Wählt man &quot;Ergebnis anzeigen&quot;, wird in (1) das erzeugte Schwarz-Weiß-Bild gezeigt.</p>
+<p><img src="colorrangefinder_dialog2.png" width="508" height="549" alt="colorrangefinder_dialog2" style="width:508px;height:549px;border:none" /></p>
+<p>Je geschlossener und größer die weißen Bereiche sind, desto besser passt der gewählte Farbbereich zu den Farben im Live-Bild. Um die Erkennung der Farben robust gegen Helligkeitsunterschiede zu machen, erweitert man den Bereich des Hellwerts (Val). Bei glänzenden Oberflächen kann es zu einer Variation der Farbsättigung (Saturation) kommen, so dass man diesen Bereich erweitert, um die Farben bei unterschiedlichen Bedingungen zu erkennen. Eine komplette Änderung der Farbe kommt normalerweise nicht vor, so dass der Farbtonbereich (Hue) nur selten angepasst werden muss.</p>
+<hr style="height:1px; color:#000000; border-width:0px; background-color:#000000;" /><p>Im HSV-Farbraum wird der Farbton (Hue) als Farbwinkel zwischen 0° und 360° dargestellt. Ein der Farbton 361 ist gleich dem Farbton 1. Problematisch ist es, wenn ein Bildbereich ausgewählt wird, dessen Farbtöne sich über die 0° Grenze erstrecken.</p>
+<p><img src="colorrangefinder_dialog_wrap.png" width="540" height="476" alt="colorrangefinder_dialog_wrap" style="width:540px;height:476px;border:none" /></p>
+<p>Die oben dargestellte Abbildung zeigt einen Bildbereich, dessen Farbton von violett bis gelb variiert. Violett hat einen Farbton von 300 und gelb einen Farbton von 60. Würde man einfach den minimalen und maximalen Farbton betrachten, so ergäbe sich der Bereich der Farbtöne, nach denen im Bild gesucht wird zu [60;300]. In diesem Bereich liegen die Farben grün und blau.</p>
+<p>Die Lösung für dieses Problem besteht darin, den Abstand der Farbtongrenzen zu betrachten. In diesem Beispiel ist der Abstand 300-60=240. Sobald der Abstand größer 180 ist, wird angenommen, dass sich der Farbbereich für die Suche über die 0° Grenze erstreckt. Dies wird dadurch angezeigt, dass der Min und Max Wert vertauscht werden und damit Max&lt;Min ist. Wenn das der Fall ist, erstreckt sich der Farbtonbereich von Min-359 und von 0-Max.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

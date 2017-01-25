@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:desc="http://easykit.informatik.tu-muenchen.de/schema/description"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+		schemaLocation="keyvalue.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+		schemaLocation="plugin.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/translation"
+		schemaLocation="translation.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/template"
+		schemaLocation="template.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/variable"
+		schemaLocation="variable.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/description"
+		schemaLocation="description.xsd"/>
+
+	<xs:element name="unit">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="1">
+
+				<!-- The translations element specifies translations for key phrases specified
+				     below this device specification. See the translation.xsd schema file for how
+				     the element and its children are to be specified. -->
+				<xs:element name="translations" type="tr:translationType" minOccurs="0" maxOccurs="1"/>
+
+				<xs:element name="unittypes" type="unit:unittypesType" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="unittypesType">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="unittype" type="unit:unittypeType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="unittypeType">
+		<xs:sequence>
+			<xs:element name="typeTemplates">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="typeTemplate" type="var:typeTemplateType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="connectors">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="in">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="connector" type="unit:connectorType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="out">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="connector" type="unit:connectorType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="state">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="statevar" type="unit:stateVarType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="guiinfo" type="unit:guiinfoType"/>
+
+			<xs:element name="plugins" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence minOccurs="1" maxOccurs="unbounded">
+						<xs:element name="plugin" type="plugin:pluginType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="codegen" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="global" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="local" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="start" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="step" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="stop" type="tmpl:toolChainListType" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="connectorType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="stateVarType">
+		<xs:complexContent>
+			<xs:extension base="var:variableType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="connectorSideType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="top"/>
+			<xs:enumeration value="bottom"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="dirType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="in"/>
+			<xs:enumeration value="out"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="descriptionType">
+		<xs:sequence>
+			<xs:sequence maxOccurs="1" minOccurs="1">
+				<xs:element name="name" type="unit:briefDescription"/>
+			</xs:sequence>
+			<xs:sequence maxOccurs="1" minOccurs="0">
+				<xs:element name="detailed" type="xs:string"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="icon" type="unit:filespec"/>
+					<xs:element name="iconSpec" type="desc:iconType"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:sequence maxOccurs="1" minOccurs="0">
+				<xs:choice>
+					<xs:element name="schematicIcon" type="unit:filespec"/>
+					<xs:element name="schematicIconSpec" type="desc:iconType"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="connectors">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="in" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element maxOccurs="unbounded" name="info" type="unit:connectorDescriptionType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="out" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element maxOccurs="unbounded" name="info" type="unit:connectorDescriptionType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="state">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="info" type="unit:stateVariableDescriptionType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="briefDescription">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="filespec">
+		<xs:attribute type="xs:string" name="filename" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="guiinfoType">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="1" name="connectors">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" maxOccurs="1" name="in">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element maxOccurs="unbounded" name="layout" type="unit:connectorGuiInfoType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element minOccurs="1" maxOccurs="1" name="out">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element maxOccurs="unbounded" name="layout" type="unit:connectorGuiInfoType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="state">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="layout" type="unit:stateVariableGuiInfoType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="description" type="unit:descriptionType"/>
+
+			<!-- Optional list of annotations that can be used to categorize this item.
+			     Reserved annotations:
+			      * skill (int)         Denotes the level of difficulty of this item.
+			      * keywords (keyValue) Child element containing keywords that can be used
+			                            to define search terms for items.
+			-->
+			<xs:element minOccurs="0" maxOccurs="1" name="annotations" type="kv:keyValueRootType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="variableGuiInfoType">
+		<xs:attribute name="varname" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="connectorGuiInfoType">
+		<xs:complexContent>
+			<xs:extension base="unit:variableGuiInfoType">
+				<xs:attribute name="side" type="unit:connectorSideType" use="required"/>
+				<xs:attribute name="display" type="unit:variableDisplayType" default="visible" use="optional"/>
+				<xs:attribute name="valueDisplay" type="unit:variableDisplayType" default="visible" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="stateVariableGuiInfoType">
+		<xs:complexContent>
+			<xs:extension base="unit:variableGuiInfoType">
+				<xs:attribute name="display" type="unit:variableDisplayType" default="visible" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="variableDisplayType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="visible"/>
+			<xs:enumeration value="hidden"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="variableDescriptionType">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="varname" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="connectorDescriptionType">
+		<xs:complexContent>
+			<xs:extension base="unit:variableDescriptionType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="stateVariableDescriptionType">
+		<xs:complexContent>
+			<xs:extension base="unit:variableDescriptionType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="pluginType">
+		<xs:attribute type="xs:string" name="easygenfilename" use="optional"/>
+		<xs:attribute type="xs:string" name="easylabfilename" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="implType" mixed="true"/>
+
+</xs:schema>
+

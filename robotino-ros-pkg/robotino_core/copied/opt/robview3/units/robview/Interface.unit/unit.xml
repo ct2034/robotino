@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+  <unit:translations>
+    <tr:item tr:key="Global Variable Reader">
+      <tr:translation tr:lang="de">Leser für globale Variable</tr:translation>
+      <tr:translation tr:lang="fr"></tr:translation>
+      <tr:translation tr:lang="es"></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Global Variable Writer">
+      <tr:translation tr:lang="de">Schreiber für globale Variable</tr:translation>
+      <tr:translation tr:lang="fr"></tr:translation>
+      <tr:translation tr:lang="es"></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Value">
+      <tr:translation tr:lang="de">Wert</tr:translation>
+      <tr:translation tr:lang="fr"></tr:translation>
+      <tr:translation tr:lang="es"></tr:translation>
+    </tr:item>
+    <tr:item tr:key="Enable">
+      <tr:translation tr:lang="de">Aktiv</tr:translation>
+      <tr:translation tr:lang="fr"></tr:translation>
+      <tr:translation tr:lang="es"></tr:translation>
+    </tr:item>
+  </unit:translations>
+
+  <unit:unittypes>
+    <unit:unittype unit:id="REC GmbH Global Variable Reader Float">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="float" var:varname="value">
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Reader</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Writer Float">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="float" var:varname="new_value">
+            <var:default var:val="0" />
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="write_enable">
+            <var:default var:val="true" />
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="new_value" unit:side="left"/>
+            <unit:layout unit:varname="write_enable" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Writer</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="new_value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+              <unit:info unit:varname="write_enable">
+                <unit:description>Enable</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Reader Pose">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="pose" var:varname="value">
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Reader Pose</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Writer Pose">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="pose" var:varname="new_value">
+            <var:default var:val="((0 0) 0)" />
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="write_enable">
+            <var:default var:val="true" />
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="new_value" unit:side="left"/>
+            <unit:layout unit:varname="write_enable" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Writer Pose</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="new_value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+              <unit:info unit:varname="write_enable">
+                <unit:description>Enable</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Reader String">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="string" var:varname="value">
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Reader String</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Writer String">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="string" var:varname="new_value">
+            <var:default var:val="empty" />
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="write_enable">
+            <var:default var:val="true" />
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="new_value" unit:side="left"/>
+            <unit:layout unit:varname="write_enable" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Writer String</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="new_value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+              <unit:info unit:varname="write_enable">
+                <unit:description>Enable</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+    </unit:unittype>
+
+
+    <unit:unittype unit:id="REC GmbH Global Variable Reader FloatVector">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in/>
+        <unit:out>
+          <unit:connector var:type="floatvector" var:varname="value">
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in/>
+          <unit:out>
+            <unit:layout unit:varname="value" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Reader</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in/>
+            <unit:out>
+              <unit:info unit:varname="value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+    <unit:unittype unit:id="REC GmbH Global Variable Writer FloatVector">
+      <unit:typeTemplates>
+      </unit:typeTemplates>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:type="floatvector" var:varname="new_value">
+            <var:default var:val="0" />
+            <!-- Use the default values from types.xml -->
+          </unit:connector>
+          <unit:connector var:type="bool" var:varname="write_enable">
+            <var:default var:val="true" />
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+      <unit:state/>
+
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="new_value" unit:side="left"/>
+            <unit:layout unit:varname="write_enable" unit:side="left" unit:display="hidden"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+        <unit:state/>
+
+        <unit:description>
+          <unit:name>Global Variable Writer</unit:name>
+          <unit:icon unit:filename="globalvariable.png"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="new_value">
+                <unit:description>Value</unit:description>
+              </unit:info>
+              <unit:info unit:varname="write_enable">
+                <unit:description>Enable</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+
+    </unit:unittype>
+
+  </unit:unittypes>
+</unit:unit>

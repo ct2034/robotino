@@ -1,0 +1,9 @@
+digraph "serialization" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_48f5dcebdc5b3b96e693d1cc6e4fa86e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="rpc" fontname="FreeSans", fontsize="10", URL="dir_48f5dcebdc5b3b96e693d1cc6e4fa86e.html"]
+  dir_ad5fd61ea549b53fab418681c621a5ed [shape=box, label="serialization", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ad5fd61ea549b53fab418681c621a5ed.html"];
+  }
+}

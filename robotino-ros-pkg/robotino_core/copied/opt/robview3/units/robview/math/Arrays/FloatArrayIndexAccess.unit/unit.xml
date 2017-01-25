@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+		<unit:unittype unit:id="REC GmbH Float Array Index Access">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="floatvector" var:varname="array">
+						<var:default var:val="" />
+					</unit:connector>
+					<unit:connector var:type="int32" var:varname="index">
+						<var:default var:val="1" />
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="float" var:varname="value">
+						<var:default var:val="" />
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state/>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="array" unit:side="left"/>
+						<unit:layout unit:varname="index" unit:side="left"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="value" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state/>
+
+				<unit:description>
+					<unit:name>Float array index access</unit:name>
+					<unit:icon unit:filename="icon.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="array">
+								<unit:description>Array</unit:description>
+							</unit:info>
+							<unit:info unit:varname="index">
+								<unit:description>Index</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="value">
+								<unit:description>Value</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state/>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_array_floatarrayindexaccess_simulation"/>
+				<!--<unit:plugin plugin:type="dialog" plugin:library="unit_robview_array_floatarrayAccess_gui"/>-->
+			</unit:plugins>
+			
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>

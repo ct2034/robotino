@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/template"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/keyvalue"
+		schemaLocation="keyvalue.xsd"/>
+	
+	<xs:element name="toolchains" type="tmpl:toolChainListType"/>
+
+	<xs:complexType name="toolChainListType">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="toolchain">
+				<xs:complexType>
+					<xs:sequence minOccurs="1" maxOccurs="unbounded">
+						<xs:element name="template" type="tmpl:codeTemplateType"/>
+					</xs:sequence>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="codeTemplateType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="typeTemplate">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:choice>
+								<xs:element name="specialization">
+									<xs:complexType>
+										<xs:attribute name="type" type="xs:string"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="specializationGroup">
+									<xs:complexType>
+										<xs:attribute name="group" type="xs:string"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:element name="attributes" type="kv:keyValueRootType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="content" type="tmpl:codeTemplateContentType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="codeTemplateContentType">
+		<xs:sequence minOccurs="0" maxOccurs="1">
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="include" type="tmpl:includeType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:choice>
+					<xs:element name="enterRef" type="tmpl:refType"/>
+					<xs:element name="programRef" type="tmpl:refType"/>
+					<xs:element name="leaveRef" type="tmpl:refType"/>
+					<xs:element name="code" type="tmpl:codeType"/>
+					<xs:element name="codeRef" type="tmpl:codeRefType"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="refType"/>
+
+	<xs:complexType name="codeRefType">
+		<xs:attribute name="file" type="xs:string" use="required"/>
+		<xs:attribute name="section" type="xs:string" use="optional"/>
+		<xs:attribute name="begin" type="xs:string" use="optional"/>
+		<xs:attribute name="end" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="includeType">
+		<xs:attribute name="type" type="tmpl:includeTypeType" use="required"/>
+		<xs:attribute name="file" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="includeTypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="system"/>
+			<xs:enumeration value="user"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="codeType" mixed="true"/>
+
+</xs:schema>

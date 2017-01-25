@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:path="http://easykit.informatik.tu-muenchen.de/schema/path"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/path"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:simpleType name="pathBaseType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="platform"/>
+			<xs:enumeration value="runtime"/>
+			<xs:enumeration value="runtimelib"/>
+			<xs:enumeration value="toolchain"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="pathType">
+		<xs:attribute name="path" type="xs:string" use="required"/>
+		<xs:attribute name="base" type="path:pathBaseType" use="optional"/> <!-- leave empty for absolute paths -->
+	</xs:complexType>
+
+	<xs:complexType name="pathDestType">
+		<xs:complexContent>
+			<xs:extension base="path:pathType">
+				<xs:attribute name="dest" type="xs:string" use="optional"/> <!-- leave empty to auto-generate destination name -->
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

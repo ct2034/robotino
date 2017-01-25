@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:desc="http://easykit.informatik.tu-muenchen.de/schema/description"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/description"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<!-- Definition of file name specification type -->
+	<xs:complexType name="fileSpec">
+		<xs:attribute type="xs:string" name="filename" use="required"/>
+	</xs:complexType>
+
+	<!-- Definition of icon type -->
+	<xs:complexType name="iconType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="iconOverlay" type="desc:iconOverlayType"/>
+		</xs:choice>
+		<xs:attribute type="xs:string" name="baseFilename" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="iconOverlayType">
+		<xs:complexContent>
+			<xs:extension base="desc:fileSpec">
+				<xs:attribute name="source" type="xs:string"/>
+				<xs:attribute name="dest" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Unfortunatly we can not use the following type definitions, -->
+	<!-- because if we did, we would have to replace all unit: and   -->
+	<!-- dev: prefixes inside description elements to desc:, which   -->
+	<!-- is not possible without breaking compatibility with older   -->
+	<!-- versions. Hence, we just define the icon type here, which   -->
+	<!-- is new and can hence be instantiated with the correct       -->
+	<!-- namespace prefix. We should consider to activate this code  -->
+	<!-- at some point in time (replacing local definitions in       -->
+	<!-- unit.xsd and device.xsd).                                   -->
+
+	<!-- Definition of brief description type -->
+<!--	<xs:simpleType name="briefDescription">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+-->
+
+	<!-- Definition of description type (needed for GUI) -->
+<!--	<xs:complexType name="descriptionType">
+		<xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="name" type="desc:briefDescription"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="detailed" type="xs:string"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="icon" type="desc:iconType"/>
+			</xs:sequence>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="schematicIcon" type="desc:iconType"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+-->
+
+</xs:schema>

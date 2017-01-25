@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	EasyLib XML Schema Definition
+
+	Copyright (c) 2007-2010 Technische Universität München, Lehrstuhl Informatik VI
+		http://www6.in.tum.de/
+
+	Copyright (c) 2007-2010 REC GmbH
+		http://www.servicerobotics.eu/
+-->
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:env="http://easykit.informatik.tu-muenchen.de/schema/environment"
+	xmlns:cfg="http://easykit.informatik.tu-muenchen.de/schema/config"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	targetNamespace="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified">
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/environment"
+		schemaLocation="environment.xsd"/>
+
+	<xs:import
+		namespace="http://easykit.informatik.tu-muenchen.de/schema/config"
+		schemaLocation="config.xsd"/>
+
+	<!-- Definition of plugin type -->
+	<xs:complexType name="pluginType">
+		<!-- Plugin type (e.g. simulation, dialog, ...) -->
+		<xs:attribute name="type" type="xs:string" use="required"/>
+
+		<!-- Relative path to shared library (without extension) -->
+		<xs:attribute name="library" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<!-- Definition of configuratable plugin type -->
+	<xs:complexType name="configurablePluginType">
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<!-- Config section -->
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="config" type="cfg:configType"/>
+			</xs:sequence>
+
+			<!-- Environment section -->
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="environment" type="env:environmentType"/>
+			</xs:sequence>
+
+			<!-- Plugin section -->
+			<xs:element name="plugins">
+				<xs:complexType>
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="plugin" type="plugin:pluginType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+
+		<xs:attribute type="xs:ID" name="id" use="required"/>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,231 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Motor</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="motor,robotino" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "robotino_motor.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Motor</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="robotino_drivesystem.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="robotino_motor_dialog.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="robotino_motor.png" width="333" height="222" alt="robotino_motor" style="width:333px;height:222px;border:none" /></p>
+<p>&nbsp;</p>
+<p>Access to one Robotino's motors. The motor number is displayed.</p>
+<p>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 10px 0px;"><table style="border:solid 2px #aca899; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Inputs</span></p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Type</span></p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Unit</span></p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Default</span></p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Speed set-point</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>rpm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>0</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>The speed set-point of the motor control in rounds per minute. Please note that there is a 16:1 gear between motor and Robotino's wheel.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Reset position</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>bool</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>false</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>If true the tick counter of the motor's encoder is reset to 0.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Brake</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>bool</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>false</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>If true the motor is stopped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Acceleration</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>int</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>100</p>
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>Coupling of speed set-point at the input and the speed set-point really transmitted (see <img src="onestep.gif" width="4" height="8" alt="ONESTEP" style="width:4px;height:8px;border:none" /> <a href="robotino_motor_dialog.htm" class="topiclink">Dialog</a>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p><span style="font-weight: bold;">Outputs</span></p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Actual velocity</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>rpm</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>The actual velocity of the motor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Actual position</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>int</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>The number of ticks counted since power up of Robotino or since &quot;Reset position&quot; had been true and the false. The ticks are generated by the motor's encoder which generates 2000 ticks per round.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:14%; padding:1px; border:solid 1px #aca899;"><p>Current</p>
+</td>
+<td style="vertical-align:top; width:7%; padding:1px; border:solid 1px #aca899;"><p>float</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><p>A</p>
+</td>
+<td style="vertical-align:top; width:8%; padding:1px; border:solid 1px #aca899;"><br />
+</td>
+<td style="vertical-align:top; width:85%; padding:1px; border:solid 1px #aca899;"><p>The current measured at the motor's H-bridge.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><img src="robotino_motor_position.png" width="400" height="369" alt="robotino_motor_position" style="width:400px;height:369px;border:none" /></p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	dev:id="Generic" dev:toplevel="true">
+
+	<dev:translations>
+	</dev:translations>
+
+	<dev:subdevices>
+
+		<dev:device dev:id="Logic">
+			<dev:subdevices>
+				<dev:device dev:id="Logic_logicops">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Logic AND" />
+						<dev:unit dev:type="REC GmbH Logic OR" />
+						<dev:unit dev:type="REC GmbH Logic NAND" />
+						<dev:unit dev:type="REC GmbH Logic NOR" />
+						<dev:unit dev:type="REC GmbH Logic XOR" />
+						<dev:unit dev:type="REC GmbH Logic NOT" />
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Logic_triggered">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Logic AND FL" />
+						<dev:unit dev:type="REC GmbH Logic NAND FL" />
+						<dev:unit dev:type="REC GmbH Logic RS" />
+						<dev:unit dev:type="REC GmbH Sample And Hold Element" />
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Logic_bitwise">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Bitwise And" />
+						<dev:unit dev:type="REC GmbH Bitwise Exclusive Or" />
+						<dev:unit dev:type="REC GmbH Bitwise Not" />
+						<dev:unit dev:type="REC GmbH Bitwise Or" />
+						<dev:unit dev:type="REC GmbH Bitwise Shift Left" />
+						<dev:unit dev:type="REC GmbH Bitwise Shift Right" />
+						<dev:unit dev:type="REC GmbH Bitwise Test" />
+					</dev:units>
+				</dev:device>
+			</dev:subdevices>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Counter Up"/>
+				<dev:unit dev:type="REC GmbH Counter Down"/>
+				<dev:unit dev:type="REC GmbH Multiplexer"/>
+				<dev:unit dev:type="REC GmbH Demultiplexer"/>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Math">
+			<dev:subdevices>
+				<dev:device dev:id="Math_arithops">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Basic Addition" />
+						<dev:unit dev:type="REC GmbH Basic Division" />
+						<dev:unit dev:type="REC GmbH Basic Modulo" />
+						<dev:unit dev:type="REC GmbH Basic Multiplication" />
+						<dev:unit dev:type="REC GmbH Basic Subtraction" />
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Math_compareops">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Basic Equality" />
+						<dev:unit dev:type="REC GmbH Basic Greater" />
+						<dev:unit dev:type="REC GmbH Basic Greater Equal" />
+						<dev:unit dev:type="REC GmbH Basic Inequality" />
+						<dev:unit dev:type="REC GmbH Basic Less" />
+						<dev:unit dev:type="REC GmbH Basic Less Equal" />
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Math_functions">
+					<dev:subdevices>
+						<!--<dev:device dev:id="Math_trigonometry">
+							<dev:subdevices>
+							</dev:subdevices>
+							<dev:units>
+								<dev:unit dev:type="REC GmbH Basic Atan"/>
+							</dev:units>
+						</dev:device>-->
+					</dev:subdevices>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Transferfunction"/>
+						<dev:unit dev:type="REC GmbH Basic Minimum"/>
+						<dev:unit dev:type="REC GmbH Basic Maximum"/>
+						<dev:unit dev:type="REC GmbH Basic Absolute Value"/>
+						<dev:unit dev:type="REC GmbH Robotino Scale"/>
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Math_arrays">
+					<dev:subdevices/>
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Float Array Composer" />
+						<dev:unit dev:type="REC GmbH Float Array Decomposer" />
+						<dev:unit dev:type="REC GmbH Float Array Splitter" />
+						<dev:unit dev:type="REC GmbH Float Array Index Access" />
+					</dev:units>
+				</dev:device>
+			</dev:subdevices>
+			<dev:units>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Vectormath">
+			<dev:subdevices>
+				<dev:device dev:id="Vectormath_vectorops">
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Vector2f Addition"/>
+						<dev:unit dev:type="REC GmbH Vector2f Subtraction"/>
+						<dev:unit dev:type="REC GmbH Vector2f Dot"/>
+						<dev:unit dev:type="REC GmbH Vector2f Norm"/>
+						<!--<dev:unit dev:type="REC GmbH Vector3f Cross"/>-->
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Vectormath_elementops">
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Vector2f Element Addition"/>
+						<dev:unit dev:type="REC GmbH Vector2f Element Subtraction"/>
+						<dev:unit dev:type="REC GmbH Vector2f Element Multiplication"/>
+						<dev:unit dev:type="REC GmbH Vector2f Element Division"/>
+					</dev:units>
+				</dev:device>
+				<dev:device dev:id="Vectormath_transform">
+					<dev:units>
+						<dev:unit dev:type="REC GmbH Vector2f Cartesian2Vector"/>
+						<dev:unit dev:type="REC GmbH Vector2f Polar2Vector"/>
+						<dev:unit dev:type="REC GmbH Vector2f Vector2Cartesian"/>
+						<dev:unit dev:type="REC GmbH Vector2f Vector2Polar"/>
+						<dev:unit dev:type="REC GmbH Vector2f Rotate"/>
+					</dev:units>
+				</dev:device>
+			</dev:subdevices>
+		</dev:device>
+
+		<dev:device dev:id="Display">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Oscilloscope" />
+				<!--<dev:unit dev:type="REC GmbH LaserRangeFinderDataDisplay" />-->
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Cv">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Segmenter" >
+					<dev:guiinfo dev:display="hidden">
+						<dev:description />
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Segment Extractor" >
+					<dev:guiinfo dev:display="hidden">
+						<dev:description />
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Line Detector" />
+				<dev:unit dev:type="REC GmbH ROI" />
+				<dev:unit dev:type="REC GmbH ImageInfo" />
+				<dev:unit dev:type="REC GmbH Colorspace Conversion" />
+				<dev:unit dev:type="REC GmbH ColorRangeFinder" />
+				<dev:unit dev:type="REC GmbH SegmentTracker" />
+				<dev:unit dev:type="REC GmbH ImageFilter" />
+				<dev:unit dev:type="REC GmbH Calibration" />
+				<dev:unit dev:type="REC GmbH Marker Detection" />
+				<dev:unit dev:type="REC GmbH Marker Position" />
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Generators">
+			<dev:subdevices/>
+			<dev:utspecs>
+				<dev:utspec md:id="REC_GmbH_Generators_float">
+					<md:spec md:curr="float" md:type="T"/>
+				</dev:utspec>
+			</dev:utspecs>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Constant" dev:utspec="REC_GmbH_Generators_float">
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="const.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH ARB generator" />
+				<dev:unit dev:type="REC GmbH Robotino Timer" />
+				<dev:unit dev:type="REC GmbH Random Generator" />
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Filter">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Mean Filter" />
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Navigation">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Position Driver" />
+				<dev:unit dev:type="REC GmbH Path Driver" />
+				<dev:unit dev:type="REC GmbH Constant Pose" />
+				<dev:unit dev:type="REC GmbH Pose Composer" />
+				<dev:unit dev:type="REC GmbH Pose Decomposer" />
+				<dev:unit dev:type="REC GmbH Path Composer" />
+				<dev:unit dev:type="REC GmbH Path Decomposer" />
+				<!--<dev:unit dev:type="REC GmbH Position View" />-->
+				<dev:unit dev:type="REC GmbH Obstacle Avoidance" />
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Input devices">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH ControlPanel"/>
+				<dev:unit dev:type="REC GmbH Slider"/>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Dataexchange">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Image Reader"/>
+				<dev:unit dev:type="REC GmbH Image Writer"/>
+				<dev:unit dev:type="REC GmbH Value Writer"/>
+				<dev:unit dev:type="REC GmbH Value Reader"/>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Custom">
+			<dev:subdevices/>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Lua Script"/>
+			</dev:units>
+		</dev:device>
+
+	</dev:subdevices>
+
+</dev:device>

@@ -1,0 +1,177 @@
+    1  roscore 
+    2  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    3  sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
+    4  sudo apt-get update
+    5  sudo apt-get install ros-kinetic-desktop-full
+    6  echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+    7  source ~/.bashrc
+    8  rviz
+    9  roscore &
+   10  gazebo
+   11  rqt_plot 
+   12  sudo apt-get install ros-kinetic-mvsim
+   13  /media/cch/VBOXADDITIONS_5.1.8_111374/VBoxLinuxAdditions.run 
+   14  sudo /media/cch/VBOXADDITIONS_5.1.8_111374/VBoxLinuxAdditions.run 
+   15  mvsim
+   16  mkdir ros
+   17  rm -r ros
+   18  mkdir src
+   19  git clone https://github.com/ct2034/cloudsim
+   20  cd cloudsim/
+   21  git s
+   22  git status
+   23  ls
+   24  mkdir -p ros_ws/src
+   25  cd ros_ws/src/
+   26  ls
+   27  mkdir -p my_mvsim/launch
+   28  cd my_mvsim/launch/
+   29  roscp mvsim mvsim_demo_2robots.launch
+   30  roscp mvsim mvsim_demo_2robots.launch .
+   31  ls
+   32  cd ..
+   33  rospack 
+   34  rospack help
+   35  roscreate-pkg 
+   36  cd ..
+   37  roscreate-pkg my_mvsim mvsim
+   38  rm my_mvsim/
+   39  rm -r my_mvsim/
+   40  roscreate-pkg my_mvsim mvsim
+   41  mkdir -p my_mvsim/launch
+   42  cd my_mvsim/launch/
+   43  roscp mvsim mvsim_demo_2robots.launch .
+   44  cd ..
+   45  cd..
+   46  cd ..
+   47  catkin_init_workspace 
+   48  catkin_make
+   49  mv CMakeLists.txt src/
+   50  catkin_make
+   51  source devel/setup.bash 
+   52  roslaunch my_mvsim mvsim_demo_2robots.launch 
+   53  export editor='nano'
+   54  rosed my_mvsim mvsim_demo_2robots.launch 
+   55  export EDITOR='nano'
+   56  rosed my_mvsim mvsim_demo_2robots.launch 
+   57  roslaunch mvsim mvsim_demo_2robots.launch
+   58  jobs
+   59  kill %1
+   60  roslaunch mvsim mvsim_demo_2robots.launch
+   61  roslaunch my_mvsim mvsim_demo_2robots.launch 
+   62  cd src/my_mvsim/
+   63  mkdir config
+   64  cd config/
+   65  roscp mvsim mvsim_demo_2robots.xml .
+   66  roscp mvsim mvsim_demo_2robots.rviz .
+   67  roslaunch my_mvsim mvsim_demo_2robots.launch 
+   68  roscp mvsim mvsim_demo_world1.png .
+   69  roslaunch my_mvsim mvsim_demo_2robots.launch 
+   70  source cloudsim/ros_ws/devel/setup.bash 
+   71  rosed my_mvsim mvsim_demo_2robots.launch 
+   72  export EDITOR=nano
+   73  rosed my_mvsim mvsim_demo_2robots.launch 
+   74  rosed my_mvsim mvsim_demo_2robots.xml 
+   75  sudo mount /media/sf_cch/
+   76  sudo apt-get install gnome-disk-utility 
+   77  sudo dpkg --configure -a
+   78  sudo nano /etc/fstab 
+   79  sudo mount host_share_cch/
+   80  sudo umount /media/sf_cch 
+   81  sudo mount host_share_cch/
+   82  sudo umount host_share_cch/
+   83  sudo mount host_share_cch/
+   84  sudo reboot
+   85  sudo apt-get install gnome-disk-utility 
+   86  sudo gnome-disks 
+   87  sudo mount --help
+   88  VBoxClient
+   89  systemctl poweroff 
+   90  sudo apt-get install openssh-server fsarchiver
+   91  ifconfig 
+   92  nmap localhost 
+   93  sudo apt install nmap
+   94  nmap localhost 
+   95  cd /media/cch/f6fec0c6-bc88-46d3-b125-e450709f1956/
+   96  ls
+   97  sudo apt-get install tree
+   98  tree -if >> all_files
+   99  sudo tree -if >> all_files
+  100  tree -if >> /tmp/all_files
+  101  grep /tmp/all_files rec
+  102  grep rec /tmp/all_files 
+  103  grep rec-rpc /tmp/all_files 
+  104  grep Robo /tmp/all_files 
+  105  grep Robotino /tmp/all_files 
+  106  grep robotino /tmp/all_files 
+  107  grep robotino/ /tmp/all_files 
+  108  tree usr/local/rec_rpc/
+  109  usr/local/rec_rpc/bin/rec_rpc_simple_server_test 
+  110  grep rec /tmp/all_files 
+  111  grep rec- /tmp/all_files 
+  112  grep rec_ /tmp/all_files 
+  113  grep ros /tmp/all_files 
+  114  grep /opt/ros /tmp/all_files 
+  115  grep roslaunch /tmp/all_files 
+  116  cd Downloads/
+  117  ls
+  118  ll
+  119  fsarchiver --help
+  120  fsarchiver restfs robotino3-3.1.1.fsa dest=/dev/sdb
+  121  sudo fsarchiver restfs robotino3-3.1.1.fsa dest=/dev/sdb
+  122  sudo fsarchiver restfs robotino3-3.1.1.fsa /dev/sdb
+  123  sudo fsarchiver restfs robotino3-3.1.1.fsa id=0,dest=/dev/sdb
+  124  sudo umount /media/cch/robotino_image 
+  125  sudo fsarchiver restfs robotino3-3.1.1.fsa id=0,dest=/dev/sdb
+  126  sudo mount /media/cch/robotino_image 
+  127  cd
+  128  cd /media/cch/f6fec0c6-bc88-46d3-b125-e450709f1956/
+  129  df -h .
+  130  cd
+  131  cd src
+  132  ls
+  133  mkdir src
+  134  cd src/
+  135  git clone https://cch@cb.ipa.fraunhofer.de/cb/git/robotino 
+  136  sudo systemctl poweroff 
+  137  /media/cch/f6fec0c6-bc88-46d3-b125-e450709f1956/opt/robview3/bin/robview3
+  138  cd /media/cch/f6fec0c6-bc88-46d3-b125-e450709f1956/
+  139  ls
+  140  cd opt/robview3/bin/
+  141  ./robview3
+  142  cp libreconnect_lib.so /lib/
+  143  sudo cp libreconnect_lib.so /lib/
+  144  ./robview3
+  145  sudo rm /lib/libreconnect_lib.so 
+  146  ./robview3
+  147  cp ../../robview3/ ~/src/robotino/robotino-ros-pkg/robotino_core/copied/opt/
+  148  mkdir ~/src/robotino/robotino-ros-pkg/robotino_core/copied/opt/
+  149  cp -r ../../robview3/ ~/src/robotino/robotino-ros-pkg/robotino_core/copied/opt/
+  150  sudo cp *.lib /lib
+  151  sudo cp lib*.so /lib
+  152  ./robview3
+  153  grep roslaunch /tmp/all_files 
+  154  grep librec_navigation /tmp/all_files 
+  155  tree -if >> /tmp/all_files
+  156  grep librec_navigation /tmp/all_files 
+  157  tree -if ../../.. > /tmp/all_files
+  158  grep librec_navigation /tmp/all_files 
+  159  sudo cp ../api/lib/lib*.so /lib
+  160  ./robview3
+  161  grep librec /tmp/all_files 
+  162  grep librec_robo /tmp/all_files 
+  163  cd ../../..
+  164  export SAVEPATH=~/src/robotino/robotino-ros-pkg/robotino_core/copied
+  165  cp /tmp/all_files $SAVEPATH
+  166  ls $SAVEPATH 
+  167  export SP=~/src/robotino/robotino-ros-pkg/robotino_core/copied
+  168  ls $SP
+  169  mkdir -p $SP/usr/local/robotino
+  170  cp -r usr/local/robotino/  $SP/usr/local/robotino
+  171  cp -r usr/local/rec_rpc/  $SP/usr/local/rec_rpc/ 
+  172  sudo cp usr/local/robotino/api2/lib/lib*.so /lib
+  173  sudo cp usr/local/robotino/common/lib/lib*.so /lib
+  174  ./robview3
+  175  ./opt/robview3/bin/robview3
+  176  history 
+  177  history > $SP/history

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation">
+
+	<unit:translations>
+	</unit:translations>
+
+	<unit:unittypes>
+
+		<unit:unittype unit:id="REC GmbH Path Composer">
+			<unit:typeTemplates/>
+			<unit:connectors>
+				<unit:in>
+					<unit:connector var:type="path" var:varname="p0">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p1">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p2">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p3">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p4">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p5">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p6">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p7">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p8">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p9">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p10">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p11">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p12">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p13">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p14">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p15">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p16">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p17">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p18">
+						<var:default var:val=""/>
+					</unit:connector>
+					<unit:connector var:type="path" var:varname="p19">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:in>
+				<unit:out>
+					<unit:connector var:type="path" var:varname="path">
+						<var:default var:val=""/>
+					</unit:connector>
+				</unit:out>
+			</unit:connectors>
+			<unit:state>
+			</unit:state>
+
+			<unit:guiinfo>
+				<unit:connectors>
+					<unit:in>
+						<unit:layout unit:varname="p0" unit:side="left"/>
+						<unit:layout unit:varname="p1" unit:side="left"/>
+						<unit:layout unit:varname="p2" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p3" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p4" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p5" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p6" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p7" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p8" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p9" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p10" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p11" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p12" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p13" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p14" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p15" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p16" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p17" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p18" unit:side="left" unit:display="hidden"/>
+						<unit:layout unit:varname="p19" unit:side="left" unit:display="hidden"/>
+					</unit:in>
+					<unit:out>
+						<unit:layout unit:varname="path" unit:side="right"/>
+					</unit:out>
+				</unit:connectors>
+				<unit:state>
+				</unit:state>
+
+				<unit:description>
+					<unit:name>Path composer</unit:name>
+					<unit:icon unit:filename="icons/icon.png"/>
+					<unit:connectors>
+						<unit:in>
+							<unit:info unit:varname="p0">
+								<unit:description>Path[ 1]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p1">
+								<unit:description>Path[ 2]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p2">
+								<unit:description>Path[ 3]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p3">
+								<unit:description>Path[ 4]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p4">
+								<unit:description>Path[ 5]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p5">
+								<unit:description>Path[ 6]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p6">
+								<unit:description>Path[ 7]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p7">
+								<unit:description>Path[ 8]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p8">
+								<unit:description>Path[ 9]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p9">
+								<unit:description>Path[ 10]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p10">
+								<unit:description>Path[ 11]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p11">
+								<unit:description>Path[ 12]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p12">
+								<unit:description>Path[ 13]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p13">
+								<unit:description>Path[ 14]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p14">
+								<unit:description>Path[ 15]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p15">
+								<unit:description>Path[ 16]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p16">
+								<unit:description>Path[ 17]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p17">
+								<unit:description>Path[ 18]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p18">
+								<unit:description>Path[ 19]</unit:description>
+							</unit:info>
+							<unit:info unit:varname="p19">
+								<unit:description>Path[ 20]</unit:description>
+							</unit:info>
+						</unit:in>
+						<unit:out>
+							<unit:info unit:varname="path">
+								<unit:description>Path[]</unit:description>
+							</unit:info>
+						</unit:out>
+					</unit:connectors>
+					<unit:state>
+					</unit:state>
+				</unit:description>
+			</unit:guiinfo>
+
+			<unit:plugins>
+				<unit:plugin plugin:type="simulation" plugin:library="unit_robview_navigation_path_composer_simulation"/>
+				<unit:plugin plugin:type="dialog" plugin:library="unit_robview_navigation_path_composer_gui"/>
+			</unit:plugins>
+
+			<unit:codegen/>
+		</unit:unittype>
+	</unit:unittypes>
+</unit:unit>
+

@@ -1,0 +1,15 @@
+<RCC version="1.0">
+	<qresource>
+    <file>../icons/ccl.png</file>
+    <file>../icons/cl.png</file>
+    <file>../icons/n.png</file>
+    <file>../icons/no.png</file>
+    <file>../icons/nw.png</file>
+    <file>../icons/o.png</file>
+    <file>../icons/s.png</file>
+    <file>../icons/so.png</file>
+    <file>../icons/stop.png</file>
+    <file>../icons/sw.png</file>
+    <file>../icons/w.png</file>
+	</qresource>
+</RCC>

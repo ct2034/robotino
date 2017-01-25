@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Example</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<style type="text/css"> 
+a { color: #0000FF; text-decoration: underline } 
+a:visited {color: #0000FF } 
+a:hover {color: #E4641C; text-decoration: underline } 
+a.weblink {color: #0000FF; text-decoration: underline } 
+a.weblink:visited {color: #0000FF} 
+a.weblink:hover {color: #E4641C } 
+a.popuplink {color: #FF0000; text-decoration: none} 
+a.popuplink:visited {color: #FF0000} 
+a.popuplink:hover {color: #FF0000; text-decoration: underline} 
+a.filelink {color: #04BC14; text-decoration: none} 
+a.filelink:visited {color: #04BC14} 
+a.filelink:hover {color: #04BC14; text-decoration: underline} 
+</style> 
+<script type="text/javascript">
+function ModelHandler(o1, o2)
+  {
+  if (document.hhctrl) document.hhctrl.outerHTML = ""; var X, Y, sl, a, ra, dir, ap, chmPath;
+  ra = /::/; a = location.href.search(ra);   ra = /:/; a = location.href.search(ra);
+  if (a == 2) X = 14; else X = 7; sl = "\\"; Y = location.href.lastIndexOf(sl);
+  dir = location.href.substring(X, Y); ap = unescape(dir) + "\\Tools\\ModelHandler.exe";
+  ShortCut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'><param name='Command' value='ShortCut'><param name='Item1' value=',"+ap+", "+o1+" "+"\""+o2+"\""+"'></object>";
+  document.body.insertAdjacentHTML("BeforeBegin", ShortCut); document.hhctrl.hhclick();
+  }
+</script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "counter_up_example.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<SCRIPT Language="JScript">
+function parser(fn)
+{
+	var X, Y, sl, a, ra, link;
+	ra = /:/;
+	a = location.href.search(ra);
+	if (a == 2)
+		X = 14;
+	else
+		X = 7;
+	sl = "\\";
+	Y = location.href.lastIndexOf(sl) + 1;
+	link = 'file:///' + location.href.substring(X, Y) + fn;
+	location.href = link;
+}
+</SCRIPT>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EBEBEB">
+  <tr valign="middle">
+    <td align="left">
+      &nbsp;</td>
+    <td align="right">
+		<img border=0 src="festo_logo.bmp" 
+
+align="right"></td>
+   </tr>
+  <tr valign="middle">
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Example</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="counter_up_dialog.htm"><img border=0 src="navigationprev.bmp" alt="Previous"></a>&nbsp;
+     <a href="welcome.htm"><img border=0 src="navigationhome.bmp" alt="home"></a>&nbsp;
+     <a href="counter_down.htm"><img border=0 src="navigationnext.bmp" alt="Next"></a>
+     &nbsp;&nbsp;
+     </span>
+    </td>
+   </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" bgcolor="#EBEBEB">
+  <td style="padding-right:5; padding-left:5; padding-top:0; padding-bottom:0;"><img width=100% height=2 src="navigationline.bmp"></td>
+</table>
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="middle"><td 
+
+align="left">
+<p><img src="counter_up_example.png" width="774" height="479" alt="counter_up_example" style="width:774px;height:479px;border:none" /></p>
+<p>&nbsp;</p>
+<p>The &quot;<a href="generators_arbitrary.htm" class="topiclink">Arbitrary Waveform Generator</a>&quot; generates a sin waveform with amplitude 2 and frequency 1 Hz. The output of the generator is of type float. Values less equal 0 are converted to false. Value greater 0 are converted to true (see <a href="typkonvertierung.htm" class="topiclink">type conversion</a>). The counter counts on rising edge, i.e. when the input changes from false to true. This happens exactly once per second at the beginning of the sine wave. The counter values represents therefore the time in seconds since sub-program start.</p>
+<p>&nbsp;</p>
+<p>The following example shows how to use the initial value input to count over sub-program boundaries. The main program executes Step1 and Step2 sequentially. After Step2 is finished, we restart with Step1.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Hauptprogramm</span></p>
+<p><img src="counter_up_example_2_sfc.png" width="104" height="301" alt="counter_up_example_2_sfc" style="width:104px;height:301px;border:none" /></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Step1</span></p>
+<p><img src="counter_up_example_2_step1.png" width="335" height="184" alt="counter_up_example_2_step1" style="width:335px;height:184px;border:none" /></p>
+<p>The Counter writes its result into the global variable &quot;count&quot;. After restart of Step1 the global variable count is used as inital value for the Counter. Step1 is active until the second &quot;<a href="generators_arbitrary.htm" class="topiclink">Arbitrary Waveform Generator</a>&quot; generates a value greater 9. This happens after 10s.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Step2</span></p>
+<p><img src="counter_up_example_2_step2.png" width="622" height="568" alt="counter_up_example_2_step2" style="width:622px;height:568px;border:none" /></p>
+<p>Step2 is also 10s active.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

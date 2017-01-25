@@ -1,0 +1,196 @@
+
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="codegen" kv:value=""/>
+  </md:settings>
+
+  <md:variables>
+    <md:variable var:type="float" var:varname="odoPosX">
+      <var:default var:val="0"/>
+    </md:variable>
+  </md:variables>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:configVarExprs/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino ®">
+      <md:configVarExprs>
+        <md:varExpr md:value="172.26.1.1" md:varname="ipAddress"/>
+        <md:varExpr md:value="172.26.1.1;;192.168.101.101;;127.0.0.1" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="0" md:varname="cameraResolution"/>
+        <md:varExpr md:value="0" md:varname="cameraColorSpace"/>
+      </md:configVarExprs>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Joystick" md:instanceName="Joystick">
+      <md:configVarExprs>
+        <md:varExpr md:value="Top Gun Fox 2  Pro " md:varname="name"/>
+      </md:configVarExprs>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_global_variable_writer_float"/>
+    <md:utspec md:id="rec_gmbh_counter_up"/>
+    <md:utspec md:id="rec_gmbh_logic_not"/>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_odometrie" md:name="Odometrie">
+      <md:timeslice md:nsec="40000000" md:sec="0"/>
+      <md:units>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_odoposx" md:name="odoPosX" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="odoPosX writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs/>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_not__1_" md:name="NOT (1)" md:type="REC GmbH Logic NOT" md:utspec="rec_gmbh_logic_not" md:variantName="REC GmbH Logic NOT">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="Q">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_z_hler_hoch__1_" md:name="Zähler hoch (1)" md:type="REC GmbH Counter Up" md:utspec="rec_gmbh_counter_up" md:variantName="REC GmbH Counter Up">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="in">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="rst">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="countOnRisingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="countOnFallingEdge">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="out">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="Q" md:unit="actor_not__1_"/>
+          <md:to md:con="in" md:unit="actor_z_hler_hoch__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="1" md:id="edge_2" md:prod="1">
+          <md:from md:con="Q" md:unit="actor_not__1_"/>
+          <md:to md:con="1" md:unit="actor_not__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="out" md:unit="actor_z_hler_hoch__1_"/>
+          <md:to md:con="new_value" md:unit="actor_odoposx"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_forward" md:name="Forward">
+      <md:timeslice md:nsec="40000000" md:sec="0"/>
+      <md:units/>
+      <md:edges/>
+    </md:sdf>
+    <md:sdf md:id="sdfmodel_backward" md:name="Backward">
+      <md:timeslice md:nsec="40000000" md:sec="0"/>
+      <md:units/>
+      <md:edges/>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init"/>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcParallel md:id="sfcitem_parallel">
+          <md:sfcSequence>
+            <md:sfcSimple md:id="sfcitem_simple_step" md:name="Step" md:sdfModel="sdfmodel_forward"/>
+            <md:sfcTransition md:guard="odoPosX > 20" md:id="sfcitem_transition2"/>
+            <md:sfcSimple md:id="sfcitem_simple_step3" md:name="Step3" md:sdfModel="sdfmodel_backward"/>
+          </md:sfcSequence>
+          <md:sfcSequence>
+            <md:sfcSimple md:id="sfcitem_simple_step2" md:name="Step2" md:sdfModel="sdfmodel_odometrie"/>
+          </md:sfcSequence>
+        </md:sfcParallel>
+        <md:sfcTransition md:guard="odoPosX > 40" md:id="sfcitem_transition3"/>
+        <md:sfcJump md:dest="sfcitem_simple_init" md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:sdfmodel="sdfmodel_odometrie" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd0000000000000427000001a300000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:nameDisplay="visible" md:unit="actor_odoposx" md:x="516" md:y="-168"/>
+          <md:unit md:nameDisplay="hidden" md:unit="actor_not__1_" md:x="198" md:y="-186"/>
+          <md:unit md:nameDisplay="hidden" md:unit="actor_z_hler_hoch__1_" md:x="348" md:y="-174"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:point md:x="240" md:y="-186">
+              <md:edge md:edge="edge_1"/>
+              <md:point md:x="240" md:y="-216">
+                <md:point md:x="138" md:y="-216">
+                  <md:point md:x="138" md:y="-186">
+                    <md:edge md:edge="edge_2"/>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_3"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_forward" md:tab="2">
+        <md:sdfViewLayout md:data="000000ff00000000fd0000000100000003fffffffffffffffffc0100000001fb000000400036006400660037003200630065006400320066006300340036003200340036003600620031006500330062003200380036003800340033003300320037006102000001e7000001e7000000c80000006400000427000001a300000004000000040000000800000008fc00000000"/>
+        <md:units/>
+        <md:nets/>
+        <md:texts/>
+      </md:sdf>
+      <md:sdf md:sdfmodel="sdfmodel_backward" md:tab="3">
+        <md:sdfViewLayout md:data="000000ff00000000fd0000000000000427000001a300000004000000040000000800000008fc00000000"/>
+        <md:units/>
+        <md:nets/>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:active="true" md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>

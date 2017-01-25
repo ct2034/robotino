@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev:device
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/device device.xsd"
+	xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device"
+	xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model"
+	xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin"
+	xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation"
+	xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable"
+	dev:id="REC GmbH Festo Easy Port" dev:toplevel="true">
+
+	<dev:translations>
+	</dev:translations>
+
+	<dev:inputs>
+		<dev:input var:type="uint8" var:varname="port1_input">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="uint8" var:varname="port2_input">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="port3_input0">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="port3_input1">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="port3_input2">
+			<var:default var:val="0"/>
+		</dev:input>
+		<dev:input var:type="float" var:varname="port3_input3">
+			<var:default var:val="0"/>
+		</dev:input>
+	</dev:inputs>
+
+	<dev:outputs>
+		<dev:output var:type="uint8" var:varname="port1_output">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="uint8" var:varname="port2_output">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="port3_output0">
+			<var:default var:val="0"/>
+		</dev:output>
+		<dev:output var:type="float" var:varname="port3_output1">
+			<var:default var:val="0"/>
+		</dev:output>
+	</dev:outputs>
+
+	<dev:state>
+		<dev:statevar var:type="string" var:varname="infoMessage">
+			<var:default var:val=""/>
+		</dev:statevar>
+		<dev:statevar var:type="bool" var:varname="isConnected">
+			<var:default var:val="false"/>
+		</dev:statevar>
+	</dev:state>
+	
+	<dev:config>
+		<dev:configvar var:type="string" var:varname="portName">
+			<var:default var:val="auto"/>
+		</dev:configvar>
+	</dev:config>
+
+	<dev:subdevices>
+		<dev:device dev:id="Port1" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Digital Output" dev:name="Digital Output1"/>
+				<dev:resource dev:class="Digital Input" dev:name="Digital Input1"/>
+			</dev:provides>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Digital Output" dev:name="Digital Output">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="port"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Digital Output1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port1_dout.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Digital Input" dev:name="Digital Input">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="1" md:varname="port"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Digital Input1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port1_din.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Port2" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Digital Output" dev:name="Digital Output2"/>
+				<dev:resource dev:class="Digital Input" dev:name="Digital Input2"/>
+			</dev:provides>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Digital Output" dev:name="Digital Output">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="port"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Digital Output2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port2_dout.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Digital Input" dev:name="Digital Input">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="2" md:varname="port"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Digital Input2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port2_din.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+		<dev:device dev:id="Port3" dev:toplevel="false">
+			<dev:provides>
+				<dev:resource dev:class="Analog Output" dev:name="Analog Output0"/>
+				<dev:resource dev:class="Analog Output" dev:name="Analog Output1"/>
+				<dev:resource dev:class="Analog Input" dev:name="Analog Input0"/>
+				<dev:resource dev:class="Analog Input" dev:name="Analog Input1"/>
+				<dev:resource dev:class="Analog Input" dev:name="Analog Input2"/>
+				<dev:resource dev:class="Analog Input" dev:name="Analog Input3"/>
+			</dev:provides>
+			<dev:units>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Output" dev:name="Analog Output[ #0]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Output0"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_aout0.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Output" dev:name="Analog Output[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Output1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_aout1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Input" dev:name="Analog Input[ #0]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="0" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Input0"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_ain0.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Input" dev:name="Analog Input[ #1]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="1" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Input1"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_ain1.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Input" dev:name="Analog Input[ #2]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="2" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Input2"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_ain2.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+				<dev:unit dev:type="REC GmbH Festo Easy Port Analog Input" dev:name="Analog Input[ #3]">
+					<dev:stateVarExprs>
+						<md:varExpr md:value="3" md:varname="port"/>
+						<md:varExpr md:value="3" md:varname="address"/>
+					</dev:stateVarExprs>
+					<dev:unitRequirements>
+						<dev:resource dev:name="Analog Input3"/>
+					</dev:unitRequirements>
+					<dev:guiinfo>
+						<dev:description>
+							<dev:icon dev:filename="icons/port3_ain3.png"/>
+						</dev:description>
+					</dev:guiinfo>
+				</dev:unit>
+			</dev:units>
+		</dev:device>
+
+	</dev:subdevices>
+
+	<!-- Plugin filename -->
+	<dev:plugins>
+		<dev:plugin plugin:type="simulation" plugin:library="device_easyport_simulation"/>
+		<dev:plugin plugin:type="dialog" plugin:library="device_easyport_gui"/>
+	</dev:plugins>
+
+	<dev:guiinfo>
+		<dev:description>
+			<dev:name>EasyPort</dev:name>
+			<dev:detailed>Festo Didactic EasyPort</dev:detailed>
+			<dev:icon dev:filename="icons/easyport.png"/>
+		</dev:description>
+	</dev:guiinfo>
+
+</dev:device>
