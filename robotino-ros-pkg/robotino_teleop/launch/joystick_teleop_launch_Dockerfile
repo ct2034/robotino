@@ -1,1 +1,2 @@
 RUN apt-get install libncurses5
+COPY $(rospack find robotino_node)
