@@ -14,6 +14,7 @@ import commands
 import time
 import socket
 import md5
+import docker
 
 class MltThrd(threading.Thread):
     def __init__(self, cmd, queue):
@@ -88,43 +89,30 @@ def createDockerImg(image,ip,rospackage):
     buildcode = "curl -v -X POST -H " + '"Content-Type:application/tar"'+ " --data-binary '@Dockerfile.tar.gz' http://" + ip + ":2375/build?t=" + image
     subprocess.call(buildcode ,shell=True)       
 
-def createDockerContainer(image,ip):
+def createDockerContainer(image,ip,roscommand,rospackage,roslaunchfile,dockercmd_rosmaster,dockercmd_rosip):
     
-    cmd = "curl -XPOST -H " + '"Content-Type: application/json"' + "http://" + ip + ":2375/containers/create?name=" + image + "_cont -d '"
-    container_str1 = '{"Hostname":"3e93a4b05cf6",\
-                        "Domainname":"","User":"1000:1000" \
-                        ,"AttachStdin":true,"AttachStdout":true, \
-                        "AttachStderr":true,"Tty":true,"OpenStdin":true,\
-                        "StdinOnce":true,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",\
-                        "LANG=en_US.UTF-8","ROS_DISTRO=kinetic"],"Cmd":["bash"],"Image":'
+    ip_str = "tcp://" + ip + ":2375"
+    cli = docker.Client(base_url=ip_str)      
+    container = cli.create_container(image,\
+    hostname='3e93a4b05cf6',user='1000:1000',tty=True,command=["bash"]\
+    ,environment=["PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],\
+    entrypoint='/ros_entrypoint.sh',working_dir='/home/cch-student',\
+    volumes='$HOME/.config/catkin:/.config/catkin:ro')
+    cli.start(container['Id'])
+    #cmd_id_rm = cli.exec_create(container['Id'],dockercmd_rosmaster)
+    #cli.exec_start(cmd_id_rm)
+    #cmd_id_ip = cli.exec_create(container['Id'],dockercmd_rosip)
+    #cli.exec_start(cmd_id_ip)
+    #ros_cmd = roscommand + ' ' + rospackage + ' ' + roslaunchfile
+    bash_cmd = "docker -H tcp://" + ip + ":2375 exec -it " +  container['Id'] + " /bin/bash"
+    print bash_cmd    
+    cmd_id = cli.exec_create(container['Id'],bash_cmd)
     
-    container_str2 = '"Volumes":null,"WorkingDir":"/home/cch-student"\
-                        ,"Entrypoint":["/ros_entrypoint.sh"],"OnBuild":null, \
-                        "Labels":{}},"NetworkSettings":{"Bridge":"",\
-                        "SandboxID":"7905e2dfc3d956cb1666df0abd9fea98ad1d3608d5b2e864cb3e355488b1d8bb",\
-                        "HairpinMode":false,"LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,\
-                        "Ports":null,"SandboxKey":"/var/run/docker/netns/7905e2dfc3d9",\
-                        "SecondaryIPAddresses":null,"SecondaryIPv6Addresses":null,\
-                        "EndpointID":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,\
-                        "IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","MacAddress":"",\
-                        "Networks":{"bridge":{"IPAMConfig":null,"Links":null,"Aliases":null,\
-                        "NetworkID":"fec89e99f0ea2921ddc66d23edbc98d7ce7fecdb74ba512faec6a8450efeb036",\
-                        "EndpointID":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"",\
-                        "GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"MacAddress":""}}}}'
+    cli.exec_start(cmd_id)
     
-    container_id = " > contmpfile"                
-    dockercontainer_cmd = cmd + container_str1 + image + container_str2 + container_id
-    print dockercontainer_cmd
-    subprocess.call(dockercontainer_cmd,shell=True)
-    pathtmpfile = os.path.abspath("contmpfile")
-    tmpfile = open(pathtmpfile,"r")
-    cont_id = tmpfile.read()
-    os.remove(pathtmpfile)
-    dockercontainerstart_cmd = "curl -XPOST http://" + ip + ":2375/containers/" +  cont_id + "/start"
-    subprocess.call(dockercontainerstart_cmd,shell=True)
-                                 
-
-
+    
+    
+    
 try:
     ip = sys.argv[1]
 except:
@@ -132,16 +120,24 @@ except:
     exit()
     
 try:
-    rospackage = sys.argv[2]
+    roscommand = sys.argv[2]
+except:
+    print "Ros command not entered!exiting script"
+    exit()
+    
+try:
+    rospackage = sys.argv[3]
 except:
     print "Ros package name not entered!exiting script"
     exit()
     
 try:
-    roslaunchfile = sys.argv[3]
+    roslaunchfile = sys.argv[4]
 except:
     print "Ros launch file name not entered!exiting script"
     exit()
+    
+
 
 dockercmd_img = "docker -H tcp://" + ip + ":2375 images"
 subprocess.call(dockercmd_img, shell=True)
@@ -170,19 +166,19 @@ dockercmd_teleop = docker_exec_str + ""
 var = md5checksum(image,img_nm)
 if (var == False):
     createDockerImg(image,ip,rospackage)
-    createDockerContainer(image,ip)
-    
-cmds = [dockercmd_runimg]
+    createDockerContainer(image,ip,roscommand,rospackage,roslaunchfile,dockercmd_rosmaster,dockercmd_rosip)
 
-try:
-    
-    result_queue = Queue.Queue()   
-    #subprocess.call(cmds[0], shell=True)
-    for cmd in cmds:
-        thread = MltThrd(cmd,result_queue)
-        thread.start()
-        time.sleep(2)
+else:
+    cmds = [dockercmd_runimg]
+    try:
         
-except:
-    
-    exit()
+        result_queue = Queue.Queue()   
+        #subprocess.call(cmds[0], shell=True)
+        for cmd in cmds:
+            thread = MltThrd(cmd,result_queue)
+            thread.start()
+            time.sleep(2)
+        
+    except:
+        print "Exiting script! Error in Execution!"
+        exit()
