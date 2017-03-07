@@ -1,0 +1,41 @@
+/*
+ *
+ *       \        \  |              |       | /       /
+ *        \        \ |       _______|       |/       /
+ *         \        \|      |_____  |       /       /
+ *          \        \              |              / 
+ *           \               _____  |              \
+ *            \             |       |       \       \
+ *             \            |       |       |\       \
+ *              Virtual Fort Knox   |_______| \_______\
+ *
+ * Version:  1
+ *
+ * Authors:  Daniel Schel <daniel.schel@ipa.fraunhofer.de>
+ *           Daniel Stock <daniel.stock@ipa.fraunhofer.de>
+ *           Olha Meyer <olha.meyer@ipa.fraunhofer.de>
+ *           Johannes Fischer <johannes.fischer@ipa.fraunhofer.de>
+ *           Christian Henkel <christian.henkel@ipa.fraunhofer.de>
+ *           Marc Daxer <marc.daxer@ipa.fraunhofer.de>
+ *           Dominik Schelle <dominik.schelle@ipa.fraunhofer.de>
+ *           Raphael Depuydt <raphael.depuydt@ipa.fraunhofer.de>
+ *           Sören Knipps <soeren.knipps@ipa.fraunhofer.de>
+ *           David Sharma <david.sharma@ipa.fraunhofer.de>
+ *
+ *********************
+ *
+ * Copyright (c) 2015-2016  Fraunhofer Institute for Manufacturing Engineering and Automation (IPA)
+ * All Rights Reserved.
+ *
+ *********************
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Fraunhofer IPA and its suppliers, if any. 
+ * The intellectual and technical concepts contained herein are proprietary 
+ * to Fraunhofer IPA and its suppliers and may be covered by German and 
+ * Foreign Patents, patents in process, and are protected by trade secret or 
+ * copyright law. Dissemination of this information or reproduction of this 
+ * material is strictly forbidden unless prior written permission is 
+ * obtained from Fraunhofer IPA.
+ *
+ */

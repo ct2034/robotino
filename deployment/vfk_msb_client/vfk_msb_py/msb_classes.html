@@ -1,0 +1,151 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module msb_classes</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>msb_classes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes.py">/home/cch/ws/VFK_MSB_CLIENT_LIBS/vfk.msb.client.library/vfk.msb.client.library.websocket.python/vfk_msb_client/scripts/msb_classes.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="msb_classes.html#DataFormat">DataFormat</a>
+</font></dt><dt><font face="helvetica, arial"><a href="msb_classes.html#DataTypes">DataTypes</a>
+</font></dt><dt><font face="helvetica, arial"><a href="msb_classes.html#Event">Event</a>
+</font></dt><dt><font face="helvetica, arial"><a href="msb_classes.html#Function">Function</a>
+</font></dt><dt><font face="helvetica, arial"><a href="msb_classes.html#Service">Service</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="msb_classes.html#Application">Application</a>
+</font></dt><dt><font face="helvetica, arial"><a href="msb_classes.html#SmartObject">SmartObject</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Application">class <strong>Application</strong></a>(<a href="msb_classes.html#Service">Service</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>an&nbsp;<a href="#Application">Application</a>&nbsp;definition<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Application-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="msb_classes.html#Service">Service</a>:<br>
+<dl><dt><a name="Application-toJson"><strong>toJson</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DataFormat">class <strong>DataFormat</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>a&nbsp;<a href="#DataFormat">DataFormat</a>&nbsp;to&nbsp;be&nbsp;returned&nbsp;by&nbsp;Functions&nbsp;or&nbsp;Events<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DataFormat-__init__"><strong>__init__</strong></a>(self, name, doc_type)</dt></dl>
+
+<dl><dt><a name="DataFormat-getName"><strong>getName</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="DataFormat-toCol"><strong>toCol</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DataTypes">class <strong>DataTypes</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>a&nbsp;data&nbsp;types&nbsp;to&nbsp;be&nbsp;used&nbsp;by&nbsp;Functions&nbsp;or&nbsp;Events<br>
+according&nbsp;to&nbsp;https://cb.ipa.fraunhofer.de/cb/displayDocument<br>
+/websocket+client+library+v0.0.3.docx?doc_id=242785<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt><strong>doc</strong> = {'Float': ('number', 'float'), 'Integer': ('integer', 'int32'), 'String': ('string',)}</dl>
+
+<dl><dt><strong>fromRos</strong> = {'duration': 'String', 'float32': 'Float', 'float64': 'Float', 'int16': 'Integer', 'int32': 'Integer', 'int64': 'Integer', 'int8': 'Integer', 'string': 'String', 'time': 'String', 'uint16': 'Integer', ...}</dl>
+
+<dl><dt><strong>toPy</strong> = {'Float': &lt;type 'float'&gt;, 'Integer': &lt;type 'int'&gt;, 'String': &lt;type 'str'&gt;}</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Event">class <strong>Event</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>an&nbsp;<a href="#Event">Event</a>&nbsp;to&nbsp;be&nbsp;included&nbsp;in&nbsp;Services<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Event-__init__"><strong>__init__</strong></a>(self, eventId, name, description, dataFormat)</dt></dl>
+
+<dl><dt><a name="Event-toOrderedDict"><strong>toOrderedDict</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Function">class <strong>Function</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>a&nbsp;<a href="#Function">Function</a>&nbsp;to&nbsp;be&nbsp;included&nbsp;in&nbsp;Services<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Function-__init__"><strong>__init__</strong></a>(self, functionId, dataFormat, name, description)</dt></dl>
+
+<dl><dt><a name="Function-toOrderedDict"><strong>toOrderedDict</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Service">class <strong>Service</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>a&nbsp;<a href="#Service">Service</a>&nbsp;definition<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Service-__init__"><strong>__init__</strong></a>(self, uuid, name, description, events, functions, token)</dt></dl>
+
+<dl><dt><a name="Service-toJson"><strong>toJson</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SmartObject">class <strong>SmartObject</strong></a>(<a href="msb_classes.html#Service">Service</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>a&nbsp;<a href="#SmartObject">SmartObject</a>&nbsp;definition<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SmartObject-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="msb_classes.html#Service">Service</a>:<br>
+<dl><dt><a name="SmartObject-toJson"><strong>toJson</strong></a>(self)</dt></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
