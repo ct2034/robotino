@@ -15,6 +15,7 @@ import time
 import socket
 import md5
 import docker
+import shutil
 
 
 class MltThrd(threading.Thread):
@@ -51,6 +52,8 @@ def createDockerImg(image, ip, rospackage):
 
     # reading base docker commands
     print "Docker file does not exist. Creating docker file..."
+    copysh_path = os.path.abspath("basedocker") + "/ros-entrypoint.sh"
+    
     base_path = os.path.abspath("basedocker") + "/Dockerfile"
     rd_base = open(base_path, "r")
     contents = rd_base.readlines()
@@ -80,6 +83,8 @@ def createDockerImg(image, ip, rospackage):
     os.mkdir(rospackage + "_docker")
     tmppath = os.getcwd() + '/' + rospackage + "_docker"
     print tmppath
+    tmentrysh = tmppath +  "/ros-entrypoint.sh"
+    shutil.copyfile(copysh_path,tmentrysh)
     os.chdir(tmppath)
 
     file = open('Dockerfile', 'w')
@@ -100,11 +105,12 @@ def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dock
     container = cli.create_container(image,
                                      hostname='3e93a4b05cf6',
                                      user='1000:1000',
+                                     stdin_open=True,
                                      tty=True,
                                      command=["bash"],
                                      environment=[
                                          "PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],
-                                     entrypoint='/ros_entrypoint.sh', working_dir='/home/cch-student',
+                                     working_dir='/',
                                      volumes='$HOME/.config/catkin:/.config/catkin:ro')
     cli.start(container['Id'])
     # cmd_id_rm = cli.exec_create(container['Id'],dockercmd_rosmaster)
@@ -114,10 +120,11 @@ def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dock
     # ros_cmd = roscommand + ' ' + rospackage + ' ' + roslaunchfile
     bash_cmd = "docker -H tcp://" + ip + \
         ":2375 exec -it " + container['Id'] + " /bin/bash"
+    bash_cmd = '/bin/bash'
     print bash_cmd
-    cmd_id = cli.exec_create(container['Id'], bash_cmd)
+    #cmd_id = cli.exec_create(container['Id'], bash_cmd)
 
-    cli.exec_start(cmd_id)
+    #cli.exec_start(cmd_id)
 
 
 try:
