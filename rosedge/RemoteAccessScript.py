@@ -50,9 +50,11 @@ def md5checksum(str1, str2):
 
 def createDockerImg(image, ip, rospackage):
 
+    ip_str = "tcp://" + ip + ":2375"
+    cli = docker.Client(base_url=ip_str)    
     # reading base docker commands
     print "Docker file does not exist. Creating docker file..."
-    copysh_path = os.path.abspath("basedocker") + "/ros-entrypoint.sh"
+    copysh_path = os.path.abspath("basedocker") + "/ros_entrypoint.sh"
     
     base_path = os.path.abspath("basedocker") + "/Dockerfile"
     rd_base = open(base_path, "r")
@@ -83,20 +85,22 @@ def createDockerImg(image, ip, rospackage):
     os.mkdir(rospackage + "_docker")
     tmppath = os.getcwd() + '/' + rospackage + "_docker"
     print tmppath
-    tmentrysh = tmppath +  "/ros-entrypoint.sh"
+    tmentrysh = tmppath +  "/ros_entrypoint.sh"
     shutil.copyfile(copysh_path,tmentrysh)
     os.chdir(tmppath)
-
+    make_exec = "chmod +x ros_entrypoint.sh"
+    subprocess.call(make_exec,shell=True)
     file = open('Dockerfile', 'w')
     contents = "".join(contents)
     file.write(contents)
     file.close()
-    tarcode = "tar zcf Dockerfile.tar.gz Dockerfile"
+    tarcode = "tar zcf Dockerfile.tar.gz Dockerfile ros_entrypoint.sh"
     subprocess.call(tarcode, shell=True)
     buildcode = "curl -v -X POST -H " + '"Content-Type:application/tar"' + \
         " --data-binary '@Dockerfile.tar.gz' http://" + ip + ":2375/build?t=" + image
+            
     subprocess.call(buildcode, shell=True)
-
+    #cli.build(fileobj=tmppath+'')
 
 def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dockercmd_rosmaster, dockercmd_rosip):
 
@@ -107,6 +111,7 @@ def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dock
                                      user='1000:1000',
                                      stdin_open=True,
                                      tty=True,
+                                     entrypoint='/ros_entrypoint.sh',
                                      command=["bash"],
                                      environment=[
                                          "PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],
@@ -122,10 +127,20 @@ def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dock
         ":2375 exec -it " + container['Id'] + " /bin/bash"
     bash_cmd = '/bin/bash'
     print bash_cmd
+    return container['Id']
     #cmd_id = cli.exec_create(container['Id'], bash_cmd)
 
     #cli.exec_start(cmd_id)
 
+def runDockerCommands(container_id,ip):
+    
+    print ip
+    print container_id
+    dockerexec_source = "docker -H tcp://" + ip + ":2375 exec -it " + container_id + " bash -c \
+    'source ros_entrypoint.sh;export ROS_MASTER_URI=http://10.2.1.11:11311;\
+    export ROS_IP=172.17.0.2;rosrun teleop_twist_keyboard teleop_twist_keyboard.py'"
+    
+    subprocess.call(dockerexec_source,shell=True)
 
 try:
     ip = sys.argv[1]
@@ -186,8 +201,10 @@ dockercmd_teleop = docker_exec_str + ""
 var = md5checksum(image, img_nm)
 if not var:
     createDockerImg(image, ip, rospackage)
-    createDockerContainer(image, ip, roscommand, rospackage,
+    cont_id = createDockerContainer(image, ip, roscommand, rospackage,
                           roslaunchfile, dockercmd_rosmaster, dockercmd_rosip)
+    print cont_id                     
+    runDockerCommands(cont_id,ip)
 
 else:
     cmds = [dockercmd_runimg]

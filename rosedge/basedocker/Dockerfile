@@ -8,11 +8,18 @@ RUN apt-get update && \
 	ros-kinetic-image* 
 
 
+# Create user
+RUN useradd -ms /bin/bash ros && \
+    adduser ros sudo && \
+    adduser root sudo && \
+    echo "%sudo   ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+USER ros
 
 EXPOSE 22 80
 
-ADD ./ros-entrypoint.sh /
+COPY ./ros_entrypoint.sh /
 
-ENTRYPOINT ["/ros-entrypoint.sh"]
-CMD [ "rosrun", "teleop_twist_keyboard teleop_twist_keyboard.py" ]
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["source"]
 
