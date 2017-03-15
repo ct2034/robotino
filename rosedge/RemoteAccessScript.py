@@ -132,13 +132,18 @@ def createDockerContainer(image, ip, roscommand, rospackage, roslaunchfile, dock
 
     #cli.exec_start(cmd_id)
 
-def runDockerCommands(container_id,ip):
+def runDockerCommands(container_id,ip,roscommand,rospackage,roslaunchfile):
     
     print ip
     print container_id
+    ip_str = "tcp://" + ip + ":2375"
+    cli = docker.Client(base_url=ip_str)
+    rosip_str = cli.inspect_container(container_id)['NetworkSettings']['IPAddress']
+    
     dockerexec_source = "docker -H tcp://" + ip + ":2375 exec -it " + container_id + " bash -c \
-    'source ros_entrypoint.sh;export ROS_MASTER_URI=http://10.2.1.11:11311;\
-    export ROS_IP=172.17.0.2;rosrun teleop_twist_keyboard teleop_twist_keyboard.py'"
+    'source ros_entrypoint.sh;export ROS_MASTER_URI=http://'" + ip + "':11311;\
+    export ROS_IP='"+ rosip_str +"';'" + roscommand + "' '" + rospackage + "' '" \
+    + roslaunchfile
     
     subprocess.call(dockerexec_source,shell=True)
 
@@ -204,7 +209,7 @@ if not var:
     cont_id = createDockerContainer(image, ip, roscommand, rospackage,
                           roslaunchfile, dockercmd_rosmaster, dockercmd_rosip)
     print cont_id                     
-    runDockerCommands(cont_id,ip)
+    runDockerCommands(cont_id,ip,roscommand,rospackage,roslaunchfile)
 
 else:
     cmds = [dockercmd_runimg]
