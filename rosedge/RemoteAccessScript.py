@@ -62,15 +62,15 @@ def createDockerImg(image, ip, rospackage):
     rd_base.close()
 
     # reading docker file of specific launch files from ros packages
-    ros_cmd = "rospack find " + rospackage + " >> tmpfile"
-    subprocess.call(ros_cmd, shell=True)
+    folder_cmd = "find ~ -type d -name " + rospackage + "_Dockerfile >> tmpfile" #"rospack find " + rospackage + " >> tmpfile"
+    subprocess.call(folder_cmd, shell=True)
     pathtmpfile = os.path.abspath("tmpfile")
     tmpfile = open(pathtmpfile, "r")
     pkg_path = tmpfile.read()
     tmpfile.close()
     pkg_path = pkg_path[:-1]
     os.remove(pathtmpfile)
-    pkg_path = pkg_path + "/Dockerfile/Dockerfile"
+    pkg_path = pkg_path + "/Dockerfile"
     print "!!!!!!!!!!"
     print pkg_path
     dock_read = open(pkg_path, "r")
