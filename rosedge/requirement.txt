@@ -1,0 +1,5 @@
+#Python script
+Docker CE>=1.13.1
+Python=2.7
+docker-py #docker library for python operations
+
