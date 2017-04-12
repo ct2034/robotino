@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr  5 15:00:10 2017
+Created on Wed Apr 12 13:32:49 2017
 
 @author: cch-student
 """
-import subprocess
+
 import docker
 
-def createDockerContainer(image, ip, port, roscommand, rospackage, roslaunchfile, dockercmd_rosmaster, dockercmd_rosip):
-
+def createDockerContainer(image, ip,port, rospackage):
     ip_str = "tcp://" + ip + ":" + port
     cli = docker.Client(base_url=ip_str)
     container = cli.create_container(image,
@@ -23,12 +22,9 @@ def createDockerContainer(image, ip, port, roscommand, rospackage, roslaunchfile
                                      working_dir='/',
                                      volumes='$HOME/.config/catkin:/.config/catkin:ro')
     cli.start(container['Id'])
-    bash_cmd = "docker -H tcp://" + ip + ":" + port +\
-        " exec -it " + container['Id'] + " /bin/bash"
-    bash_cmd = '/bin/bash'
-    print bash_cmd
-    return container['Id']
+    #return container['Id']
+    var = len(container['Id'])
+    return var == 64
     
 def test_answer():
-    
-    assert createDockerContainer()
+    assert createDockerContainer("teleop_twist_keyboard_dockerfile", '10.2.1.11','1139','teleop_twist_keyboard') == True
