@@ -23,9 +23,6 @@ class MltThrd(threading.Thread):
     def run(self):
         # execute the command, queue the result
         subprocess.call(self.cmd, shell=True)
-        # (status, output) = commands.getstatusoutput(self.cmd)
-        # self.queue.put((self.cmd, output, status))
-
 
 def md5checksum(str1, str2):
     """
@@ -33,8 +30,7 @@ def md5checksum(str1, str2):
         md5 checksum algorithm
         Args:
             str1 (str): 1st string
-            str1 (str): 2nd string
-            
+            str1 (str): 2nd string      
     """
     m1 = md5.new()
     m2 = md5.new()
@@ -116,6 +112,7 @@ class RemoteDock():
         tmp_contents = dock_read.readlines()
         dock_read.close()
         idx = 9
+        
         for i in range(len(tmp_contents)):
             contents.insert(idx, tmp_contents[i])
             idx = idx + 1
