@@ -5,7 +5,6 @@
  *      Author: indorewala@servicerobotics.eu
  */
 
-
 #include "RobotinoCameraNode.h"
 
 #include <ros/ros.h>
