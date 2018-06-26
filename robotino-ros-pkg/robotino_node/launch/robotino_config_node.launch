@@ -39,18 +39,17 @@
     </node>
 -->
 
-<!--
-    <node name="robotino_config" pkg="robotino_node" type="robotino_config" output="screen">
+
+    <node name="robotino_config_node" pkg="robotino_node" type="robotino_config_node" output="screen">
         <param name="hostname" value="$(arg hostname)" />
         <param name="config" value="0" />
     </node>
--->
+
 
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
     	<param name="publish_frequency" type="double" value="20.0" />
   	</node>
 
- 
 <!--
     <node pkg="tf" type="static_transform_publisher" name="laser_camera_broadcaster" args="0.0 0 0.0 0 0 0 laser_link camera_depth_frame 50" />
 -->

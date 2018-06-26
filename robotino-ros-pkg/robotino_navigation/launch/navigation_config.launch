@@ -1,5 +1,9 @@
 <launch>
   <arg name="map_file" value="$(find robotino_navigation)/maps/try_map3.yaml" />
+  <arg name="hostname" default="127.0.1.1" />
+
+  <!--- Config -->
+  <param name="Robot_type" value="$(arg hostname)" />
 
   <!--- Run mapserver -->
   <include file="$(find robotino_navigation)/launch/map_server.launch">
@@ -25,8 +29,6 @@
     <remap from="cmd_vel" to="robotino_cmd_vel" />
   </node>
 
-
-
   <!--<node pkg="cob_base_velocity_smoother" type="cob_base_velocity_smoother" respawn="false" name="smoother" output="screen"> -->
     <!--<param name="circular_buffer_capacity" value="6" /> -->
     <!--<param name="maximal_time_delay" value="1.0" /> -->
@@ -36,10 +38,9 @@
 
   <!-- Run rplidar -->
   <include file="$(find robotino_navigation)/launch/rplidar.launch" /> 
-
+ 
   <!-- Run rviz -->
   <include file="$(find robotino_navigation)/launch/rviz.launch"/>
-  
 
   <!-- Run robotino_safety_node -->
   <include file="$(find robotino_safety)/launch/robotino_safety_node.launch"/>
