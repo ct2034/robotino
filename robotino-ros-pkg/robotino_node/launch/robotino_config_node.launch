@@ -1,7 +1,9 @@
 <launch>
     <arg name="hostname" default="127.0.1.1" />
+    <arg name="robot" default="$(env ROBOT)" />
 	<node name="robotino_node" pkg="robotino_node" type="robotino_node" output="screen">
 		<param name="hostname" value="$(arg hostname)" />
+		<param name="robot" value="$(arg robot)" />
 		<param name="max_linear_vel" value="0.3" />
 		<param name="min_linear_vel" value="0.01" />
 		<param name="max_angular_vel" value="1.0" />
@@ -18,13 +20,15 @@
         <param name="hostname" value="$(arg hostname)" />
         <param name="laserRangeFinderNumber" value="0" />
     </node>
--->
 
-<!--
     <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" output="screen">
 	<rosparam command="load" file="$(find robotino_node)/launch/sick.yaml"/>
     </node>
 -->
+
+      <!-- Run rplidar IF Robotino 3-->
+      <include file="$(find robotino_navigation)/launch/rplidar.launch" if="$(eval robot == 'robotino3')"/> 
+
 
     <node name="laserfilter" pkg="cob_sick_s300" type="cob_scan_filter" output="screen">
         <rosparam command="load" file="$(find robotino_node)/launch/sick.yaml"/>
@@ -38,13 +42,6 @@
         <param name="cameraNumber" value="0" />
     </node>
 -->
-
-
-    <node name="robotino_config_node" pkg="robotino_node" type="robotino_config_node" output="screen">
-        <param name="hostname" value="$(arg hostname)" />
-        <param name="config" value="0" />
-    </node>
-
 
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
     	<param name="publish_frequency" type="double" value="20.0" />

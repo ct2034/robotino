@@ -34,9 +34,6 @@
     <!-- <remap from="output" to="robotino_cmd_vel" /> -->
   <!--</node> -->
 
-  <!-- Run rplidar -->
-  <include file="$(find robotino_navigation)/launch/rplidar.launch" /> 
-
   <!-- Run rviz -->
   <include file="$(find robotino_navigation)/launch/rviz.launch"/>
   
