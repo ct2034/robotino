@@ -20,11 +20,13 @@
         <param name="hostname" value="$(arg hostname)" />
         <param name="laserRangeFinderNumber" value="0" />
     </node>
-
-    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" output="screen">
-	<rosparam command="load" file="$(find robotino_node)/launch/sick.yaml"/>
-    </node>
 -->
+
+    <!-- Run cob_sick Laser IF Robotino 2-->
+    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" output="screen" if="$(eval robot == 'robotino2')" >
+	<rosparam command="load" file="$(find robotino_node)/launch/sick.yaml" />
+    </node>
+
 
       <!-- Run rplidar IF Robotino 3-->
       <include file="$(find robotino_navigation)/launch/rplidar.launch" if="$(eval robot == 'robotino3')"/> 
