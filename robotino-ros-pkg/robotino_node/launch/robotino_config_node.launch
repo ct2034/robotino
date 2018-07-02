@@ -49,10 +49,12 @@
     	<param name="publish_frequency" type="double" value="20.0" />
   	</node>
 
-<!--
-    <node pkg="tf" type="static_transform_publisher" name="laser_camera_broadcaster" args="0.0 0 0.0 0 0 0 laser_link camera_depth_frame 50" />
--->
-  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.0 0.0 0.28 0 0 0 base_link laser_link 50" />
-  	<param name="robot_description" textfile="$(find robotino_description)/urdf/robotino.urdf" />
+        <node pkg="tf" type="static_transform_publisher" name="laser_camera_broadcaster" args="0.0 0 0.0 0 0 0 laser_link camera_depth_frame 50" />
+
+  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.0 0.0 0.28 0 0 0 base_link laser_link 50" if="$(eval robot == 'robotino3')" />
+  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.185 0 0.12 0 0 0 base_link laser_link 50" if="$(eval robot == 'robotino2')" />
+  	
+	<param name="robot_description" textfile="$(find robotino_description)/urdf/robotino.urdf" />
+
 
 </launch>
