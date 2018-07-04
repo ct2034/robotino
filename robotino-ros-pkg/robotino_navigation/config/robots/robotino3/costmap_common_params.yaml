@@ -1,0 +1,12 @@
+obstacle_range: 8.0
+raytrace_range: 10.0
+footprint: [[0.25, 0.25], [0.25, -0.25], [-0.25, -0.25], [-0.25, 0.25]]
+#robot_radius: 0.25
+inflation_radius: 1.0
+
+observation_sources: scan
+
+scan: {sensor_frame: laser_link, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+#distance_sensors: {sensor_frame: base_link, data_type: PointCloud, topic: distance_sensors, marking: true, clearing: false, obstacle_range: 0.35, raytrace_range: 0.4, observation_persistence: 1.0 }
+#distance_sensors_clearing: {sensor_frame: base_link, data_type: PointCloud, topic: distance_sensors_clearing, marking: false, clearing: true, raytrace_range: 0.36, observation_persistence: 0.0 }
+

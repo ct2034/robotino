@@ -36,7 +36,6 @@
 
   <!-- Run rviz -->
   <include file="$(find robotino_navigation)/launch/rviz.launch"/>
-  
 
   <!-- Run robotino_safety_node -->
   <include file="$(find robotino_safety)/launch/robotino_safety_node.launch"/>

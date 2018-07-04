@@ -1,9 +1,8 @@
 <launch>
   <arg name="map_file" value="$(find robotino_navigation)/maps/try_map3.yaml" />
-  <arg name="hostname" default="127.0.1.1" />
-
+  
   <!--- Config -->
-  <param name="Robot_type" value="$(arg hostname)" />
+  <arg name="robot" default="$(env ROBOT)" />
 
   <!--- Run mapserver -->
   <include file="$(find robotino_navigation)/launch/map_server.launch">
@@ -17,14 +16,14 @@
 
   <!--- Run move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find robotino_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find robotino_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find robotino_navigation)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find robotino_navigation)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find robotino_navigation)/config/base_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find robotino_navigation)/config/recovery_behaviors.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find robotino_navigation)/config/robots/$(arg robot)/recovery_behaviors.yaml" command="load" />
     <!-- <param name="base_local_planner" value="eband_local_planner/EBandPlannerROS" /> -->
-    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> 
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="controller_frequency" value="10.0" />
     <remap from="cmd_vel" to="robotino_cmd_vel" />
   </node>
@@ -36,9 +35,6 @@
     <!-- <remap from="output" to="robotino_cmd_vel" /> -->
   <!--</node> -->
 
-  <!-- Run rplidar -->
-  <include file="$(find robotino_navigation)/launch/rplidar.launch" /> 
- 
   <!-- Run rviz -->
   <include file="$(find robotino_navigation)/launch/rviz.launch"/>
 
