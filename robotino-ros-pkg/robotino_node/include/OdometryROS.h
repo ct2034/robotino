@@ -38,7 +38,6 @@ private:
 
 	ros::Time stamp_;
 
-
 	void readingsEvent(double x, double y, double phi,
 			float vx, float vy, float omega, unsigned int sequence );
 	bool resetOdometryCallback(
