@@ -54,7 +54,7 @@
 
         
 
-  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.0 0.0 0.28 0 0 0 base_link laser_link 50" if="$(eval robot == 'robotino3')" />
+  	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="-0.075 -0.13 0.30 0 0 0 base_link laser_link 50" if="$(eval robot == 'robotino3')" />
   	<node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0.185 0 0.12 0 0 0 base_link laser_link 50" if="$(eval robot == 'robotino2')" />
   	
 	<param name="robot_description" textfile="$(find robotino_description)/urdf/robotino.urdf" />
