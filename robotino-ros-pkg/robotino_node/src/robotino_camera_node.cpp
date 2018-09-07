@@ -1,8 +1,6 @@
 /*
  * main.cpp
  *
- *  Created on: 09.12.2011
- *      Author: indorewala@servicerobotics.eu
  */
 
 

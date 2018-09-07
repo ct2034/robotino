@@ -6,8 +6,7 @@
     <param name="ymax" value="20" />
   </node>
 
-  <!-- Run rviz 
+  <!-- Run rviz   -->
   <include file="$(find robotino_navigation)/launch/rviz.launch" />
-  -->
 
 </launch>

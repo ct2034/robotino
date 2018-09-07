@@ -4,7 +4,7 @@
 		name="keyboard_teleop_node" output="screen" >
 				
 		<!-- Scale -->
-		<param name="scale_linear" value="2.0" type="double" />
+		<param name="scale_linear" value="4.0" type="double" />
 		<param name="scale_angular" value="1.0" type="double" />
 	</node>
 </launch>

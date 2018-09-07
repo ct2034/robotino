@@ -129,6 +129,7 @@ add_executable(
   src/OmniDriveROS.cpp
   src/PowerManagementROS.cpp
   src/RobotinoNode.cpp
+  src/RobotinoConfigNode.cpp
 )
 
 target_link_libraries(
@@ -191,6 +192,12 @@ add_dependencies(robotino_odometry_node robotino_msgs_generate_messages_cpp)
 # target_link_libraries(robotino_node_node
 #   ${catkin_LIBRARIES}
 # )
+
+add_executable(vfk_nav_robotino src/vfk_nav_robotino.cpp)
+
+target_link_libraries(
+  vfk_nav_robotino
+  ${catkin_LIBRARIES})
 
 #############
 ## Install ##

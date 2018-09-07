@@ -1,0 +1,19 @@
+DWAPlannerROS:
+  sim_time: 0.5
+  
+  max_vel_x: 1.0
+  min_vel_x: 0.6
+  max_vel_y: 0.05
+  min_vel_y: 0.05
+  max_vel_theta: 1.0
+  min_vel_theta: -1.0
+
+  yaw_goal_tolerance: 0.10
+  xy_goal_tolerance: 0.10
+  
+  dwa: true
+
+  path_distance_bias: 32.0
+  goal_distance_bias: 15.0
+  occdist_scale: 0.05
+  

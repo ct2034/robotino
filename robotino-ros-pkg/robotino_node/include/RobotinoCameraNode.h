@@ -1,8 +1,6 @@
 /*
  * RobotinoNode.h
  *
- *  Created on: 09.12.2011
- *      Author: indorewala@servicerobotics.eu
  */
 
 #ifndef RobotinoCameraNode_H
@@ -33,4 +31,4 @@ private:
 	void initModules();
 };
 
-#endif /* RobotinoCameraNode_H */
+#endif /* RobotinoCameraNode_H_ */
